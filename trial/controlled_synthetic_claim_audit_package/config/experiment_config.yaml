@@ -1,0 +1,8 @@
+study: synthetic_binary_classification
+seed_family: 9000
+model: gradient_boosted_tree
+max_depth: 3
+learning_rate: 0.08
+train_rows: 350
+test_rows: 170
+runs: 6
