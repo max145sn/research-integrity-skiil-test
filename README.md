@@ -9,7 +9,7 @@ This repository includes several document bundles and one installed skill.
 - `.github/skills/exploratory-data-analysis/skill.md`
 - `.github/skills/academic-paper-review/skill.md`
 - `.github/skills/academic-paper-reviewer/skill.md`
-  - `.github/skills/academic-paper-reviewer/agents/` — eic-agent.md, domain-reviewer-agent.md, editorial-synthesizer-agent.md, devils-advocate-reviewer-agent.md
+  - `.github/skills/academic-paper-reviewer/agents/` — field-analyst-agent.md, eic-agent.md, methodology-reviewer-agent.md, domain-reviewer-agent.md, perspective-reviewer-agent.md, editorial-synthesizer-agent.md, devils-advocate-reviewer-agent.md
   - `.github/skills/academic-paper-reviewer/examples/`
   - `.github/skills/academic-paper-reviewer/references/`
   - `.github/skills/academic-paper-reviewer/templates/`
