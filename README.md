@@ -6,6 +6,7 @@ This repository includes several document bundles and one installed skill.
 
 - `.github/skills/paper-claim-audit/skill.md`
 - `.github/skills/citation-management/skill.md`
+- `.github/skills/exploratory-data-analysis/skill.md`
 
 ## Core documents
 
