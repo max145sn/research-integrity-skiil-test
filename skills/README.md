@@ -7,3 +7,7 @@ Visible copies of repository skills for easier browsing in Codespaces.
 - `exploratory-data-analysis/skill.md`
 - `academic-paper-review/skill.md`
 - `academic-paper-reviewer/skill.md`
+  - `academic-paper-reviewer/agents/` — eic-agent.md, domain-reviewer-agent.md, editorial-synthesizer-agent.md, devils-advocate-reviewer-agent.md
+  - `academic-paper-reviewer/examples/`
+  - `academic-paper-reviewer/references/`
+  - `academic-paper-reviewer/templates/`
