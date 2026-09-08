@@ -8,6 +8,7 @@ This repository includes several document bundles and one installed skill.
 - `.github/skills/citation-management/skill.md`
 - `.github/skills/exploratory-data-analysis/skill.md`
 - `.github/skills/academic-paper-review/skill.md`
+- `.github/skills/academic-paper-reviewer/skill.md`
 
 ## Core documents
 
