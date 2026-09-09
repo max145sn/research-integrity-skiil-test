@@ -1,0 +1,123 @@
+{
+  "skill": "research-package-integrity-audit2",
+  "skill_commit": "c8e4d87",
+  "package": "pcbi.1007945",
+  "manuscript": "Ayala MJC, Villela DAM (2020). PLOS Computational Biology 16(6):e1007945.",
+  "files": [
+    {"path": "file.pdf", "role": "manuscript", "readable": true},
+    {"path": "pcbi.1007945.s001.Rmd", "role": "code", "manuscript_ref": "S1 File", "readable": true, "lines": 780},
+    {"path": "S2 File (rendered document)", "role": "documentation", "status": "MISSING_FILE"},
+    {"path": "Fig5 LHS sensitivity code/data", "role": "code_and_data", "status": "MISSING_FILE"}
+  ],
+  "figure_map": [
+    {"figure": "Fig1", "mapping_status": "NOT_APPLICABLE", "reason": "static diagram"},
+    {"figure": "Fig2", "mapping_status": "NOT_APPLICABLE", "reason": "static diagram"},
+    {"figure": "Fig3", "code_section": "R0 chunk, lines 1-197", "mapping_status": "CONFIRMED",
+     "figure_status": "FIGURE_NUMERICALLY_MATCHED_PARTIAL", "note": "formula recomputed independently, plotting code not executed"},
+    {"figure": "Fig4", "code_section": "simulation chunk, lines 198-780", "mapping_status": "CONFIRMED",
+     "figure_status": "FIGURE_SOURCE_UNAVAILABLE", "note": "code present, neither executed nor independently recomputed"},
+    {"figure": "Fig5", "mapping_status": "BLOCKED_MISSING_CODE", "figure_status": "FIGURE_CHECK_BLOCKED"}
+  ],
+  "claim_ledger": {
+    "group_a_fixed_parameters": {"status": "COMPLETE", "total_cells": 38, "confirmed": 32, "not_applicable": 4, "mismatch": 2},
+    "group_b_narrative_qualitative": {"status": "INCOMPLETE", "reason": "not extracted with stable IDs in this pass"}
+  },
+  "execution": {
+    "state": "EXECUTION_NOT_ATTEMPTED",
+    "reason": "R/Rscript runtime not found in environment; no lockfile, container, or manifest present",
+    "entry_points": ["pcbi.1007945.s001.Rmd"]
+  },
+  "independent_recomputation": {
+    "state": "PARTIALLY_RECOMPUTED",
+    "items": [
+      {
+        "target": "R0 formula (R0s, R0r)",
+        "method": "manual line-by-line translation to Python/NumPy",
+        "tooling": "Python 3.12.10, numpy 2.5.3",
+        "script": "audit-output/pcbi_recompute/recompute_r0.py",
+        "state": "RECOMPUTED",
+        "results": {
+          "vivax_R0s_max_relative_diff_pct": 1.9342314622998544,
+          "vivax_R0s_mean_relative_diff_pct": 1.6041657331839587,
+          "vivax_R0r_max_relative_diff_pct": 1.8161075985483925,
+          "vivax_R0r_mean_relative_diff_pct": 1.383792054890787,
+          "isolated_Nh_effect_max_relative_diff_pct": 0.08009612817948082,
+          "isolated_phit_effect_R0s_max_relative_diff_pct": 1.8526514320546588,
+          "isolated_phit_effect_R0r_max_relative_diff_pct": 1.734622105224112,
+          "falciparum_isolated_Nh_effect_max_relative_diff_pct": 0.08009612817947248
+        }
+      },
+      {"target": "Fig4 ODE simulation (falciP, vivax)", "state": "NOT_CHECKED", "reason": "assessed as feasible via scipy.integrate.odeint but out of scope for this pass"},
+      {"target": "Fig5 LHS sensitivity analysis", "state": "BLOCKED", "reason": "no code or data supplied"}
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "F-01",
+      "primary_category": "CODE_MANUSCRIPT_MISMATCH",
+      "secondary_categories": ["REPORTING_INCONSISTENCY"],
+      "locations": {"manuscript": "Table 1, row m (Nm/Nh=2435/625)", "code": "parf/parv[2] = 624"},
+      "evidence_status": ["DIRECTLY_INSPECTED", "CROSS_DOCUMENT_MATCH", "RECOMPUTED"],
+      "reported": 625,
+      "observed_in_evidence": 624,
+      "tolerance": 0,
+      "reconciliation_attempts": ["rounding: not_applicable", "initial_condition_consistency: plausible_partial_explanation (Sh=623+Is=1=624)"],
+      "impact_status": "EVALUATED",
+      "impact_evidence": "max 0.080% relative effect on R0 curves, both species",
+      "severity": "MINOR",
+      "certainty": "DEMONSTRATED",
+      "misconduct_inference": "NONE"
+    },
+    {
+      "finding_id": "F-02",
+      "primary_category": "CODE_MANUSCRIPT_MISMATCH",
+      "secondary_categories": ["REPORTING_INCONSISTENCY"],
+      "locations": {"manuscript": "Table 1, row phit = 0.21", "code": "parv[12] = 0.29"},
+      "evidence_status": ["DIRECTLY_INSPECTED", "CROSS_DOCUMENT_MATCH", "RECOMPUTED"],
+      "reported": 0.21,
+      "observed_in_evidence": 0.29,
+      "tolerance": 0,
+      "reconciliation_attempts": ["rounding: no", "alternate_table_row: none_exists", "ocr_extraction_artifact: low_probability_not_excluded"],
+      "impact_status": "EVALUATED",
+      "impact_evidence": "max 1.853% (R0s) / 1.735% (R0r) relative effect, P. vivax only; dominant contributor to combined ~1.9% shift",
+      "severity": "MINOR",
+      "certainty": "DEMONSTRATED",
+      "misconduct_inference": "NONE"
+    }
+  ],
+  "coverage": {
+    "parameter_cells": {"total": 38, "confirmed": 32, "not_applicable": 4, "mismatch": 2, "reconciliation": "PASS"},
+    "figures": {"total": 5, "code_mapped_not_execution_verified": 2, "not_applicable": 2, "blocked": 1, "reconciliation": "PASS"}
+  },
+  "blocked_and_not_checked": [
+    {"item": "Fig5 correspondence", "state": "BLOCKED", "missing": "LHS code/data"},
+    {"item": "Fig3/Fig4 execution", "state": "EXECUTION_NOT_ATTEMPTED", "missing": "R runtime"},
+    {"item": "Published-figure provenance cross-check", "state": "BLOCKED", "missing": "S2 File"},
+    {"item": "Fig4 ODE independent recomputation", "state": "NOT_CHECKED", "missing": "scope/time, not tooling"},
+    {"item": "Group b narrative claim ledger", "state": "NOT_CHECKED", "missing": "full extraction pass"}
+  ],
+  "adaptations": [],
+  "output_validation": {
+    "coverage_reconciles": "PASS",
+    "findings_have_valid_locations": "PASS",
+    "impact_bases_documented": "PASS",
+    "status_taxonomy_distinct": "PASS",
+    "verdict_scope_matches_coverage": "PASS",
+    "dual_output_consistency": "PASS",
+    "no_misconduct_or_publication_verdict": "PASS",
+    "overall": "PASS"
+  },
+  "verdict": {
+    "package_completeness": "PARTIALLY_COMPLETE",
+    "source_code_execution": "EXECUTION_NOT_ATTEMPTED",
+    "independent_recomputation": "PARTIALLY_RECOMPUTED",
+    "computational_reproducibility": "BLOCKED",
+    "reporting_correspondence": "PARTIALLY_VERIFIED",
+    "empirical_data_integrity_evidence": "NOT_APPLICABLE_FOR_EMPIRICAL_DATA",
+    "configuration_and_model_input_integrity": "DEMONSTRATED_ISSUES"
+  },
+  "inclusion_flags": {
+    "F-01": {"in_output_a": true, "in_output_b": true},
+    "F-02": {"in_output_a": true, "in_output_b": true}
+  }
+}

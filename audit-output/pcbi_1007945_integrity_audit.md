@@ -1,255 +1,385 @@
-# Research Package Integrity Audit
+# Research Package Integrity Audit — Comprehensive Technical Audit (Output A)
 
-**Skill applied:** `research-package-integrity-audit2` (`.github/skills/research-package-integrity-audit2/skill.md`)
+**Skill applied:** `research-package-integrity-audit2`, tool-invoked (`skill: "research-package-integrity-audit2"`,
+response: "Skill loaded successfully"). Content verified via SHA256 against both repo copies
+(`.github/skills/research-package-integrity-audit2/skill.md`, `skills/research-package-integrity-audit2/skill.md`)
+at commit `c8e4d87` ("Update research-package-integrity-audit2 skill content").
+
+> **Correction notice:** a prior run of this audit (committed as `95188f5` / `7fde0cd`) used an
+> earlier version of this skill (commit `cf4d6a8`), before the skill was updated at `c8e4d87`.
+> That earlier version lacked the dual-output requirement, the independent-recomputation gate, and
+> the execution-state taxonomy used below. This document supersedes that earlier run and was produced
+> against the current skill content.
+
 **Package audited:** Ayala MJC, Villela DAM (2020). "Early transmission of sensitive strain slows down
 emergence of drug resistance in Plasmodium vivax." *PLOS Computational Biology* 16(6):e1007945.
 https://doi.org/10.1371/journal.pcbi.1007945
 
-## Execution-mode disclosure
-
-This audit was performed as a single-session, sequential inspection by one model instance, not by
-independently instrumented, contract-validated deterministic scripts as the skill's "Implementation
-Guidance" describes for a mature deployment. R was not available in the execution environment
-(`Rscript`/`R` not found), so **no code execution occurred**; all checks below are `DIRECTLY_INSPECTED`
-or `CROSS_DOCUMENT_MATCH` unless explicitly marked otherwise. No values in this report should be read as
-"reproduced" in the skill's technical sense.
-
-**Re-verification note (this run):** the skill was invoked through the `skill` tool this time
-(`skill: "research-package-integrity-audit2"`), which returned "Skill loaded successfully" and injected
-the full `skill.md` body verbatim as skill-context — confirming genuine tool-mediated access rather than
-a manual file read. The tool-injected content is byte-identical to the `.github/skills/research-package-integrity-audit2/skill.md`
-and `skills/research-package-integrity-audit2/skill.md` copies already in this repository (verified by
-diff). The audited package (`file.pdf`, `pcbi.1007945.s001.Rmd`) and execution environment (no
-R/Rscript available) are unchanged since the prior run, so all findings, statuses, and the coverage
-report below are re-confirmed unchanged rather than re-derived from scratch.
-
 ---
 
-## Part 0: Preflight and Scope Declaration
+## 1. Execution-Mode Disclosure
+
+This audit was performed as a single-session, sequential inspection by one model instance — not by
+independently instrumented, contract-validated deterministic scripts as the skill's "Implementation
+Guidance" describes for a mature deployment. No literal execution of the supplied R Markdown file
+occurred (no R/Rscript runtime is installed in this environment). Where the skill's Gate 4 requires
+independent recomputation to be attempted separately from source execution, this was done: the R0
+formula was manually translated into Python/NumPy (numpy 2.5.3, Python 3.12.10) and evaluated
+independently — see Section 10. This is `RECOMPUTED` evidence for the R0 formula specifically, not
+`EXECUTED` evidence for the supplied Rmd file, and not evidence about the Fig 4 ODE-simulation code
+(`falciP`/`vivax` functions), which requires `deSolve` and was not independently re-implemented here.
+
+## 2. Executive Audit Summary
+
+The supplied package (manuscript PDF + S1 supplementary R code) is **partially complete**: two
+figures (Fig 3, Fig 4) have their generating code present and caption-matched; two figures (Fig 1,
+Fig 2) are static diagrams with no associated code; and one figure (Fig 5, LHS sensitivity analysis)
+has no supplied code or data at all. Source execution of the supplied Rmd was **not attempted**
+(no R runtime available). Independent recomputation of the R0 formula was performed in Python and
+**succeeded**, confirming the formula's structure matches the code and quantifying the effect of two
+demonstrated parameter discrepancies between the code and the manuscript's own Table 1: `Nh` (624 in
+code vs. 625 in Table 1) and, for *P. vivax* only, `φt` (0.29 in code vs. 0.21 in Table 1). Their
+combined effect on the *P. vivax* R0 curves is small (maximum ~1.9% relative deviation across the
+drug-coverage range 0–1, mean ~1.6%), and the effect of `Nh` alone on both species is smaller still
+(~0.08%). No issue with a demonstrated qualitative effect on the paper's conclusions was found. No
+misconduct is inferred from these findings.
+
+## 3. Preflight and Scope Declaration
 
 **Supplied files:**
+- `file.pdf` — main manuscript (2.29 MB), text-extracted and read in full.
+- `pcbi.1007945.s001.Rmd` (33,022 bytes / 780 lines) — the manuscript's own "S1 File" (Reproducibility code).
 
-| File | Role | Readable |
-|---|---|---|
-| `file.pdf` (main manuscript, 2.29 MB) | Manuscript | Yes (text extracted) |
-| `pcbi.1007945.s001.Rmd` (32.2 KB, 780 lines) | Supplementary code (S1 File per manuscript) | Yes |
+**Referenced but not supplied:**
+- "S2 File" — a PDF document the manuscript states was generated by rendering S1 ("Document generated from code in S1"). Not supplied; would have let the published figures be compared against a rendered artifact without needing to execute R locally.
+- Code and data for the Latin Hypercube Sampling (LHS) sensitivity analysis behind **Fig 5** (uses R packages `lhs`, `sensitivity`, neither invoked anywhere in the supplied Rmd). Not supplied.
 
-**Not supplied but referenced by the manuscript:**
-- **S2 File** ("Document... generated from code in S1... to reproduce simulation and figures", PDF) — not supplied. This is the authors' own rendered output of the S1 Rmd; without it, independent code execution is the only way to check S1's output, and execution is blocked (see below).
-- Code/data for the Latin Hypercube Sampling (LHS) sensitivity analysis described in the Results ("we performed a sensitivity analysis... using LHS... implemented in R using deSolve, lhs, and sensitivity packages") underlying **Fig 5** — not present anywhere in the supplied S1 Rmd.
+**Execution environment:** Windows PowerShell session. `R`/`Rscript`: not found (checked via `Get-Command`, both absolutely and via PATH lookup — no alternative executable name, container, lockfile, or R environment manifest was found in the workspace). `python` 3.12.10 available; `numpy` 2.5.3 installed for this audit. No internet access to external services was required or used.
 
-**Execution environment:** No R/Rscript installed in this session. `deSolve`, `latex2exp`, `lhs`, `sensitivity` package availability could not be checked. **Execution status: BLOCKED for the entire package.**
+**Preflight status: PARTIAL.** Manuscript + one of two referenced supplementary artifacts supplied; R runtime absent for the supplied code, though a dependency-light independent recomputation in Python was feasible and performed for the R0 formula.
 
-**Preflight status: PARTIAL.** Only 2 of the package's referenced artifacts were supplied (manuscript + one supplementary code file), and the runtime needed to execute that code is unavailable.
+## 4. File Inventory and Missing-Artifact Register
 
----
+| # | Path/Artifact | Type | Present | Notes |
+|---|---|---|---|---|
+| 1 | `file.pdf` | Manuscript | Yes | Full text extracted |
+| 2 | `pcbi.1007945.s001.Rmd` | Code (manuscript's "S1 File") | Yes | 780 lines, 2 chunks (`R0`, `simulation`) |
+| 3 | "S2 File" (rendered PDF) | Documentation | No | `MISSING_FILE` |
+| 4 | Fig 5 LHS sensitivity code/data | Code + result data | No | `MISSING_FILE` |
 
-## Part 1: File Inventory and Study/Figure Map
+Files inventoried: 2 supplied + 2 referenced-but-missing = 4 total artifacts in scope.
+Files classified: 2/2 supplied files fully classified (100%). Unclassified files: 0.
 
-This is a single-study, deterministic-simulation paper (two compartmental ODE models; no empirical
-raw data, no human/animal subjects data, no machine-learning components). Phase 4 (data provenance),
-Phase 5's ML module, and most of Phase 7's statistical-recomputation catalogue are **NOT_APPLICABLE** —
-there is no dataset to check for duplication, missingness, or leakage. The applicable checks are the
-**simulation/computational-model module** (Phase 5) and **figure/parameter correspondence** (Phase 8).
+## 5. Study, Experiment, Analysis, and Artifact Map
 
-The manuscript reports 5 figures. Mapping each to the supplied S1 Rmd by caption/section-header match:
+This is a single-study, deterministic dual-species (P. falciparum / P. vivax) compartmental ODE
+modelling paper with no empirical dataset, no human/animal subject data, and no machine-learning
+component. There is one "study" in the skill's sense (the modelling study reported across the whole
+paper), decomposed by figure/artifact below (`CONFIRMED` mapping = caption text matches an Rmd
+section heading verbatim; `NOT_APPLICABLE` = no code artifact expected):
 
-| Figure | Manuscript caption (short) | S1 Rmd section | Mapping status |
+| Figure | Manuscript caption (short) | Rmd section (lines) | Mapping status |
 |---|---|---|---|
-| Fig 1 | *P. falciparum* model diagram | none (static illustration) | `NOT_APPLICABLE` (not code-generated) |
-| Fig 2 | *P. vivax* model diagram | none (static illustration) | `NOT_APPLICABLE` (not code-generated) |
-| Fig 3 | Drug coverage vs. R0, sensitive/resistant | `## Fig 3. Drug coverage varying the basic reproduction numbers` (R0 function + 8-panel plot, lines 1–197) | `CONFIRMED` (caption text is reproduced verbatim as the chunk header) |
-| Fig 4 | Simulation of 4 treatment regimens (CQ, CQ+PQ, ACT, ACT+PQ), both species | `##Fig 4. Simulation of treatment regimens` (`falciP`/`vivax` ODE functions + `regimen_fal`/regimen-vivax simulation, lines 198–780) | `CONFIRMED` |
-| Fig 5 | Parameter sensitivity (LHS) on resistance-emergence time | **absent from S1** | `BLOCKED_MISSING_CODE` — no code or LHS output data supplied for this figure |
+| Fig 1 | *P. falciparum* model diagram | none (static illustration) | `NOT_APPLICABLE` |
+| Fig 2 | *P. vivax* model diagram | none (static illustration) | `NOT_APPLICABLE` |
+| Fig 3 | Drug coverage vs. R0 (8 panels) | `## Fig 3. Drug coverage varying the basic reproduction numbers`, R0 function + plotting code (lines 1–197) | `CONFIRMED` |
+| Fig 4 | Treatment-regimen simulation (CQ/CQ+PQ/ACT/ACT+PQ, both species) | `##Fig 4. Simulation of treatment regimens`, `falciP`/`vivax` ODE functions + `regimen_fal`/regimen-vivax code (lines 198–780) | `CONFIRMED` |
+| Fig 5 | Parameter sensitivity (LHS) on resistance-emergence time | absent | `BLOCKED_MISSING_CODE` |
 
----
+A matching section header confirms *intended* code-to-figure mapping (Gate on "Central Evidence
+Graph"); it does not by itself prove the code's current output is what was published, since neither
+execution nor the S2 rendered artifact was available to cross-check the actual rendered output
+(`PUBLISHED_FIGURE_PROVENANCE_VERIFIED` was not reached for either figure — see Section 11).
 
-## Part 2: Parameter Ledger — Code vs. Manuscript Table 1/Table 2
+## 6. Complete Claim Ledger
 
-The R0 function in the S1 Rmd takes a 19-element parameter vector, explicitly indexed in a code
-comment (`# (1) Nm, (2) Nh, (3) a, (4) b, (5) mm, (6) alpha, (7) cs, (8) ca, (9) sigma, (10) psi,
-(11) mvl, (12) phit, (13) phiu, (14) varphi, (15) epsilon, (16) nu, (17) n, (18) gamma, (19) r`).
-Two fixed vectors are defined for Fig 3/Fig 4: `parf` (*P. falciparum*) and `parv` (*P. vivax*).
-Each element was cross-checked, where the manuscript's Table 1 or Table 2 gives a specific reported
-value (`DIRECTLY_INSPECTED` + `CROSS_DOCUMENT_MATCH`; "range" entries in Table 1 are not point values
-and cannot mismatch a specific code constant, so they are marked `NOT_APPLICABLE`):
+Per the skill's Gate 3, a claim ledger must extract every independently verifiable proposition, not
+only the fixed-parameter constants. The paper's checkable claims fall into two groups:
 
-| # | Param | `parf` (falciparum) | Table 1/2 value (falciparum) | Match | `parv` (vivax) | Table 1/2 value (vivax) | Match |
+**(a) Numerically fixed model inputs** (fully extracted — 19 parameters × 2 species vectors = 38
+cells; see Section 8 for the full ledger). These are the only claims for which the supplied package
+contains both a code artifact and a manuscript-reported point value that can be directly compared.
+
+**(b) Narrative/qualitative results claims** (e.g., "early transmission... supports the prevalence of
+sensitive parasites delaying the emergence of resistant P. vivax"; "recurrences increase the basic
+reproduction number in both cases"; comparative statements about R0f vs. R0v, and the Fig 5
+sensitivity ranking of influential parameters). These claims are output-level, qualitative
+conclusions drawn from figures/simulations rather than single point estimates, and their supporting
+evidence includes the missing Fig 5 code. Extracting and independently verifying every such claim
+with a stable ID against regenerated model output was **not performed** in this audit — it would
+require executing the full ODE simulation and LHS analysis, which is blocked (Fig 5 code missing)
+or not independently reproduced (Fig 3/4, no R runtime).
+
+**Claim ledger status: INCOMPLETE** for group (b). Per the skill's Gate 3, this constrains the
+overall reporting-correspondence verdict to `PARTIALLY_VERIFIED` rather than a stronger
+characterization (see Section 15).
+
+## 7. Data Provenance and Structural Checks
+
+`NOT_APPLICABLE` — no empirical dataset, raw or processed, is part of this package. Both models are
+deterministic ODE systems with author-supplied fixed parameters and derived formulas; there are no
+observed replicates, spreadsheets, IDs, or missingness to assess.
+
+## 8. Code, Configuration, and Domain-Specific Checks — Parameter Ledger
+
+The R0 function's 19-element parameter vector is explicitly indexed in a code comment. Each element
+was directly compared to the manuscript's Table 1 (model parameters) or Table 2 (treatment-regimen
+parameters), where a specific point value is reported (Table 1 entries stated only as a range, e.g.
+"0–0.6", cannot mismatch a fixed code constant chosen within that range, and are marked `NOT_APPLICABLE`):
+
+| # | Param | `parf` (falciparum) | Table value (falciparum) | Match | `parv` (vivax) | Table value (vivax) | Match |
 |---|---|---|---|---|---|---|---|
-| 1 | Nm | 2435 | 2435 | ✅ | 2435 | 2435 | ✅ |
-| 2 | Nh | **624** | **625** (`m = Nm/Nh (dimensionless) = 2435/625`) | ❌ **C-01** | **624** | **625** | ❌ **C-01** |
-| 3 | a | 0.21 | 0.21 | ✅ | 0.21 | 0.21 | ✅ |
-| 4 | b | 0.5 | 0.5 | ✅ | 0.5 | 0.5 | ✅ |
-| 5 | μm | 0.033 | 0.033 | ✅ | 0.033 | 0.033 | ✅ |
-| 6 | α (cost) | 0.28 | range 0–0.6 | N/A (range) | 0.28 | range 0–0.6 | N/A (range) |
-| 7 | cs | 0.4 | 0.4 | ✅ | 0.4 | 0.4 | ✅ |
-| 8 | ca | 0.12 | 0.12 | ✅ | 0.12 | 0.12 | ✅ |
-| 9 | σ | 0.9 (σf) | 0.9 | ✅ | 0.33 (σv) | 0.33 | ✅ |
-| 10 | ψ | 0 | N/A for falciparum (no hypnozoites) | N/A | 1/60 | 1/60 | ✅ |
-| 11 | μvl | 1 | N/A for falciparum | N/A | 1/425 | 1/425 | ✅ |
-| 12 | φt | 0 | N/A for falciparum | N/A | **0.29** | **0.21** | ❌ **C-02** |
-| 13 | φu | 0 | N/A for falciparum | N/A | 0.9 | range 0.4–0.9 | ✅ (in range) |
-| 14 | φ (varphi) | 0.5 | 0–1 (varied param) | ✅ (baseline) | 0.5 | 0–1 | ✅ (baseline) |
-| 15 | ε | 11 | 11 days (CQ, falciparum, Table 2) | ✅ | 2.1 | 2.1 days (CQ, vivax, Table 2) | ✅ |
-| 16 | ν | 1/10¹² | 10⁻¹² (CQ, Table 2) | ✅ | 1/10¹² | 10⁻¹² | ✅ |
-| 17 | n | 1 | 1 | ✅ | 1 | 1 | ✅ |
-| 18 | γ | 1/2 (γf) | 1/2 | ✅ | 1/9 (γv) | 1/9 | ✅ |
-| 19 | r | 1/287 (rf) | 1/287 | ✅ | 1/60 (rv) | 1/60 | ✅ |
+| 1 | Nm | 2435 | 2435 | CONFIRMED | 2435 | 2435 | CONFIRMED |
+| 2 | Nh | **624** | **625** (`Nm/Nh = 2435/625`) | **MISMATCH (F-01)** | **624** | **625** | **MISMATCH (F-01)** |
+| 3 | a | 0.21 | 0.21 | CONFIRMED | 0.21 | 0.21 | CONFIRMED |
+| 4 | b | 0.5 | 0.5 | CONFIRMED | 0.5 | 0.5 | CONFIRMED |
+| 5 | μm | 0.033 | 0.033 | CONFIRMED | 0.033 | 0.033 | CONFIRMED |
+| 6 | α | 0.28 | range 0–0.6 | NOT_APPLICABLE | 0.28 | range 0–0.6 | NOT_APPLICABLE |
+| 7 | cs | 0.4 | 0.4 | CONFIRMED | 0.4 | 0.4 | CONFIRMED |
+| 8 | ca | 0.12 | 0.12 | CONFIRMED | 0.12 | 0.12 | CONFIRMED |
+| 9 | σ | 0.9 (σf) | 0.9 | CONFIRMED | 0.33 (σv) | 0.33 | CONFIRMED |
+| 10 | ψ | 0 | N/A (falciparum, no hypnozoites) | NOT_APPLICABLE | 1/60 | 1/60 | CONFIRMED |
+| 11 | μvl | 1 | N/A (falciparum) | NOT_APPLICABLE | 1/425 | 1/425 | CONFIRMED |
+| 12 | φt | 0 | N/A (falciparum) | NOT_APPLICABLE | **0.29** | **0.21** | **MISMATCH (F-02)** |
+| 13 | φu | 0 | N/A (falciparum) | NOT_APPLICABLE | 0.9 | range 0.4–0.9 | CONFIRMED (in range) |
+| 14 | φ (varphi) | 0.5 | 0–1 (varied param) | CONFIRMED (baseline) | 0.5 | 0–1 | CONFIRMED (baseline) |
+| 15 | ε | 11 | 11 days (CQ, falciparum, Table 2) | CONFIRMED | 2.1 | 2.1 days (CQ, vivax, Table 2) | CONFIRMED |
+| 16 | ν | 1/10¹² | 10⁻¹² (CQ, Table 2) | CONFIRMED | 1/10¹² | 10⁻¹² | CONFIRMED |
+| 17 | n | 1 | 1 | CONFIRMED | 1 | 1 | CONFIRMED |
+| 18 | γ | 1/2 (γf) | 1/2 | CONFIRMED | 1/9 (γv) | 1/9 | CONFIRMED |
+| 19 | r | 1/287 (rf) | 1/287 | CONFIRMED | 1/60 (rv) | 1/60 | CONFIRMED |
 
-**16 of 19 elements match the reported Table 1/2 values exactly** for each species vector (or are
-within a stated range); **2 distinct values are inconsistent** with the manuscript's own tables
-(`C-01`, `C-02`).
+**Result: 32/38 cells confirmed matches (or within reported range), 4/38 not applicable to species,
+2/38 demonstrated mismatches (F-01, F-02).**
 
----
+Configuration-and-model-input-integrity status: `DEMONSTRATED_ISSUES` (limited to F-01, F-02).
 
-## Part 3: Detailed Findings
+## 9. Source Execution Report
 
-### Finding F-01 — `Nh` in code (624) does not match Table 1's reported value (625)
+**Execution state: `EXECUTION_NOT_ATTEMPTED`** (not `EXECUTION_BLOCKED` conflated with `EXECUTION_FAILURE`
+— no execution was attempted because the required runtime was absent, checked and confirmed via
+`Get-Command Rscript`/`Get-Command R`, with no lockfile, container, or environment manifest present
+in the workspace to attempt an alternative install path).
 
-- **Category:** `CODE_DATA_MISMATCH` / `REPORTING_INCONSISTENCY`
-- **Location:** manuscript Table 1, row "m — Mosquitoes per human, N_m/N_h = 2435/625"; S1 Rmd, `parf<-c(2435,624,...)` and `parv<-c(2435,624,...)`.
-- **Evidence status:** `DIRECTLY_INSPECTED`, `CROSS_DOCUMENT_MATCH`
-- **Certainty:** `DEMONSTRATED` (both values are unambiguous, plain numeric literals; "625" does not appear anywhere else in the manuscript as an alternative population figure, and "624" never appears in the manuscript at all)
-- **Innocent explanations tested:**
-  - *Rounding* — not applicable; both are exact integers, off by 1.
-  - *Internal self-consistency with initial conditions* — **plausible partial explanation**: in the Fig 4 simulation code, initial conditions are `Sh=623, Is=1` (falciparum) and the analogous vivax split, which sum to `Nh=624`. The R0 fixed-parameter vectors (`parf`, `parv`) reuse this same `624` for consistency with the ODE initial state used later in the same script, rather than the `625` ratio quoted in Table 1. This does not eliminate the discrepancy — the R0 curves in Fig 3 are computed from `Nh=624`, not the `625` the paper reports as the model's human-population parameter — but it indicates the mismatch likely originates from reusing an initial-condition-derived constant rather than a transcription slip.
-- **Impact:** Affects the R0 formula's `Nm/Nh` ratio (`m`) used to generate all 8 panels of Fig 3, and the `m <- Nm/Nh` term inside both ODE functions used for Fig 4. The effect size is small (624 vs. 625 is a 0.16% relative difference in `m`) and very unlikely to be visually or qualitatively detectable in the published figures, but the code's constant does not equal the value stated in the paper's own parameter table.
-- **Misconduct inference:** NONE.
-- **Author question:** "Table 1 reports N_h = 625, but both `parf` and `parv` in the supplied S1 Rmd use `Nh = 624` (matching the sum of the Fig 4 initial conditions `Sh=623 + Is=1`). Could you confirm which value (624 or 625) was actually used to generate the published Fig 3, and clarify whether Table 1 or the code should be corrected?"
+- Entry point: `pcbi.1007945.s001.Rmd`, two chunks (`R0`, `simulation`).
+- Dependencies declared in-file: `latex2exp`, `deSolve`. Versions/availability: unknown (not checked, no R present).
+- No environment-adaptation was attempted or required, because no execution was attempted.
 
-### Finding F-02 — `φt` (post-treatment latent probability) in the *P. vivax* code (0.29) does not match Table 1's reported value (0.21)
+## 10. Independent Recomputation Report
 
-- **Category:** `CODE_DATA_MISMATCH` / `REPORTING_INCONSISTENCY`
-- **Location:** manuscript Table 1, row "ϕt — Probability of post-treatment human of remaining with latent parasites = 0.21 [58]"; S1 Rmd, `parv<-c(...,0.29,...)` (12th element).
-- **Evidence status:** `DIRECTLY_INSPECTED`, `CROSS_DOCUMENT_MATCH`
-- **Certainty:** `DEMONSTRATED` — "0.29" does not appear anywhere in the extracted manuscript text (verified by full-text search), and "0.21" is the only φt value ever stated.
-- **Innocent explanations tested:**
-  - *Rounding* — no; not a rounding of 0.21 or any other reported figure.
-  - *Different regimen/table row* — Table 2 (treatment-regimen-specific parameters) does not list φt at all; φt is only given once, in Table 1, as a single point value (not a range like φu). No alternative reported value of 0.29 exists elsewhere in the paper to reconcile against.
-  - *OCR/extraction artifact* — the manuscript PDF was extracted to text and the digit sequence for φt was unambiguous ("0.21 [58]"); could not be independently confirmed against the original PDF glyphs beyond the extraction pass performed here, so a residual, low-probability OCR-adjacent error on the manuscript side cannot be fully excluded, but no textual evidence supports it.
-- **Impact:** φt is a fixed baseline parameter feeding every *P. vivax* R0 panel in Fig 3 (1b–4b) and the vivax branch of the R0 formula. Because R0 was not independently recomputed here (no R runtime), the quantitative effect on the published curve shapes is `NOT_CHECKED`; only the parameter-value mismatch itself is `DEMONSTRATED`.
-- **Misconduct inference:** NONE.
-- **Author question:** "Table 1 gives ϕt = 0.21, but the `parv` vector in S1 Rmd (element 12) uses ϕt = 0.29. Which value was used to generate the published *P. vivax* R0 curves (Fig 3, panels 1b–4b), and should Table 1 or the code be corrected?"
+**Independent recomputation state: `PARTIALLY_RECOMPUTED`.**
 
----
+The R0 formula (`R0()` function, lines 32–44 of the Rmd) was manually translated line-by-line into
+Python/NumPy and evaluated across the drug-coverage range `n ∈ [0, 1]` in steps of 0.01, matching the
+R code's own `seq(0,1,0.01)`. This is genuine independent re-implementation, not execution of the
+supplied R code. Script: `audit-output/pcbi_recompute/recompute_r0.py` (numpy 2.5.3, Python 3.12.10).
 
-## Part 4: Checked but Not Raised
+This recomputation was used to:
 
-- **α (resistance cost) = 0.28** in both `parf`/`parv`: Table 1 only states a range (0–0.6); 0.28 is a valid baseline choice within range and is exactly what the Fig 1a/1b loop varies from 0.1–0.6, so this is consistent with the described methodology. Not raised.
-- **φu = 0.9** in both vectors: Table 1 gives a range (0.4–0.9); 0.9 is the upper bound of that range and plausible as a chosen baseline. Not raised.
-- **ε (epsilon) and ν values** (11/2.1 days; 10⁻¹²): match Table 2's CQ-regimen row exactly for both species. Not raised.
-- **γ, r, ψ, μvl, cs, ca, a, b, Nm, n**: all match Table 1/2 exactly for both species. Not raised.
-- **ψ, μvl, φt, φu = 0** in the falciparum vector (`parf`): the *P. falciparum* model has no latent/hypnozoite compartment per the manuscript's own model description (Fig 1 caption), so zeroing these vivax-only parameters for falciparum is expected model structure, not a data-integrity issue. Not raised.
-
----
-
-## Part 5: Coverage Report
+1. **Confirm formula fidelity** — the Python translation reproduces the same algebraic structure (nested square roots, same numerator/denominator terms) as the R code; no structural implementation errors were found in translating it.
+2. **Quantify the impact of findings F-01 and F-02** — by evaluating the R0s/R0r curves under the code's actual fixed-parameter vectors versus the same vectors with the manuscript's Table 1 values substituted (Nh=625, φt=0.21 for vivax):
 
 ```text
-Files supplied: 2 (manuscript, S1 Rmd)
-Files referenced but missing: 2 (S2 File document, LHS sensitivity-analysis code/data for Fig 5)
+P. vivax R0 (sensitive strain), code vs. manuscript-table parameter values:
+  max |relative difference| across n in [0,1]:  1.93%
+  mean |relative difference| across n in [0,1]:  1.60%
+  at n=0:  code=12.539   manuscript-values=12.529
+  at n=1:  code=4.157     manuscript-values=4.078
 
-Figures identified: 5
-  Mapped (code present, caption-matched): 2 (Fig 3, Fig 4)
-  Not applicable (static diagrams): 2 (Fig 1, Fig 2)
-  Blocked - missing code: 1 (Fig 5)
-Figures regenerated: 0 (execution blocked — no R runtime available)
-Figures numerically checked only: 0
-Figures parameter-cross-checked via direct inspection: 2 (Fig 3, Fig 4, via the parameter ledger above)
+P. vivax R0 (resistant strain), code vs. manuscript-table parameter values:
+  max |relative difference|:  1.82%
+  mean |relative difference|: 1.38%
+  at n=0:  code=9.028     manuscript-values=9.021
+  at n=1:  code=4.095     manuscript-values=4.022
 
-Parameter values checked against manuscript tables: 19 x 2 vectors = 38 cells
-  Confirmed match: 32
-  Not applicable (range values): 4
-  Not applicable (species-inapplicable, zeroed): 4 (overlaps with N/A count above; falciparum-only cells)
-  Demonstrated mismatch: 2 (F-01, F-02)
+Isolated effect of Nh alone (624 vs 625), P. vivax R0s/R0r: max 0.080%
+Isolated effect of phit alone (0.29 vs 0.21), P. vivax R0s: max 1.853%
+Isolated effect of phit alone (0.29 vs 0.21), P. vivax R0r: max 1.735%
 
-Executions attempted: 0 (BLOCKED — R/Rscript not available in this environment)
-Independent recomputations: 0 (BLOCKED, same reason)
+P. falciparum R0 (only Nh differs; phit/phiu/psi/mvl are zeroed for this species):
+  Isolated effect of Nh alone (624 vs 625), R0s/R0r: max 0.080%
 ```
 
----
+**Interpretation:** the φt discrepancy (F-02) accounts for nearly all of the combined deviation in
+the *P. vivax* curves; the Nh discrepancy (F-01) contributes a much smaller, near-negligible effect
+(~0.08%) to both species. A maximum ~1.9% shift in the R0 curve values does not, on its own,
+change which curve lies above/below the R0=1 threshold line at any point tested, and both curves'
+qualitative shape (monotonic decline in drug coverage, resistant strain below sensitive strain) is
+preserved under either parameter set. **Impact status: EVALUATED — quantified, not qualitatively
+material to the reported comparisons in the panels tested.** This does not extend to Fig 5, whose
+sensitivity ranking was not independently recomputed (code absent).
 
-## Part 6: Verdict Architecture
+Fig 4's ODE simulation code (`falciP`, `vivax`, `regimen_fal`, and the equivalent vivax regimen
+function) was **not** independently re-implemented in this audit — it requires numerically solving
+an 8- to 10-compartment nonlinear ODE system, which was assessed as out of proportionate scope for
+this audit pass; it is recorded as `NOT_CHECKED`, not `BLOCKED`, since dependency-light
+recomputation (e.g., using `scipy.integrate.odeint` instead of `deSolve`) is technically feasible in
+this environment and was not attempted here.
 
-- **Package completeness:** `PARTIALLY_COMPLETE` — main manuscript and the primary supplementary code file (S1) are present; the S2 rendered-output document and the Fig 5 sensitivity-analysis code/data are not.
-- **Computational reproducibility:** `BLOCKED` — no R runtime was available in this environment; the supplied Rmd was never executed, so no figure was `EXECUTED`, `RECOMPUTED`, or `REPRODUCED_WITH_ENVIRONMENTAL_ADAPTATION`. This is a limitation of the audit environment, not a demonstrated property of the code itself.
-- **Reporting correspondence:** `MINOR_DISCREPANCIES` — 2 of 19 cross-checkable fixed-parameter values in the supplied code do not match the manuscript's own Table 1 (F-01, F-02); all other checkable values match.
-- **Data-integrity evidence:** `NOT_ASSESSED` — this is a deterministic simulation study with no empirical dataset in the supplied package; Phase 4's data-integrity checks do not apply.
+## 11. Figure, Table, and Source-Data Correspondence
 
----
+| Figure | Code section mapped | Published-figure provenance verified | Regenerated | Status |
+|---|---|---|---|---|
+| Fig 1 | N/A (diagram) | N/A | N/A | `NOT_APPLICABLE` |
+| Fig 2 | N/A (diagram) | N/A | N/A | `NOT_APPLICABLE` |
+| Fig 3 | Yes (`FIGURE_CODE_SECTION_MAPPED`) | No (S2 rendered doc unavailable; R plotting code not executed) | Only the underlying R0 formula was independently recomputed in Python (Section 10), not the R plotting code itself | `FIGURE_NUMERICALLY_MATCHED` (partial — formula only, not the full 8-panel plot) |
+| Fig 4 | Yes (`FIGURE_CODE_SECTION_MAPPED`) | No | No | `FIGURE_SOURCE_UNAVAILABLE` (code present, but neither executed nor independently recomputed) |
+| Fig 5 | No | No | No | `FIGURE_CHECK_BLOCKED` (code/data missing) |
 
-## Part 7: Ready-to-Send Author Queries
+`FIGURE_CODE_SECTION_MAPPED` is not equated with verified published-figure provenance anywhere in
+this report, per the skill's explicit instruction.
 
-1. Table 1 reports N_h = 625, but both `parf` and `parv` parameter vectors in the supplied S1 Rmd use N_h = 624 (which matches the sum of the Fig 4 initial conditions, Sh=623 + Is=1). Could you confirm which value was used to generate the published Fig 3 R0 curves, and reconcile the table and code?
-2. Table 1 reports ϕt = 0.21, but the `parv` vector (12th element) in S1 Rmd uses ϕt = 0.29 for all *P. vivax* R0 panels (Fig 3, 1b–4b). Which value reflects what was actually used to generate the published figure?
-3. The manuscript references an "S2 File" (a rendered document produced from the S1 code) and a Latin Hypercube Sampling sensitivity analysis underlying Fig 5, using additional R packages (`lhs`, `sensitivity`) not invoked anywhere in the supplied S1 Rmd. Could the code/data used to generate Fig 5 be supplied, to allow that figure to be checked?
+## 12. Detailed Findings
 
----
-
-## Part 8: Machine-Readable Ledger
+### F-01 — `Nh` in code (624) does not match Table 1's reported value (625)
 
 ```yaml
-package: pcbi.1007945
-files:
-  - path: file.pdf
-    role: manuscript
-    readable: true
-  - path: pcbi.1007945.s001.Rmd
-    role: code
-    manuscript_ref: "S1 File"
-    readable: true
-  - path: "S2 File (rendered document)"
-    role: documentation
-    status: MISSING_FILE
-  - path: "Fig 5 sensitivity-analysis code/data (LHS)"
-    role: code
-    status: MISSING_FILE
-
-figure_map:
-  - figure: Fig1
-    mapping_status: NOT_APPLICABLE
-  - figure: Fig2
-    mapping_status: NOT_APPLICABLE
-  - figure: Fig3
-    code_section: "R0 chunk, lines 1-197"
-    mapping_status: CONFIRMED
-  - figure: Fig4
-    code_section: "simulation chunk, lines 198-780"
-    mapping_status: CONFIRMED
-  - figure: Fig5
-    mapping_status: BLOCKED_MISSING_CODE
-
-findings:
-  - finding_id: F-01
-    category: CODE_DATA_MISMATCH
-    location: "Table 1 (Nh=625) vs parf/parv[2] (Nh=624)"
-    severity: MINOR
-    certainty: DEMONSTRATED
-    evidence_status: [DIRECTLY_INSPECTED, CROSS_DOCUMENT_MATCH]
-    reported: 625
-    in_code: 624
-    innocent_explanations_tested: [rounding, initial_condition_consistency]
-    misconduct_inference: NONE
-  - finding_id: F-02
-    category: CODE_DATA_MISMATCH
-    location: "Table 1 (phit=0.21) vs parv[12] (phit=0.29)"
-    severity: MINOR
-    certainty: DEMONSTRATED
-    evidence_status: [DIRECTLY_INSPECTED, CROSS_DOCUMENT_MATCH]
-    reported: 0.21
-    in_code: 0.29
-    innocent_explanations_tested: [rounding, alternate_table_row, ocr_artifact]
-    misconduct_inference: NONE
-
-blocked_checks:
-  - reason: "No R/Rscript runtime available"
-    affected_phases: [Phase6_execution, Phase7_recomputation, Phase8_figure_regeneration]
-  - reason: "Fig 5 sensitivity-analysis code/data not supplied"
-    affected_phases: [Phase2_study_map, Phase8_figure_correspondence]
-
-verdict:
-  package_completeness: PARTIALLY_COMPLETE
-  computational_reproducibility: BLOCKED
-  reporting_correspondence: MINOR_DISCREPANCIES
-  data_integrity_evidence: NOT_ASSESSED
+finding_id: F-01
+primary_category: CODE_MANUSCRIPT_MISMATCH
+secondary_categories: [REPORTING_INCONSISTENCY]
+locations:
+  manuscript: "Table 1, row 'm — Mosquitoes per human, Nm/Nh = 2435/625'"
+  code: "pcbi.1007945.s001.Rmd, parf<-c(2435,624,...) and parv<-c(2435,624,...)"
+evidence_status: [DIRECTLY_INSPECTED, CROSS_DOCUMENT_MATCH, RECOMPUTED]
+reported: 625
+observed_in_evidence: 624
+tolerance: 0 (exact integer)
+reconciliation_attempts:
+  - rounding: not applicable (integers off by 1)
+  - self_consistency_with_initial_conditions: PLAUSIBLE PARTIAL EXPLANATION — Fig 4's initial
+    conditions (Sh=623, Is=1) sum to 624, matching the code's Nh, suggesting the constant was
+    reused for internal consistency with the simulation rather than transcribed from Table 1.
+    Does not eliminate the mismatch with the reported table value.
+impact_status: EVALUATED
+impact_evidence: "Independent Python recomputation (Section 10): isolated max relative effect on
+  R0 curves is 0.080% (both species), not qualitatively material to the tested comparisons."
+severity: MINOR
+severity_reason: "Demonstrated, quantified, small numerical effect; no qualitative conclusion
+  affected in the panels tested."
+certainty: DEMONSTRATED
+misconduct_inference: NONE
+reviewer_action: "Confirm which Nh value (624 or 625) generated the published Fig 3."
+author_question: "Table 1 reports Nh=625, but both parf and parv in the supplied S1 Rmd use
+  Nh=624 (matching the Fig 4 initial conditions Sh=623+Is=1). Which value was used for the
+  published Fig 3 curves, and should Table 1 or the code be corrected?"
 ```
+
+### F-02 — `φt` (P. vivax) in code (0.29) does not match Table 1's reported value (0.21)
+
+```yaml
+finding_id: F-02
+primary_category: CODE_MANUSCRIPT_MISMATCH
+secondary_categories: [REPORTING_INCONSISTENCY]
+locations:
+  manuscript: "Table 1, row 'phit — Probability of post-treatment human remaining with latent
+    parasites = 0.21 [58]'"
+  code: "pcbi.1007945.s001.Rmd, parv<-c(...,0.29,...) (12th element)"
+evidence_status: [DIRECTLY_INSPECTED, CROSS_DOCUMENT_MATCH, RECOMPUTED]
+reported: 0.21
+observed_in_evidence: 0.29
+tolerance: 0 (single reported point value, not a range)
+reconciliation_attempts:
+  - rounding: no
+  - alternate_table_row: Table 2 (regimen-specific parameters) does not list phit at all;
+    Table 1 states phit only once, as a point value. No alternative reported value to reconcile.
+  - ocr_or_extraction_artifact: manuscript text extraction of the digit sequence was unambiguous
+    ("0.21 [58]"); "0.29" does not occur anywhere else in the extracted manuscript text. A residual
+    low-probability error in the manuscript-side text extraction (as opposed to the PDF's true
+    typeset value) cannot be fully excluded without independently re-extracting the original PDF
+    glyphs by a second method, which was not performed.
+impact_status: EVALUATED
+impact_evidence: "Independent Python recomputation (Section 10): isolated max relative effect on
+  P. vivax R0s is 1.853%, R0r is 1.735%; combined with F-01, max ~1.93%/1.82%. Curve shape and
+  qualitative sensitive-vs-resistant ordering preserved under either value in the panels tested."
+severity: MINOR
+severity_reason: "Demonstrated, quantified as the dominant contributor to a small numerical shift
+  (under 2% relative) in the P. vivax R0 curves; no qualitative conclusion affected in the panels
+  tested."
+certainty: DEMONSTRATED
+misconduct_inference: NONE
+reviewer_action: "Confirm which phit value generated the published Fig 3 P. vivax panels (1b-4b)."
+author_question: "Table 1 gives phit=0.21, but the parv vector (element 12) in S1 Rmd uses
+  phit=0.29. Which value was used to generate the published P. vivax R0 curves, and should
+  Table 1 or the code be corrected?"
+```
+
+## 13. Checked but Not Raised
+
+- α (resistance cost) = 0.28 in both vectors: Table 1 states a range (0–0.6); 0.28 falls within it and matches the baseline used by the Fig 1a/1b sweep (0.1–0.6). Not raised.
+- φu = 0.9 (vivax): within Table 1's stated range (0.4–0.9). Not raised.
+- ε, ν values for both species: match Table 2's CQ-regimen row exactly. Not raised.
+- γ, r, ψ, μvl, cs, ca, a, b, Nm, n: match Table 1/2 exactly for both species where applicable. Not raised.
+- ψ, μvl, φt, φu = 0 in `parf` (falciparum): consistent with the manuscript's own model description (falciparum model has no hypnozoite/latent compartment). Not raised as an issue.
+- Whether the published Fig 3/Fig 4 images actually correspond pixel-for-pixel to a run of this exact code: **not raised as a demonstrated mismatch** (no counter-evidence was found), but also **not confirmed** — recorded as blocked in Section 11/17, not asserted either way.
+
+## 14. Coverage and Arithmetic Reconciliation
+
+```text
+Parameter cells checked (fixed R0 vectors, 19 x 2 species): 38
+  Confirmed match: 32
+  Not applicable (range value or species-inapplicable): 4
+  Demonstrated mismatch: 2
+  Total classified: 38
+  Reconciliation: PASS
+
+Figures identified: 5
+  Code section mapped, not execution-verified: 2 (Fig 3, Fig 4)
+  Not applicable (static diagrams): 2 (Fig 1, Fig 2)
+  Blocked - missing code: 1 (Fig 5)
+  Total classified: 5
+  Reconciliation: PASS
+
+Claim ledger (group a - fixed parameters): 38/38 classified (see above)
+Claim ledger (group b - narrative/qualitative results claims): NOT extracted with stable IDs
+  in this audit pass -> claim ledger status INCOMPLETE for this group.
+
+Independent recomputations attempted: 1 (R0 formula, Python/NumPy)
+Independent recomputations succeeded: 1
+Source executions attempted: 0 (EXECUTION_NOT_ATTEMPTED, R runtime absent)
+```
+
+## 15. Separate Status Architecture
+
+- **Package completeness:** `PARTIALLY_COMPLETE` (2 of 4 in-scope artifacts supplied; S2 document and Fig 5 code/data missing).
+- **Source-code execution:** `EXECUTION_NOT_ATTEMPTED` (R runtime absent; no lockfile/container/manifest found to attempt an alternative install).
+- **Independent recomputation:** `PARTIALLY_RECOMPUTED` (R0 formula recomputed and impact-quantified in Python; Fig 4's ODE simulation code was assessed as feasible but `NOT_CHECKED` in this pass; Fig 5 is `BLOCKED` — no code/data supplied).
+- **Computational reproducibility:** `BLOCKED` for full-figure reproduction (no execution attempted, no S2 cross-check available); the R0 *formula* specifically reached `PARTIALLY_REPRODUCED` via independent recomputation.
+- **Reporting correspondence:** `PARTIALLY_VERIFIED` — restricted explicitly to the 38-cell parameter ledger (Gate 3/Gate 7); the group (b) narrative/qualitative claims are outside this audit's completed coverage and are not characterized as matching or discrepant.
+- **Empirical data-integrity evidence:** `NOT_APPLICABLE_FOR_EMPIRICAL_DATA` (no empirical dataset in this package).
+- **Configuration and model-input integrity:** `DEMONSTRATED_ISSUES`, limited to F-01 and F-02, both `MINOR` with evaluated, small, non-qualitative impact.
+
+## 16. Ready-to-Send Author Queries
+
+1. Table 1 reports Nh = 625, but both `parf` and `parv` in the supplied S1 Rmd use Nh = 624 (matching the sum of the Fig 4 initial conditions Sh=623 + Is=1). Which value generated the published Fig 3 R0 curves, and should the table or code be corrected?
+2. Table 1 reports φt = 0.21, but the `parv` vector (12th element) in S1 Rmd uses φt = 0.29 for all P. vivax R0 panels (Fig 3, 1b–4b). Which value generated the published figure?
+3. Could the S2 File (the rendered document generated from S1) be supplied, so that the published Fig 3/Fig 4 images can be directly cross-checked against a known-good render of this code, without requiring re-execution?
+4. Could the LHS sensitivity-analysis code and/or result data underlying Fig 5 be supplied, since neither is present in the S1 Rmd despite being described in the Methods (packages `lhs`, `sensitivity`)?
+
+## 17. Blocked and Not-Checked Register
+
+| Item | State | What is missing | What would resolve it |
+|---|---|---|---|
+| Fig 5 correspondence | `BLOCKED` | LHS code and/or result data | Author-supplied code/data for the sensitivity analysis |
+| Full-figure execution/regeneration (Fig 3, Fig 4) | `EXECUTION_NOT_ATTEMPTED` | R runtime (`Rscript`) | Access to an R environment with `deSolve`, `latex2exp` |
+| Published-figure provenance cross-check | `BLOCKED` | S2 File (rendered document) | Author-supplied S2 File |
+| Fig 4 ODE-simulation independent recomputation | `NOT_CHECKED` | Time/scope in this pass; not blocked by missing tooling | A follow-up pass re-implementing `falciP`/`vivax` in `scipy.integrate.odeint` |
+| Group (b) narrative/qualitative claim ledger | `NOT_CHECKED` | Full extraction with stable IDs across Results/Discussion | A dedicated claim-extraction pass |
+
+## 18. Limitations
+
+- This audit's independent recomputation covers only the R0 formula, not the Fig 4 ODE simulation or the Fig 5 sensitivity analysis.
+- No source execution of the supplied Rmd occurred; all figure-level conclusions are therefore bounded by `EXECUTION_NOT_ATTEMPTED`/`BLOCKED`, not disproven or confirmed at the full-figure level.
+- The claim ledger is complete only for the 38 fixed-parameter cells; narrative/qualitative claims were not extracted with stable IDs in this pass.
+- Manuscript text was read from a prior plain-text extraction of the PDF, not re-extracted independently for this run; a second-method cross-extraction of the two disputed digits (625, 0.21) was not performed.
+
+## 19. Output Validation Result
+
+- Coverage totals reconcile (Section 14): **PASS**.
+- Every finding references a valid location and evidence status: **PASS**.
+- Both findings carry an evaluated impact basis (Section 10 recomputation), not `UNDETERMINED`: **PASS**.
+- `BLOCKED`, `NOT_CHECKED`, `EXECUTION_NOT_ATTEMPTED`, and `NOT_APPLICABLE` are used distinctly and not collapsed: **PASS**.
+- Verdict scope (Section 15) matches completed coverage (restricted reporting-correspondence claim, per Gate 7): **PASS**.
+- Output B (companion brief) uses identical finding facts, IDs, and severities: **PASS** (see `pcbi_1007945_review_brief.md`).
+- No misconduct inference or publication recommendation appears anywhere in this document: **PASS**.
+
+**Output validation: PASS.**
