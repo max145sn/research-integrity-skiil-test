@@ -3,13 +3,16 @@
 **Skill applied:** `research-package-integrity-audit2`, tool-invoked (`skill: "research-package-integrity-audit2"`,
 response: "Skill loaded successfully"). Content verified via SHA256 against both repo copies
 (`.github/skills/research-package-integrity-audit2/skill.md`, `skills/research-package-integrity-audit2/skill.md`)
-at commit `c8e4d87` ("Update research-package-integrity-audit2 skill content").
+at commit `d0893fd` ("Update research-package-integrity-audit2 skill to newer revision").
 
-> **Correction notice:** a prior run of this audit (committed as `95188f5` / `7fde0cd`) used an
-> earlier version of this skill (commit `cf4d6a8`), before the skill was updated at `c8e4d87`.
-> That earlier version lacked the dual-output requirement, the independent-recomputation gate, and
-> the execution-state taxonomy used below. This document supersedes that earlier run and was produced
-> against the current skill content.
+> **Correction notice:** this audit has been updated twice as the skill itself was revised.
+> The first run (`95188f5`/`7fde0cd`) used commit `cf4d6a8`; the second run (`2c7aec8`) used
+> commit `c8e4d87` and added the dual-output format and independent-recomputation gate. This
+> document reflects the current skill revision (`d0893fd`), which adds explicit reader-facing
+> assessment labels (POSITIVE/CONCERN/LIMITATION/NEUTRAL/NOT ASSESSED/NOT APPLICABLE/UNRESOLVED),
+> a stricter no-code/no-YAML accessibility rule for Output B, and more precise figure-correspondence
+> statuses. The underlying findings (F-01, F-02) and their quantified impact are unchanged from the
+> prior run; only the reporting structure and vocabulary have been updated to match this revision.
 
 **Package audited:** Ayala MJC, Villela DAM (2020). "Early transmission of sensitive strain slows down
 emergence of drug resistance in Plasmodium vivax." *PLOS Computational Biology* 16(6):e1007945.
@@ -218,16 +221,19 @@ this environment and was not attempted here.
 
 ## 11. Figure, Table, and Source-Data Correspondence
 
-| Figure | Code section mapped | Published-figure provenance verified | Regenerated | Status |
+| Figure | Code section mapped | Published-figure provenance verified | Independent recomputation | Status |
 |---|---|---|---|---|
 | Fig 1 | N/A (diagram) | N/A | N/A | `NOT_APPLICABLE` |
 | Fig 2 | N/A (diagram) | N/A | N/A | `NOT_APPLICABLE` |
-| Fig 3 | Yes (`FIGURE_CODE_SECTION_MAPPED`) | No (S2 rendered doc unavailable; R plotting code not executed) | Only the underlying R0 formula was independently recomputed in Python (Section 10), not the R plotting code itself | `FIGURE_NUMERICALLY_MATCHED` (partial — formula only, not the full 8-panel plot) |
-| Fig 4 | Yes (`FIGURE_CODE_SECTION_MAPPED`) | No | No | `FIGURE_SOURCE_UNAVAILABLE` (code present, but neither executed nor independently recomputed) |
+| Fig 3 | Yes (`FIGURE_CODE_SECTION_MAPPED`) | No (S2 rendered doc unavailable; R plotting code not executed) | Yes, R0 formula only (Section 10) | `FIGURE_UNDERLYING_FORMULA_RECOMPUTED` (the formula was recomputed; the R plotting code that turns it into the published 8-panel image was not executed, so `PUBLISHED_FIGURE_PROVENANCE_VERIFIED` was not reached) |
+| Fig 4 | Yes (`FIGURE_CODE_SECTION_MAPPED`) | No | No | `FIGURE_EXECUTION_NOT_ATTEMPTED` (code present, but neither executed nor independently recomputed) |
 | Fig 5 | No | No | No | `FIGURE_CHECK_BLOCKED` (code/data missing) |
 
 `FIGURE_CODE_SECTION_MAPPED` is not equated with verified published-figure provenance anywhere in
-this report, per the skill's explicit instruction.
+this report, per the skill's explicit instruction. `FIGURE_UNDERLYING_FORMULA_RECOMPUTED` is used
+only because the R0 formula itself — not the plotting code, not the published image — was
+independently recalculated; this is a narrower claim than `FIGURE_REGENERATED_MATCH` or
+`PUBLISHED_FIGURE_PROVENANCE_VERIFIED`, neither of which applies here.
 
 ## 12. Detailed Findings
 
@@ -314,13 +320,24 @@ author_question: "Table 1 gives phit=0.21, but the parv vector (element 12) in S
 
 ## 14. Coverage and Arithmetic Reconciliation
 
+Per Gate 7, affected cells (individual parameter comparisons) and distinct findings (unique
+discrepancies raised) are reported on separate denominators, since one distinct finding (e.g., Nh)
+affects two cells (one per species vector).
+
 ```text
-Parameter cells checked (fixed R0 vectors, 19 x 2 species): 38
-  Confirmed match: 32
-  Not applicable (range value or species-inapplicable): 4
-  Demonstrated mismatch: 2
+Parameter cells checked (fixed R0 vectors, 19 parameters x 2 species): 38
+  Matched or acceptable (exact match or within stated range): 32
+  Not applicable (range-only value or species-inapplicable parameter): 4
+  Mismatching cells: 2
   Total classified: 38
   Reconciliation: PASS
+
+Distinct discrepancies underlying the mismatching cells: 2 (Nh, phit)
+Distinct findings raised: 2 (F-01, F-02)
+  Note: Nh (F-01) affects 1 cell (the value is shared by both parf and parv, but the manuscript's
+  Table 1 states one ratio, so it is one discrepancy affecting the falciparum and vivax vectors
+  identically, not two independent discrepancies). phit (F-02) affects 1 cell (P. vivax only;
+  no falciparum equivalent exists, since phit is zeroed for that species by model design).
 
 Figures identified: 5
   Code section mapped, not execution-verified: 2 (Fig 3, Fig 4)
@@ -374,12 +391,23 @@ Source executions attempted: 0 (EXECUTION_NOT_ATTEMPTED, R runtime absent)
 
 ## 19. Output Validation Result
 
-- Coverage totals reconcile (Section 14): **PASS**.
+- Coverage totals reconcile (Section 14), with affected cells (38) and distinct findings (2)
+  reported on separate denominators per the current Gate 7: **PASS**.
 - Every finding references a valid location and evidence status: **PASS**.
 - Both findings carry an evaluated impact basis (Section 10 recomputation), not `UNDETERMINED`: **PASS**.
 - `BLOCKED`, `NOT_CHECKED`, `EXECUTION_NOT_ATTEMPTED`, and `NOT_APPLICABLE` are used distinctly and not collapsed: **PASS**.
+- Figure-correspondence statuses use the current precise vocabulary
+  (`FIGURE_UNDERLYING_FORMULA_RECOMPUTED`, `FIGURE_EXECUTION_NOT_ATTEMPTED`,
+  `FIGURE_CHECK_BLOCKED`) rather than the deprecated `FIGURE_NUMERICALLY_MATCHED` /
+  `FIGURE_SOURCE_UNAVAILABLE` labels: **PASS**.
 - Verdict scope (Section 15) matches completed coverage (restricted reporting-correspondence claim, per Gate 7): **PASS**.
-- Output B (companion brief) uses identical finding facts, IDs, and severities: **PASS** (see `pcbi_1007945_review_brief.md`).
+- Output B (companion brief) uses identical finding facts, IDs, and severities, carries a reader-facing
+  assessment label (`CONCERN`) on every item, and contains no code blocks, YAML, JSON, hashes, or
+  commit references: **PASS** (verified directly, see `pcbi_1007945_review_brief.md`).
+- The machine-readable ledger (`pcbi_1007945_audit_ledger.json`) is valid JSON, records the current
+  skill commit (`d0893fd`), carries assessment labels on both findings, and uses the current
+  figure-status vocabulary: **PASS**.
 - No misconduct inference or publication recommendation appears anywhere in this document: **PASS**.
 
 **Output validation: PASS.**
+

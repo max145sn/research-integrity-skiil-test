@@ -1,148 +1,74 @@
 ---
 name: research-package-integrity-audit2
 description: >
-  Audit complete research packages containing manuscripts, supplements, data,
-  source-data workbooks, analysis code, configurations, results, tables, and
-  figures. Build a verified study-aware claim-to-evidence graph before checking
-  integrity, reproducibility, numerical correspondence, and reporting accuracy.
-  Produce both a comprehensive technical audit and a concise issue-focused
-  review brief. Report blocked and not-checked work explicitly, calibrate every
-  conclusion to its evidence, and never infer misconduct or make publication
-  decisions.
+  Audit complete research packages by mapping manuscript claims to studies,
+  data, code, configurations, outputs, tables, and figures before checking
+  integrity, reproducibility, and reporting correspondence. Produce a detailed
+  technical audit, an accessible issue-focused review brief, and a shared
+  machine-readable ledger. The accessible brief remains factual and serious,
+  uses plain language and table-first presentation, and clearly labels each
+  result as positive, concerning, limiting, neutral, or not assessed without
+  inferring misconduct or making publication decisions.
 ---
 
 # Research Package Integrity Audit
 
-## Purpose
+## Governing Rule
 
-Perform a study-aware, evidence-calibrated, executable audit of a complete research package. The governing rule is:
+Build a verified evidence graph for every study and claim before performing checks or issuing conclusions:
 
-> Build a verified evidence graph for every study and claim before performing integrity checks or issuing conclusions.
+`claim -> study -> experiment -> analysis -> code entry point -> input -> configuration -> transformation -> result object -> table or figure -> reported value`
 
-This is not a generic manuscript review, a misconduct detector, or a publication-decision tool. It traces claims through manuscripts, supplements, data, code, configurations, result objects, tables, and figures.
+This skill audits evidence correspondence. It does not detect intent, infer misconduct, or make publication decisions.
 
 ## Trigger Conditions
 
-Use this skill when the user asks to:
+Use this skill when the user asks to audit a manuscript and its data or code, verify reported results, inspect a reproducibility package, validate tables or figures, investigate numerical consistency, identify unsupported claims, or trace code and result provenance.
 
-- audit a manuscript and its data or code;
-- verify a paper against source data;
-- check whether reported results reproduce;
-- compare a manuscript, supplement, code, configuration, and data;
-- validate tables or figures;
-- inspect a reproducibility bundle;
-- investigate whether reported numbers add up;
-- identify unsupported claims;
-- review code and result provenance;
-- check a complete research package for inconsistencies or integrity concerns.
-
-If only part of the package is supplied, perform the applicable work and label the remainder `BLOCKED` or `NOT_CHECKED`. Do not represent a partial audit as a full-package audit.
+If only part of the package is supplied, complete the feasible work and label the remaining checks `BLOCKED` or `NOT_CHECKED`. Never present a partial audit as a complete audit.
 
 ## Non-Negotiable Principles
 
-1. **Map before measuring.** Do not recompute or compare a claim until its study, analysis, inputs, code, configuration, output, and reported location are mapped.
-2. **Inventory first.** The first substantive audit output is the complete file inventory.
-3. **Evidence labels on every conclusion.** Inspection, execution, recomputation, inference, and blocking are different states.
-4. **Preserve study-level granularity.** A blocked study does not invalidate a checked study.
-5. **Missing does not mean wrong.** Missing evidence affects verifiability only.
-6. **Static inspection is not reproduction.** Reserve “reproduced” for regenerated or independently recomputed results.
-7. **Search broadly, report narrowly.** Raise demonstrated issues and central blocked checks, not speculative suspicions.
-8. **No misconduct inference.** Never infer fabrication, falsification, deception, or intent from package defects.
-9. **No publication verdicts.** Never recommend accept, reject, approve, retract, or similar editorial actions.
-10. **Separate integrity, reproducibility, consistency, and methodology.** Methodological notes belong in a separate section.
-11. **Apply domain checks only when applicable.** Do not mechanically apply GRIM, Benford, risk-of-bias tools, terminal-digit checks, or other frameworks.
-12. **Preserve originals.** Do not silently modify supplied files. Log every temporary adaptation.
-13. **Both human-readable outputs use one source of truth.** Generate the detailed audit and short review brief from the same validated ledger.
+1. Inventory first.
+2. Map before measuring.
+3. Preserve study-level granularity.
+4. Missing evidence limits verification but does not establish error.
+5. Static inspection is not execution or reproduction.
+6. Source execution and independent recomputation are separate.
+7. Every conclusion carries an evidence status.
+8. Every severity has a tested impact basis or is `UNDETERMINED`.
+9. Coverage categories are mutually exclusive and arithmetically reconcile.
+10. Methodological quality, reporting consistency, reproducibility, and integrity evidence receive separate statuses.
+11. No fabrication, falsification, deception, or motive inference.
+12. No accept, reject, approve, retract, or reliance recommendation.
+13. Both human-readable reports are generated from one validated ledger.
+14. Accessibility must not reduce factual precision, scope qualifications, or evidentiary seriousness.
 
-## Accepted Inputs
+## Evidence Statuses
 
-Support, where tooling permits:
+Use:
 
-- PDF, DOCX, LaTeX, and Markdown manuscripts;
-- supplementary information and source-data workbooks;
-- CSV, TSV, XLSX, and XLS data;
-- R, Rmd, Quarto, Python, and notebooks;
-- Stata, SPSS, SAS, MATLAB, and Julia files;
-- YAML, JSON, and TOML configurations;
-- figures, logs, result files, serialized outputs, and caches;
-- README files, dictionaries, preregistrations, protocols, rebuttal letters, and checklists.
+- `EXECUTED`
+- `RECOMPUTED`
+- `DIRECTLY_INSPECTED`
+- `CROSS_DOCUMENT_MATCH`
+- `INFERRED`
+- `NOT_APPLICABLE`
+- `BLOCKED`
+- `NOT_CHECKED`
+- `FAILED`
 
-## Central Evidence Graph
+Never describe `DIRECTLY_INSPECTED` or `INFERRED` evidence as reproduced.
 
-Represent each checkable chain as:
+## Mapping Statuses
 
-```text
-manuscript claim
--> study
--> experiment
--> analysis
--> code entry point
--> input data or model inputs
--> configuration
--> transformation
--> result object
--> table or figure
--> final reported value or statement
-```
-
-Assign every edge:
+Use:
 
 - `CONFIRMED`
 - `PROBABLE`
 - `UNRESOLVED`
 
-Do not treat `PROBABLE` as `CONFIRMED`. Record the mapping evidence.
-
-Keep these separate:
-
-- intended code-section mapping;
-- actual input mapping;
-- configuration mapping;
-- result-object mapping;
-- published image or table provenance;
-- numerical correspondence.
-
-A matching heading or caption can confirm intended code mapping. It does not prove that the published artifact was generated by that code version.
-
-## Evidence Status Taxonomy
-
-Assign one or more of these statuses to every check and conclusion:
-
-- `EXECUTED`: mapped source code was run;
-- `RECOMPUTED`: a result was independently calculated;
-- `DIRECTLY_INSPECTED`: the relevant source, formula, code, or value was read;
-- `CROSS_DOCUMENT_MATCH`: corresponding evidence was matched across artifacts;
-- `INFERRED`: interpretation was required and direct verification is absent;
-- `NOT_APPLICABLE`: the check does not fit the study or artifact;
-- `BLOCKED`: a required dependency or artifact was unavailable;
-- `NOT_CHECKED`: feasible work was not completed;
-- `FAILED`: an attempted check or execution failed.
-
-Never describe `DIRECTLY_INSPECTED` or `INFERRED` evidence as reproduced.
-
-## Execution State Taxonomy
-
-Report environment checks and executions separately:
-
-- `ENVIRONMENT_READY`
-- `ENVIRONMENT_PARTIAL`
-- `ENVIRONMENT_CHECK_FAILED`
-- `EXECUTION_NOT_ATTEMPTED`
-- `EXECUTION_ATTEMPTED_FAILED`
-- `EXECUTION_SUCCEEDED`
-- `EXECUTION_SUCCEEDED_WITH_WARNINGS`
-- `REPRODUCED_WITH_ENVIRONMENTAL_ADAPTATION`
-- `EXECUTION_BLOCKED`
-
-A missing runtime does not mean the source analysis failed. It means the environment check failed or execution was blocked. If no entry point ran, use `EXECUTION_NOT_ATTEMPTED`.
-
-Before declaring execution blocked, check and record:
-
-- alternative executable names and installed versions;
-- containers, lockfiles, manifests, and environment files;
-- whether dependency installation is allowed;
-- supported isolated runtimes;
-- dependency-light or partial entry points.
+A caption or matching code heading can confirm intended code mapping. It cannot verify that the published figure was produced by that exact code version.
 
 ## Finding Categories
 
@@ -165,590 +91,392 @@ Use precise primary categories:
 - `REPRODUCIBILITY_LIMITATION`
 - `METHODOLOGICAL_REVIEW_NOTE`
 
-Use `CODE_DATA_MISMATCH` only when code conflicts with a data artifact. Use `CODE_MANUSCRIPT_MISMATCH` or `CONFIGURATION_MISMATCH` for manuscript-to-code constants and parameter definitions.
+Use `CODE_DATA_MISMATCH` only for a conflict between code and data. Use `CODE_MANUSCRIPT_MISMATCH` for manuscript-to-code constants or model definitions.
 
-Keep missing evidence distinct from contradictory evidence:
+## Reader-Facing Assessment Labels
 
-- `MISSING_FILE`
-- `UNREADABLE_FILE`
-- `WRONG_FILE`
-- `FILE_VERSION_MISMATCH`
-- `CODE_DATA_SCHEMA_MISMATCH`
-- `EXECUTION_FAILURE`
-- `NUMERICAL_MISMATCH`
-- `IMPLEMENTATION_ERROR`
-- `REPORTING_ERROR`
-- `METHODOLOGICAL_CONCERN`
+Every item in the accessible brief must explicitly explain whether it is good, bad, limiting, neutral, or unresolved. Do not force a binary good/bad label when the evidence supports a more precise interpretation.
+
+Use these labels:
+
+| Label | Meaning | Reader-facing wording |
+|---|---|---|
+| **POSITIVE** | A completed check supports correspondence or reproducibility within its stated scope. | “Good: the checked values agree.” |
+| **CONCERN** | A demonstrated discrepancy, error, or provenance failure exists. | “Concern: the manuscript and code use different values.” |
+| **LIMITATION** | Verification could not be completed because evidence, tooling, or scope was unavailable. | “Limitation: this result could not be checked.” |
+| **NEUTRAL** | A factual condition is neither evidence for nor against correctness. | “Neutral: this figure is a conceptual diagram and was not expected to be code-generated.” |
+| **NOT ASSESSED** | The item was within possible scope but was not evaluated. | “Not assessed: the analysis was technically feasible but not completed.” |
+| **NOT APPLICABLE** | The check does not fit the study or artifact. | “Not applicable: there are no participant records in this simulation study.” |
+| **UNRESOLVED** | Available evidence does not support a determinate classification. | “Unresolved: the relationship between these files is uncertain.” |
+
+### Assessment-label rules
+
+- Always pair the label with a one-sentence reason.
+- `POSITIVE` means only that a specific completed check passed. It does not establish that the entire paper is correct.
+- `CONCERN` must be tied to demonstrated evidence, not suspicion.
+- `LIMITATION` is not a negative finding about the research. It is a limitation of verifiability.
+- `NOT ASSESSED` is not the same as `BLOCKED`. Explain why the check was not completed.
+- Never mark missing evidence as `CONCERN` about research correctness unless a reporting requirement itself is demonstrably unmet. Otherwise use `LIMITATION`.
+- Avoid traffic-light color as the only signal. Always show the text label and explanation.
 
 ## Mandatory Completion Gates
 
-### Gate 1: Inventory completeness
+### Gate 1: Inventory
 
-Before any integrity conclusion:
+Inventory every supplied file. Investigate unclassified files. List manuscript-referenced and inferred required artifacts separately. State the denominator and scope behind completeness claims.
 
-- inventory every supplied file;
-- investigate every unclassified file;
-- identify externally referenced and inferred required artifacts;
-- distinguish required inputs, generated outputs, and optional documentation;
-- state the denominator and scope behind every package-completeness statement.
+### Gate 2: Study and evidence mapping
 
-Define completeness separately for parameter checking, source execution, figure regeneration, and full-paper verification when necessary.
+Map every checked claim to its study, analysis, inputs, code, configuration, result, and reported artifact. Separate intended code mapping, actual output provenance, numerical correspondence, and published-artifact correspondence.
 
-### Gate 2: Study and artifact mapping
+### Gate 3: Claim ledger
 
-Map every checked claim to the relevant study, analysis, files, code, configuration, outputs, and reported artifact. Do not compare files merely because they have similar variables or names.
+Assign stable IDs to every independently verifiable claim, including claims that will end as `BLOCKED`, `NOT_CHECKED`, or `NOT_APPLICABLE`.
 
-### Gate 3: Complete claim ledger
+Include numerical claims, model behavior, comparisons, figure-derived claims, exclusions, scope statements, and words such as “all,” “most,” “best,” and “consistent.”
 
-Extract every verifiable claim from all readable manuscript and supplementary sections. Assign stable IDs and split compound prose into independently checkable claim units.
-
-Include:
-
-- sample sizes and exclusions;
-- means, dispersion, percentages, and ratios;
-- tests, p-values, intervals, and effect sizes;
-- coefficients and prediction metrics;
-- simulation outputs and model-behavior statements;
-- comparative claims;
-- “all,” “most,” “best,” and “consistent” claims;
-- figure-derived statements;
-- scope and generalization claims.
-
-A parameter ledger is not a complete claim ledger.
-
-If full extraction was not performed, state:
+A parameter ledger is not a manuscript-wide claim ledger. If extraction is incomplete, state:
 
 ```text
 Claim ledger status: INCOMPLETE
-Overall reporting correspondence: PARTIALLY_VERIFIED or BLOCKED
+Reporting correspondence: PARTIALLY_VERIFIED or BLOCKED
 ```
 
-Do not assign an overall reporting characterization stronger than the claim-ledger coverage permits.
+### Gate 4: Execution-state precision
 
-### Gate 4: Separate source execution from independent recomputation
+Distinguish:
 
-Lack of the authors' runtime may block source execution but does not automatically block independent recomputation.
+- `ENVIRONMENT_READY`
+- `ENVIRONMENT_PARTIAL`
+- `ENVIRONMENT_CHECK_FAILED`
+- `EXECUTION_NOT_ATTEMPTED`
+- `EXECUTION_ATTEMPTED_FAILED`
+- `EXECUTION_SUCCEEDED`
+- `EXECUTION_SUCCEEDED_WITH_WARNINGS`
+- `REPRODUCED_WITH_ENVIRONMENTAL_ADAPTATION`
+- `EXECUTION_BLOCKED`
 
-Where feasible with available tools, independently:
+A missing runtime does not mean the code failed.
 
-- evaluate documented equations;
-- recompute ratios and parameter-derived quantities;
-- translate formulas into an independent implementation;
-- quantify the effect of discrepant input values;
-- verify initial-condition totals, dimensions, and conservation rules;
-- parse constants, I/O, and dependencies deterministically.
+### Gate 5: Independent recomputation
 
-Report separately:
+A missing source runtime does not automatically block independent computation. Where feasible, use an available environment to evaluate formulas, recompute statistics, quantify discrepancies, verify dimensions, or independently implement selected calculations.
 
-- source-code execution;
-- independent recomputation;
-- figure regeneration.
+Report source execution, independent recomputation, and figure regeneration separately. Feasible but omitted work is `NOT_CHECKED`, not `BLOCKED`.
 
-If independent work was feasible but not performed, use `NOT_CHECKED`, not `BLOCKED`.
+### Gate 6: Evidence-backed severity
 
-### Gate 5: Evidence-backed severity
-
-Do not assign `MINOR`, `MAJOR`, or `CRITICAL` from appearance alone. Every severity requires a documented impact basis, such as:
-
-- quantified output change;
-- changed qualitative conclusion;
-- affected central claim, figure, table, or study;
-- altered sample, denominator, or evaluation integrity;
-- inability to regenerate a central result.
-
-If effect was not evaluated, use:
-
-```yaml
-severity: UNDETERMINED
-impact_status: NOT_EVALUATED
-severity_reason: >
-  The discrepancy is demonstrated, but its effect on reported outputs or
-  conclusions was not evaluated.
-```
-
-`POTENTIALLY_MATERIAL` may be a triage flag, but not a demonstrated severity.
-
-### Gate 6: Reconciled coverage
-
-Coverage categories sharing a denominator must be mutually exclusive and must sum to that denominator.
-
-```text
-Claims identified: 53
-Recomputed: 34
-Cross-checked only: 9
-Blocked: 7
-Not applicable: 2
-Not checked: 1
-Total classified: 53
-Reconciliation: PASS
-```
-
-Do not double count an item across outcome categories. Put overlapping descriptive properties in a separate secondary breakdown.
-
-### Gate 7: Verdict scope matches audit coverage
-
-Use `MATCHES`, `MINOR_DISCREPANCIES`, or `MATERIAL_DISCREPANCIES` only when coverage is broad enough to characterize the stated domain.
+Assign `MINOR`, `MAJOR`, or `CRITICAL` only after testing impact on values, conclusions, figures, tables, studies, samples, denominators, or evaluation integrity.
 
 Otherwise use:
 
-- `PARTIALLY_VERIFIED`
-- `BLOCKED`
-- `NOT_ASSESSED`
+```text
+Severity: UNDETERMINED
+Reason: The discrepancy is demonstrated, but its effect was not evaluated.
+```
 
-When only a subset was checked, state the exact subset and unverified remainder.
+### Gate 7: Coverage reconciliation
 
-### Gate 8: Final dual-output consistency validation
+All categories sharing a denominator must be mutually exclusive and sum to the denominator. Distinguish affected cells from distinct findings.
 
-Before delivery, verify that:
+```text
+Parameter cells: 38
+Matched or acceptable: 29
+Not applicable: 6
+Mismatching cells: 3
+Total classified: 38
+Reconciliation: PASS
 
-- all coverage totals reconcile;
-- every completeness denominator is documented;
-- every finding references valid file, study, claim, and evidence IDs;
-- every severity has an impact basis or is `UNDETERMINED`;
-- statuses do not exceed completed coverage;
-- `BLOCKED`, `NOT_CHECKED`, `FAILED`, and `NOT_APPLICABLE` are distinct;
-- detailed and concise outputs use identical finding facts;
-- the concise brief introduces no new issue;
-- demonstrated issues are not omitted from the concise brief unless a documented low-priority filter applies.
+Distinct discrepancies: 2
+Distinct findings: 2
+```
 
-Record `Output validation: PASS` or list validation failures.
+### Gate 8: Verdict scope
+
+Use `MATCHES`, `MINOR_DISCREPANCIES`, or `MATERIAL_DISCREPANCIES` only when coverage is broad enough to characterize the stated domain. Otherwise use `PARTIALLY_VERIFIED`, `BLOCKED`, or `NOT_ASSESSED` and name the checked subset.
+
+### Gate 9: Dual-output validation
+
+Before delivery verify that:
+
+- both human-readable outputs exist;
+- both use the same finding IDs and facts;
+- the concise report never strengthens the detailed report;
+- all counts reconcile;
+- every brief assessment label agrees with the technical evidence state;
+- code syntax, YAML, JSON, and raw implementation logs are absent from the accessible brief unless indispensable;
+- the machine-readable ledger remains separate from the brief.
 
 ## Audit Workflow
 
 ### Phase 0: Preflight
 
-Record supplied and readable files, unsupported formats, execution environment, available software, dependencies, internet requirements, expected study types, user scope, and planned exclusions.
-
-Set `Preflight status` to `READY`, `PARTIAL`, or `BLOCKED`.
+Record supplied files, readable files, unsupported formats, environment, available software, dependencies, expected study types, internet needs, user scope, and exclusions. Set `READY`, `PARTIAL`, or `BLOCKED`.
 
 ### Phase 1: Extraction and inventory
 
-For manuscripts and supplements:
+Extract complete manuscript and supplement text with page, section, table, figure, caption, equation, and cross-reference locations. Record extraction confidence.
 
-- extract complete text;
-- preserve pages, sections, paragraphs, tables, figures, and line references;
-- extract tables and captions separately;
-- identify equations, cross-references, and supplementary references;
-- record unreadable regions and extraction confidence.
+For spreadsheets inspect sheet visibility, used ranges, formulas, cached values, names, links, comments, filters, missing codes, and formula-derived replicate cells.
 
-For spreadsheets inspect:
-
-- sheets, used ranges, hidden sheets, rows, and columns;
-- formulas and cached displayed values separately;
-- named ranges, external links, comments, merges, and filters;
-- missing-value codes;
-- formula-derived cells presented as observations or replicates.
-
-For code identify:
-
-- entry points and execution order;
-- files read and written;
-- libraries, versions, paths, arguments, seeds, and configurations;
-- commented, dead, alternate, and inactive branches;
-- overwritten variables and hardcoded outputs;
-- output objects and filenames.
+For code inspect entry points, I/O, libraries, versions, seeds, paths, arguments, configurations, dead branches, overwritten variables, hardcoded outputs, and result objects.
 
 ### Phase 2: Study registry and evidence graph
 
-Create study, experiment, analysis, model, run, configuration, dataset, result, table, figure, and claim nodes. Record confirmed, probable, and unresolved links.
+Create nodes for studies, experiments, analyses, models, runs, configurations, datasets, results, tables, figures, and claims. Record confirmed, probable, and unresolved links.
 
 ### Phase 3: Claim ledger
 
-Create one record per independently verifiable proposition:
-
-```yaml
-claim_id: C-014
-study_id: S1
-location: "manuscript.pdf, page 8, paragraph 2"
-claim_type: group_mean
-reported_value: 4.83
-reported_precision: 2
-population: female respondents
-analysis: descriptive mean
-support_expected:
-  - study1_data.csv
-  - analysis.R
-  - table_2
-mapping_status: CONFIRMED
-audit_outcome: NOT_CHECKED
-```
+Every independently verifiable claim receives an ID, exact location, type, reported proposition, expected support, mapping status, evidence status, and outcome. Identification is required even when verification is blocked.
 
 ### Phase 4: Data provenance and structural integrity
 
-Classify evidence roles:
+Classify data as `RAW_OBSERVED`, `RAW_SIMULATED`, `CLEANED`, `DERIVED`, `IMPUTED`, `MODEL_INPUT`, `MODEL_OUTPUT`, `PREDICTION`, `GROUND_TRUTH`, `PRESENTATION_ONLY`, or `UNKNOWN`.
 
-- `RAW_OBSERVED`
-- `RAW_SIMULATED`
-- `CLEANED`
-- `DERIVED`
-- `IMPUTED`
-- `MODEL_INPUT`
-- `MODEL_OUTPUT`
-- `PREDICTION`
-- `GROUND_TRUTH`
-- `PRESENTATION_ONLY`
-- `UNKNOWN`
+Apply relevant checks for IDs, duplicates, overlap, missingness, ranges, coding, dates, denominators, formulas, exclusions, transformations, labels, and overwritten outcomes.
 
-Check IDs, duplication, overlap, missingness, ranges, coding, dates, group sizes, denominators, logical constraints, formulas in raw cells, exclusions, transformations, labels, and overwritten outcomes where applicable.
+### Phase 5: Code, configuration, and domain checks
 
-### Phase 5: Code, configuration, and domain modules
+Check file existence, schemas, joins, filters, score construction, missing-value handling, labels, seeds, consumed configurations, generated outputs, hardcoded values, overwritten provenance, inactive branches, and stale outputs.
 
-Check file existence, schemas, joins, filters, scores, reverse coding, missing-value handling, labels, seeds, configurations actually consumed, output generation, hardcoded values, overwritten provenance, inactive branches, and stale intermediate outputs.
+For machine learning inspect leakage, split overlap, tuning reuse, thresholds, denominators, seed selection, failed-run exclusion, fold duplication, and prediction-to-ground-truth joins.
 
-For machine learning, inspect splits, train/test overlap, tuning reuse, leakage, duplicate folds, metric denominators, thresholds, seed selection, failed-run exclusions, and prediction-to-ground-truth joins.
-
-For simulations, inspect parameter sources, units, initial conditions, numerical methods, solver tolerance, convergence, sweeps, uncertainty propagation, stochastic seeds, sample generation, dimensions, and configuration-to-output correspondence.
+For simulations inspect parameter sources, units, initial conditions, numerical methods, solver settings, convergence, sweeps, uncertainty, seeds, dimensions, and configuration-to-output correspondence.
 
 ### Phase 6: Controlled execution
 
-Run only after mapping. Preserve originals and logs. Record entry point, environment, versions, seed state, input and output hashes, warnings, errors, and every adaptation.
+Execute only after mapping. Preserve originals. Record environment, versions, entry point, seed state, hashes, warnings, errors, and every adaptation.
 
 ### Phase 7: Independent recomputation
 
-Independently calculate applicable counts, descriptive statistics, intervals, tests, effect sizes, metrics, model formulas, parameter-derived quantities, summary formulas, and figure values.
+Independently calculate applicable statistics, formulas, model quantities, prediction metrics, summary formulas, and figure values. Set tolerances from reported precision, not a universal percentage.
 
-Set tolerance by reported precision:
+### Phase 8: Figures and tables
 
-```yaml
-exact_integer: 0
-percentage_tolerance: "0.05 percentage points unless precision requires less"
-rounded_value_tolerance: "half of the final reported unit"
-p_value_rule: "compare at reported precision and honor inequality notation"
-```
+For each figure or table locate its caption, source, output object, code, and configuration. Compare values, labels, units, legends, panels, and aggregation type.
 
-### Phase 8: Figures, tables, and source data
-
-For each artifact locate its caption, source data, result object, code, and configuration. Compare values, labels, units, conditions, legends, panels, and aggregation type. Regenerate where possible.
-
-Use statuses including:
+Use precise statuses such as:
 
 - `FIGURE_CODE_SECTION_MAPPED`
+- `FIGURE_UNDERLYING_FORMULA_RECOMPUTED`
 - `PUBLISHED_FIGURE_PROVENANCE_VERIFIED`
 - `FIGURE_REGENERATED_MATCH`
-- `FIGURE_NUMERICALLY_MATCHED`
+- `FIGURE_PUBLISHED_VALUES_COMPARED`
 - `FIGURE_LABEL_MISMATCH`
-- `FIGURE_SOURCE_UNAVAILABLE`
+- `FIGURE_EXECUTION_NOT_ATTEMPTED`
 - `FIGURE_CHECK_BLOCKED`
 
-Do not equate `FIGURE_CODE_SECTION_MAPPED` with published-figure provenance.
+Do not use `FIGURE_NUMERICALLY_MATCHED` unless published or supplied figure values were actually compared.
 
-### Phase 9: Contradiction reconciliation
+### Phase 9: Reconciliation
 
-Before raising a mismatch, test applicable explanations:
+Before raising a mismatch, test rounding, population differences, exclusions, adjustment, weighting, aggregation, observed versus simulated values, denominators, subgroups, versions, software differences, caches, and transcription.
 
-1. rounding;
-2. filtered versus full sample;
-3. adjusted versus unadjusted analysis;
-4. weighted versus unweighted estimate;
-5. single run versus aggregate;
-6. observed versus simulated value;
-7. alternate denominator;
-8. different study or subgroup;
-9. version difference;
-10. software-version difference;
-11. stale cache;
-12. transcription error.
+### Phase 10: Findings and statuses
 
-Record every test and outcome.
+Each finding records its ID, category, locations, claim IDs, evidence, reported and observed values, tolerance, reconciliation attempts, impact, severity basis, certainty, misconduct inference `NONE`, reviewer action, and author question.
 
-### Phase 10: Finding construction
+### Phase 11: Generate and validate outputs
 
-Each finding must include:
-
-```yaml
-finding_id: F-007
-primary_category: CODE_MANUSCRIPT_MISMATCH
-secondary_categories:
-  - REPORTING_INCONSISTENCY
-study_id: S1
-claim_ids: [C-014]
-locations:
-  manuscript: "page 8, Table 2"
-  code: "analysis.R, lines 120-128"
-evidence_status:
-  - DIRECTLY_INSPECTED
-  - CROSS_DOCUMENT_MATCH
-reported: 4.83
-observed_in_evidence: 4.51
-tolerance: 0.005
-reconciliation_attempts: []
-impact_status: NOT_EVALUATED
-severity: UNDETERMINED
-severity_reason: >
-  The discrepancy is demonstrated, but its effect on outputs or conclusions
-  was not evaluated.
-certainty: DEMONSTRATED
-misconduct_inference: NONE
-reviewer_action: "Check which value generated Figure 3."
-author_question: "Please confirm which value was used..."
-```
-
-### Phase 11: Output generation and validation
-
-Generate both human-readable outputs from the shared ledger, then perform the second-pass consistency and arithmetic validation.
-
-## Status Architecture
-
-Never issue one binary verdict.
-
-### Package completeness
-
-- `COMPLETE`
-- `PARTIALLY_COMPLETE`
-- `INCOMPLETE`
-- `UNDETERMINED`
-
-### Source-code execution
-
-- `EXECUTION_SUCCEEDED`
-- `EXECUTION_SUCCEEDED_WITH_WARNINGS`
-- `REPRODUCED_WITH_ENVIRONMENTAL_ADAPTATION`
-- `EXECUTION_ATTEMPTED_FAILED`
-- `EXECUTION_NOT_ATTEMPTED`
-- `BLOCKED`
-- `NOT_APPLICABLE`
-
-### Independent recomputation
-
-- `FULLY_RECOMPUTED`
-- `PARTIALLY_RECOMPUTED`
-- `BLOCKED`
-- `NOT_CHECKED`
-- `NOT_APPLICABLE`
-
-### Computational reproducibility
-
-- `FULLY_REPRODUCED`
-- `SUBSTANTIALLY_REPRODUCED`
-- `PARTIALLY_REPRODUCED`
-- `BLOCKED`
-- `FAILED`
-- `NOT_APPLICABLE`
-
-### Reporting correspondence
-
-- `MATCHES`
-- `MINOR_DISCREPANCIES`
-- `MATERIAL_DISCREPANCIES`
-- `PARTIALLY_VERIFIED`
-- `BLOCKED`
-- `NOT_ASSESSED`
-
-### Empirical data-integrity evidence
-
-- `NO_DEMONSTRATED_ISSUES`
-- `DEMONSTRATED_ISSUES`
-- `INSUFFICIENT_EVIDENCE`
-- `NOT_ASSESSED`
-- `NOT_APPLICABLE_FOR_EMPIRICAL_DATA`
-
-### Configuration and model-input integrity
-
-- `NO_DEMONSTRATED_ISSUES`
-- `DEMONSTRATED_ISSUES`
-- `PARTIALLY_ASSESSED`
-- `INSUFFICIENT_EVIDENCE`
-- `NOT_ASSESSED`
-- `NOT_APPLICABLE`
-
-`NO_DEMONSTRATED_ISSUES` means only that no issue was demonstrated within completed checks.
+Build Output A, Output B, and the ledger from the same structured records. Run arithmetic and cross-output validation before declaring `PASS`.
 
 ## Required Output A: Comprehensive Technical Audit
 
-Produce a detailed report with these sections:
+Produce a detailed technical report containing:
 
-1. **Execution-Mode Disclosure**
-2. **Executive Audit Summary**
-3. **Preflight and Scope Declaration**
-4. **File Inventory and Missing-Artifact Register**
-5. **Study, Experiment, Analysis, and Artifact Map**
-6. **Complete Claim Ledger**
-7. **Data Provenance and Structural Checks**
-8. **Code, Configuration, and Domain-Specific Checks**
-9. **Source Execution Report**
-10. **Independent Recomputation Report**
-11. **Figure, Table, and Source-Data Correspondence**
-12. **Detailed Findings**
-13. **Checked but Not Raised**
-14. **Coverage and Arithmetic Reconciliation**
-15. **Separate Status Architecture**
-16. **Ready-to-Send Author Queries**
-17. **Blocked and Not-Checked Register**
-18. **Limitations**
-19. **Output Validation Result**
+1. Execution-mode disclosure
+2. Executive summary
+3. Preflight and scope
+4. File inventory and missing-artifact register
+5. Study and evidence map
+6. Complete claim ledger or explicit incomplete status
+7. Data-provenance checks
+8. Code, configuration, and domain checks
+9. Source-execution report
+10. Independent-recomputation report
+11. Figure, table, and source-data correspondence
+12. Detailed findings
+13. Checked but not raised
+14. Reconciled coverage
+15. Separate status architecture
+16. Author queries
+17. Blocked and not-checked register
+18. Limitations
+19. Output-validation result
 
-The detailed report must contain exact locations, evidence methods, calculations, reconciliation attempts, impact tests, severity bases, and neutral wording.
+Technical code snippets and machine-readable details may appear here when necessary, but explain their meaning in prose.
 
-## Required Output B: Issue-Focused Review Brief
+## Required Output B: Accessible Issue-Focused Review Brief
 
-Produce a separate, shorter report for researchers, reviewers, editors, and authors. It must focus on issues and central blocked checks so the reader can move through the paper efficiently.
+### Purpose and tone
 
-### B1. Review Snapshot
+Create a serious, factual, plain-language brief for researchers, reviewers, editors, and authors. It must help a reader locate issues and understand their significance without reading code or audit implementation details.
 
-Use no more than 8 bullets covering:
+Use short sections, descriptive headings, concise paragraphs, and tables. Prefer tables over code blocks, YAML, JSON, raw vectors, formulas, file dumps, and long status lists.
 
-- package components reviewed;
-- source execution status;
-- independent recomputation status;
-- number of demonstrated issues;
-- issues with impact not yet determined;
-- central blocked checks;
-- neutral package status.
+Do not reduce scientific precision. Expand technical terms on first use and retain exact values, locations, evidence levels, and scope limitations.
 
-### B2. Issues Requiring Attention
+### Accessibility rules
 
-Order by review priority:
+1. **Table-first presentation.** Use tables for findings, blocked checks, coverage, figure status, and author questions.
+2. **No raw code by default.** Translate code into a readable description. For example, write “the code sets the human population to 624” rather than displaying a parameter vector.
+3. **No YAML or JSON.** Keep the machine-readable ledger outside Output B.
+4. **Define technical terms.** Introduce terms such as “independent recomputation” in plain language.
+5. **Use descriptive headings.** Prefer “Two parameter values differ between Table 1 and the code” over “Findings.”
+6. **State the practical meaning.** Every item answers: What happened? Is it positive, concerning, limiting, neutral, or not assessed? Why does it matter? What should the reviewer do?
+7. **Use exact locations.** Include page, table, figure, section, supplement, or code-file reference without requiring the reader to interpret code syntax.
+8. **Separate research issues from audit limitations.** Never place missing software in the same table as demonstrated manuscript errors without a clear type column.
+9. **Prioritize actionable information.** Put demonstrated concerns first, then central limitations, then positive checks.
+10. **Avoid implementation metadata in the opening.** Skill hashes, repository commits, tool-loading messages, and internal paths belong in an appendix or ledger, not the review snapshot.
+11. **Avoid unexplained status codes.** If a code is shown, add a plain-language translation.
+12. **Do not use color alone.** Labels must be readable in text and accessible to screen readers.
 
-1. demonstrated issues with quantified material impact;
-2. demonstrated issues with impact not evaluated;
-3. blocked checks affecting central claims;
-4. minor demonstrated reporting inconsistencies;
-5. lower-priority clarification items.
+### B1. Review at a glance
 
-Use this compact format for every item:
+Begin with a compact summary table:
 
-```text
-[F-###] Short issue title
-Where: exact page, paragraph, table, figure, supplement, or code location
-What differs: reported statement or value versus evidence
-Why it matters: demonstrated impact or “impact not yet determined”
-Evidence: evidence-status labels
-Reviewer action: one concrete check or question
-```
+| Area | Assessment | What this means |
+|---|---|---|
+| Package completeness | LIMITATION | Some material needed to verify central outputs was not supplied. |
+| Checked manuscript-to-code values | CONCERN | Two values differ between the manuscript and code. |
+| Independently recalculated results | POSITIVE | The selected formula was recalculated in a separate implementation. |
+| Full source-code execution | LIMITATION | The original analysis was not run in its native environment. |
+| Misconduct inference | NEUTRAL | The audit does not assess or infer intent. |
 
-Do not include long implementation logs or speculative explanations.
+Use the actual audit facts, not these example outcomes.
 
-### B3. Paper Navigation Guide
+Follow with no more than six plain-language bullets covering the most important facts.
 
-Group issue IDs and blocked central checks under the manuscript locations that a reviewer should visit:
+### B2. Issues requiring attention
 
-- Abstract
-- Methods
-- Results
-- Tables
-- Figures
-- Supplementary information
-- Code or configuration
+Use one row per finding:
 
-Omit sections with no issue or central blocked check.
+| Priority | Assessment | Issue | Where to look | What the evidence shows | Why it matters | Recommended reviewer action |
+|---:|---|---|---|---|---|---|
+| 1 | CONCERN | Different value used for a model parameter | Table 1; Figure 3 analysis | The manuscript reports one value and the code uses another. | The effect was measured as ... | Ask which value generated the published figure. |
 
-### B4. Blocked Central Checks
+Rules:
 
-For each central blocked check state:
+- Put the finding ID in the issue title, such as `[F-02] Different latent-probability value`.
+- Replace code syntax with prose.
+- Exact values must remain visible.
+- State “impact not yet determined” when impact was not tested.
+- Do not call an issue minor or major without an evidence-backed impact assessment.
+- Explain whether the item is a research concern or an audit limitation.
 
-- the missing artifact, runtime, or unresolved mapping;
-- the exact claim, table, or figure affected;
-- what would be needed to complete the check.
+### B3. What checked out well
 
-### B5. Compact Author Questions
+Always include a positive-results section so readers can distinguish passed checks from unchecked work.
 
-Give one ready-to-send question per bullet.
+Use a table:
 
-### B6. Scope Note
+| Assessment | Check completed | Result | Scope limitation |
+|---|---|---|---|
+| POSITIVE | Selected model parameters compared with the manuscript | The checked values agreed except for F-01 and F-02. | This does not cover untested simulation claims. |
+
+Only include completed checks. Never convert “no issue found” into proof that the full package is correct.
+
+### B4. What could not be verified
+
+Use a separate table for blocked and not-assessed work:
+
+| Assessment | Item | Why it could not be verified | Effect on the review | What would resolve it |
+|---|---|---|---|---|
+| LIMITATION | Figure 5 sensitivity analysis | Supporting analysis files were not supplied. | The figure and related claims remain unverified. | Supply the analysis code and outputs. |
+| NOT ASSESSED | A feasible independent simulation | It was outside the completed audit scope. | No conclusion can be drawn from this audit. | Complete a follow-up calculation. |
+
+Do not present these rows as evidence that the research is wrong.
+
+### B5. Paper navigation guide
+
+Use a short table to help the reviewer move through the paper:
+
+| Paper location | What to check | Related item |
+|---|---|---|
+| Table 1 | Compare reported and coded parameter values | F-01, F-02 |
+| Figure 3 | Confirm which values generated the published curves | F-01, F-02 |
+| Figure 5 | Locate the missing sensitivity-analysis support | B-01 |
+
+Only include locations with an issue, limitation, or high-value positive verification.
+
+### B6. Author questions
+
+Use a numbered table:
+
+| # | Location | Question for the authors | Why this question is needed |
+|---:|---|---|---|
+| 1 | Table 1 and Figure 3 | Which value was used to generate the published figure? | The manuscript and code differ. |
+
+Questions must remain neutral and must not speculate about intent.
+
+### B7. Bottom line
+
+End with four clearly labelled statements:
+
+- **What is good:** summarize the strongest completed positive check.
+- **What needs attention:** summarize the demonstrated concerns.
+- **What remains unknown:** summarize the central blocked and not-assessed work.
+- **What this does not mean:** state that the audit does not infer misconduct and that unchecked claims have not been validated or invalidated.
+
+Use plain language and no more than 150 words.
+
+### B8. Scope note
 
 End with:
 
-> This brief lists demonstrated issues and central blocked checks from the completed audit. It does not imply misconduct, and absence from this brief does not mean every other claim was independently reproduced. See the comprehensive technical audit for coverage and limitations.
+> This brief lists demonstrated issues, completed positive checks, and central verification limitations. A concern indicates an evidence-backed discrepancy, while a limitation indicates that verification could not be completed. Neither label implies misconduct. Absence from this brief does not mean every other claim was independently reproduced. See the comprehensive technical audit for the full evidence, coverage, and limitations.
 
 ## Shared Machine-Readable Ledger
 
-Produce JSON or YAML as the source of truth for both reports. Include:
+Produce a separate JSON or YAML ledger as the source of truth. Include inventory, completeness denominators, study mappings, evidence-graph edges, claims, executions, independent recomputations, findings, assessment labels, severity bases, coverage, blocked and not-checked records, transformations, report-inclusion flags, and validation results.
 
-- inventory and completeness denominators;
-- study registry and evidence-graph edges;
-- complete claim ledger and its completeness status;
-- environment checks and execution attempts;
-- independent recomputations;
-- findings, impacts, severity bases, and reviewer priorities;
-- coverage and reconciliation fields;
-- blocked and not-checked items;
-- adaptations and transformations;
-- output-validation results;
-- inclusion flags for both reports.
+Do not paste the ledger into the accessible brief unless the user explicitly requests it.
 
 ## Dual-Output Consistency Rules
 
-- Output B may shorten Output A but must never strengthen it.
-- Output B must not introduce an issue absent from the ledger and Output A.
-- Every demonstrated issue must appear in Output B unless a documented low-priority filter excludes it.
-- Finding IDs, values, locations, categories, evidence statuses, certainty, and severity must agree.
-- If impact is undetermined in Output A, Output B must say “impact not yet determined.”
-- A blocked check must not become a claim that the reported result is wrong.
-- Both outputs must state that no misconduct inference is made.
+- Output B may simplify wording but may not remove qualifications or strengthen conclusions.
+- Every concern in Output B must exist in Output A and the ledger.
+- Finding IDs, values, locations, categories, impact, severity, and evidence must agree.
+- Every Output B item includes an assessment label and plain-language reason.
+- `LIMITATION` and `NOT ASSESSED` must never be rewritten as research errors.
+- `POSITIVE` must never imply whole-paper validation.
+- Output B must include both concerns and positive completed checks.
+- Output B must not contain raw code, YAML, JSON, hashes, commits, or tool-loading detail unless essential to the scientific finding.
 
-## Required Language
+## Status Architecture
 
-Prefer:
+Report separately:
 
-- “The supplied evidence does not reproduce the reported value.”
-- “This check was blocked because the mapped raw-data file was not supplied.”
-- “The code was inspected but not executed.”
-- “Independent recomputation was not performed.”
-- “No issue was demonstrated within the completed checks.”
-- “The discrepancy is demonstrated, but its impact was not evaluated.”
-
-Do not say:
-
-- “The value was fabricated.”
-- “The study is invalid” because evidence is missing.
-- “The package is reproducible” after static inspection.
-- “No integrity concerns exist.”
-- “Approve,” “reject,” or “retract.”
+- package completeness: `COMPLETE`, `PARTIALLY_COMPLETE`, `INCOMPLETE`, `UNDETERMINED`;
+- source execution: `EXECUTION_SUCCEEDED`, `EXECUTION_SUCCEEDED_WITH_WARNINGS`, `REPRODUCED_WITH_ENVIRONMENTAL_ADAPTATION`, `EXECUTION_ATTEMPTED_FAILED`, `EXECUTION_NOT_ATTEMPTED`, `BLOCKED`, `NOT_APPLICABLE`;
+- independent recomputation: `FULLY_RECOMPUTED`, `PARTIALLY_RECOMPUTED`, `BLOCKED`, `NOT_CHECKED`, `NOT_APPLICABLE`;
+- computational reproducibility: `FULLY_REPRODUCED`, `SUBSTANTIALLY_REPRODUCED`, `PARTIALLY_REPRODUCED`, `BLOCKED`, `FAILED`, `NOT_APPLICABLE`;
+- reporting correspondence: `MATCHES`, `MINOR_DISCREPANCIES`, `MATERIAL_DISCREPANCIES`, `PARTIALLY_VERIFIED`, `BLOCKED`, `NOT_ASSESSED`;
+- empirical data integrity: `NO_DEMONSTRATED_ISSUES`, `DEMONSTRATED_ISSUES`, `INSUFFICIENT_EVIDENCE`, `NOT_ASSESSED`, `NOT_APPLICABLE_FOR_EMPIRICAL_DATA`;
+- configuration and model-input integrity: `NO_DEMONSTRATED_ISSUES`, `DEMONSTRATED_ISSUES`, `PARTIALLY_ASSESSED`, `INSUFFICIENT_EVIDENCE`, `NOT_ASSESSED`, `NOT_APPLICABLE`.
 
 ## Final Validation Checklist
 
-Before delivery verify:
+Before delivery confirm:
 
 - every supplied file is inventoried;
-- unclassified files were investigated;
-- completeness denominators are defined;
-- each study has a separate status;
-- the claim ledger is complete or explicitly `INCOMPLETE`;
-- every claim has an ID and location;
-- every conclusion has an evidence status;
-- probable mappings were not promoted to confirmed;
-- published-artifact provenance is separate from intended code mapping;
-- formulas and cached spreadsheet values are distinguished;
+- completeness denominators are documented;
+- every identifiable claim has a stable ID, even if blocked or not checked;
+- mappings are evidence-backed;
 - source execution and independent recomputation are separate;
-- feasible but omitted work is `NOT_CHECKED`, not `BLOCKED`;
-- every severity has an impact basis or is `UNDETERMINED`;
-- missing evidence is not treated as contradiction;
+- figure-code mapping is separate from published-figure provenance;
+- every severity has a tested impact basis or is undetermined;
+- coverage counts reconcile programmatically where possible;
+- affected cells and distinct findings use separate denominators;
 - methodological notes are separate;
 - no misconduct inference or publication verdict appears;
-- mutually exclusive coverage totals reconcile;
-- machine-readable references are valid;
-- adaptations are logged;
-- Output A and Output B agree exactly on shared facts.
+- Output A and Output B agree;
+- Output B contains assessment labels, plain-language reasons, tables, positive checks, concerns, limitations, navigation guidance, and author questions;
+- Output B contains no unnecessary raw code or machine-readable blocks;
+- `Output validation: PASS` is used only if every applicable item passes.
 
-If validation fails, correct the reports or mark the affected output `FAILED`, `INCOMPLETE`, or `BLOCKED` instead of overstating completion.
-
-## Implementation Guidance
-
-Use deterministic scripts for inventory, extraction, formula inspection, code I/O scanning, calculations, figure comparisons, coverage reconciliation, and ledger validation. Use model reasoning for study mapping, claim interpretation, applicability decisions, contradiction reconciliation, prioritization, and report writing.
-
-Recommended development order:
-
-1. inventory, study map, claim ledger, evidence taxonomy, and completeness denominators;
-2. deterministic spreadsheet, statistics, I/O, configuration, prediction-label, and duplicate checks;
-3. controlled execution with dependency, version, seed, entry-point, and hash logging;
-4. domain modules for behavioral data, machine learning, simulations, and replicate workbooks;
-5. dual-output rendering from one ledger;
-6. adversarial and clean-control regression tests.
-
-Suggested acceptance criteria:
-
-```text
-Clean-control false positives: 0 major findings
-Planted major-error recall: at least 90%
-Study-to-file mapping accuracy: 100% on benchmark packages
-Blocked-check accuracy: at least 95%
-Coverage-ledger reconciliation: 100%
-Unsupported severity assignments: 0
-Detailed-to-brief factual contradictions: 0
-Misconduct inferences: 0
-Publication recommendations: 0
-```
+If any validation item fails, correct it or report `Output validation: FAILED` with the specific failures.
 
 ## Final Governing Rule
 
-Build a verified evidence graph for every study and claim before checking integrity or issuing conclusions. Produce one complete technical audit and one concise issue-focused review brief from the same validated ledger. Never allow incomplete coverage, unavailable execution, or uncertain impact to become a stronger conclusion than the evidence supports.
+Produce a rigorous technical audit and an accessible review brief from the same validated evidence. The brief must be easier to read, not less factual. It must show readers what is positive, what is concerning, what limits verification, what was not assessed, why each classification applies, and what action to take next.

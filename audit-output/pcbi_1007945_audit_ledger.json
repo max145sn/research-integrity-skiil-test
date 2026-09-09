@@ -1,6 +1,6 @@
 {
   "skill": "research-package-integrity-audit2",
-  "skill_commit": "c8e4d87",
+  "skill_commit": "d0893fd",
   "package": "pcbi.1007945",
   "manuscript": "Ayala MJC, Villela DAM (2020). PLOS Computational Biology 16(6):e1007945.",
   "files": [
@@ -13,9 +13,9 @@
     {"figure": "Fig1", "mapping_status": "NOT_APPLICABLE", "reason": "static diagram"},
     {"figure": "Fig2", "mapping_status": "NOT_APPLICABLE", "reason": "static diagram"},
     {"figure": "Fig3", "code_section": "R0 chunk, lines 1-197", "mapping_status": "CONFIRMED",
-     "figure_status": "FIGURE_NUMERICALLY_MATCHED_PARTIAL", "note": "formula recomputed independently, plotting code not executed"},
+     "figure_status": "FIGURE_UNDERLYING_FORMULA_RECOMPUTED", "note": "formula recomputed independently, plotting code not executed, PUBLISHED_FIGURE_PROVENANCE_VERIFIED not reached"},
     {"figure": "Fig4", "code_section": "simulation chunk, lines 198-780", "mapping_status": "CONFIRMED",
-     "figure_status": "FIGURE_SOURCE_UNAVAILABLE", "note": "code present, neither executed nor independently recomputed"},
+     "figure_status": "FIGURE_EXECUTION_NOT_ATTEMPTED", "note": "code present, neither executed nor independently recomputed"},
     {"figure": "Fig5", "mapping_status": "BLOCKED_MISSING_CODE", "figure_status": "FIGURE_CHECK_BLOCKED"}
   ],
   "claim_ledger": {
@@ -56,6 +56,7 @@
       "finding_id": "F-01",
       "primary_category": "CODE_MANUSCRIPT_MISMATCH",
       "secondary_categories": ["REPORTING_INCONSISTENCY"],
+      "assessment_label": "CONCERN",
       "locations": {"manuscript": "Table 1, row m (Nm/Nh=2435/625)", "code": "parf/parv[2] = 624"},
       "evidence_status": ["DIRECTLY_INSPECTED", "CROSS_DOCUMENT_MATCH", "RECOMPUTED"],
       "reported": 625,
@@ -72,6 +73,7 @@
       "finding_id": "F-02",
       "primary_category": "CODE_MANUSCRIPT_MISMATCH",
       "secondary_categories": ["REPORTING_INCONSISTENCY"],
+      "assessment_label": "CONCERN",
       "locations": {"manuscript": "Table 1, row phit = 0.21", "code": "parv[12] = 0.29"},
       "evidence_status": ["DIRECTLY_INSPECTED", "CROSS_DOCUMENT_MATCH", "RECOMPUTED"],
       "reported": 0.21,
