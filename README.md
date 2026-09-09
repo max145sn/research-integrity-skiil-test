@@ -14,6 +14,13 @@ This repository includes several document bundles and one installed skill.
   - `.github/skills/academic-paper-reviewer/references/` — calibration_mode_protocol.md, editorial_decision_standards.md, review_quality_thinking_framework.md
   - `.github/skills/academic-paper-reviewer/templates/` — editorial_decision_template.md, peer_review_report_template.md, revision_response_template.md
 - `.github/skills/research-package-integrity-audit2/skill.md`
+- `.github/skills/universal-research-package-audit/skill.md`
+  - `.github/skills/universal-research-package-audit/modules/` — registry.yaml
+  - `.github/skills/universal-research-package-audit/references/` — module-contract.md, population-and-denominator-rules.md, tolerance-rules.md
+  - `.github/skills/universal-research-package-audit/schemas/` — audit-ledger.schema.json, finding.schema.json, population-record.schema.json
+  - `.github/skills/universal-research-package-audit/scripts/` — build_reports.py, inspect_tabular_data.py, inventory_package.py, validate_audit.py
+  - `.github/skills/universal-research-package-audit/templates/` — accessible-review-brief.md, technical-audit.md
+  - `.github/skills/universal-research-package-audit/tests/` — test_validation.py, fixtures/
 
 ## Core documents
 
