@@ -11,6 +11,4 @@ Visible copies of repository skills for easier browsing in Codespaces.
   - `academic-paper-reviewer/examples/` — hei_paper_review_example.md, interdisciplinary_review_example.md, subclaim_decomposition_example.md
   - `academic-paper-reviewer/references/` — calibration_mode_protocol.md, editorial_decision_standards.md, review_quality_thinking_framework.md
   - `academic-paper-reviewer/templates/` — editorial_decision_template.md, peer_review_report_template.md, revision_response_template.md
-  - `academic-paper-reviewer/examples/`
-  - `academic-paper-reviewer/references/`
-  - `academic-paper-reviewer/templates/`
+- `research-package-integrity-audit2/skill.md`
