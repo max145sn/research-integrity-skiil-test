@@ -14,6 +14,15 @@ Guidance" describes for a mature deployment. R was not available in the executio
 or `CROSS_DOCUMENT_MATCH` unless explicitly marked otherwise. No values in this report should be read as
 "reproduced" in the skill's technical sense.
 
+**Re-verification note (this run):** the skill was invoked through the `skill` tool this time
+(`skill: "research-package-integrity-audit2"`), which returned "Skill loaded successfully" and injected
+the full `skill.md` body verbatim as skill-context — confirming genuine tool-mediated access rather than
+a manual file read. The tool-injected content is byte-identical to the `.github/skills/research-package-integrity-audit2/skill.md`
+and `skills/research-package-integrity-audit2/skill.md` copies already in this repository (verified by
+diff). The audited package (`file.pdf`, `pcbi.1007945.s001.Rmd`) and execution environment (no
+R/Rscript available) are unchanged since the prior run, so all findings, statuses, and the coverage
+report below are re-confirmed unchanged rather than re-derived from scratch.
+
 ---
 
 ## Part 0: Preflight and Scope Declaration
