@@ -1,0 +1,40 @@
+{
+  "date": "2026-04-10",
+  "auditor": "task-agent-gpt-5.3-codex-high-reasoning (zero-context, substituting for mcp__codex__codex which is unavailable in this environment)",
+  "project": "documents/Meaning in Life/ (byte-identical to code/Code.R, results/Data.csv, paper/Manuscript.pdf)",
+  "overall_verdict": "fail",
+  "integrity_status": "fail",
+  "checks": {
+    "gt_provenance": {
+      "status": "warn",
+      "details": "Study 4 outcome/condition loaded from real participant data (Data.csv); Study 2 ground truth unverifiable because Study2rawdataexp.csv does not exist in this repository."
+    },
+    "score_normalization": {
+      "status": "warn",
+      "details": "No self-referential/fraudulent normalization found. Bayes factor labeling in manuscript (BF01 = 0.033/0.185/0.181, interpreted as favoring the null) appears to actually be BF10 mislabeled as BF01 - a likely notation error, not fabrication."
+    },
+    "result_existence": {
+      "status": "fail",
+      "details": "Study 4 claims (sample sizes, means/SDs, t-test, Cohen's d, adjusted regression) independently recomputed from Data.csv and matched. All ~15 Study 2 numeric claims reference a raw data file (Study2rawdataexp.csv) absent from the entire repository and are therefore unverifiable."
+    },
+    "dead_code": {
+      "status": "warn",
+      "details": "st2$mil1..mil5 and unstb2 computed in Code.R but never used downstream (vestigial, no effect on reported results). Exploratory Box-Cox/interaction/quadratic-term branch is clearly labeled as exploratory in both code and manuscript and not substituted for confirmatory results."
+    },
+    "scope": {
+      "status": "warn",
+      "details": "Manuscript frames a 'direct replication' of Studies 2 and 4 plus a pooled meta-analysis with the original 2013 study, but only Study 4 is independently verifiable from files present in this repository; meta-analysis also depends on externally-sourced, non-re-derivable original-study statistics."
+    },
+    "eval_type": "real_gt"
+  },
+  "claims": [
+    {"id": "Study4_sample_sizes_means_sds", "impact": "supported"},
+    {"id": "Study4_ttest_cohens_d", "impact": "supported"},
+    {"id": "Study4_adjusted_regression", "impact": "supported"},
+    {"id": "Study4_bayes_factors", "impact": "needs_qualifier"},
+    {"id": "Study2_all_claims", "impact": "unsupported"},
+    {"id": "pooled_meta_analysis", "impact": "needs_qualifier"},
+    {"id": "direct_replication_framing_studies_2_and_4", "impact": "needs_qualifier"}
+  ],
+  "reviewer_backend_note": "mcp__codex__codex and mcp__manual_review__review are unavailable in this environment. Substituted a separate stateless task-tool agent (model gpt-5.3-codex, high reasoning effort) given only file paths and the skill's exact audit-checklist prompt, with no reference to this conversation, preserving reviewer independence (different model family, zero prior context, executor does not judge integrity itself)."
+}

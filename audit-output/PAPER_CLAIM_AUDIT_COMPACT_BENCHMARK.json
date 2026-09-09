@@ -1,0 +1,110 @@
+{
+  "audit_skill": "paper-claim-audit",
+  "fixture": "trial/compact_tabular_benchmark_package",
+  "verdict": "FAIL",
+  "reason_code": "claim_mismatch",
+  "summary": "The manuscript overstates dataset size (486 vs 480), understates run count (6 vs 7), misstates max tree depth (6 vs 4), misreports mean accuracy (79.6% vs actual 80.0%, unreproducible by any run-subset), and conflates the single best run's accuracy with an 'overall' aggregate figure. Peak accuracy and learning rate are correctly reported. Scope claims of general applicability beyond the single tested benchmark are unsupported.",
+  "reviewers": {
+    "primary": "Claude Sonnet 5",
+    "cross_model": "GPT-5.3-Codex (genuine blind audit, no answer key provided in this package)"
+  },
+  "audited_inputs": {
+    "manuscript": "trial/compact_tabular_benchmark_package/manuscript.docx",
+    "data": "trial/compact_tabular_benchmark_package/data/benchmark_data.csv",
+    "run_metrics": "trial/compact_tabular_benchmark_package/results/run_metrics.csv",
+    "aggregate_results": "trial/compact_tabular_benchmark_package/results/aggregate_results.json",
+    "config": "trial/compact_tabular_benchmark_package/config/model_config.yaml",
+    "summarize_script": "trial/compact_tabular_benchmark_package/code/summarize_results.py"
+  },
+  "details": {
+    "total_claims_checked": 14,
+    "status_counts": {
+      "exact_match": 5,
+      "rounding_ok": 1,
+      "mismatch": 5,
+      "internal_inconsistency": 1,
+      "cherry_pick": 1,
+      "unsupported_scope": 1
+    },
+    "findings": [
+      {
+        "location": "Abstract; \u00a72.1 Data; Table 1",
+        "claim": "final dataset comprised 486 records",
+        "evidence": "benchmark_data.csv has 480 rows",
+        "status": "mismatch"
+      },
+      {
+        "location": "\u00a72.1 Data; Table 1",
+        "claim": "Training partition 320",
+        "evidence": "split=='train' count = 320",
+        "status": "exact_match"
+      },
+      {
+        "location": "\u00a72.1 Data",
+        "claim": "retained the remaining records for testing (implies 486-320=166)",
+        "evidence": "split=='test' count = 160; every run test_n = 160",
+        "status": "internal_inconsistency"
+      },
+      {
+        "location": "\u00a72.1 Data",
+        "claim": "three predictors and a binary outcome",
+        "evidence": "signal_a, signal_b, category_c (3 predictors); outcome in {0,1}",
+        "status": "exact_match"
+      },
+      {
+        "location": "\u00a72.1 Data",
+        "claim": "All records were complete",
+        "evidence": "0 missing values across all columns",
+        "status": "exact_match"
+      },
+      {
+        "location": "\u00a72.2 Model and configuration",
+        "claim": "maximum tree depth of 6",
+        "evidence": "run_metrics.csv distinct max_depth = {4}; config max_depth: 4",
+        "status": "mismatch"
+      },
+      {
+        "location": "\u00a72.2 Model and configuration",
+        "claim": "learning rate of 0.06",
+        "evidence": "all runs and config use 0.06",
+        "status": "exact_match"
+      },
+      {
+        "location": "Abstract; \u00a72.3 Evaluation; Table 1",
+        "claim": "six independent runs / run count 6",
+        "evidence": "run_metrics.csv has 7 runs (run_id 1-7); config runs: 7",
+        "status": "mismatch"
+      },
+      {
+        "location": "Abstract; \u00a73 Results; Table 1",
+        "claim": "Mean accuracy across runs was 79.6%",
+        "evidence": "mean of all 7 run accuracies = 80.0% exactly; no 6-of-7 subset reproduces 79.6% (closest: excluding run 4 gives 79.6875%, which rounds to 79.7%)",
+        "status": "mismatch"
+      },
+      {
+        "location": "Abstract; \u00a73 Results; Table 1",
+        "claim": "Peak accuracy reached 81.9%",
+        "evidence": "max single-run accuracy = 81.875% (run 4)",
+        "status": "rounding_ok"
+      },
+      {
+        "location": "\u00a73 Results",
+        "claim": "Overall model accuracy was 81.9% on the held-out test set",
+        "evidence": "81.9% is the best single run only; true overall mean is 80.0%",
+        "status": "cherry_pick"
+      },
+      {
+        "location": "Abstract; \u00a74 Discussion",
+        "claim": "dependable performance / supports use across small structured-data applications",
+        "evidence": "only one simulated dataset and one fixed train/test partition (7 seeds) was evaluated",
+        "status": "unsupported_scope"
+      },
+      {
+        "location": "config consistency check",
+        "claim": "(audit check, not a manuscript claim)",
+        "evidence": "model_config.yaml (training_rows=320, test_rows=160, runs=7, max_depth=4, learning_rate=0.06) is fully consistent with raw data/run files; only the manuscript diverges from both",
+        "status": "exact_match"
+      }
+    ]
+  }
+}

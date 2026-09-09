@@ -1,0 +1,58 @@
+{
+  "package_type": "controlled synthetic claim-audit fixture",
+  "ground_truth": {
+    "actual_sample_n": 520,
+    "train_n": 350,
+    "test_n": 170,
+    "actual_run_count": 6,
+    "mean_accuracy": 0.8235294117647058,
+    "best_accuracy": 0.8470588235294118,
+    "best_run_id": 4,
+    "actual_max_depth": 3,
+    "learning_rate": 0.08
+  },
+  "planted_flaws": [
+    {
+      "id": "F1",
+      "type": "wrong number",
+      "manuscript_claim": "final sample contained 524 observations",
+      "evidence": "study_data.csv has 520 rows",
+      "expected": "ERROR"
+    },
+    {
+      "id": "F2",
+      "type": "acceptable rounding",
+      "manuscript_claim": "mean accuracy was 82.4%",
+      "evidence": "six-run mean is 82.352941...%",
+      "expected": "PASS_ROUNDING"
+    },
+    {
+      "id": "F3",
+      "type": "cherry-picked best run",
+      "manuscript_claim": "Method accuracy was 84.7%",
+      "evidence": "84.7% is run 4 only; mean is 82.35%",
+      "expected": "FLAG_CHERRY_PICK"
+    },
+    {
+      "id": "F4",
+      "type": "incorrect run count",
+      "manuscript_claim": "five independent runs",
+      "evidence": "run_results.csv and config contain 6 runs",
+      "expected": "ERROR"
+    },
+    {
+      "id": "F5",
+      "type": "configuration mismatch",
+      "manuscript_claim": "maximum tree depth of 5",
+      "evidence": "YAML and all outputs use max_depth 3",
+      "expected": "ERROR"
+    },
+    {
+      "id": "F6",
+      "type": "unsupported scope claim",
+      "manuscript_claim": "generalizes across all tabular classification domains",
+      "evidence": "one synthetic dataset and one split only",
+      "expected": "UNSUPPORTED"
+    }
+  ]
+}

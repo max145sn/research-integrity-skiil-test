@@ -1,0 +1,94 @@
+{
+  "audit_skill": "paper-claim-audit",
+  "verdict": "WARN",
+  "reason_code": "missing_raw_evidence_partial",
+  "summary": "All Study 4 numeric claims reproduce exactly (to rounding) from results/Data.csv; all Study 2 numeric claims are unverifiable because the repository has no Study 2 raw data file; Bayes factors and meta-analytic pooled effects could not be independently recomputed (R/metafor/BayesFactor unavailable in this environment).",
+  "auditors": [
+    "Claude Sonnet 5 (primary, direct recomputation)",
+    "GPT-5.3-Codex (fresh zero-context cross-model reviewer, independent recomputation)"
+  ],
+  "audited_input_hashes_note": "SHA256 hashing not performed in this environment run; paths audited are listed below.",
+  "audited_inputs": {
+    "paper": "paper/Manuscript.pdf",
+    "code": "code/Code.R",
+    "results": "results/Data.csv"
+  },
+  "generated_at": "2026-09-07T13:20:00Z",
+  "details": {
+    "total_claims": 33,
+    "status_counts": {
+      "exact_match": 8,
+      "rounding_ok": 15,
+      "missing_evidence": 9,
+      "not_independently_recomputable": 7,
+      "mismatch": 0
+    },
+    "mismatches": [],
+    "missing_evidence": [
+      {
+        "location": "Table 1; Study 2 descriptives and demographics (N=482 recruited, N=478 valid)",
+        "reason": "No Study2rawdataexp.csv (or equivalent) exists in the repository."
+      },
+      {
+        "location": "\u00a74.1-4.2 unadjusted ANOVA F(2,475)=0.35, p=0.705",
+        "reason": "Requires Study 2 raw data, unavailable."
+      },
+      {
+        "location": "\u00a74.2 contrast t(476)=0.59, p=0.554, d=0.06",
+        "reason": "Requires Study 2 raw data, unavailable."
+      },
+      {
+        "location": "\u00a74.2 adjusted regression F(7,470)=23.17, R2=0.26, adj R2=0.25",
+        "reason": "Requires Study 2 raw data, unavailable."
+      },
+      {
+        "location": "Table 3, Study 2: tree photos rows (condition, EPA, ENA, IPA, INA, time)",
+        "reason": "Requires Study 2 raw data, unavailable."
+      },
+      {
+        "location": "\u00a74.2.2 Bayes factors BF01 = 0.033 / 0.185 / 0.285",
+        "reason": "Requires Study 2 raw data plus R BayesFactor package, unavailable."
+      },
+      {
+        "location": "Footnote 1: F(7,470)=22.12 time-average reanalysis",
+        "reason": "Requires Study 2 raw data, unavailable."
+      },
+      {
+        "location": "\u00a74.5 Box-Cox exploratory model F(6,449)=25.19, R2=0.25",
+        "reason": "Requires Study 2 raw data, unavailable."
+      },
+      {
+        "location": "\u00a73.1.1 original-study G*Power derivations (d=0.37/0.33, required n=438)",
+        "reason": "Depends on Study 2 sample and external original-paper values not present in repo."
+      }
+    ],
+    "not_independently_recomputable": [
+      "\u00a73.1.1/3.1.2 original Heintzelman et al. (2013) effect sizes and G*Power outputs (external source, not in repo)",
+      "\u00a74.4.2 Study 4 Bayes factor BF01=0.181 (unadjusted)",
+      "\u00a74.4.2 Study 4 Bayes factor BF01=0.135 (adjusted)",
+      "\u00a74.5 unadjusted pooled meta-analytic effect 0.246, z=2.20, p=0.028; Q(5)=14.49, p=0.013; moderator b=-0.447, z=-3.64, p=0.0003",
+      "\u00a74.5 adjusted pooled meta-analytic effect 0.214, z=2.63, p=0.009; Q(5)=7.78, p=0.169; moderator b=-0.318, z=-2.59, p=0.010",
+      "\u00a74.5 residual heterogeneity Q(4)=1.26, p=0.869; stimulus moderator b=-0.030, z=-0.12, p=0.903",
+      "R (Rscript) with metafor/BayesFactor packages is not installed in this environment"
+    ],
+    "checkable_claims_matched": [
+      {"location": "\u00a73.1.2", "paper": "Recruited 294", "evidence": "294", "status": "exact_match"},
+      {"location": "\u00a73.1.2", "paper": "Age 18-79, M=34.73, s.d.=11.4", "evidence": "min18 max79 M=34.7313 SD=11.3966", "status": "rounding_ok"},
+      {"location": "\u00a73.1.2", "paper": "166 female (56.5%), 128 male (43.5%)", "evidence": "166/128 (56.46%/43.54%)", "status": "rounding_ok"},
+      {"location": "\u00a74.3.1", "paper": "3 failed attention check; final N=291", "evidence": "3 excluded; n=291", "status": "exact_match"},
+      {"location": "\u00a74.3.1", "paper": "No missing data", "evidence": "0 missing values", "status": "exact_match"},
+      {"location": "Table 2", "paper": "N=291 (144/147)", "evidence": "144/147=291", "status": "exact_match"},
+      {"location": "Table 2", "paper": "MLQ-P 4.76(1.54); 4.68(1.64); 4.83(1.44)", "evidence": "4.7576(1.5449); 4.6802(1.6441); 4.8333(1.4428)", "status": "rounding_ok"},
+      {"location": "Table 2", "paper": "EPA 4.33(1.51); 4.22(1.50); 4.44(1.52)", "evidence": "4.3288(1.5119); 4.2153(1.5039); 4.4399(1.5157)", "status": "rounding_ok"},
+      {"location": "Table 2", "paper": "ENA 2.73(1.66); 2.83(1.75); 2.64(1.57)", "evidence": "2.7320(1.6620); 2.8264(1.7474); 2.6395(1.5744)", "status": "rounding_ok"},
+      {"location": "\u00a74.4.1", "paper": "t(289)=-0.845, p=0.399, CI[-0.51,0.20], d=0.099", "evidence": "t=-0.8449, p=0.3989, CI[-0.5098,0.2036], |d|=0.0991", "status": "rounding_ok"},
+      {"location": "\u00a74.4.1", "paper": "F(3,287)=46.62, p<0.001, R2=0.33, adjR2=0.32", "evidence": "F=46.618, p=1.42e-24, R2=0.3276, adjR2=0.3206", "status": "rounding_ok"},
+      {"location": "\u00a74.4.1", "paper": "condition eta2p=0.00004", "evidence": "partial eta2=4.17e-05", "status": "rounding_ok"},
+      {"location": "Table 3", "paper": "condition 0.02(0.15), t=0.11, p=0.913, CI[-0.28,0.31]", "evidence": "0.0164(0.1498), t=0.109, p=0.913, CI[-0.278,0.311]", "status": "rounding_ok"},
+      {"location": "Table 3", "paper": "EPA 0.56(0.05), t=10.48, p<0.001, CI[0.45,0.66]", "evidence": "0.5559(0.0530), t=10.482, p<0.001, CI[0.452,0.660]", "status": "rounding_ok"},
+      {"location": "Table 3", "paper": "ENA -0.06(0.05), t=-1.32, p=0.189, CI[-0.15,0.03]", "evidence": "-0.0635(0.0482), t=-1.318, p=0.189, CI[-0.158,0.031]", "status": "rounding_ok"},
+      {"location": "Code.R meta input", "paper": "res4unadj m1i=4.680208 m2i=4.833333 sd1i=1.64 sd2i=1.44 n1i=144 n2i=147", "evidence": "matches recomputed group stats exactly", "status": "exact_match"},
+      {"location": "Code.R meta input", "paper": "res4adj m1i=0.01638", "evidence": "recomputed condition coefficient 0.016382", "status": "exact_match"}
+    ]
+  }
+}

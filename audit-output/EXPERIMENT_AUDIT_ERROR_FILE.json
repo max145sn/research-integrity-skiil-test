@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-07",
+  "auditor": "task-agent-gpt-5.3-codex-high-reasoning (zero-context, substituting for mcp__codex__codex which is unavailable in this environment)",
+  "project": "documents/error file/tabular_model_research_package.zip",
+  "note": "data/results/config/code/manuscript are byte-identical to trial/compact_tabular_benchmark_package (verified via file hash + git diff --no-index). Package adds LICENSE.txt, README.md, data/benchmark_data.xlsx, results/predictions.csv.",
+  "overall_verdict": "fail",
+  "integrity_status": "fail",
+  "checks": {
+    "gt_provenance": {
+      "status": "pass",
+      "details": "Full join of all 1120 predictions.csv rows against benchmark_data.csv outcome column found zero mismatches; ground truth genuinely dataset-sourced, not derived from predictions."
+    },
+    "score_normalization": {
+      "status": "pass",
+      "details": "Accuracy uses fixed denominator (test_n=160); raw correct/total counts present alongside percentages; no self-referential normalization; best score 81.875%, not suspiciously near 100%."
+    },
+    "result_existence": {
+      "status": "fail",
+      "details": "Manuscript claims 486 records (actual 480), six runs (actual 7), mean accuracy 79.6% (actual 80.0%, unreproducible via any run subset), max_depth 6 (actual/config 4). learning_rate 0.06 matches. Peak 81.9% numerically consistent with best single run but mislabeled as overall/aggregate accuracy."
+    },
+    "dead_code": {
+      "status": "pass",
+      "details": "All computed statistics in summarize_results.py are emitted in output; no unused code paths."
+    },
+    "scope": {
+      "status": "warn",
+      "details": "Single simulated dataset, one fixed 320/160 split, 7 seeds; manuscript's generalization language ('across small structured-data applications') exceeds this single-dataset, single-partition scope."
+    },
+    "eval_type": "simulation_only"
+  },
+  "claims": [
+    {"id": "dataset_size_486", "impact": "unsupported"},
+    {"id": "run_count_six", "impact": "unsupported"},
+    {"id": "mean_accuracy_79_6_percent", "impact": "unsupported"},
+    {"id": "max_depth_6", "impact": "unsupported"},
+    {"id": "learning_rate_0_06", "impact": "supported"},
+    {"id": "peak_overall_accuracy_81_9_percent", "impact": "needs_qualifier"},
+    {"id": "generalization_across_applications", "impact": "unsupported"}
+  ],
+  "reviewer_backend_note": "mcp__codex__codex and mcp__manual_review__review are unavailable in this environment. Substituted a separate stateless task-tool agent (model gpt-5.3-codex, high reasoning effort) given only file paths and the skill's exact audit-checklist prompt, with no reference to this conversation or prior related audits, preserving reviewer independence."
+}

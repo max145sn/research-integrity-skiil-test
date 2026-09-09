@@ -1,0 +1,78 @@
+{
+  "audit_skill": "paper-claim-audit",
+  "fixture": "trial/controlled_synthetic_claim_audit_package",
+  "verdict": "FAIL",
+  "reason_code": "material_mismatch",
+  "summary": "The synthetic manuscript has three material reporting errors (sample size, run count, max depth), one cherry-pick framing issue, and one unsupported scope claim. The mean accuracy and best-run accuracy are numerically correct to rounding.",
+  "reviewers": {
+    "primary": "GPT-5.4-mini",
+    "cross_model": "GPT-5.3-Codex"
+  },
+  "audited_inputs": {
+    "manuscript": "audit-output/trial_fixture/manuscript.docx",
+    "data": "audit-output/trial_fixture/data/study_data.csv",
+    "run_results": "audit-output/trial_fixture/results/run_results.csv",
+    "summary_statistics": "audit-output/trial_fixture/results/summary_statistics.json",
+    "config": "audit-output/trial_fixture/config/experiment_config.yaml",
+    "analysis": "audit-output/trial_fixture/code/analysis.py"
+  },
+  "details": {
+    "total_claims_checked": 8,
+    "status_counts": {
+      "FAIL": 3,
+      "PASS": 3,
+      "WARN": 1,
+      "UNSUPPORTED": 1
+    },
+    "findings": [
+      {
+        "location": "Abstract; Methods 2.1; Table 1",
+        "claim": "The final sample contained 524 observations",
+        "evidence": "study_data.csv has 520 rows",
+        "status": "FAIL"
+      },
+      {
+        "location": "Abstract; Results 3; Table 1",
+        "claim": "Mean accuracy was 82.4%",
+        "evidence": "mean(run_results.accuracy) = 82.352941...%",
+        "status": "PASS"
+      },
+      {
+        "location": "Abstract; Results 3; Table 1",
+        "claim": "The best-performing run reached 84.7% accuracy",
+        "evidence": "max(run_results.accuracy) = 84.705882...% at run_id=4",
+        "status": "PASS"
+      },
+      {
+        "location": "Abstract; Results 3; Table 1",
+        "claim": "Method accuracy was 84.7% on the held-out test set",
+        "evidence": "84.7% is the best run only; the mean is 82.35%",
+        "status": "WARN"
+      },
+      {
+        "location": "Abstract; Methods 2.3; Table 1",
+        "claim": "five independent runs",
+        "evidence": "run_results.csv has 6 rows; config says runs: 6",
+        "status": "FAIL"
+      },
+      {
+        "location": "Methods 2.2",
+        "claim": "maximum tree depth of 5",
+        "evidence": "config and all runs use max_depth = 3",
+        "status": "FAIL"
+      },
+      {
+        "location": "Methods 2.2",
+        "claim": "learning rate of 0.08",
+        "evidence": "config and all runs use 0.08",
+        "status": "PASS"
+      },
+      {
+        "location": "Discussion 4",
+        "claim": "generalizes across all tabular classification domains",
+        "evidence": "one synthetic dataset and one split only",
+        "status": "UNSUPPORTED"
+      }
+    ]
+  }
+}

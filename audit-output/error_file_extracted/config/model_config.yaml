@@ -1,0 +1,8 @@
+project: compact_tabular_benchmark
+model: gradient_boosted_tree
+max_depth: 4
+learning_rate: 0.06
+training_rows: 320
+test_rows: 160
+runs: 7
+seed_start: 5101
