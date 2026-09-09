@@ -1,211 +1,983 @@
 {
-  "schema": "research-package-integrity-audit2/ledger/v1",
-  "audit_id": "dryad_s7h44j1gc_eap3053",
-  "generated_by": "research-package-integrity-audit2",
-  "execution_mode": {
-    "single_session": true,
-    "manuscript_extraction": "pdfplumber, 38 pages, 68034 chars, confidence HIGH",
-    "recomputation_environment": "Python 3.12 / pandas / numpy",
-    "r_runtime_available": false,
-    "source_code_executed": false,
-    "note": "All numerical agreements are independent recomputations from raw data, not reproductions of the authors' pipeline."
+  "audit": {
+    "skill": "research-package-integrity-audit2",
+    "skill_sha256": "d5bb4fba34ebed875c3d4a5dee2031e8e2e84a8e46c0d52c4fdabffad04d7595",
+    "run": "independent re-execution, superseding the earlier run on the same package",
+    "date": "2026-09-09",
+    "manuscript": "Schubert et al. 2025, Ecological Applications 35(1), doi:10.1002/eap.3053",
+    "package": "Dryad doi:10.5061/dryad.s7h44j1gc, version 20251216"
   },
-  "manuscript": {
-    "title": "Active restoration increases tree species richness and recruitment of large-seeded taxa after 16-18 years",
-    "authors": "Schubert SC, Zahawi RA, Oviedo-Brenes F, Rosales JA, Holl KD",
-    "journal": "Ecological Applications 35(1), 2025",
-    "doi": "10.1002/eap.3053",
-    "supplied_file": "qt2qt6s177.pdf",
-    "pages": 38,
-    "embedded_images": 0
-  },
-  "package": {
-    "doi": "10.5061/dryad.s7h44j1gc",
-    "version": "v20251216",
-    "archive": "doi_10_5061_dryad_s7h44j1gc__v20251216.zip"
-  },
-  "preflight": {
-    "status": "PARTIAL",
-    "blockers": ["R runtime absent", "manuscript analysis script absent"],
-    "notes": ["Main CSV is Latin-1 encoded; UTF-8 read fails at byte 137401"]
-  },
-  "inventory": {
-    "denominator_supplied_artifacts": 9,
+  "inventory": [
+    {
+      "file": "Cartesian.Long.Meters.csv",
+      "bytes": 4079,
+      "sha256": "a435a8cbe769de9a0931da40750d238ee4815de4190fa22b36cf215a96eaba2e",
+      "classified": true
+    },
+    {
+      "file": "Cartesian.Reference.Meters.csv",
+      "bytes": 5509,
+      "sha256": "c458532346ef26b3b64e6cfb3ad0398c37bbc5176a943addf00fc961f807eeae",
+      "classified": true
+    },
+    {
+      "file": "Cartesian.Standard.Meters.csv",
+      "bytes": 5691,
+      "sha256": "c13190616b63e1ebb931f3b8f0f153943d7d256b0e569ef8a009548a30225e84",
+      "classified": true
+    },
+    {
+      "file": "ECOLAPPS_final_Schubert.et.al.2024.csv",
+      "bytes": 10138063,
+      "sha256": "a47f93028d9fbd2855704bb96147fb7655d4240adde5f624cbb96cb839f2261a",
+      "classified": true
+    },
+    {
+      "file": "FinalAnalysis_AVS_Schubert.et.al.R",
+      "bytes": 511092,
+      "sha256": "68964c4b60871fc42dfbb64c03288f2f5f3e55cffdaca65ceff5a06277482f22",
+      "classified": true
+    },
+    {
+      "file": "IslasMaster_abbreviated2025.csv",
+      "bytes": 18497,
+      "sha256": "956200a2ace93aeaaf2fd09840ef9ad59e5a78c3da13957dcff4ab214e4f1b03",
+      "classified": true
+    },
+    {
+      "file": "PlotQuadrantes.csv",
+      "bytes": 348,
+      "sha256": "de0b36b414fe04f0a9239110dee413057eca0d43ef78eeed5c2790aaabba11fe",
+      "classified": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 13592,
+      "sha256": "efd078b25cca62ee6c034b593fae7403619cbb0e1435735858d3d777c7cca916",
+      "classified": true
+    },
+    {
+      "file": "qt2qt6s177.pdf",
+      "bytes": 1056094,
+      "sha256": "72954d4a0cf2d95060602e48720aa7edf30018e8f778a583cbcc765801091c6a",
+      "classified": true
+    }
+  ],
+  "inventory_summary": {
+    "supplied_files": 9,
     "classified": 9,
-    "unclassified": 0,
-    "files": [
-      {"name": "qt2qt6s177.pdf", "bytes": 1056094, "class": "MANUSCRIPT", "used": true},
-      {"name": "README.md", "bytes": 13592, "class": "DOCUMENTATION", "used": true},
-      {"name": "ECOLAPPS_final_Schubert.et.al.2024.csv", "bytes": 10138063, "class": "RAW_OBSERVED+DERIVED", "rows": 67046, "used": true},
-      {"name": "PlotQuadrantes.csv", "bytes": 348, "class": "MODEL_INPUT", "rows": 33, "used": true},
-      {"name": "IslasMaster_abbreviated2025.csv", "bytes": 18497, "class": "CLEANED", "rows": 256, "used": true},
-      {"name": "FinalAnalysis_AVS_Schubert.et.al.R", "bytes": 511092, "class": "CODE_OTHER_MANUSCRIPT", "lines": 12434, "used": "inference_only"},
-      {"name": "Cartesian.Standard.Meters.csv", "bytes": 5691, "class": "MODEL_INPUT", "used": false, "status": "NOT_APPLICABLE"},
-      {"name": "Cartesian.Long.Meters.csv", "bytes": 4079, "class": "MODEL_INPUT", "used": false, "status": "NOT_APPLICABLE"},
-      {"name": "Cartesian.Reference.Meters.csv", "bytes": 5509, "class": "MODEL_INPUT", "used": false, "status": "NOT_APPLICABLE"}
-    ]
+    "unclassified": 0
   },
-  "missing_artifacts": {
-    "denominator_manuscript_referenced_required": 5,
-    "supplied": 0,
-    "register": [
-      {"id": "M-01", "artifact": "FinalAnalysis_ECOLAPP_Schubert.et.al.R", "expectation": "README file list; manuscript Open Research Statement p.2 ll.21-22", "status": "ABSENT"},
-      {"id": "M-02", "artifact": "Figures 1-3 graphics", "expectation": "figure captions p.37", "status": "ABSENT"},
-      {"id": "M-03", "artifact": "Appendix S1 (Tables S1-S4, Figures S1-S4)", "expectation": "14 in-text citations", "status": "ABSENT"},
-      {"id": "M-04", "artifact": "per-species per-plot initial planting counts", "expectation": "survival claims p.9 ll.176-179", "status": "ABSENT"},
-      {"id": "M-05", "artifact": "session/environment record (R 4.3.3, versions, seeds)", "expectation": "p.10 l.223", "status": "ABSENT"}
-    ]
-  },
-  "evidence_graph": {
-    "manuscript_to_dataset": "CONFIRMED",
-    "manuscript_to_analysis_code": "UNRESOLVED",
-    "figures_to_code": "UNRESOLVED",
-    "published_figure_provenance": "NOT_VERIFIED",
-    "dataset_to_area_file": "CONFIRMED_WITH_DISCREPANCY",
-    "cleaning_rule_source": {"rule": "exclude BORAGINACEAE, HIRAEA, RUBIACEAE, INGA, GUAREA, LAURACEAE", "inferred_from": "FinalAnalysis_AVS_Schubert.et.al.R", "mapping": "PROBABLE"}
-  },
-  "claims": [
-    {"id": "C-01", "loc": "p.11 l.247", "proposition": "66,446 seedling recruits", "evidence": "RECOMPUTED", "observed": 66446, "outcome": "MATCH"},
-    {"id": "C-02", "loc": "p.11 l.247", "proposition": "14,038 sapling recruits", "evidence": "RECOMPUTED", "observed": 14038, "outcome": "MATCH"},
-    {"id": "C-03", "loc": "p.11 l.247", "proposition": "3,842 tree recruits", "evidence": "RECOMPUTED", "observed": 3842, "outcome": "MATCH"},
-    {"id": "C-04", "loc": "p.11 l.248", "proposition": "1,941 surviving planted trees", "evidence": "RECOMPUTED", "observed": 1941, "outcome": "MATCH"},
-    {"id": "C-05", "loc": "p.3 l.34", "proposition": ">80,000 individuals censused", "evidence": "RECOMPUTED", "observed": 84326, "outcome": "MATCH"},
-    {"id": "C-06", "loc": "p.11 l.247", "proposition": "255 operational taxonomic units", "evidence": "RECOMPUTED", "observed": 255, "note": "261 codes minus 6 poor-resolution taxa", "outcome": "MATCH"},
-    {"id": "C-07", "loc": "p.3 l.34-35; p.9 l.164", "proposition": "26 restoration plots: NR 9, AN 9, PL 8", "evidence": "RECOMPUTED", "observed": "9/9/8", "outcome": "MATCH"},
-    {"id": "C-08", "loc": "p.3 l.35", "proposition": "six reference forests", "evidence": "RECOMPUTED", "observed": 6, "outcome": "MATCH"},
-    {"id": "C-09", "loc": "p.10 l.229", "proposition": "1.01 ha minimum sampled area", "evidence": "RECOMPUTED", "observed": 1.0116, "outcome": "MATCH"},
-    {"id": "C-10", "loc": "p.13 l.298", "proposition": "planted-taxa seedlings 13.0% in AN", "evidence": "RECOMPUTED", "observed": 12.96, "outcome": "MATCH"},
-    {"id": "C-11", "loc": "p.13 l.298", "proposition": "planted-taxa seedlings 4.7% in PL", "evidence": "RECOMPUTED", "observed": 4.67, "outcome": "MATCH"},
-    {"id": "C-12", "loc": "p.14 l.300", "proposition": "planted-taxa saplings 1.8% of all saplings", "evidence": "RECOMPUTED", "observed": 1.82, "outcome": "MATCH"},
-    {"id": "C-13", "loc": "p.13 l.281", "proposition": "early-successional 54.0% of NR saplings", "evidence": "RECOMPUTED", "observed": 53.95, "outcome": "MATCH"},
-    {"id": "C-14", "loc": "p.13 l.281", "proposition": "early-successional 43.3% of AN saplings", "evidence": "RECOMPUTED", "observed": 43.30, "outcome": "MATCH"},
-    {"id": "C-15", "loc": "p.13 l.282", "proposition": "early-successional 18.6% of PL saplings", "evidence": "RECOMPUTED", "observed": "18.19-18.59 across 7 rules", "outcome": "MISMATCH", "finding": "F-15"},
-    {"id": "C-16", "loc": "p.14 l.312", "proposition": "later-successional tree density in restoration = 8% of reference forest", "evidence": "RECOMPUTED", "observed": 7.7, "outcome": "MATCH"},
-    {"id": "C-17", "loc": "p.13 l.293", "proposition": "listed early-successional taxa >75% of recruited trees in restored plots", "evidence": "RECOMPUTED", "observed": 79.1, "outcome": "MATCH"},
-    {"id": "C-18", "loc": "p.10 l.215", "proposition": "71% of late-successional species have seeds >=5 mm", "evidence": "RECOMPUTED", "observed": 70.6, "outcome": "MATCH"},
-    {"id": "C-19", "loc": "Fig.1 caption", "proposition": "mid-successional n = 52 spp", "evidence": "RECOMPUTED", "observed": 52, "outcome": "MATCH"},
-    {"id": "C-20", "loc": "Fig.1 caption", "proposition": "early-successional n = 38 spp", "evidence": "RECOMPUTED", "observed": 38, "outcome": "MATCH"},
-    {"id": "C-21", "loc": "p.9-10 l.192-197", "proposition": "plot quadrat counts (256/252/196/147)", "evidence": "RECOMPUTED", "observed": "32/32 plots agree exactly", "outcome": "MATCH"},
-    {"id": "C-22", "loc": "p.11 l.249-250", "proposition": "94.2% of individuals to species, 4.6% genus, 1.1% family", "evidence": "RECOMPUTED", "observed": "individuals 99.85/0.15/0.00; taxa 94.25/4.60/1.15", "outcome": "MISMATCH", "finding": "F-02"},
-    {"id": "C-23", "loc": "p.11-12 l.251-253", "proposition": "richness NR 156, AN 185, PL 196, RF 205", "evidence": "RECOMPUTED", "observed": "155/184/195/204 (255-set); 156/187/197/206 (261-set)", "outcome": "MISMATCH", "finding": "F-03"},
-    {"id": "C-24", "loc": "p.12 l.254-255", "proposition": "all but 10.5% of reference-forest species colonized >=1 restoration plot", "evidence": "RECOMPUTED", "observed": 13.24, "outcome": "MISMATCH", "finding": "F-04"},
-    {"id": "C-25", "loc": "p.9 l.206", "proposition": "early-successional taxa 37 spp", "evidence": "RECOMPUTED", "observed": 38, "outcome": "MISMATCH", "finding": "F-05"},
-    {"id": "C-26", "loc": "Fig.1 caption", "proposition": "late-successional n = 163 spp", "evidence": "RECOMPUTED", "observed": 162, "outcome": "MISMATCH", "finding": "F-06"},
-    {"id": "C-27", "loc": "p.10 l.214-215", "proposition": "64% of mid-successional species have small seeds", "evidence": "RECOMPUTED", "observed": "69.2 (2024 traits) / 70.0 (2025 traits)", "outcome": "MISMATCH", "finding": "F-07"},
-    {"id": "C-28", "loc": "p.14 l.302-303", "proposition": "ALL trees >=5 cm DBH of planted species in AN and PL were planted", "evidence": "RECOMPUTED", "observed": "17 Origin=Recruit stems (AN 11, PL 6)", "outcome": "MISMATCH", "finding": "F-08"},
-    {"id": "C-29", "loc": "p.14 l.300-301", "proposition": "60% of planted-taxa saplings in AN+PL were originally planted", "evidence": "RECOMPUTED", "observed": 65.3, "outcome": "MISMATCH", "finding": "F-09"},
-    {"id": "C-30", "loc": "p.11 l.248", "proposition": "65 families", "evidence": "RECOMPUTED", "observed": 64, "outcome": "MISMATCH", "finding": "F-11"},
-    {"id": "C-31", "loc": "p.10 l.219-220", "proposition": "0.04% of individuals unidentified and excluded", "evidence": "RECOMPUTED", "observed": "0.031% (26 ind.) or 0.100% (86 ind.)", "outcome": "MISMATCH", "finding": "F-14"},
-    {"id": "C-32", "loc": "p.10 l.226-227", "proposition": "sampling completeness 85-99%", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-02"},
-    {"id": "C-33", "loc": "p.10 l.228-229; Fig.1", "proposition": "bootstrapped 95% CIs for accumulated richness at 1.01 ha", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-02"},
-    {"id": "C-34", "loc": "Fig.2 caption", "proposition": "NMDS stress 0.17-0.18", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-03"},
-    {"id": "C-35", "loc": "p.12 l.277; Table S4", "proposition": "PERMANOVA pairwise treatment differences", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-04"},
-    {"id": "C-36", "loc": "Fig.3; p.14-15", "proposition": "glmmTMB/emmeans significance letters and all significance statements", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-06"},
-    {"id": "C-37", "loc": "p.9 l.176-179", "proposition": "planted-species survival 34.5/22.9/82.8/82.1%", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-05"},
-    {"id": "C-38", "loc": "p.15 l.334-335", "proposition": "NR had >2x expected species vs Holl et al. 2017", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-08"},
-    {"id": "C-39", "loc": "p.9 l.168-169", "proposition": "313 trees planted in PL, 86 in AN", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-08"},
-    {"id": "C-40", "loc": "Figs S1-S4, Tables S1-S3", "proposition": "supplementary-derived claims", "evidence": "BLOCKED", "outcome": "BLOCKED", "blocker": "B-04"},
-    {"id": "C-41", "loc": "p.10-11 l.230-235", "proposition": "Chao dissimilarity / NMDS ordination", "evidence": "NOT_CHECKED", "outcome": "NOT_CHECKED", "reason": "feasible; matrix construction rules exist only in absent code"},
-    {"id": "C-42", "loc": "p.10 l.224-229", "proposition": "independent rarefaction / coverage estimation", "evidence": "NOT_CHECKED", "outcome": "NOT_CHECKED", "reason": "feasible; outside completed scope"},
-    {"id": "C-43", "loc": "package", "proposition": "spatial Cartesian analyses", "evidence": "NOT_APPLICABLE", "outcome": "NOT_APPLICABLE", "reason": "belongs to the Applied Vegetation Science manuscript"}
+  "missing_required_artifacts": [
+    {
+      "id": "M-01",
+      "artifact": "FinalAnalysis_ECOLAPP_Schubert.et.al.R",
+      "source": "README.md L67, manuscript-referenced",
+      "status": "ABSENT"
+    },
+    {
+      "id": "M-02",
+      "artifact": "Supplementary figures S1 to S4 and tables S1 to S4",
+      "source": "manuscript cross-references",
+      "status": "NOT_SUPPLIED"
+    },
+    {
+      "id": "M-03",
+      "artifact": "Per-species and per-plot initial planting records",
+      "source": "inferred requirement for survival percentages",
+      "status": "ABSENT"
+    },
+    {
+      "id": "M-04",
+      "artifact": "Session or environment record listing R and package versions",
+      "source": "inferred reproducibility requirement",
+      "status": "ABSENT"
+    },
+    {
+      "id": "M-05",
+      "artifact": "Derived analysis objects for iNEXT, NMDS and the fitted models",
+      "source": "inferred",
+      "status": "ABSENT"
+    }
   ],
-  "findings": [
-    {"id": "F-01", "category": "FILE_OR_PACKAGE_GAP", "assessment_label": "CONCERN", "claims": ["C-32","C-33","C-34","C-35","C-36","C-40"], "evidence": "DIRECTLY_INSPECTED", "reported": "code needed to reproduce analyses is archived", "observed": "only FinalAnalysis_AVS_Schubert.et.al.R present; header identifies a different manuscript", "impact_basis": "blocks 6 of 43 claims covering all inferential results", "severity": "MAJOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-1", "in_output_a": true, "in_output_b": true},
-    {"id": "F-02", "category": "REPORTING_INCONSISTENCY", "assessment_label": "CONCERN", "claims": ["C-22"], "evidence": "RECOMPUTED", "reported": "94.2/4.6/1.1% of individuals", "observed": "individuals 99.85/0.15/0.00; taxa 246/12/3 of 261 = 94.25/4.60/1.15", "tolerance": "0.1 pp", "impact_basis": "wording only; no downstream analysis uses it; error understates identification quality", "severity": "MINOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-2", "in_output_a": true, "in_output_b": true},
-    {"id": "F-03", "category": "NUMERICAL_MISMATCH", "assessment_label": "CONCERN", "claims": ["C-23"], "evidence": "RECOMPUTED", "reported": [156,185,196,205], "observed": [155,184,195,204], "impact_basis": "rank order NR<AN<PL<RF preserved under every rule tested; all comparative statements unaffected", "severity": "MINOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-3", "in_output_a": true, "in_output_b": true},
-    {"id": "F-04", "category": "NUMERICAL_MISMATCH", "assessment_label": "CONCERN", "claims": ["C-24"], "evidence": "RECOMPUTED", "reported": 10.5, "observed": 13.24, "impact_basis": "Discussion approximation of ~90% remains supported at 86.8%; precise Results value not reproduced; 6 species", "severity": "MINOR", "certainty": "MEDIUM", "misconduct_inference": "NONE", "author_question": "AQ-4", "in_output_a": true, "in_output_b": true},
-    {"id": "F-05", "category": "REPORTING_INCONSISTENCY", "assessment_label": "CONCERN", "claims": ["C-25"], "evidence": "CROSS_DOCUMENT_MATCH+RECOMPUTED", "reported": "37 spp (Methods) vs 38 spp (Fig.1 caption)", "observed": 38, "impact_basis": "descriptive only; no calculation depends on it", "severity": "MINOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-5", "in_output_a": true, "in_output_b": true},
-    {"id": "F-06", "category": "NUMERICAL_MISMATCH", "assessment_label": "CONCERN", "claims": ["C-26"], "evidence": "RECOMPUTED", "reported": 163, "observed": 162, "impact_basis": "effect on Figure 1 not evaluated because the figure is absent", "severity": "UNDETERMINED", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-5", "in_output_a": true, "in_output_b": true},
-    {"id": "F-07", "category": "NUMERICAL_MISMATCH", "assessment_label": "CONCERN", "claims": ["C-27"], "evidence": "RECOMPUTED", "reported": 64, "observed": "69.2 / 70.0", "impact_basis": "recomputed value supports the non-independence point at least as strongly; no conclusion changes", "severity": "MINOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-6", "in_output_a": true, "in_output_b": true},
-    {"id": "F-08", "category": "UNSUPPORTED_SCOPE_CLAIM", "assessment_label": "CONCERN", "claims": ["C-28"], "evidence": "RECOMPUTED", "reported": "All trees >=5 cm DBH of planted species in AN and PL were planted", "observed": "17 Origin=Recruit stems: AN ERY_POE 4 (6.3-27.3 cm), ING_EDU 7 (5.0-20.0 cm); PL ERY_POE 4, ING_EDU 1, VOC_GUA 1", "impact_basis": "17 of 1785 planted-taxa tree stems = 0.95%; qualitative conclusion unchanged, universal quantifier false", "severity": "MINOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-7", "in_output_a": true, "in_output_b": true},
-    {"id": "F-09", "category": "NUMERICAL_MISMATCH", "assessment_label": "CONCERN", "claims": ["C-29"], "evidence": "RECOMPUTED", "reported": 60, "observed": 65.3, "alternatives_tested": [48.8, 45.7, 88.6], "impact_basis": "supports the same qualitative statement more strongly; no downstream dependence", "severity": "MINOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-7", "in_output_a": true, "in_output_b": true},
-    {"id": "F-10", "category": "CONFIGURATION_MISMATCH", "assessment_label": "CONCERN", "claims": ["C-16"], "evidence": "RECOMPUTED", "reported": "plantation n = 8", "observed": "PlotQuadrantes.csv lists 33 plots incl. BBPL (243 quadrats) absent from census", "impact_basis": "naive join inflates plantation area 2.0295 vs 1.8108 ha = +12.1%; PL later-successional tree density 47.8 vs 53.6 stems/ha; actual effect on published analysis not evaluable without the missing code", "severity": "UNDETERMINED", "certainty": "HIGH_for_inconsistency", "misconduct_inference": "NONE", "author_question": "AQ-8", "in_output_a": true, "in_output_b": true},
-    {"id": "F-11", "category": "NUMERICAL_MISMATCH", "assessment_label": "CONCERN", "claims": ["C-30"], "evidence": "RECOMPUTED", "reported": 65, "observed": 64, "impact_basis": "descriptive only; no analysis stratified by family", "severity": "MINOR", "certainty": "MEDIUM", "misconduct_inference": "NONE", "author_question": "AQ-9", "in_output_a": true, "in_output_b": true},
-    {"id": "F-12", "category": "REPRODUCIBILITY_LIMITATION", "assessment_label": "LIMITATION", "claims": ["C-33","C-35","C-40"], "evidence": "DIRECTLY_INSPECTED", "observed": "supplied PDF is a text-only postprint: 0 embedded images across 38 pages; no appendix", "impact_basis": "audit-input limitation, not a defect of the published article", "severity": "NOT_APPLICABLE", "certainty": "HIGH", "misconduct_inference": "NONE", "in_output_a": true, "in_output_b": true},
-    {"id": "F-13", "category": "DATA_STRUCTURE_ERROR", "assessment_label": "CONCERN", "claims": [], "evidence": "RECOMPUTED", "observed": "Latin-1 encoding undocumented; seed_size mixes string and float formats (1308 records at risk); undocumented UNK (16 ind.) and ? (1 ind.) codes; 5 OTUs with blank Family (86 ind.)", "impact_basis": "no published claim shown affected; independent reuser can silently mis-aggregate up to 1308 records", "severity": "MINOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-10", "in_output_a": true, "in_output_b": true},
-    {"id": "F-14", "category": "NUMERICAL_MISMATCH", "assessment_label": "CONCERN", "claims": ["C-31"], "evidence": "RECOMPUTED", "reported": 0.04, "observed": "0.031 (26 ind.) or 0.100 (86 ind.)", "impact_basis": "below 0.1% under every candidate definition; no analysis materially affected", "severity": "MINOR", "certainty": "MEDIUM", "misconduct_inference": "NONE", "author_question": "AQ-11", "in_output_a": true, "in_output_b": true},
-    {"id": "F-15", "category": "MAPPING_AMBIGUITY", "assessment_label": "CONCERN", "claims": ["C-15"], "evidence": "RECOMPUTED", "reported": [54.0, 43.3, 18.6], "observed_variants": [[53.95,43.31,18.19],[53.95,43.30,18.19],[53.95,43.74,18.52],[52.87,43.44,18.43],[57.00,43.83,18.59]], "impact_basis": "max deviation 0.4 pp; ordering NR>AN>>PL holds under every rule; conclusion unaffected", "severity": "MINOR", "certainty": "HIGH", "misconduct_inference": "NONE", "author_question": "AQ-12", "in_output_a": true, "in_output_b": true}
-  ],
-  "positive_checks": [
-    {"id": "P-01", "check": "seedling/sapling/tree recruit totals", "result": "66446/14038/3842 exact", "label": "POSITIVE"},
-    {"id": "P-02", "check": "surviving planted trees", "result": "1941 exact", "label": "POSITIVE"},
-    {"id": "P-03", "check": "abstract total >80,000", "result": "84326", "label": "POSITIVE"},
-    {"id": "P-04", "check": "255 OTUs", "result": "exact after documented 6-taxon exclusion", "label": "POSITIVE"},
-    {"id": "P-05", "check": "plot replication 9/9/8/6", "result": "exact", "label": "POSITIVE"},
-    {"id": "P-06", "check": "minimum sampled area 1.01 ha", "result": "1.0116 ha", "label": "POSITIVE"},
-    {"id": "P-07", "check": "per-plot quadrat counts vs area file", "result": "32/32 exact after excluding 1941 off-grid planted records", "label": "POSITIVE"},
-    {"id": "P-08", "check": "planted-taxa seedling share AN/PL", "result": "12.96 / 4.67 vs 13.0 / 4.7", "label": "POSITIVE"},
-    {"id": "P-09", "check": "planted-taxa sapling share", "result": "1.82 vs 1.8", "label": "POSITIVE"},
-    {"id": "P-10", "check": "early-successional dominance of recruited trees", "result": "79.1% vs >75%", "label": "POSITIVE"},
-    {"id": "P-11", "check": "later-successional tree density ratio", "result": "7.7% vs 8%", "label": "POSITIVE"},
-    {"id": "P-12", "check": "late-successional seed size >=5 mm", "result": "70.6% vs 71%", "label": "POSITIVE"},
-    {"id": "P-13", "check": "data-file internal consistency (ND rows, Class vs DBH, Extrapolated flag, planted species codes)", "result": "no defects found", "label": "POSITIVE"}
-  ],
-  "blocked_and_not_checked": [
-    {"id": "B-01", "item": "execution of manuscript analysis pipeline", "status": "EXECUTION_BLOCKED", "reason": "code absent (F-01); R runtime absent", "resolution": "supply ECOLAPP script"},
-    {"id": "B-02", "item": "iNEXT completeness and Fig.1 rarefaction/CIs", "status": "BLOCKED", "reason": "code and result objects absent"},
-    {"id": "B-03", "item": "NMDS stress 0.17-0.18", "status": "BLOCKED", "reason": "code absent"},
-    {"id": "B-04", "item": "PERMANOVA Table S4 and supplementary claims", "status": "BLOCKED", "reason": "Appendix S1 not supplied"},
-    {"id": "B-05", "item": "planted-species survival percentages", "status": "BLOCKED", "reason": "initial per-species per-plot planting counts absent; equal-split assumption yields >100% survival for TER_AMA (105%) and VOC_GUA (107%) in AN, demonstrating the assumption is invalid"},
-    {"id": "B-06", "item": "Figure 3 significance letters and all significance statements", "status": "BLOCKED", "reason": "model objects, code and figures absent"},
-    {"id": "B-07", "item": "published figure values, Figures 1-3", "status": "FIGURE_CHECK_BLOCKED", "reason": "supplied PDF contains no graphics"},
-    {"id": "B-08", "item": "external prior-publication comparisons (Holl et al. 2017, 2011)", "status": "BLOCKED", "reason": "values not in package"},
-    {"id": "N-01", "item": "independent Chao dissimilarity / NMDS reimplementation", "status": "NOT_CHECKED", "reason": "feasible, but matrix construction rules exist only in the absent code"},
-    {"id": "N-02", "item": "independent rarefaction / coverage estimation", "status": "NOT_CHECKED", "reason": "feasible; outside completed audit scope"},
-    {"id": "NA-01", "item": "Cartesian spatial analyses", "status": "NOT_APPLICABLE", "reason": "belongs to the Applied Vegetation Science manuscript"}
-  ],
-  "coverage": {
-    "claim_denominator": 43,
-    "recomputed_match": 20,
-    "recomputed_mismatch": 11,
-    "blocked": 9,
-    "not_checked": 2,
-    "not_applicable": 1,
-    "total_classified": 43,
-    "reconciliation": "PASS",
-    "distinct_findings": 15,
-    "findings_tied_to_claim_mismatch": 11,
-    "findings_not_tied_to_a_claim": 4,
-    "severity_distribution": {"MAJOR": 1, "MINOR": 11, "UNDETERMINED": 2, "NOT_APPLICABLE": 1}
+  "completeness_denominators": {
+    "manuscript_referenced_required_artifacts": 2,
+    "inferred_required_artifacts": 3,
+    "supplied_and_classified": 9,
+    "scope_note": "Completeness is stated against artifacts named in the README and the manuscript, plus artifacts inferred to be necessary for the reported analyses."
   },
   "status_architecture": {
-    "package_completeness": "INCOMPLETE",
+    "package_completeness": "PARTIALLY_COMPLETE",
     "source_execution": "EXECUTION_BLOCKED",
     "independent_recomputation": "PARTIALLY_RECOMPUTED",
     "computational_reproducibility": "BLOCKED",
     "reporting_correspondence": "PARTIALLY_VERIFIED",
     "empirical_data_integrity": "NO_DEMONSTRATED_ISSUES",
-    "configuration_and_model_input_integrity": "DEMONSTRATED_ISSUES",
-    "methodological_quality": "NOT_ASSESSED",
-    "misconduct_assessment": "NOT_APPLICABLE"
+    "configuration_and_model_input_integrity": "NOT_APPLICABLE"
   },
-  "recomputation_transformations": [
-    "read main CSV with latin-1 encoding and seed_size forced to string",
-    "individuals = sum of No..indiv., never row counts",
-    "exclude Especie == 'ND' placeholder rows (789 rows, 0 individuals)",
-    "exclude 6 poor-resolution taxa for the 255-OTU analysis set",
-    "sampled area = N.Quad * 9 m^2 / 10000",
-    "planted taxa = ERY_POE, ING_EDU, TER_AMA, VOC_GUA",
-    "tolerances set from reported precision of each value"
+  "environment": {
+    "python": "3.12.10",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pdfplumber": "0.11.10",
+    "R_runtime": "NOT_FOUND",
+    "execution_state": "ENVIRONMENT_CHECK_FAILED",
+    "note": "The absence of an R runtime is recorded separately from the absence of the analysis script. Neither means that the code failed."
+  },
+  "evidence_graph": [
+    {
+      "from": "manuscript",
+      "to": "ECOLAPPS_final_Schubert.et.al.2024.csv",
+      "relation": "primary data source",
+      "mapping_status": "CONFIRMED",
+      "basis": "All descriptive totals recompute exactly from this file."
+    },
+    {
+      "from": "manuscript",
+      "to": "FinalAnalysis_ECOLAPP_Schubert.et.al.R",
+      "relation": "named analysis code",
+      "mapping_status": "UNRESOLVED",
+      "basis": "Named in the README but absent from the archive."
+    },
+    {
+      "from": "manuscript",
+      "to": "FinalAnalysis_AVS_Schubert.et.al.R",
+      "relation": "not the analysis code for this paper",
+      "mapping_status": "CONFIRMED",
+      "basis": "The script header identifies a different manuscript."
+    },
+    {
+      "from": "manuscript",
+      "to": "PlotQuadrantes.csv",
+      "relation": "sampling-area source",
+      "mapping_status": "CONFIRMED",
+      "basis": "All 32 census plots match their quadrat counts exactly."
+    },
+    {
+      "from": "manuscript",
+      "to": "IslasMaster_abbreviated2025.csv",
+      "relation": "trait source",
+      "mapping_status": "PROBABLE",
+      "basis": "The reported 71% seed-size figure reproduces from this file at 71.1%."
+    }
   ],
-  "output_validation": {
-    "all_files_inventoried": "PASS",
-    "denominators_documented": "PASS",
-    "all_claims_have_ids": "PASS",
-    "mappings_evidence_backed": "PASS",
-    "execution_vs_recomputation_separated": "PASS",
-    "figure_mapping_vs_provenance_separated": "PASS",
-    "severity_has_tested_impact_or_undetermined": "PASS",
-    "coverage_reconciles": "PASS",
-    "affected_cells_vs_distinct_findings_separated": "PASS",
-    "no_misconduct_inference_or_publication_verdict": "PASS",
-    "output_a_and_b_agree": "PASS",
-    "output_b_free_of_raw_code_and_machine_blocks": "PASS",
-    "result": "PASS"
+  "claims": [
+    {
+      "id": "C-01",
+      "location": "p.13 L247",
+      "proposition": "seedling recruits censused",
+      "reported": "66,446",
+      "recomputed": "66446",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-02",
+      "location": "p.13 L247",
+      "proposition": "sapling recruits censused",
+      "reported": "14,038",
+      "recomputed": "14038",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-03",
+      "location": "p.13 L247",
+      "proposition": "tree recruits censused",
+      "reported": "3,842",
+      "recomputed": "3842",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-04",
+      "location": "p.13 L248",
+      "proposition": "survivors of originally-planted trees",
+      "reported": "1,941",
+      "recomputed": "1941",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-05",
+      "location": "Abstract L34",
+      "proposition": "total censused individuals",
+      "reported": "more than 80,000",
+      "recomputed": "84,326 recruits; 86,267 including planted survivors",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-06",
+      "location": "p.13 L247-248",
+      "proposition": "operational taxonomic units",
+      "reported": "255",
+      "recomputed": "255 after the documented six-taxon poor-resolution exclusion",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-07",
+      "location": "p.13 L248",
+      "proposition": "families",
+      "reported": "65",
+      "recomputed": "64 named families plus one unassigned group",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-08",
+      "location": "p.13 L251",
+      "proposition": "observed richness, natural regeneration",
+      "reported": "156",
+      "recomputed": "155 retained plus 1 grouped unit",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-09",
+      "location": "p.13 L252",
+      "proposition": "observed richness, applied nucleation",
+      "reported": "185",
+      "recomputed": "184 plus 1",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-10",
+      "location": "p.13 L252",
+      "proposition": "observed richness, plantation",
+      "reported": "196",
+      "recomputed": "195 plus 1",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-11",
+      "location": "p.13 L252-253",
+      "proposition": "observed richness, reference forest",
+      "reported": "205",
+      "recomputed": "204 plus 1",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-12",
+      "location": "Abstract L35",
+      "proposition": "natural regeneration plots",
+      "reported": "9",
+      "recomputed": "9",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-13",
+      "location": "Abstract L35",
+      "proposition": "applied nucleation plots",
+      "reported": "9",
+      "recomputed": "9",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-14",
+      "location": "Abstract L35",
+      "proposition": "plantation plots",
+      "reported": "8",
+      "recomputed": "8 in the census; the area file lists a ninth, BBPL, with no records",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-15",
+      "location": "Abstract L35-36",
+      "proposition": "reference forest plots",
+      "reported": "6",
+      "recomputed": "6",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-16",
+      "location": "p.12 L229",
+      "proposition": "minimum area sampled across treatments",
+      "reported": "1.01 ha",
+      "recomputed": "1.0116 ha in reference forest",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-17",
+      "location": "p.14 L298",
+      "proposition": "planted-taxa seedlings, applied nucleation",
+      "reported": "13.0%",
+      "recomputed": "12.95% on the recruit denominator",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-18",
+      "location": "p.14 L298",
+      "proposition": "planted-taxa seedlings, plantation",
+      "reported": "4.7%",
+      "recomputed": "4.67% on the recruit denominator",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-19",
+      "location": "p.15 L300",
+      "proposition": "saplings of planted species, all treatments",
+      "reported": "1.8%",
+      "recomputed": "1.82%",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-20",
+      "location": "p.14 L281",
+      "proposition": "early-successional share of saplings, natural regeneration",
+      "reported": "54.0%",
+      "recomputed": "53.95%",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-21",
+      "location": "p.14 L281",
+      "proposition": "early-successional share of saplings, applied nucleation",
+      "reported": "43.3%",
+      "recomputed": "43.30%",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-22",
+      "location": "p.15 L311-312",
+      "proposition": "later-successional tree density, restoration relative to reference",
+      "reported": "8%",
+      "recomputed": "8.0% for mid plus late with BBPL excluded; 7.7% if BBPL is included",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-23",
+      "location": "p.13 L291-293",
+      "proposition": "share of naturally-recruited restored-plot trees in a few early-successional taxa",
+      "reported": "more than 75%",
+      "recomputed": "79.1%",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-24",
+      "location": "p.13 L269-270",
+      "proposition": "mid-successional species reaching the tree size class",
+      "reported": "approximately 50%",
+      "recomputed": "50.0%, or 26 of 52",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-25",
+      "location": "p.24 L469",
+      "proposition": "reference-forest species observed in restored plots",
+      "reported": "approximately 90%",
+      "recomputed": "89.0% of reference-forest tree species",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-26",
+      "location": "p.13 L254",
+      "proposition": "reference-forest tree species absent from restoration",
+      "reported": "10.5%",
+      "recomputed": "10.34% on the retained set; 10.96% on the full set",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-27",
+      "location": "PlotQuadrantes.csv",
+      "proposition": "per-plot quadrat counts against census records",
+      "reported": "33 rows",
+      "recomputed": "all 32 census plots match exactly; BBPL has no census records",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-28",
+      "location": "Fig.1 caption L874",
+      "proposition": "mid-successional species",
+      "reported": "n = 52",
+      "recomputed": "52",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-29",
+      "location": "Fig.1 caption L874",
+      "proposition": "early-successional species",
+      "reported": "n = 38",
+      "recomputed": "38",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-30",
+      "location": "Fig.1 caption L874",
+      "proposition": "late-successional species",
+      "reported": "n = 163",
+      "recomputed": "162 retained plus 1 grouped unit",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-31",
+      "location": "p.11 L215-216",
+      "proposition": "late-successional species with seeds of at least 5 mm",
+      "reported": "71%",
+      "recomputed": "71.1% from the 2025 trait master",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "C-32",
+      "location": "p.13 L249-250",
+      "proposition": "taxonomic resolution reported as percentages of individuals",
+      "reported": "94.2% / 4.6% / 1.1%",
+      "recomputed": "taxon level: 4.6% genus equals 12 of 261 exactly; individual level: 98.9% / 0.21% / 0.92%",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MISMATCH",
+      "finding": "F-02"
+    },
+    {
+      "id": "C-33",
+      "location": "p.13 L269-270",
+      "proposition": "late-successional species reaching the tree size class",
+      "reported": "15%",
+      "recomputed": "21.3% on the full set; 21.0% on the retained set",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MISMATCH",
+      "finding": "F-03"
+    },
+    {
+      "id": "C-34",
+      "location": "p.15 L300-301",
+      "proposition": "planted-taxa saplings in planted treatments that were originally planted",
+      "reported": "60%",
+      "recomputed": "65.3%, or 126 of 193",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MISMATCH",
+      "finding": "F-04"
+    },
+    {
+      "id": "C-35",
+      "location": "p.15 L301-303",
+      "proposition": "all trees of at least 5 cm DBH of the planted species in applied nucleation and plantation were planted",
+      "reported": "All",
+      "recomputed": "17 recruit-origin stems, 11 in applied nucleation and 6 in plantation, spanning 5.0 to 27.3 cm DBH",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MISMATCH",
+      "finding": "F-05"
+    },
+    {
+      "id": "C-36",
+      "location": "p.14 L282",
+      "proposition": "early-successional share of saplings, plantation",
+      "reported": "18.6%",
+      "recomputed": "18.19% on all records; 18.52% on recruits only",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MISMATCH",
+      "finding": "F-06"
+    },
+    {
+      "id": "C-37",
+      "location": "p.11 L214-215",
+      "proposition": "mid-successional species with small seeds",
+      "reported": "64%",
+      "recomputed": "69.2%, or 36 of 52, in both supplied trait sources",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MISMATCH",
+      "finding": "F-07"
+    },
+    {
+      "id": "C-38",
+      "location": "p.11 L219",
+      "proposition": "unidentified individuals excluded from analyses",
+      "reported": "0.04%",
+      "recomputed": "0.030% for 26 individuals, or 0.100% for 86 individuals",
+      "evidence_status": "RECOMPUTED",
+      "mapping_status": "CONFIRMED",
+      "outcome": "MISMATCH",
+      "finding": "F-08"
+    },
+    {
+      "id": "C-39",
+      "location": "p.12 L224-229",
+      "proposition": "iNEXT rarefied and extrapolated richness at 1.01 ha with bootstrapped 95% intervals",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "The analysis script for this manuscript is absent, per F-01."
+    },
+    {
+      "id": "C-40",
+      "location": "p.12 L226-227",
+      "proposition": "estimated sampling completeness of 85 to 99%",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "The analysis script is absent, per F-01."
+    },
+    {
+      "id": "C-41",
+      "location": "p.12 L230-232",
+      "proposition": "NMDS ordination and stress values",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "The analysis script is absent, per F-01."
+    },
+    {
+      "id": "C-42",
+      "location": "Results; Table S4",
+      "proposition": "PERMANOVA pairwise composition tests",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "The analysis script and the supplement are absent."
+    },
+    {
+      "id": "C-43",
+      "location": "Fig. 3",
+      "proposition": "glmmTMB abundance models and emmeans significance groupings",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "The analysis script is absent, per F-01."
+    },
+    {
+      "id": "C-44",
+      "location": "Abstract L37-39",
+      "proposition": "significantly elevated seedling and sapling establishment",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "The inferential model is not reproducible."
+    },
+    {
+      "id": "C-45",
+      "location": "Abstract L42-43",
+      "proposition": "plantation large-seeded densities similar to reference forest",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "The inferential model is not reproducible."
+    },
+    {
+      "id": "C-46",
+      "location": "p.9 L168",
+      "proposition": "per-plot planting counts of 313 in plantation and 86 in applied nucleation",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "Per-species and per-plot initial planting records are absent, so survival percentages cannot be verified."
+    },
+    {
+      "id": "C-47",
+      "location": "Figs. S1-S4; Tables S1-S4",
+      "proposition": "all supplementary figures and tables",
+      "evidence_status": "BLOCKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "BLOCKED",
+      "reason": "No supplement was supplied and the PDF is a text-only postprint."
+    },
+    {
+      "id": "C-48",
+      "location": "Cartesian coordinate files",
+      "proposition": "spatial coordinate files",
+      "evidence_status": "NOT_CHECKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "NOT_CHECKED",
+      "reason": "Inspection was feasible but no manuscript claim verified here depends on them, so they were not evaluated."
+    },
+    {
+      "id": "C-49",
+      "location": "Methods",
+      "proposition": "reported count of early-successional species in the Methods text",
+      "evidence_status": "NOT_CHECKED",
+      "mapping_status": "UNRESOLVED",
+      "outcome": "NOT_CHECKED",
+      "reason": "An earlier audit recorded a Methods figure of 37 conflicting with the Figure 1 caption. That string could not be located in this extraction, so the conflict is neither confirmed nor refuted."
+    },
+    {
+      "id": "C-50",
+      "location": "FinalAnalysis_AVS_Schubert.et.al.R",
+      "proposition": "execution of the supplied R script",
+      "evidence_status": "NOT_APPLICABLE",
+      "mapping_status": "NOT_APPLICABLE",
+      "outcome": "NOT_APPLICABLE",
+      "reason": "The supplied script reproduces a different manuscript, so executing it would not test this paper's claims."
+    }
+  ],
+  "findings": [
+    {
+      "id": "F-01",
+      "category": "FILE_OR_PACKAGE_GAP",
+      "severity": "MAJOR",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-39",
+        "C-40",
+        "C-41",
+        "C-42",
+        "C-43",
+        "C-44",
+        "C-45"
+      ],
+      "location": "README.md L67 and the package root",
+      "assessment": "LIMITATION",
+      "evidence": "The README names FinalAnalysis_ECOLAPP_Schubert.et.al.R as the analysis code for this manuscript. That file is not in the archive. The only R file present declares in its first line that it reproduces the Applied Vegetation Science manuscript.",
+      "impact": "Blocks independent verification of every inferential result, including rarefied richness and its confidence intervals, sampling completeness, NMDS, PERMANOVA, and all model-based comparisons in Figure 3.",
+      "severity_basis": "Tested by claim coverage: 7 of 50 ledger claims, comprising all inferential claims, cannot be evaluated.",
+      "reviewer_action": "Request the ECOLAPP analysis script.",
+      "author_question": "Could you supply FinalAnalysis_ECOLAPP_Schubert.et.al.R, which the README lists but which is not present in the archive?"
+    },
+    {
+      "id": "F-02",
+      "category": "REPORTING_INCONSISTENCY",
+      "severity": "MINOR",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-32"
+      ],
+      "location": "p.13 L249-250",
+      "assessment": "CONCERN",
+      "evidence": "The sentence states that of the naturally recruited taxa, 94.2% of individuals were identified to species, 4.6% to genus and 1.1% to family. The genus figure matches taxon counts exactly at 12 of 261, or 4.60%. At individual level the genus share is 0.21%.",
+      "impact": "Descriptive only. The stated percentages are correct as taxon proportions, and the word individuals is the error. No downstream analysis depends on it.",
+      "severity_basis": "Tested: an exact taxon-level match was found and the individual-level value differs by a factor of about 22. No analytic result depends on this sentence.",
+      "reviewer_action": "Ask for the wording to be corrected to taxa.",
+      "author_question": "Should the phrase of individuals read of taxa? The reported percentages match taxon counts rather than individual counts."
+    },
+    {
+      "id": "F-03",
+      "category": "NUMERICAL_MISMATCH",
+      "severity": "UNDETERMINED",
+      "certainty": "MEDIUM",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-33"
+      ],
+      "location": "p.13 L269-270",
+      "assessment": "CONCERN",
+      "evidence": "The manuscript reports that approximately 50% of mid-successional and 15% of late-successional species were recorded in the tree size class of any restoration treatment. The mid-successional figure recomputes to exactly 50.0%, or 26 of 52. The late-successional figure recomputes to 21.3%, or 35 of 164, and to 21.0% on the retained set.",
+      "impact": "Not evaluated. The exact match on the companion figure in the same sentence indicates the interpretation is correct, but the effect of the late-successional difference on any conclusion was not tested.",
+      "severity_basis": "UNDETERMINED. The discrepancy is demonstrated, but its effect was not evaluated.",
+      "reviewer_action": "Ask how the late-successional percentage was derived.",
+      "author_question": "How was the 15% figure for late-successional species in the tree size class calculated? The same calculation reproduces the companion 50% figure exactly but yields about 21% here."
+    },
+    {
+      "id": "F-04",
+      "category": "NUMERICAL_MISMATCH",
+      "severity": "MINOR",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-34"
+      ],
+      "location": "p.15 L300-301",
+      "assessment": "CONCERN",
+      "evidence": "The manuscript reports that 60% of planted-species sapling stems in the two planted treatments were originally-planted individuals. The recomputed value is 65.3%, or 126 of 193.",
+      "impact": "A difference of 5.3 percentage points. The direction and the qualitative statement that a majority were originally planted are unaffected.",
+      "severity_basis": "Tested: recomputed on the full sapling set, and the majority claim holds under both values.",
+      "reviewer_action": "Ask for the denominator used.",
+      "author_question": "Which denominator produced 60%? Counting all planted-species saplings in applied nucleation and plantation gives 65.3%."
+    },
+    {
+      "id": "F-05",
+      "category": "UNSUPPORTED_SCOPE_CLAIM",
+      "severity": "MINOR",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-35"
+      ],
+      "location": "p.15 L301-303",
+      "assessment": "CONCERN",
+      "evidence": "The manuscript states that all trees of at least 5 cm DBH of these species in applied nucleation and plantation were planted as part of the initial restoration. The dataset records 17 such stems coded as recruits: 11 in applied nucleation, comprising 4 Erythrina poeppigiana and 7 Inga edulis, and 6 in plantation, comprising 4 E. poeppigiana, 1 I. edulis and 1 Vochysia guatemalensis, spanning 5.0 to 27.3 cm DBH.",
+      "impact": "17 of 1,781 such stems, or 0.95%. The quantitative pattern is unaffected and only the universal quantifier is contradicted.",
+      "severity_basis": "Tested: affected stems were counted against the full set, giving 17 of 1,781, or 0.95%.",
+      "reviewer_action": "Ask for the word all to be qualified.",
+      "author_question": "The data record 17 recruit-origin stems of the planted species at 5 cm DBH or above in these treatments. Should the statement be qualified?"
+    },
+    {
+      "id": "F-06",
+      "category": "NUMERICAL_MISMATCH",
+      "severity": "MINOR",
+      "certainty": "MEDIUM",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-36"
+      ],
+      "location": "p.14 L282",
+      "assessment": "CONCERN",
+      "evidence": "The manuscript reports an 18.6% early-successional share of plantation saplings. The recomputed value is 18.19% using all records or 18.52% using recruits only. The companion natural regeneration and applied nucleation figures in the same sentence reproduce exactly, at 53.95% and 43.30%, under the all-records rule, which yields 18.19% for plantation.",
+      "impact": "At most 0.41 percentage points. Treatment ordering and the qualitative contrast are unaffected.",
+      "severity_basis": "Tested across four denominator rules, with a maximum deviation of 0.41 percentage points and ordering preserved in every variant.",
+      "reviewer_action": "Ask which rule was applied, noting that no single rule reproduces all three values in the sentence.",
+      "author_question": "No single inclusion rule reproduces all three sapling percentages in this sentence. Which rule was used for the plantation value?"
+    },
+    {
+      "id": "F-07",
+      "category": "NUMERICAL_MISMATCH",
+      "severity": "MINOR",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-37"
+      ],
+      "location": "p.11 L214-215",
+      "assessment": "CONCERN",
+      "evidence": "The manuscript reports that 64% of mid-successional species have small seeds under 5 mm. The recomputed value is 69.2%, or 36 of 52, from the census trait fields and identically from the 2025 trait master. The companion figure in the same sentence, 71% of late-successional species with seeds of at least 5 mm, reproduces at 71.1%.",
+      "impact": "A difference of 5.2 percentage points, equivalent to 3 species of 52. The stated qualitative conclusion that most mid-successional species have small seeds holds under both values.",
+      "severity_basis": "Tested against both supplied trait sources. The companion figure in the same sentence reproduces, which argues against systematic trait-table drift.",
+      "reviewer_action": "Ask for the mid-successional figure to be rechecked.",
+      "author_question": "Both trait sources give 69.2%, or 36 of 52, rather than 64%, while the companion 71% figure reproduces exactly. Could the 64% value be rechecked?"
+    },
+    {
+      "id": "F-08",
+      "category": "NUMERICAL_MISMATCH",
+      "severity": "MINOR",
+      "certainty": "MEDIUM",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-38"
+      ],
+      "location": "p.11 L219",
+      "assessment": "CONCERN",
+      "evidence": "The manuscript reports that 0.04% of individuals were not identified and were excluded. Candidate definitions give 0.030%, or 26 individuals in the six poor-resolution taxa, and 0.100%, or 86 individuals whose Family field is blank. A value of 0.04% would correspond to about 34 individuals, and no tested definition yields that.",
+      "impact": "Not material to any analysis. The excluded fraction is negligible under every definition tested.",
+      "severity_basis": "Tested across four candidate definitions of not identified. All fall outside the reported value, but the absolute quantity is negligible in every case.",
+      "reviewer_action": "Ask which records were treated as unidentified.",
+      "author_question": "Which records were counted as not identified? Candidate definitions give 0.030% or 0.100% rather than 0.04%."
+    },
+    {
+      "id": "F-09",
+      "category": "DATA_STRUCTURE_ERROR",
+      "severity": "MINOR",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-14",
+        "C-27"
+      ],
+      "location": "PlotQuadrantes.csv, the BBPL row",
+      "assessment": "CONCERN",
+      "evidence": "The area file lists 33 plots including BBPL with 243 quadrats, but BBPL has no records in the census file and the manuscript reports 8 plantation plots. A naive join of the two files would inflate plantation sampled area from 1.8108 to 2.0295 hectares, an increase of 12.1%.",
+      "impact": "Tested and found not to have propagated. The reported later-successional tree density ratio of 8% reproduces at exactly 8.0% only when BBPL is excluded, and gives 7.7% if it is included. This is positive evidence that the published analysis used the correct eight-plot set.",
+      "severity_basis": "Tested: the discrepancy is a reuse hazard in the archive rather than an error in the published result.",
+      "reviewer_action": "Ask for BBPL to be removed or flagged in the archived file.",
+      "author_question": "PlotQuadrantes.csv contains a BBPL row with no corresponding census records. Should it be removed or flagged so that reusers do not join it into area calculations?"
+    },
+    {
+      "id": "F-10",
+      "category": "REPRODUCIBILITY_LIMITATION",
+      "severity": "MINOR",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "claims": [],
+      "location": "ECOLAPPS_final_Schubert.et.al.2024.csv",
+      "assessment": "CONCERN",
+      "evidence": "The census file is Latin-1 encoded, which the README does not state, and a standard UTF-8 read fails at byte 137401. The seed_size column contains two undocumented codes, UNK with 16 records and a question mark with 1 record. Five taxa have a blank Family field, covering 86 individuals.",
+      "impact": "Affects reuse rather than the reported results. No published value depends on these defects.",
+      "severity_basis": "Tested: each defect was reproduced directly and none propagates to a reported value.",
+      "reviewer_action": "Ask for the encoding and the missing-value codes to be documented.",
+      "author_question": "Could the README state the file encoding and define the UNK and question-mark codes in seed_size?"
+    },
+    {
+      "id": "F-11",
+      "category": "REPRODUCIBILITY_LIMITATION",
+      "severity": "MINOR",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "claims": [
+        "C-47"
+      ],
+      "location": "qt2qt6s177.pdf",
+      "assessment": "LIMITATION",
+      "evidence": "The supplied PDF is a 38-page accepted-manuscript postprint containing no embedded images on any page and no supplementary material.",
+      "impact": "All figure-level and supplement-level claims are unverifiable from what was supplied. This is a limitation of the review materials rather than a defect of the published article.",
+      "severity_basis": "Tested: image extraction returned zero images across all 38 pages.",
+      "reviewer_action": "Obtain the typeset article and supplement.",
+      "author_question": "Not applicable, because this concerns the materials supplied to the audit."
+    }
+  ],
+  "positive_checks": [
+    "C-01",
+    "C-02",
+    "C-03",
+    "C-04",
+    "C-05",
+    "C-06",
+    "C-07",
+    "C-08",
+    "C-09",
+    "C-10",
+    "C-11",
+    "C-12",
+    "C-13",
+    "C-14",
+    "C-15",
+    "C-16",
+    "C-17",
+    "C-18",
+    "C-19",
+    "C-20",
+    "C-21",
+    "C-22",
+    "C-23",
+    "C-24",
+    "C-25",
+    "C-26",
+    "C-27",
+    "C-28",
+    "C-29",
+    "C-30",
+    "C-31"
+  ],
+  "coverage": {
+    "claim_denominator": 50,
+    "recomputed_match": 31,
+    "recomputed_mismatch": 7,
+    "blocked": 9,
+    "not_checked": 2,
+    "not_applicable": 1,
+    "total_classified": 50,
+    "reconciliation": "PASS",
+    "distinct_findings": 11,
+    "affected_claim_cells": 17,
+    "severity_distribution": {
+      "MAJOR": 1,
+      "MINOR": 9,
+      "UNDETERMINED": 1
+    }
   },
-  "outputs": {
-    "output_a": "audit-output/dryad_s7h44j1gc_eap3053_integrity_audit.md",
-    "output_b": "audit-output/dryad_s7h44j1gc_eap3053_review_brief.md",
-    "ledger": "audit-output/dryad_s7h44j1gc_eap3053_audit_ledger.json"
+  "corrections_to_prior_run": [
+    {
+      "id": "X-01",
+      "prior_statement": "seed_size is stored in mixed string and float formats, putting 1,308 records at risk of silent category splitting",
+      "status": "RETRACTED",
+      "basis": "Raw token inspection with the standard library CSV reader shows only the values 1, 2, 3, NA, UNK and a question mark. The decimal-formatted tokens appear only under the chunked type inference used by a default pandas read and are an artifact of the reader, not a property of the file."
+    },
+    {
+      "id": "X-02",
+      "prior_statement": "Richness values of 156, 185, 196 and 205 do not reproduce; recomputed 155, 184, 195 and 204",
+      "status": "RETRACTED",
+      "basis": "Reported richness equals retained richness plus one in all four treatments. The rule discriminates, because applied nucleation contains three excluded taxa yet still gains only one, which rules out per-taxon reinstatement. The manuscript documents grouping of inconsistently identified taxa for diversity analyses at p.11 L217-218."
+    },
+    {
+      "id": "X-03",
+      "prior_statement": "65 families reported but only 64 present in the data",
+      "status": "RETRACTED",
+      "basis": "64 named families plus one unassigned group equals the reported 65, consistent with the same documented grouping rule."
+    },
+    {
+      "id": "X-04",
+      "prior_statement": "The claim of all but 10.5% does not reproduce; recomputed 13.24% absent",
+      "status": "RETRACTED",
+      "basis": "The prior figure used all size classes, whereas the manuscript states tree species. Restricting to reference-forest tree species gives 10.34% to 10.96% absent, which brackets the reported 10.5%, and the companion statement of about 90% of reference forest species also reproduces, at 89.0%."
+    },
+    {
+      "id": "X-05",
+      "prior_statement": "The Figure 1 caption value of 163 late-successional species does not reproduce; recomputed 162",
+      "status": "RETRACTED",
+      "basis": "162 retained plus one grouped unit equals 163, which is the same rule that reconciles the richness values."
+    },
+    {
+      "id": "X-06",
+      "prior_statement": "The values 7.7%, 79.1% and 70.6% were recorded as reported manuscript values that matched exactly",
+      "status": "CORRECTED",
+      "basis": "None of these strings occurs in the manuscript. They were the prior run's own recomputed values entered in the reported-value column. The actual manuscript claims are 8%, more than 75%, and 71%, which recompute to 8.0%, 79.1% and 71.1% respectively and are confirmed."
+    },
+    {
+      "id": "X-07",
+      "prior_statement": "BBPL inflates plantation area, with the effect recorded as UNDETERMINED",
+      "status": "RESOLVED",
+      "basis": "The 8% density claim reproduces at exactly 8.0% only when BBPL is excluded, which demonstrates that the published analysis used the correct eight-plot set. The archive defect remains a reuse hazard and is retained as F-09."
+    },
+    {
+      "id": "X-08",
+      "prior_statement": "The Methods state 37 early-successional species, conflicting with the Figure 1 caption value of 38",
+      "status": "UNCONFIRMED",
+      "basis": "The string could not be located in this extraction of the manuscript. It is recorded as C-49 NOT_CHECKED rather than asserted as a finding."
+    }
+  ],
+  "verdict_scope": {
+    "reporting_correspondence": "PARTIALLY_VERIFIED",
+    "checked_subset": "All descriptive and derived numerical claims recoverable from the supplied census, area and trait files. No inferential result was checked.",
+    "why_not_matches": "Coverage excludes every model-based result, so the domain is not broad enough to support MATCHES or MINOR_DISCREPANCIES."
+  },
+  "output_validation": {
+    "result": "PASS",
+    "checks_executed": 134,
+    "checks_failed": 0,
+    "validator": "audit-run2/validate.py (Gate 9 dual-output validation)",
+    "verified": [
+      "both human-readable outputs exist and are generated from this ledger",
+      "coverage arithmetic reconciles to the claim denominator",
+      "claim IDs are unique and complete from C-01 to C-50",
+      "all 11 finding IDs appear in both outputs",
+      "every severity has a tested impact basis or is UNDETERMINED",
+      "misconduct inference is NONE on every finding",
+      "Output B contains no code fences, JSON, hashes, or status-code jargon",
+      "Output B carries assessment labels and required sections B1 to B8",
+      "Output A carries all 19 required sections",
+      "the B8 scope note is verbatim and the B7 bottom line is within 150 words",
+      "no publication-verdict or misconduct language appears in either output",
+      "key numeric facts agree across Output A, Output B, and this ledger",
+      "Output B does not strengthen Output A's verdict scope",
+      "the eight corrections to the prior run are disclosed in both outputs"
+    ]
   }
 }
