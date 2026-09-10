@@ -1,0 +1,280 @@
+{
+  "skill": "research-package-integrity-audit2",
+  "paper": {
+    "title": "Chromosomal translocation-derived aberrant Rab22a drives metastasis of osteosarcoma",
+    "authors": "Liao, D., Zhong, L., Yin, J. et al.",
+    "journal": "Nature Cell Biology",
+    "year": 2020,
+    "volume_pages": "22, 868-881"
+  },
+  "generated_at": "2026-09-10T09:34:00Z",
+  "preflight_status": "PARTIAL",
+  "package_completeness": "INCOMPLETE",
+  "inventory": {
+    "supplied_files": [
+      {
+        "path": "supporting-files/manuscript_extracted.txt",
+        "type": "manuscript_extracted_text",
+        "present": true
+      }
+    ],
+    "referenced_but_missing": [
+      {
+        "artifact": "SRA accession SRP181860 (RNA-seq/WGS)",
+        "type": "raw_sequencing_data",
+        "present": false,
+        "status": "MISSING_FILE"
+      },
+      {
+        "artifact": "Source Data for Figs. 1-8 and Extended Data Figs. 1-10",
+        "type": "result_data",
+        "present": false,
+        "status": "MISSING_FILE"
+      },
+      {
+        "artifact": "RNA-seq/fusion-detection analysis pipeline code",
+        "type": "code",
+        "present": false,
+        "status": "MISSING_FILE"
+      },
+      {
+        "artifact": "Clinical cohort screening dataset (97-sample RT-PCR/Sanger/FISH results)",
+        "type": "raw_or_derived_clinical_data",
+        "present": false,
+        "status": "MISSING_FILE"
+      }
+    ],
+    "denominator": 5,
+    "classified": 1,
+    "unclassified": 0
+  },
+  "evidence_graph": {
+    "study_count": 1,
+    "figures": [
+      {"id": "Fig1", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "Fig2", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "Fig3", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "Fig4", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "Fig5", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "Fig6", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "Fig7", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "Fig8", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig1", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig2", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig3", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig4", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig5", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig6", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig7", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig8", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig9", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ExtDataFig10", "mapping_status": "BLOCKED_MISSING_CODE"},
+      {"id": "ClinicalCohortTable_inText", "mapping_status": "BLOCKED_MISSING_CODE"}
+    ],
+    "figures_total": 19,
+    "figures_blocked": 19,
+    "figures_checked": 0
+  },
+  "claim_ledger": {
+    "status": "ADOPTED_FROM_paper-claim-audit_report.json",
+    "source": "paper-claim-audit_report.json (this session, same folder)",
+    "total_claims": 32,
+    "status_breakdown": {
+      "directly_inspected_internally_consistent": 14,
+      "recomputed": 1,
+      "blocked_no_raw_file": 12,
+      "unresolved_mapping_ambiguity": 2,
+      "inferred_scope_concern": 2,
+      "inferred_reporting_inconsistency": 1
+    },
+    "reporting_correspondence": "BLOCKED_FOR_MOST_CLAIMS; PARTIALLY_VERIFIED_FOR_INTERNAL_CROSS_REFERENCE_SUBSET"
+  },
+  "data_provenance": {
+    "empirical_data_integrity_status": "INSUFFICIENT_EVIDENCE",
+    "configuration_model_input_integrity_status": "NOT_ASSESSED"
+  },
+  "source_execution": {
+    "status": "NOT_APPLICABLE",
+    "reason": "No code exists locally to execute for this paper."
+  },
+  "independent_recomputation": {
+    "status": "PARTIALLY_RECOMPUTED",
+    "recomputed_checks": [
+      {
+        "description": "Fusion-positive prevalence 2/37",
+        "recomputed_value": "5.4054%",
+        "paper_value": "5.4%",
+        "match": true
+      },
+      {
+        "description": "Cohort total reconciliation 37+60",
+        "recomputed_value": 97,
+        "paper_value": 97,
+        "match": true
+      },
+      {
+        "description": "Metastatic subgroup reconciliation 2+35",
+        "recomputed_value": 37,
+        "paper_value": 37,
+        "match": true
+      },
+      {
+        "description": "Tumor volume unit conversion 1.5 cm^3 to mm^3",
+        "recomputed_value": "1500 mm^3",
+        "paper_value": "1500 mm^3 / 1.5 cm^3 (both used)",
+        "match": true
+      },
+      {
+        "description": "Epitope peptide length residues 68-82",
+        "recomputed_value": 15,
+        "paper_value": "15-mer",
+        "match": true
+      }
+    ],
+    "blocked_recomputations": [
+      "All statistical test statistics/p-values (raw measurements not supplied)",
+      "Survival curve medians (patient-level data not supplied)",
+      "Any figure-underlying formula requiring raw per-replicate data"
+    ]
+  },
+  "figure_table_correspondence": {
+    "status": "BLOCKED",
+    "checked": 0,
+    "total": 19,
+    "reason": "No Source Data files or code supplied for any figure/table."
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "category": "REPORTING_INCONSISTENCY",
+      "locations": ["Methods (iRGD dosing)", "Extended Data Fig. 10 legend"],
+      "claim_ids": ["C30"],
+      "evidence_status": "DIRECTLY_INSPECTED",
+      "reported_value_1": "1 mg kg-1 or 10 mg kg-1",
+      "reported_value_2": "1 mg/ml and 10 mg/ml",
+      "mapping_status": "UNRESOLVED",
+      "impact_tested": false,
+      "severity": "UNDETERMINED",
+      "severity_reason": "Discrepancy demonstrated; effect on any reported result not evaluated (raw dosing records not supplied).",
+      "misconduct_inference": "NONE",
+      "reviewer_action": "Ask authors to confirm correct unit and reconcile passages.",
+      "assessment_label": "CONCERN",
+      "report_inclusion": ["OutputA_Section12", "OutputB_B2", "ledger"]
+    },
+    {
+      "id": "F-02",
+      "category": "REPLICATE_COUNT_MISMATCH",
+      "locations": ["Extended Data Fig. 10 legend, panels c-f vs g"],
+      "claim_ids": ["C22"],
+      "evidence_status": "DIRECTLY_INSPECTED",
+      "reported_value_1": "n=3 (panels c-f)",
+      "reported_value_2": "n=4 (panel g)",
+      "mapping_status": "PROBABLE",
+      "impact_tested": false,
+      "severity": "UNDETERMINED",
+      "severity_reason": "Demonstrated inconsistency in stated replicate count across a matched panel set; effect on reported result not evaluated.",
+      "misconduct_inference": "NONE",
+      "reviewer_action": "Ask authors why panel g used a different replicate count.",
+      "assessment_label": "CONCERN",
+      "report_inclusion": ["OutputA_Section12", "OutputB_B2", "ledger"]
+    },
+    {
+      "id": "F-03",
+      "category": "UNSUPPORTED_SCOPE_CLAIM",
+      "locations": ["Title/Abstract", "Results clinical-cohort paragraph"],
+      "claim_ids": ["C03"],
+      "evidence_status": "DIRECTLY_INSPECTED",
+      "reported_value_1": "General causal claim: 'drives metastasis of osteosarcoma'",
+      "reported_value_2": "2/37 (5.4%) fusion-positive metastatic patients; single-patient endogenous cell-line pair",
+      "mapping_status": "CONFIRMED",
+      "impact_tested": false,
+      "severity": "UNDETERMINED",
+      "severity_reason": "Scope/framing observation, not a numeric or data error.",
+      "misconduct_inference": "NONE",
+      "reviewer_action": "Ask whether title/abstract framing should be qualified.",
+      "assessment_label": "CONCERN",
+      "cross_reference": ["experiment-audit_report.md Check E", "paper-claim-audit_report.json C03"],
+      "report_inclusion": ["OutputA_Section12", "OutputB_B2", "ledger"]
+    },
+    {
+      "id": "F-04",
+      "category": "UNSUPPORTED_SCOPE_CLAIM",
+      "locations": ["Results, cross-cancer generalization sentence"],
+      "claim_ids": ["C12"],
+      "evidence_status": "DIRECTLY_INSPECTED",
+      "reported_value_1": "Claim: 'occur and drive metastasis in multiple cancer types'",
+      "reported_value_2": "2 clinical cases + 2 cell lines cited",
+      "mapping_status": "CONFIRMED",
+      "impact_tested": false,
+      "severity": "UNDETERMINED",
+      "severity_reason": "Scope/framing observation, not a numeric or data error.",
+      "misconduct_inference": "NONE",
+      "reviewer_action": "Ask authors to specify which cancer types/how many cases support this statement.",
+      "assessment_label": "CONCERN",
+      "report_inclusion": ["OutputA_Section12", "OutputB_B2", "ledger"]
+    }
+  ],
+  "checked_not_raised": [
+    "Percentage-to-count arithmetic 2/37=5.4%",
+    "Cohort subgroup totals 37+60=97 and 2+35=37",
+    "Tumor volume unit conversion 1500mm^3=1.5cm^3",
+    "Epitope peptide length 68-82 residues = 15-mer",
+    "Sequencing depth figures (6GB/90GB) and TopHat pipeline parameters restated identically",
+    "Replicate counts consistent across the large majority of in vitro (n=3) and in vivo (n=6, within stated 6-8 range) panels"
+  ],
+  "coverage_reconciliation": {
+    "claims_total": 32,
+    "claims_checkable_internal_crossref": 15,
+    "claims_blocked": 12,
+    "claims_unresolved_mapping": 2,
+    "claims_scope_findings": 2,
+    "claims_reconciliation": "PASS",
+    "figures_total": 19,
+    "figures_blocked": 19,
+    "figures_checked": 0,
+    "figures_reconciliation": "PASS",
+    "distinct_findings": 4
+  },
+  "status_architecture": {
+    "package_completeness": "INCOMPLETE",
+    "source_execution": "NOT_APPLICABLE",
+    "independent_recomputation": "PARTIALLY_RECOMPUTED",
+    "computational_reproducibility": "NOT_APPLICABLE",
+    "reporting_correspondence": "BLOCKED",
+    "empirical_data_integrity": "INSUFFICIENT_EVIDENCE",
+    "configuration_model_input_integrity": "NOT_ASSESSED"
+  },
+  "author_queries": [
+    "Which unit is correct for the iRGD peptide treatment arms (mg/kg vs mg/ml), and are the two mentions the same treatment conditions?",
+    "Why does Extended Data Fig. 10 panel g use n=4 while panels c-f use n=3?",
+    "Would the authors qualify the title/abstract to specify the rare-fusion, single-institution-cohort scope?",
+    "Which specific cancer types and how many cases/cell lines support the 'multiple cancer types' statement?"
+  ],
+  "blocked_and_not_checked_register": [
+    {"item": "RNA-seq/WGS fusion-detection pipeline execution", "status": "BLOCKED", "reason": "No code or raw sequencing data supplied"},
+    {"item": "Clinical cohort raw screening results", "status": "BLOCKED", "reason": "Not supplied or deposited locally"},
+    {"item": "All figure/table Source Data", "status": "BLOCKED", "reason": "Journal-hosted Source Data not retrieved"},
+    {"item": "Survival-analysis recomputation", "status": "BLOCKED", "reason": "No patient-level survival data supplied"},
+    {"item": "Statistical test recomputation", "status": "BLOCKED", "reason": "No raw per-replicate measurements supplied"},
+    {"item": "Multiple-comparison-correction assessment", "status": "NOT_CHECKED", "reason": "Feasible in principle but raw data not supplied; covered separately in experiment-audit_report.md"}
+  ],
+  "misconduct_inference": "NONE",
+  "publication_recommendation": "NONE — this skill does not issue accept/reject/approve/retract recommendations",
+  "output_validation": {
+    "result": "PASS",
+    "checks": [
+      "output_a_and_b_share_finding_ids: true",
+      "both_outputs_exist: true",
+      "output_b_does_not_strengthen_output_a: true",
+      "counts_reconcile: true",
+      "assessment_labels_agree_with_evidence: true",
+      "no_raw_code_or_json_in_output_b: true",
+      "ledger_separate_from_human_readable_outputs: true"
+    ]
+  },
+  "report_files": {
+    "output_a": "research-package-integrity-audit2_integrity-audit.md",
+    "output_b": "research-package-integrity-audit2_review-brief.md",
+    "ledger": "research-package-integrity-audit2_ledger.json"
+  }
+}
