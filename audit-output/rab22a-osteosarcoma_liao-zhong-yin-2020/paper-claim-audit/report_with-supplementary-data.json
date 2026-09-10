@@ -1,0 +1,98 @@
+{
+  "audit_skill": "paper-claim-audit",
+  "verdict": "BLOCKED",
+  "reason_code": "no_raw_evidence",
+  "summary": "45 claims extracted (32 from the manuscript, 13 new from the supplied supplementary_data.pdf): 14 exact_match, 1 rounding_ok, 4 ambiguous_mapping, 21 missing_evidence, 1 number_mismatch (unit inconsistency), 2 scope_overclaim, 2 not_applicable. No raw result files exist locally for either document, so claim-to-raw-evidence verification remains BLOCKED. An identity check re-confirms (consistent with research-package-integrity-audit2's F-05) that the supplied supplementary_data.pdf is a DIFFERENT_PUBLICATION from this manuscript (different title, author roster, and correspondence authors), so it cannot be used to cross-verify the manuscript's own claims; it was instead audited for internal self-consistency across its own Figures S1-S9.",
+  "audited_input_hashes": {
+    "../supporting-files/manuscript_extracted.txt": "sha256:047470c1fd44bb749788bd46717df0a3db77a9482ff95ab137d4f891e3489ef3",
+    "../supporting-files/supplementary_data_extracted.txt": "sha256:5397dfea0252e2374194be5383a064bb4538e4b6f47b7086e2d7144680a0439e"
+  },
+  "trace_path": null,
+  "thread_id": null,
+  "reviewer_model": "general-purpose sub-agent (substituted for unavailable mcp__codex__codex / gpt-6-astra)",
+  "reviewer_reasoning": "high (substituted for unavailable 'ultra' tier)",
+  "generated_at": "2026-09-10T14:00:00Z",
+  "identity_check": {
+    "verdict": "DIFFERENT_PUBLICATION",
+    "manuscript_title": "Chromosomal translocation-derived aberrant Rab22a drives metastasis of osteosarcoma",
+    "supplementary_title": "Rab22a-NeoF1 fusion protein promotes osteosarcoma lung metastasis through its secretion into exosomes",
+    "manuscript_correspondence_authors": ["Jing-Nan Shen", "Jian Chen", "Tiebang Kang"],
+    "supplementary_correspondence_authors": ["Tiebang Kang", "Jianhua Sui"],
+    "cross_reference": "Same finding logged as F-05 in ../research-package-integrity-audit2/integrity-audit_with-supplementary-data.md"
+  },
+  "details": {
+    "total_claims": 45,
+    "status_counts": {
+      "exact_match": 14,
+      "rounding_ok": 1,
+      "ambiguous_mapping": 4,
+      "missing_evidence": 21,
+      "number_mismatch": 1,
+      "scope_overclaim": 2,
+      "not_applicable": 2
+    },
+    "mismatches": [
+      {
+        "claim_id": "C30",
+        "location": "Manuscript Methods (iRGD dosing) vs. Extended Data Fig. 10 caption",
+        "status": "number_mismatch",
+        "details": "Unit inconsistency (mg/kg vs mg/ml). Carried over unchanged from report_without-supplementary-data.json."
+      },
+      {
+        "claim_id": "C03",
+        "location": "Manuscript Title/Abstract",
+        "status": "scope_overclaim",
+        "details": "Carried over unchanged from report_without-supplementary-data.json."
+      },
+      {
+        "claim_id": "C12",
+        "location": "Manuscript Results, cross-cancer generalization sentence",
+        "status": "scope_overclaim",
+        "details": "Carried over unchanged from report_without-supplementary-data.json."
+      },
+      {
+        "claim_id": "C13",
+        "location": "Manuscript Results vs. Methods",
+        "status": "ambiguous_mapping",
+        "details": "Carried over unchanged from report_without-supplementary-data.json."
+      },
+      {
+        "claim_id": "C22",
+        "location": "Manuscript Extended Data Fig. 10 legend, panels c-f vs. g",
+        "status": "ambiguous_mapping",
+        "details": "Carried over unchanged from report_without-supplementary-data.json."
+      },
+      {
+        "claim_id": "S10",
+        "location": "Supplementary Fig. S5, panel (a) vs (b) vs (c-f)",
+        "status": "ambiguous_mapping",
+        "details": "n=4 (panel a) vs n=5 (panel b) vs n=3 (panels c-f) mice for closely related arms of the same pre-education/metastasis assay, with no stated reason for the differing sample sizes."
+      },
+      {
+        "claim_id": "S08_S12",
+        "location": "Supplementary Fig. S3(d) vs Fig. S8(a)",
+        "status": "ambiguous_mapping",
+        "details": "KFERQ-like motif residue span given as aa52-56 for RAB22A-NeoF1 (Fig. S3d) vs aa52-57 for RAB22A-NeoF2-6 (Fig. S8a), with no explanation for the one-residue difference."
+      },
+      {
+        "claim_id": "S05",
+        "location": "Supplementary Fig. S1(g)",
+        "status": "ambiguous_mapping",
+        "details": "Co-injection ratios of both 10:1 and 10:2 used within one panel without a stated rationale (e.g. dose-response design)."
+      }
+    ],
+    "result_files": [
+      "NONE - no local raw result files exist for either the manuscript (primary sequencing data deposited externally at SRA accession SRP181860) or the supplied supplementary_data.pdf (figure captions only, no underlying data tables, spreadsheets, or code)"
+    ],
+    "internal_arithmetic_checks_passed": [
+      "Manuscript: 2/37 = 5.4054% rounds correctly to stated 5.4%",
+      "Manuscript: 37 (metastatic) + 60 (non-metastatic) = 97 (total screened cohort)",
+      "Manuscript: 2 (fusion-positive) + 35 (fusion-negative) = 37 (metastatic subgroup)",
+      "Manuscript: 1.5 cm^3 = 1,500 mm^3 tumor-volume cutoff, consistent across 4 mentions",
+      "Manuscript: epitope residues 68-82 = 15 amino acids, consistent with '15-mer' peptide",
+      "Supplementary: n=3 biologically independent experiments recurs consistently across Figs. S2-S4, S6, S7, S9 in-vitro panels",
+      "Supplementary: n=5 biologically independent mice recurs consistently across most in-vivo panels in Figs. S1, S3, S4, S6, S7 (exceptions: S5 and S6f-g, see mismatches)",
+      "Supplementary: 12-36% and 5%-40% iodixanol gradients (Fig. S2e,f) are distinct, clearly-labelled protocols with no internal conflict"
+    ]
+  }
+}
