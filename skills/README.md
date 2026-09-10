@@ -22,3 +22,6 @@ Visible copies of repository skills for easier browsing in Codespaces.
 - `manuscript-consistency-audit/skill.md`
   - `manuscript-consistency-audit/references/` — cross-check-checklist.md, query-style.md
   - `manuscript-consistency-audit/scripts/` — dump_sheet.py, extract_package.py, scan_workbook.py
+- `manuscript-data-integrity/skill.md`
+  - `manuscript-data-integrity/references/` — discipline_checks.md
+  - `manuscript-data-integrity/scripts/` — digit_analysis.py, duplicate_scan.py, grim_check.py, statcheck.py

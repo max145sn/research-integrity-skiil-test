@@ -24,6 +24,9 @@ This repository includes several document bundles and one installed skill.
 - `.github/skills/manuscript-consistency-audit/skill.md`
   - `.github/skills/manuscript-consistency-audit/references/` — cross-check-checklist.md, query-style.md
   - `.github/skills/manuscript-consistency-audit/scripts/` — dump_sheet.py, extract_package.py, scan_workbook.py
+- `.github/skills/manuscript-data-integrity/skill.md`
+  - `.github/skills/manuscript-data-integrity/references/` — discipline_checks.md
+  - `.github/skills/manuscript-data-integrity/scripts/` — digit_analysis.py, duplicate_scan.py, grim_check.py, statcheck.py
 
 ## Core documents
 
