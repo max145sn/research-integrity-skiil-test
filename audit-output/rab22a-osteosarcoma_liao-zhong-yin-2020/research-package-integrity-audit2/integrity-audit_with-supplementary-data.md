@@ -39,9 +39,9 @@ Preflight status: **PARTIAL** (a document was supplied, but it does not extend v
 
 | Path | Type | Present |
 |---|---|---|
-| `supporting-files/manuscript_extracted.txt` | Manuscript extracted text | Yes |
-| `supporting-files/supplementary_data.pdf` | User-supplied supplementary document | Yes |
-| `supporting-files/supplementary_data_extracted.txt` | Extracted text of the above | Yes |
+| `../supporting-files/manuscript_extracted.txt` | Manuscript extracted text | Yes |
+| `../supporting-files/supplementary_data.pdf` | User-supplied supplementary document | Yes |
+| `../supporting-files/supplementary_data_extracted.txt` | Extracted text of the above | Yes |
 
 Missing, manuscript-referenced artifacts (unchanged from the prior run, still absent):
 

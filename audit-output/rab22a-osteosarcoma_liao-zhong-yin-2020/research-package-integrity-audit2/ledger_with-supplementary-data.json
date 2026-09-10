@@ -8,18 +8,18 @@
   "inventory": {
     "supplied_files": [
       {
-        "path": "supporting-files/manuscript_extracted.txt",
+        "path": "../supporting-files/manuscript_extracted.txt",
         "type": "manuscript_extracted_text",
         "present": true
       },
       {
-        "path": "supporting-files/supplementary_data.pdf",
+        "path": "../supporting-files/supplementary_data.pdf",
         "type": "user_supplied_supplementary_document",
         "present": true,
         "note": "17-page PDF containing Figures S1-S9 with captions only; no source data, code, or configuration files."
       },
       {
-        "path": "supporting-files/supplementary_data_extracted.txt",
+        "path": "../supporting-files/supplementary_data_extracted.txt",
         "type": "supplementary_extracted_text",
         "present": true
       }

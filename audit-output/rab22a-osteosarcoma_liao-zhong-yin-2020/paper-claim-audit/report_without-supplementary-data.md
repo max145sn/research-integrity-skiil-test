@@ -12,7 +12,7 @@ in this folder.
 **Paper**: Liao, Y. et al., "Chromosomal translocation-derived aberrant
 Rab22a drives metastasis of osteosarcoma", *Nature Cell Biology* (2020) —
 text extracted from the manuscript PDF to
-`supporting-files/manuscript_extracted.txt`.
+`../supporting-files/manuscript_extracted.txt`.
 
 ## Overall Verdict: 🚫 BLOCKED
 
@@ -151,7 +151,7 @@ below) that are independent of the missing-raw-evidence limitation.
 
 - `paper-claim-audit_report.md` — this report
 - `paper-claim-audit_report.json` — machine-readable version
-- `supporting-files/manuscript_extracted.txt` — full extracted manuscript
+- `../supporting-files/manuscript_extracted.txt` — full extracted manuscript
   text (evidence trail), already present in this folder from the earlier
   `experiment-audit` and `exploratory-data-analysis` runs
 

@@ -33,7 +33,7 @@ or `FIGURE_REGENERATED_MATCH` evidence exists anywhere in this audit.
 ## 2. Executive Audit Summary
 
 The supplied package consists of **one file**: the manuscript PDF (text
-extracted to `supporting-files/manuscript_extracted.txt`). No code, no
+extracted to `../supporting-files/manuscript_extracted.txt`). No code, no
 configuration files, no raw or processed result files, and no supplementary
 data files were supplied or found anywhere in this repository for this
 paper. This is a wet-lab cancer-biology paper; its primary sequencing
@@ -64,7 +64,7 @@ misconduct is inferred from any of these findings.
 
 **Supplied files:**
 - Manuscript PDF (39 pages), extracted in full to
-  `supporting-files/manuscript_extracted.txt` (117,795 characters / 17,634
+  `../supporting-files/manuscript_extracted.txt` (117,795 characters / 17,634
   words / 3,088 extracted lines).
 
 **Referenced but not supplied (per the manuscript's own Data Availability
@@ -89,7 +89,7 @@ zero referenced code, configuration, or result artifacts supplied.
 
 | # | Path/Artifact | Type | Present | Notes |
 |---|---|---|---|---|
-| 1 | `supporting-files/manuscript_extracted.txt` | Manuscript (extracted text) | Yes | Full text extracted via PyMuPDF from the published PDF |
+| 1 | `../supporting-files/manuscript_extracted.txt` | Manuscript (extracted text) | Yes | Full text extracted via PyMuPDF from the published PDF |
 | 2 | SRA accession SRP181860 (RNA-seq/WGS) | Raw sequencing data | No | `MISSING_FILE` — external archive, not retrieved |
 | 3 | Figs. 1–8, Ext. Data Figs. 1–10 "Source Data" | Result data underlying figures | No | `MISSING_FILE` — journal-hosted, not supplied |
 | 4 | RNA-seq/fusion-detection analysis pipeline code | Code | No | `MISSING_FILE` — described in Methods prose only, no script supplied |

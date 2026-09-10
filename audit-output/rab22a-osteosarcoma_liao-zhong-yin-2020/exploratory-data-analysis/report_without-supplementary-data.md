@@ -1,6 +1,6 @@
 # EDA: Rab22a Osteosarcoma Manuscript — Text Artifact (no local scientific dataset)
 
-**File analyzed**: `supporting-files/manuscript_extracted.txt` (PyMuPDF-extracted
+**File analyzed**: `../supporting-files/manuscript_extracted.txt` (PyMuPDF-extracted
 text from the published PDF "Chromosomal translocation-derived aberrant
 Rab22a drives metastasis of osteosarcoma", Liao et al., *Nature Cell Biology*,
 2020)

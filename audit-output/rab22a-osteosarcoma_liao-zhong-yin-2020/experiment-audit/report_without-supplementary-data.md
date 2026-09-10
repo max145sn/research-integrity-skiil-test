@@ -9,7 +9,7 @@ this environment).
 **Manuscript**: Liao, Y. et al., *Nature Cell Biology* (2020) — attached PDF
 "Chromosomal translocation-derived aberrant Rab22a drives metastasis of
 osteosarcoma", text extracted via PyMuPDF to
-`supporting-files/manuscript_extracted.txt` (122,750 characters, ~39 pages) for
+`../supporting-files/manuscript_extracted.txt` (122,750 characters, ~39 pages) for
 read-only auditing.
 
 ## Skill/Target Mismatch Disclosure (read this first)

@@ -13,7 +13,7 @@
   "inventory": {
     "supplied_files": [
       {
-        "path": "supporting-files/manuscript_extracted.txt",
+        "path": "../supporting-files/manuscript_extracted.txt",
         "type": "manuscript_extracted_text",
         "present": true
       }

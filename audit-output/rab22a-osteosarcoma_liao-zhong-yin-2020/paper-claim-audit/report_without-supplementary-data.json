@@ -4,7 +4,7 @@
   "reason_code": "no_raw_evidence",
   "summary": "32 claims extracted from the manuscript text; 14 exact_match, 1 rounding_ok, 2 ambiguous_mapping, 12 missing_evidence, 1 number_mismatch (unit inconsistency), 2 scope_overclaim. No raw result files exist locally (primary sequencing data deposited externally at SRA accession SRP181860), so claim-to-raw-evidence verification is BLOCKED; only internal cross-referencing within the manuscript text was possible.",
   "audited_input_hashes": {
-    "supporting-files/manuscript_extracted.txt": "sha256:047470c1fd44bb749788bd46717df0a3db77a9482ff95ab137d4f891e3489ef3"
+    "../supporting-files/manuscript_extracted.txt": "sha256:047470c1fd44bb749788bd46717df0a3db77a9482ff95ab137d4f891e3489ef3"
   },
   "trace_path": null,
   "thread_id": null,
