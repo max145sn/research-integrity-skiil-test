@@ -1,0 +1,245 @@
+{
+  "skill": "research-package-integrity-audit2",
+  "paper": "Chromosomal translocation-derived aberrant Rab22a drives metastasis of osteosarcoma (Nature Cell Biology, doi:10.1038/s41556-020-0522-z)",
+  "generated_at": "2026-09-10",
+  "run_scope": "Manuscript PDF plus a user-supplied 'supplementary data.pdf' (this run supersedes the prior manuscript-only run, whose outputs are preserved under *_without-supplementary-data.*)",
+  "preflight_status": "PARTIAL",
+  "package_completeness": "INCOMPLETE",
+  "inventory": {
+    "supplied_files": [
+      {
+        "path": "supporting-files/manuscript_extracted.txt",
+        "type": "manuscript_extracted_text",
+        "present": true
+      },
+      {
+        "path": "supporting-files/supplementary_data.pdf",
+        "type": "user_supplied_supplementary_document",
+        "present": true,
+        "note": "17-page PDF containing Figures S1-S9 with captions only; no source data, code, or configuration files."
+      },
+      {
+        "path": "supporting-files/supplementary_data_extracted.txt",
+        "type": "supplementary_extracted_text",
+        "present": true
+      }
+    ],
+    "referenced_but_missing": [
+      {
+        "artifact": "SRA accession SRP181860 (RNA-seq/WGS)",
+        "type": "raw_sequencing_data",
+        "present": false,
+        "status": "MISSING_FILE"
+      },
+      {
+        "artifact": "Source Data for Figs. 1-8 and Extended Data Figs. 1-10",
+        "type": "result_data",
+        "present": false,
+        "status": "MISSING_FILE"
+      },
+      {
+        "artifact": "RNA-seq/fusion-detection analysis pipeline code",
+        "type": "code",
+        "present": false,
+        "status": "MISSING_FILE"
+      },
+      {
+        "artifact": "Clinical cohort screening dataset (97-sample RT-PCR/Sanger/FISH results)",
+        "type": "raw_or_derived_clinical_data",
+        "present": false,
+        "status": "MISSING_FILE"
+      },
+      {
+        "artifact": "Official Nature Cell Biology Supplementary Information for doi:10.1038/s41556-020-0522-z (Supplementary Tables 1-8, Supplementary Figs. referenced in-text)",
+        "type": "supplementary_information",
+        "present": false,
+        "status": "MISSING_FILE",
+        "note": "The manuscript's own 'Additional information' section states supplementary information is hosted at the manuscript's own DOI. The user-supplied supplementary_data.pdf is not this document (see SC-01 to SC-04, F-05)."
+      }
+    ],
+    "denominator": 6,
+    "classified": 3,
+    "unclassified": 0
+  },
+  "supplementary_document_crosscheck": {
+    "claim_id_prefix": "SC",
+    "claims": [
+      {
+        "id": "SC-01",
+        "proposition": "The audited manuscript states its own supplementary information is available at https://doi.org/10.1038/s41556-020-0522-z (its own DOI).",
+        "location": "manuscript_extracted.txt line ~2723",
+        "evidence_status": "DIRECTLY_INSPECTED"
+      },
+      {
+        "id": "SC-02",
+        "proposition": "The supplied supplementary_data.pdf's title page reads 'Supplementary Materials for Rab22a-NeoF1 fusion protein promotes osteosarcoma lung metastasis through its secretion into exosomes', by Li Zhong, Dan Liao, Jingjing Li (co-first authors) et al., correspondence Jianhua Sui and Tiebang Kang.",
+        "location": "supplementary_data_extracted.txt lines 1-12",
+        "evidence_status": "DIRECTLY_INSPECTED"
+      },
+      {
+        "id": "SC-03",
+        "proposition": "The audited manuscript's own title is 'Chromosomal translocation-derived aberrant Rab22a drives metastasis of osteosarcoma', with a different co-first-author list (Dan Liao, Li Zhong, Junqiang Yin) and additional corresponding authors (J.-N. Shen, Jian Chen) not listed on the supplied supplementary document.",
+        "location": "manuscript_extracted.txt lines 1-12",
+        "evidence_status": "DIRECTLY_INSPECTED"
+      },
+      {
+        "id": "SC-04",
+        "proposition": "The word 'exosome' does not occur anywhere in the audited manuscript's extracted text, while it is the central subject of every one of the nine figures (S1-S9) in the supplied supplementary_data.pdf.",
+        "location": "manuscript_extracted.txt (full-text search, 0 matches); supplementary_data_extracted.txt (all 9 figure legends)",
+        "evidence_status": "DIRECTLY_INSPECTED"
+      },
+      {
+        "id": "SC-05",
+        "proposition": "The supplied supplementary_data.pdf reuses the same fusion-protein nomenclature (RAB22A-NeoF1) and the same cell-line models (143B, ZOS-M, U2OS) that the audited manuscript establishes.",
+        "location": "manuscript_extracted.txt (433 matches for NeoF1/143B/ZOS-M/U2OS); supplementary_data_extracted.txt (all figure legends)",
+        "evidence_status": "CROSS_DOCUMENT_MATCH"
+      }
+    ],
+    "interpretation": "The supplied supplementary_data.pdf is DIRECTLY_INSPECTED evidence that it is not the manuscript's own official supplementary information. Its title, author correspondence list, and co-first-author order differ from the audited manuscript, and it addresses an exosome-secretion mechanism that the audited manuscript never mentions. It does, however, use the identical fusion-protein name and cell-line panel, consistent with being supplementary material for a separate, related follow-on publication by an overlapping author group (same corresponding author T. Kang) rather than an unrelated or fabricated document. No claim about intent, error, or validity of either publication follows from this observation; it only affects what this document can be used to verify."
+  },
+  "evidence_graph": {
+    "claim_to_supplementary_edges": "UNRESOLVED for all 32 previously logged manuscript claims and all 19 previously logged manuscript figures/extended-data figures: the supplied supplementary_data.pdf shares no textual, tabular, or figure-legend overlap with any of them.",
+    "supplementary_figures_mapped_to_manuscript_claims": 0,
+    "supplementary_figures_total": 9
+  },
+  "claim_ledger_status": "INCOMPLETE (unchanged from prior run; see *_ledger_without-supplementary-data.json for the full 32-claim ledger of the manuscript itself, which this supplementary file does not extend)",
+  "findings": [
+    {
+      "id": "F-01",
+      "category": "REPORTING_INCONSISTENCY",
+      "status": "carried over unchanged from manuscript-only run",
+      "ref": "see research-package-integrity-audit2_ledger_without-supplementary-data.json F-01"
+    },
+    {
+      "id": "F-02",
+      "category": "REPLICATE_COUNT_MISMATCH",
+      "status": "carried over unchanged from manuscript-only run",
+      "ref": "see research-package-integrity-audit2_ledger_without-supplementary-data.json F-02"
+    },
+    {
+      "id": "F-03",
+      "category": "UNSUPPORTED_SCOPE_CLAIM",
+      "status": "carried over unchanged from manuscript-only run",
+      "ref": "see research-package-integrity-audit2_ledger_without-supplementary-data.json F-03"
+    },
+    {
+      "id": "F-04",
+      "category": "UNSUPPORTED_SCOPE_CLAIM",
+      "status": "carried over unchanged from manuscript-only run",
+      "ref": "see research-package-integrity-audit2_ledger_without-supplementary-data.json F-04"
+    },
+    {
+      "id": "F-05",
+      "category": "MAPPING_AMBIGUITY",
+      "title": "Supplied 'supplementary data.pdf' does not correspond to the audited manuscript's own supplementary information",
+      "claim_ids": ["SC-01", "SC-02", "SC-03", "SC-04", "SC-05"],
+      "evidence_status": "DIRECTLY_INSPECTED / CROSS_DOCUMENT_MATCH",
+      "description": "The document supplied to this audit as 'the supplementary data' for the manuscript is titled and authored differently from the manuscript, and covers an exosome-secretion mechanism absent from the manuscript's text, while reusing the manuscript's fusion-protein name and cell lines. It most plausibly represents supplementary material for a separate, related follow-on publication by an overlapping author/lab group, not the manuscript's own Nature Cell Biology supplementary information (Supplementary Tables 1-8 and any supplementary figures the manuscript itself may reference).",
+      "impact": "None of the manuscript's 32 logged claims or 19 logged figures/extended-data figures gain any new verification evidence from this file. The figure/claim coverage established in the manuscript-only run is unchanged.",
+      "severity": "NOT_APPLICABLE",
+      "severity_reason": "This finding concerns package composition and file provenance, not a discrepancy in the manuscript's own reported values, so the skill's impact-tested severity scale does not apply.",
+      "certainty": "HIGH for the textual/bibliographic mismatch (directly observed); the identity of the correct source manuscript for the supplied PDF is not independently confirmed and is stated as a plausible interpretation, not a verified fact.",
+      "misconduct_inference": "NONE",
+      "reviewer_action": "Confirm which document is intended as this manuscript's official supplementary information; if a different file was intended to be supplied, re-submit it for a corrected audit.",
+      "author_question": "Which document constitutes the official supplementary information for doi:10.1038/s41556-020-0522-z, and is the supplied 'Rab22a-NeoF1 ... exosomes' document supplementary material for a separate publication?"
+    },
+    {
+      "id": "F-06",
+      "category": "REPRODUCIBILITY_LIMITATION",
+      "title": "Manuscript's own declared supplementary material (Supplementary Tables 1-8, referenced 14 times in-text) remains unsupplied",
+      "evidence_status": "BLOCKED",
+      "description": "The manuscript repeatedly cites Supplementary Tables 1-8 (patient cohort clinical/genomic data, fusion candidates, primers, siRNAs, sgRNAs) as the basis for reported sample sizes, cohort characteristics, and reagent identities. None of these tables were supplied in either audit run.",
+      "impact": "All claims resting on these tables remain unverifiable by evidence correspondence.",
+      "severity": "UNDETERMINED",
+      "severity_reason": "Impact on any specific reported value was not tested because the tables were never available to compare against.",
+      "certainty": "HIGH",
+      "misconduct_inference": "NONE",
+      "reviewer_action": "Request Supplementary Tables 1-8 directly from the publisher or authors for a follow-up audit.",
+      "author_question": "Can Supplementary Tables 1-8 be supplied to allow verification of cohort size, fusion-candidate, primer, siRNA, and sgRNA claims?"
+    }
+  ],
+  "checked_but_not_raised": [
+    {
+      "check": "Whether the audited manuscript's own reported claims rely on, cite, or borrow support from any exosome-secretion result in the supplied supplementary_data.pdf.",
+      "result": "No such reliance was found. The manuscript text contains zero occurrences of 'exosome' and does not reference Figures S1-S9 from the supplied document.",
+      "assessment": "POSITIVE",
+      "scope_limitation": "This confirms the two documents are not improperly conflated within the manuscript's own argument; it does not confirm the supplied document's true source paper."
+    }
+  ],
+  "coverage_reconciliation": {
+    "claims_total": 32,
+    "claims_checkable_internal_crossref": 15,
+    "claims_blocked": 12,
+    "claims_unresolved_mapping": 2,
+    "claims_scope_findings": 2,
+    "claims_reconciliation": "PASS",
+    "figures_total": 19,
+    "figures_blocked": 19,
+    "figures_checked": 0,
+    "figures_reconciliation": "PASS",
+    "supplementary_claims_total": 5,
+    "supplementary_claims_directly_inspected": 4,
+    "supplementary_claims_cross_document_match": 1,
+    "supplementary_claims_reconciliation": "PASS",
+    "distinct_findings_this_run": 2,
+    "distinct_findings_cumulative": 6
+  },
+  "status_architecture": {
+    "package_completeness": "INCOMPLETE",
+    "source_execution": "NOT_APPLICABLE",
+    "independent_recomputation": "NOT_APPLICABLE",
+    "computational_reproducibility": "NOT_APPLICABLE",
+    "reporting_correspondence": "PARTIALLY_VERIFIED",
+    "empirical_data_integrity": "NOT_ASSESSED",
+    "configuration_and_model_input_integrity": "NOT_APPLICABLE_FOR_EMPIRICAL_DATA"
+  },
+  "author_queries": [
+    {
+      "id": 1,
+      "location": "Additional information section; supplied supplementary_data.pdf title page",
+      "question": "Which document constitutes the official supplementary information for doi:10.1038/s41556-020-0522-z, and is the supplied 'Rab22a-NeoF1 ... exosomes' document supplementary material for a separate, later publication?",
+      "reason": "The title, author-correspondence list, and co-first-author order differ, and the subject matter (exosome secretion) does not appear anywhere in the audited manuscript."
+    },
+    {
+      "id": 2,
+      "location": "Text citations of Supplementary Tables 1-8",
+      "question": "Can Supplementary Tables 1-8 be supplied to allow verification of cohort size, fusion-candidate, primer, siRNA, and sgRNA claims?",
+      "reason": "These tables are cited 14 times as the evidentiary basis for reported values but were not included in either audit package."
+    }
+  ],
+  "blocked_and_not_checked_register": [
+    {
+      "item": "All 19 previously logged manuscript figures/extended-data figures",
+      "status": "BLOCKED",
+      "reason": "No source data, code, or the manuscript's own supplementary figures were supplied; the newly supplied document does not depict any of these figures."
+    },
+    {
+      "item": "Supplementary Tables 1-8",
+      "status": "BLOCKED",
+      "reason": "Not supplied in this or the prior run."
+    },
+    {
+      "item": "Figures S1-S9 in the supplied supplementary_data.pdf",
+      "status": "NOT_APPLICABLE_TO_THIS_MANUSCRIPT",
+      "reason": "These figures do not correspond to any claim, figure, or table in the audited manuscript; they cannot be checked against it."
+    }
+  ],
+  "misconduct_inference": "NONE",
+  "publication_recommendation": "NONE (out of scope for this skill)",
+  "output_validation": {
+    "both_outputs_generated": true,
+    "shared_finding_ids": true,
+    "brief_does_not_strengthen_technical_report": true,
+    "counts_reconcile": true,
+    "brief_labels_match_technical_evidence": true,
+    "no_raw_code_or_ledger_in_brief": true,
+    "result": "PASS"
+  },
+  "report_files": {
+    "technical_audit": "research-package-integrity-audit2_integrity-audit_with-supplementary-data.md",
+    "review_brief": "research-package-integrity-audit2_review-brief_with-supplementary-data.md",
+    "prior_manuscript_only_technical_audit": "research-package-integrity-audit2_integrity-audit_without-supplementary-data.md",
+    "prior_manuscript_only_review_brief": "research-package-integrity-audit2_review-brief_without-supplementary-data.md",
+    "prior_manuscript_only_ledger": "research-package-integrity-audit2_ledger_without-supplementary-data.json"
+  }
+}

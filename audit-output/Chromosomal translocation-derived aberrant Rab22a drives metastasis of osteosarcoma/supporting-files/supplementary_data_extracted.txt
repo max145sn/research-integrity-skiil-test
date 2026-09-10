@@ -1,0 +1,388 @@
+Supplementary Materials for 
+1 
+ 
+2 
+Rab22a-NeoF1 fusion protein promotes osteosarcoma lung 
+3 
+metastasis through its secretion into exosomes  
+4 
+ 
+5 
+Li Zhong1#, Dan Liao1#, Jingjing Li1#, Wenqiang Liu2, Jingxuan Wang2, Cuiling 
+6 
+Zeng1, Xin Wang1, Zhiliang Cao3, Ruhua Zhang1, Miao Li4, Kuntai Jiang5, Yi-Xin 
+7 
+Zeng1, Jianhua Sui3*, and Tiebang Kang1* 
+8 
+ 
+9 
+*Correspondence to:  
+10 
+Dr. Tiebang Kang, kangtb@sysucc.org.cn. 
+11 
+Dr. Jianhua Sui, suijianhua@nibs.ac.cn 
+12 
+ 
+13 
+ 
+14 
+This PDF file includes: 
+15 
+Figures. S1 to S9 
+16 
+ 
+ 
+17 
+18 
+Figure. S1. The secreted RAB22A-NeoF1 fusion protein enhances 
+19 
+metastasis in osteosarcoma. 
+20 
+(a) Bioluminescence analyses of lung metastases from mice orthotopically 
+21 
+injected with the indicated cells under treatment of either Vector-CM or 
+22 
+RAB22A-NeoF1 CM. n = 5 biologically independent mice. Data are mean ± s.d. 
+23 
+P values are shown.  
+24 
+(b) 143B cells were co-cultured with the indicated stable cells for 5 days and 
+25 
+then were subjected to migration and invasion assays. Data are mean ± s.d. of 
+26 
+n = 3 biologically independent experiments. P values are shown. 
+27 
+(c-f) Representative IVIS imaging (c), Bioluminescence analyses (d) 
+28 
+H&E-stained lung sections (e) and quantification of lung metastatic foci (f) from 
+29 
+mice orthotopically co-injected 143B-Luc cells with either ZOS-M-shNC cells or 
+30 
+ZOS-M-shRAB22A-NeoF1 cells at the 1:1 ratio. n = 5 biologically independent 
+31 
+mice. Data are mean ± s.d. P values are shown. Scale bar, 2mm. 
+32 
+(g) Bioluminescence analyses of lung metastases from mice orthotopically 
+33 
+injected U2OS/MTX300-Luc cells alone or with either ZOS-M-shNC cells or 
+34 
+ZOS-M-shRAB22A-NeoF1 cells at the indicated 10:1 and 10:2 ratios. n = 5 
+35 
+biologically independent mice. Data are mean ± s.d. P values are shown. 
+36 
+37 
+Figure. S2. The RAB22A-NeoF1 fusion protein is present in exosomes to 
+38 
+promote osteosarcoma metastasis. 
+39 
+(a) Representative images of immunofluorescence staining for both 
+40 
+intracellular RAB22A-NeoF1 and the indicated subcellular markers in U2OS 
+41 
+cells stably expressing RAB22A-NeoF1. Scale bar, 5μm. 
+42 
+(b) Pearson correlation coefficients (PCCs) were calculated from multiple 
+43 
+individual cells expressing RAB22A-NeoF1 and the indicated subcellular 
+44 
+markers. mean ± SD. n = 8 fields. Data are mean ± s.d. 
+45 
+(c) Characterization of exosomes derived from the indicated stable 143B cells 
+46 
+and stable ZOS-M cells using nanoparticle tracking analysis. 
+47 
+(d) Representative TEM images of the purified exosomes derived from the 
+48 
+indicated stable 143B (up two panels) and stable ZOS-M cells (low two panels). 
+49 
+Scale bar,100nm. 
+50 
+(e, f) 12-36% (e) and 5%-40% (f) iodixanol density gradients centrifugation 
+51 
+was performed using the exosomes derived from 143B cells stably expressing 
+52 
+RAB22A-NeoF1 as described in “Materials and Methods” and followed by 
+53 
+Western blotting. Data in e and f are representative of n = 3 biologically 
+54 
+independent experiments. 
+55 
+(g) Representative confocal microscopy image of U2OS cells treated with 
+56 
+exosomes derived from 143B cells stably expressing Rab22a-NeoF1-EGFP 
+57 
+(Rab22a-NeoF1-EGFP-exo) for 15min. The late endosomes (Red, denoted by 
+58 
+RAB7) and GFP signals (Green) were shown. Scale bar, 5μm. 
+59 
+(h) The U2OS cells were treated with or without exosomes derived from 143B 
+60 
+cells stably expressing Rab22a-NeoF1-GFP (Rab22a-NeoF1-EGFP-exo) for 
+61 
+15 min, and subjected to flow cytometry analysis.  
+62 
+(i) Bioluminescence analyses of lung metastases from mice orthotopically 
+63 
+injected with the indicated cells under treatment of exosomes derived from the 
+64 
+indicated stable ZOS-M cells. n = 5 biologically independent mice. Data are 
+65 
+mean ± s.d. P values are shown.
+66 
+67 
+Figure. S3. RAB22A-NeoF1 fusion protein is sorted into exosomes via 
+68 
+binding to HSP90 to promote osteosarcoma metastasis  
+69 
+(a, b) The indicated stable 143B cells were lysed and analyzed by Western 
+70 
+blotting. 
+71 
+(c) The exosomes from the indicated stable 143B cells were purified and 
+72 
+analyzed by Western blotting. The relative intensity of RAB22A-NeoF1 was 
+73 
+quantified with ImageJ software and normalized with HSP70. Data in a-c are 
+74 
+representative of n = 3 biologically independent experiments.  
+75 
+ 
+76 
+(d) The protein sequence of RAB22A-NeoF1. The yellow region indicates four 
+77 
+KFERQ-like motifs (aa52-56, aa59-63, aa102-106 and aa137-142) and 
+78 
+mutated amino acids are highlighted in red. 
+79 
+(e) 293T cells were co-transfected with the indicated plasmids and then were 
+80 
+lysed and analyzed by immunoprecipitation using S protein beads and 
+81 
+Western blotting. 
+82 
+(f) The 143B cells stably expressing Rab22a-NeoF1 were treated with the 
+83 
+HSP90 inhibitor (Ganetespib), HSP70 and HSC70 inhibitors (VER155008 and 
+84 
+Apoptozole) for 24h, and then the exosomes were purified and analyzed by 
+85 
+Western blotting. Data in e and f are representative of n = 3 biologically 
+86 
+independent experiments.  
+87 
+(g) Bioluminescence analysis of lung metastasis from mice orthotopically 
+88 
+injected 143B-Luc cells with exosomes derived from the indicated stable 143B 
+89 
+cells. n = 5 biologically independent mice. Data are mean ± s.d. P values are 
+90 
+shown.
+91 
+92 
+Figure. S4. The functions of exosomes containing RAB22A-NeoF1 fusion 
+93 
+protein on its negative recipient cancer cells requires its binding partner 
+94 
+PYK2 from donor cells.  
+95 
+ (a) The heat maps of differential expression cluster in exosomes from the 
+96 
+indicated stable 143B cells. 
+97 
+(b) The protein compositions in exosomes from the indicated stable 143B cells. 
+98 
+Proteins with significant increase from exosomes positive for RAB22A-NeoF1 
+99 
+were marked in red. 
+100 
+(c) 293T cells were co-transfected with the indicated plasmids and then were 
+101 
+lysed and analyzed by immunoprecipitation using anti-Flag beads or anti-V5 
+102 
+beads and Western blotting. 
+103 
+(d) 143B cells treated with exosomes derived from the indicated stable 143B 
+104 
+cells for 1 h, and then were subjected to the RhoA activation assay. The 
+105 
+relative intensity of RhoA-GTP quantified with ImageJ software and normalized 
+106 
+with RhoA-Total. Data in c and d are representative of n = 3 biologically 
+107 
+independent experiments. 
+108 
+(e) U2OS and 143B cells were treated with or without RhoA inhibitor CT04 for 
+109 
+4h, and then were incubated with exosomes derived from the indicated stable 
+110 
+143B cells for 24h. The cells were then collected and subjected to migration 
+111 
+and invasion assays. Data are mean ± s.d. of n = 3 biologically independent 
+112 
+experiments. P values are shown. 
+113 
+(f) The exosomes and cell lysates were prepared from the indicated stable 
+114 
+143B cells, and then were analyzed by Western blotting. Data are 
+115 
+representative of n = 3 biologically independent experiments.  
+116 
+(g) Bioluminescence analysis of lung metastatic foci from mice orthotopically 
+117 
+injected 143B-Luc cells, and then were treated with the indicated exosomes. 
+118 
+n = 5 biologically independent mice. Data are mean ± s.d. P values are shown.
+119 
+120 
+Figure. S5. The functions of exosomal RAB22A-NeoF1 fusion protein 
+121 
+requires recruiting BMDMs to pulmonary pre-metastatic niche. 
+122 
+(a) Mice were pre-educated with the indicated conditioned media (CM) for 3 
+123 
+weeks, and then were orthotopically or tail vein injected with 143B-Luc cells. 
+124 
+The lung metastases were analyzed by Bioluminescence after 3 weeks. n =4 
+125 
+biologically independent mice. Data are mean ± s.d. P values are shown. 
+126 
+(b) Mice orthotopically co-injected U2OS/MTX300-Luc cells with the indicated 
+127 
+stable ZOS-M cells at the 10:1 ratio, and then intravenously injected liposome 
+128 
+or PBS twice a week. The lung metastases were analyzed by bioluminescence. 
+129 
+n = 5 biologically independent mice. Data are mean ± s.d. P values are shown.  
+130 
+(c-f) Mice were pre-educated with the indicated exosomes combined with 
+131 
+liposome or PBS for 3 weeks, and then were orthotopically injected with 
+132 
+143B-Luc cells. The lung metastases were analyzed after 3 weeks. 
+133 
+Representative IVIS imaging (c), Bioluminescence analysis (d), H&E-stained 
+134 
+lung sections (e), Quantification of lung metastatic foci (f). n = 3 biologically 
+135 
+independent mice. Data are mean ± s.d. P values are shown. Scale bar, 2mm.
+136 
+137 
+Figure. S6. The exosomal RAB22A-NeoF1 fusion protein promotes M2 
+138 
+polarization in its recipient macrophages via its binding partner PYK2. 
+139 
+(a, b) Raw264.7 cells (a) and THP-1 cells (b) were incubated with the indicated 
+140 
+exosomes for 24 h, and differential expression patterns of the M0, M1 and M2 
+141 
+phenotype markers were presented by a heatmap. 
+142 
+(c) THP-1 cells were incubated with the indicated exosomes for 24 h, and 
+143 
+differential expression patterns of the M2 polarization macrophage markers 
+144 
+were presented by a heatmap. 
+145 
+(d) Raw264.7 cells were incubated with the indicated exosomes for 24h, and 
+146 
+were subjected to migration assays. Data are mean ± s.d. of n = 3 biologically 
+147 
+independent experiments. P values are shown. 
+148 
+(e) Raw264.7 cells were treated the indicated exosomes with or without the 
+149 
+indicated Stat3 inhibitor, Niclosamide or SH-4-54, for 24h and expression of 
+150 
+M2-like macrophage markers were present by a heatmap. 
+151 
+(f, g) Mice lungs were pre-educated with the indicated exosomes for 3 weeks, 
+152 
+and the CD11b and CD206 expression were analyzed by IHC. Representative 
+153 
+staining imaging (f) and relative H-score of CD11b and CD206 (g). n = 4 
+154 
+biologically independent mice. Data are mean ± s.d. P values are shown. 
+155 
+(h) Mice were pre-educated with the indicated exosomes for 3 weeks, and 
+156 
+then were orthotopically injected with 143B-Luc cells. The lung metastases 
+157 
+were analyzed after 3 weeks. The lung metastases were analyzed by 
+158 
+bioluminescence. n = 5 biologically independent mice. Data are mean ± s.d. P 
+159 
+values are shown.
+160 
+161 
+Figure. S7. The 1-10aa of RAB22A-NeoF1 is responsible for its binding to 
+162 
+PYK2. 
+163 
+(a, b) 293T cells were co-transfected with the indicated plasmids and then 
+164 
+were lysed and analyzed by immunoprecipitation using anti-Flag beads (a) or 
+165 
+anti-V5 beads (b) followed by Western blotting. 
+166 
+(c, d) 293T cells were co-transfected with the indicated plasmids and treated 
+167 
+with the indicated peptide for 24 h, and then were lysed and analyzed by 
+168 
+immunoprecipitation using anti-V5 beads (c) or anti-Flag beads (d) followed by 
+169 
+Western blotting. Data in a-d are representative of n = 3 biologically 
+170 
+independent experiments. 
+171 
+(e) U2OS cells were treated with the indicated exosomes for 24h, and then 
+172 
+were subjected to migration and invasion assays. Data are mean ± s.d. of n = 3 
+173 
+biologically independent experiments. P values are shown. 
+174 
+(f) Bioluminescence analysis of lung metastatic foci from mice orthotopically 
+175 
+injected 143B-Luc cells with the indicated exosomes. n = 5 biologically 
+176 
+independent mice. Data are mean ± s.d. P values are shown. 
+177 
+(g) Bioluminescence analysis of lung metastatic foci from mice orthotopically 
+178 
+co-injected U2OS/MTX300-Luc cells with ZOS-M cells at the 10:1 ratio under 
+179 
+the treatment of either 1-10aa-iRGD or random-iRGD peptide. n = 5 
+180 
+biologically independent mice. Data are mean ± s.d. P values are shown.
+181 
+182 
+Figure. S8. Secretion of RAB22A-NeoFs proteins 
+183 
+(a) The protein sequences of RAB22A-NeoF2-6. The yellow region indicates 
+184 
+the KFERQ-like motif (aa52-57). 
+185 
+(b) The exosomes derived from the indicated stable 143B cells were purified 
+186 
+and subjected to Western blotting. Data are representative of n = 3 biologically 
+187 
+independent experiments.
+188 
+189 
+Figure. S9. The interaction of RAB22A-NeoF1 fusion protein with PYK2, 
+190 
+but not with smgGDS607, is dependent on its binding to HSP90. 
+191 
+(a, b) 293T cells were co-transfected with the indicated plasmids and treated 
+192 
+with the indicated HSP90 inhibitors for 24 h, and then were lysed and analyzed 
+193 
+by immunoprecipitation using anti-Flag beads followed by Western blotting. 
+194 
+(c) ZOS-M cells were treated with the indicated HSP90 inhibitors for 24 h and 
+195 
+then were lysed and subject to immunoprecipitation using IgG and mAb 
+196 
+RAD5-8 followed by Western blotting. Data in a-c are representative of n = 3 
+197 
+biologically independent experiments. 
+198 
