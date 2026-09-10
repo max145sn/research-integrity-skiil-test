@@ -13,9 +13,20 @@ This repository includes several document bundles and one installed skill.
   - `.github/skills/academic-paper-reviewer/examples/` — hei_paper_review_example.md, interdisciplinary_review_example.md, subclaim_decomposition_example.md
   - `.github/skills/academic-paper-reviewer/references/` — calibration_mode_protocol.md, editorial_decision_standards.md, review_quality_thinking_framework.md
   - `.github/skills/academic-paper-reviewer/templates/` — editorial_decision_template.md, peer_review_report_template.md, revision_response_template.md
-  - `.github/skills/academic-paper-reviewer/examples/`
-  - `.github/skills/academic-paper-reviewer/references/`
-  - `.github/skills/academic-paper-reviewer/templates/`
+- `.github/skills/research-package-integrity-audit2/skill.md`
+- `.github/skills/universal-research-package-audit/skill.md`
+  - `.github/skills/universal-research-package-audit/modules/` — registry.yaml
+  - `.github/skills/universal-research-package-audit/references/` — module-contract.md, population-and-denominator-rules.md, tolerance-rules.md
+  - `.github/skills/universal-research-package-audit/schemas/` — audit-ledger.schema.json, finding.schema.json, population-record.schema.json
+  - `.github/skills/universal-research-package-audit/scripts/` — build_reports.py, inspect_tabular_data.py, inventory_package.py, validate_audit.py
+  - `.github/skills/universal-research-package-audit/templates/` — accessible-review-brief.md, technical-audit.md
+  - `.github/skills/universal-research-package-audit/tests/` — test_validation.py, fixtures/
+- `.github/skills/manuscript-consistency-audit/skill.md`
+  - `.github/skills/manuscript-consistency-audit/references/` — cross-check-checklist.md, query-style.md
+  - `.github/skills/manuscript-consistency-audit/scripts/` — dump_sheet.py, extract_package.py, scan_workbook.py
+- `.github/skills/manuscript-data-integrity/skill.md`
+  - `.github/skills/manuscript-data-integrity/references/` — discipline_checks.md
+  - `.github/skills/manuscript-data-integrity/scripts/` — digit_analysis.py, duplicate_scan.py, grim_check.py, statcheck.py
 
 ## Core documents
 
