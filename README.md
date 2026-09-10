@@ -21,6 +21,9 @@ This repository includes several document bundles and one installed skill.
   - `.github/skills/universal-research-package-audit/scripts/` — build_reports.py, inspect_tabular_data.py, inventory_package.py, validate_audit.py
   - `.github/skills/universal-research-package-audit/templates/` — accessible-review-brief.md, technical-audit.md
   - `.github/skills/universal-research-package-audit/tests/` — test_validation.py, fixtures/
+- `.github/skills/manuscript-consistency-audit/skill.md`
+  - `.github/skills/manuscript-consistency-audit/references/` — cross-check-checklist.md, query-style.md
+  - `.github/skills/manuscript-consistency-audit/scripts/` — dump_sheet.py, extract_package.py, scan_workbook.py
 
 ## Core documents
 

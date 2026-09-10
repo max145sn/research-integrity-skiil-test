@@ -19,3 +19,6 @@ Visible copies of repository skills for easier browsing in Codespaces.
   - `universal-research-package-audit/scripts/` — build_reports.py, inspect_tabular_data.py, inventory_package.py, validate_audit.py
   - `universal-research-package-audit/templates/` — accessible-review-brief.md, technical-audit.md
   - `universal-research-package-audit/tests/` — test_validation.py, fixtures/
+- `manuscript-consistency-audit/skill.md`
+  - `manuscript-consistency-audit/references/` — cross-check-checklist.md, query-style.md
+  - `manuscript-consistency-audit/scripts/` — dump_sheet.py, extract_package.py, scan_workbook.py
