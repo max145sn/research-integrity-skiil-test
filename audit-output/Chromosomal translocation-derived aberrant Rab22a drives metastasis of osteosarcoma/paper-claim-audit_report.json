@@ -1,0 +1,75 @@
+{
+  "audit_skill": "paper-claim-audit",
+  "verdict": "BLOCKED",
+  "reason_code": "no_raw_evidence",
+  "summary": "32 claims extracted from the manuscript text; 14 exact_match, 1 rounding_ok, 2 ambiguous_mapping, 12 missing_evidence, 1 number_mismatch (unit inconsistency), 2 scope_overclaim. No raw result files exist locally (primary sequencing data deposited externally at SRA accession SRP181860), so claim-to-raw-evidence verification is BLOCKED; only internal cross-referencing within the manuscript text was possible.",
+  "audited_input_hashes": {
+    "supporting-files/manuscript_extracted.txt": "sha256:047470c1fd44bb749788bd46717df0a3db77a9482ff95ab137d4f891e3489ef3"
+  },
+  "trace_path": null,
+  "thread_id": null,
+  "reviewer_model": "gpt-5.3-codex (substituted for unavailable mcp__codex__codex / gpt-6-astra)",
+  "reviewer_reasoning": "high (substituted for unavailable 'ultra' tier)",
+  "generated_at": "2026-09-10T09:27:00Z",
+  "details": {
+    "total_claims": 32,
+    "status_counts": {
+      "exact_match": 14,
+      "rounding_ok": 1,
+      "ambiguous_mapping": 2,
+      "missing_evidence": 12,
+      "number_mismatch": 1,
+      "scope_overclaim": 2,
+      "not_applicable": 0
+    },
+    "mismatches": [
+      {
+        "claim_id": "C30",
+        "location": "Methods (iRGD dosing) vs. Extended Data Fig. 10 caption",
+        "paper_text_1": "1 mg kg-1 or 10 mg kg-1 (Methods)",
+        "paper_text_2": "1 mg/ml and 10 mg/ml (Extended Data Fig. 10 caption)",
+        "status": "number_mismatch",
+        "details": "Unit inconsistency (dose per body weight vs. solution concentration) between two mentions of the same iRGD treatment arms."
+      },
+      {
+        "claim_id": "C03",
+        "location": "Title/Abstract",
+        "paper_text": "Rab22a drives metastasis of osteosarcoma",
+        "status": "scope_overclaim",
+        "details": "General causal framing exceeds the 2/37 (5.4%) fusion-positive clinical subgroup that is the actual evidence base; corroborates the same finding in experiment-audit_report.md Check E."
+      },
+      {
+        "claim_id": "C12",
+        "location": "Results, cross-cancer generalization sentence",
+        "paper_text": "occur and drive metastasis in multiple cancer types",
+        "status": "scope_overclaim",
+        "details": "Supported by only 2 clinical cases and 2 cell lines in Results."
+      },
+      {
+        "claim_id": "C13",
+        "location": "Results vs. Methods",
+        "paper_text_1": "two cases of breast cancer",
+        "paper_text_2": "four tumour samples",
+        "status": "ambiguous_mapping",
+        "details": "Not explicitly reconciled which subset/filter produces each count."
+      },
+      {
+        "claim_id": "C22",
+        "location": "Extended Data Fig. 10 legend, panels c-f vs. g",
+        "paper_text": "panels c-f n=3; panel g n=4",
+        "status": "ambiguous_mapping",
+        "details": "Unexplained replicate-count variation within an otherwise-matched panel set."
+      }
+    ],
+    "result_files": [
+      "NONE — no local raw result files exist for this paper; primary sequencing data is deposited externally at SRA accession SRP181860 and was not retrieved for this audit"
+    ],
+    "internal_arithmetic_checks_passed": [
+      "2/37 = 5.4054% rounds correctly to stated 5.4%",
+      "37 (metastatic) + 60 (non-metastatic) = 97 (total screened cohort)",
+      "2 (fusion-positive) + 35 (fusion-negative) = 37 (metastatic subgroup)",
+      "1.5 cm^3 = 1,500 mm^3 tumor-volume cutoff, consistent across 4 mentions",
+      "epitope residues 68-82 = 15 amino acids, consistent with stated '15-mer' peptide"
+    ]
+  }
+}
