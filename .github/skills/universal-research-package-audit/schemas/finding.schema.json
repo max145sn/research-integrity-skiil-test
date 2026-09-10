@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finding.schema.json",
+  "type": "object",
+  "required": ["finding_id", "item_type", "title", "primary_category", "evidence_status", "certainty", "verification_impact", "result_correctness_impact", "severity", "assessment_label", "misconduct_inference"],
+  "properties": {
+    "finding_id": {"type": "string", "pattern": "^[FBL]-[0-9]{3,}$"},
+    "item_type": {"enum": ["RESEARCH_PACKAGE_FINDING", "VERIFICATION_LIMITATION", "AUDIT_LIMITATION"]},
+    "title": {"type": "string", "minLength": 1},
+    "primary_category": {"type": "string"},
+    "claim_ids": {"type": "array", "items": {"type": "string"}},
+    "evidence_status": {"type": "array", "items": {"enum": ["EXECUTED", "RECOMPUTED", "DIRECTLY_INSPECTED", "CROSS_DOCUMENT_MATCH", "INFERRED", "NOT_APPLICABLE", "BLOCKED", "NOT_CHECKED", "FAILED"]}, "minItems": 1},
+    "certainty": {"enum": ["DEMONSTRATED", "HIGH", "MEDIUM", "LOW", "UNRESOLVED"]},
+    "verification_impact": {"enum": ["NONE", "MINOR", "MAJOR", "COMPLETE_BLOCK", "NOT_DETERMINED"]},
+    "result_correctness_impact": {"enum": ["NONE_DEMONSTRATED", "MINOR", "MAJOR", "CRITICAL", "NOT_DETERMINED", "NOT_APPLICABLE"]},
+    "impact_status": {"enum": ["EVALUATED", "PARTIALLY_EVALUATED", "NOT_EVALUATED", "NOT_APPLICABLE"]},
+    "severity": {"enum": ["MINOR", "MAJOR", "CRITICAL", "UNDETERMINED", "NOT_APPLICABLE"]},
+    "severity_basis": {"type": ["string", "null"]},
+    "assessment_label": {"enum": ["POSITIVE", "CONCERN", "LIMITATION", "NOT_ASSESSED", "NOT_APPLICABLE", "UNRESOLVED", "NEUTRAL"]},
+    "misconduct_inference": {"const": "NONE"},
+    "include_in_technical": {"type": "boolean"},
+    "include_in_brief": {"type": "boolean"},
+    "review_priority": {"type": "integer", "minimum": 1}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"impact_status": {"const": "NOT_EVALUATED"}}},
+      "then": {"properties": {"severity": {"enum": ["UNDETERMINED", "NOT_APPLICABLE"]}}}
+    },
+    {
+      "if": {"properties": {"item_type": {"const": "VERIFICATION_LIMITATION"}}},
+      "then": {"properties": {"assessment_label": {"enum": ["LIMITATION", "UNRESOLVED"]}}}
+    }
+  ],
+  "additionalProperties": true
+}

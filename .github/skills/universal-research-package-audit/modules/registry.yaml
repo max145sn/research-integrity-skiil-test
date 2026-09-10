@@ -1,0 +1,25 @@
+modules:
+  - id: generic-tabular
+    evidence_profiles: [counted_observations, repeated_measurements, group_comparison, aggregate_only]
+    status: core
+  - id: spreadsheet
+    evidence_profiles: [laboratory_measurements, aggregate_only]
+    status: planned
+  - id: statistical
+    evidence_profiles: [group_comparison, hierarchical_data, repeated_measurements]
+    status: planned
+  - id: machine-learning
+    evidence_profiles: [predictive_evaluation]
+    status: planned
+  - id: simulation
+    evidence_profiles: [numerical_model]
+    status: planned
+  - id: spatial
+    evidence_profiles: [spatial_evidence]
+    status: planned
+  - id: qualitative
+    evidence_profiles: [qualitative_coding]
+    status: planned
+  - id: image
+    evidence_profiles: [image_evidence]
+    status: planned

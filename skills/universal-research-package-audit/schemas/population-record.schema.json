@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "population-record.schema.json",
+  "type": "object",
+  "required": ["population_id", "source_file_ids", "unit_of_analysis", "inclusion_rules", "exclusion_rules", "placeholder_handling", "missing_value_handling", "grouping", "mapping_confidence"],
+  "properties": {
+    "population_id": {"type": "string", "pattern": "^P-[0-9]{3,}$"},
+    "source_file_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "unit_of_analysis": {"type": "string", "minLength": 1},
+    "value_column": {"type": ["string", "null"]},
+    "weight_column": {"type": ["string", "null"]},
+    "numerator": {"type": ["string", "null"]},
+    "denominator": {"type": ["string", "null"]},
+    "inclusion_rules": {"type": "array", "items": {"type": "string"}},
+    "exclusion_rules": {"type": "array", "items": {"type": "string"}},
+    "positive_count_requirement": {"type": ["string", "null"]},
+    "placeholder_handling": {"type": "string"},
+    "missing_value_handling": {"type": "string"},
+    "grouping": {"type": "array", "items": {"type": "string"}},
+    "aggregation": {"type": ["string", "null"]},
+    "mapping_confidence": {"enum": ["CONFIRMED", "PROBABLE", "UNRESOLVED"]},
+    "alternative_specifications_tested": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

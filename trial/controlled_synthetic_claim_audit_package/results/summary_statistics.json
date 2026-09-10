@@ -1,0 +1,11 @@
+{
+  "actual_sample_n": 520,
+  "train_n": 350,
+  "test_n": 170,
+  "actual_run_count": 6,
+  "mean_accuracy": 0.8235294117647058,
+  "best_accuracy": 0.8470588235294118,
+  "best_run_id": 4,
+  "actual_max_depth": 3,
+  "learning_rate": 0.08
+}

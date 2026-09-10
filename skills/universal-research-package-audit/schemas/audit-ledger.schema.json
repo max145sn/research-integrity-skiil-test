@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "audit-ledger.schema.json",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "package",
+    "files",
+    "section_coverage",
+    "studies",
+    "claims",
+    "populations",
+    "findings",
+    "limitations",
+    "coverage",
+    "validation"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string"
+    },
+    "package": {
+      "type": "object",
+      "required": [
+        "title",
+        "scope_status"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "scope_status": {
+          "enum": [
+            "COMPLETE",
+            "PARTIALLY_COMPLETE",
+            "INCOMPLETE",
+            "UNDETERMINED"
+          ]
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "file_id",
+          "path",
+          "classification",
+          "readable"
+        ],
+        "properties": {
+          "file_id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "classification": {
+            "type": "string"
+          },
+          "readable": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "section_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "section",
+          "status",
+          "claims_identified",
+          "claims_classified"
+        ],
+        "properties": {
+          "section": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "claims_identified": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "claims_classified": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "studies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "study_id"
+        ],
+        "properties": {
+          "study_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "canonical_text",
+          "centrality",
+          "outcome"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^C-[0-9]{3,}$"
+          },
+          "canonical_text": {
+            "type": "string"
+          },
+          "centrality": {
+            "enum": [
+              "CENTRAL",
+              "SUPPORTING",
+              "DESCRIPTIVE",
+              "CONTEXTUAL"
+            ]
+          },
+          "population_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "outcome": {
+            "enum": [
+              "MATCH",
+              "ROBUST_MISMATCH",
+              "SPECIFICATION_DEPENDENT",
+              "MAPPING_AMBIGUITY",
+              "BLOCKED",
+              "NOT_CHECKED",
+              "NOT_APPLICABLE",
+              "DEPENDENCY_UNRESOLVED"
+            ]
+          }
+        }
+      }
+    },
+    "populations": {
+      "type": "array",
+      "items": {
+        "$ref": "population-record.schema.json"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "finding.schema.json"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "$ref": "finding.schema.json"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "claims_total",
+        "claim_outcomes",
+        "reconciliation"
+      ],
+      "properties": {
+        "claims_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "claim_outcomes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "reconciliation": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ]
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "CONDITIONAL_PASS",
+            "MANUAL_CHECK_ONLY",
+            "FAILED",
+            "NOT_RUN"
+          ]
+        },
+        "errors": {
+          "type": "array"
+        },
+        "warnings": {
+          "type": "array"
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}
