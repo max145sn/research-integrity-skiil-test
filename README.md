@@ -8,6 +8,10 @@ This repository includes several document bundles and one installed skill.
 - `.github/skills/claim-grounding/skill.md`
 - `.github/skills/citation-management/skill.md`
 - `.github/skills/exploratory-data-analysis/skill.md`
+  - `.github/skills/exploratory-data-analysis/assets/` — report_template.md
+  - `.github/skills/exploratory-data-analysis/fixtures/` — proteomics_fixture.mztab, mass_spectrometry_fixture.mgf, structure_fixture.pdb
+  - `.github/skills/exploratory-data-analysis/references/` — README.md
+  - `.github/skills/exploratory-data-analysis/scripts/` — eda_analyzer.py
 - `.github/skills/academic-paper-review/skill.md`
 - `.github/skills/academic-paper-reviewer/skill.md`
   - `.github/skills/academic-paper-reviewer/agents/` — field-analyst-agent.md, eic-agent.md, methodology-reviewer-agent.md, domain-reviewer-agent.md, perspective-reviewer-agent.md, editorial-synthesizer-agent.md, devils-advocate-reviewer-agent.md
