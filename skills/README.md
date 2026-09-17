@@ -8,7 +8,7 @@ Visible copies of repository skills for easier browsing in Codespaces.
 - `exploratory-data-analysis/skill.md`
   - `exploratory-data-analysis/assets/` — report_template.md
   - `exploratory-data-analysis/fixtures/` — proteomics_fixture.mztab, mass_spectrometry_fixture.mgf, structure_fixture.pdb
-  - `exploratory-data-analysis/references/` — README.md
+  - `exploratory-data-analysis/references/` — bioinformatics_genomics_formats.md, chemistry_molecular_formats.md, general_scientific_formats.md, microscopy_imaging_formats.md, proteomics_metabolomics_formats.md, spectroscopy_analytical_formats.md
   - `exploratory-data-analysis/scripts/` — eda_analyzer.py
 - `academic-paper-review/skill.md`
 - `academic-paper-reviewer/skill.md`

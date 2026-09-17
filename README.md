@@ -10,7 +10,7 @@ This repository includes several document bundles and one installed skill.
 - `.github/skills/exploratory-data-analysis/skill.md`
   - `.github/skills/exploratory-data-analysis/assets/` — report_template.md
   - `.github/skills/exploratory-data-analysis/fixtures/` — proteomics_fixture.mztab, mass_spectrometry_fixture.mgf, structure_fixture.pdb
-  - `.github/skills/exploratory-data-analysis/references/` — README.md
+  - `.github/skills/exploratory-data-analysis/references/` — bioinformatics_genomics_formats.md, chemistry_molecular_formats.md, general_scientific_formats.md, microscopy_imaging_formats.md, proteomics_metabolomics_formats.md, spectroscopy_analytical_formats.md
   - `.github/skills/exploratory-data-analysis/scripts/` — eda_analyzer.py
 - `.github/skills/academic-paper-review/skill.md`
 - `.github/skills/academic-paper-reviewer/skill.md`
