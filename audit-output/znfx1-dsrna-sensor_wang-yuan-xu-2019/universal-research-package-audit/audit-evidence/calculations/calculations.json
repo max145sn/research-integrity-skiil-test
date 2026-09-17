@@ -1,0 +1,178 @@
+[
+  {
+    "id": "CALC-VSV-2h",
+    "panel": "Fig 2h",
+    "comparison": "wt vs Znfx1-/- (VSV)",
+    "n_per_group": [
+      3,
+      3
+    ],
+    "stored_p": 0.004186885624489595,
+    "stored_cell": "Source Data Fig 2.xlsx!Sheet1!E53",
+    "recomputed_p_student": 0.004186885624489591,
+    "recomputed_p_welch": 0.023710066381876883,
+    "t": -5.8775110754004665,
+    "match_student": true,
+    "match_welch": false
+  },
+  {
+    "id": "CALC-EMCV-2h",
+    "panel": "Fig 2h",
+    "comparison": "wt vs Znfx1-/- (EMCV)",
+    "n_per_group": [
+      3,
+      3
+    ],
+    "stored_p": 0.0018500638904232246,
+    "stored_cell": "Source Data Fig 2.xlsx!Sheet1!I53",
+    "recomputed_p_student": 0.001850063890423224,
+    "recomputed_p_welch": 0.011019394372631912,
+    "t": -7.323262355179296,
+    "match_student": true,
+    "match_welch": false
+  },
+  {
+    "id": "CALC-2h-n",
+    "panel": "Fig 2h",
+    "check": "replicate rows deposited per arm",
+    "block1_rows": 3,
+    "block1_range": "Source Data Fig 2.xlsx!Sheet1!B50:I52",
+    "block2_rows": 4,
+    "block2_range": "Source Data Fig 2.xlsx!Sheet1!B57:I60",
+    "legend_statement": "For d,e,h-j, n = 3 independent experiments (manuscript_extracted.txt:910)"
+  },
+  {
+    "id": "CALC-7g-IFNB1",
+    "panel": "Fig 7g",
+    "comparison": "EV vs EV+VSV (the only two deposited columns)",
+    "deposited_columns": [
+      "EV",
+      "EV+VSV"
+    ],
+    "figure_groups_shown": [
+      "EV",
+      "ZNFX1",
+      "EV+VSV",
+      "ZNFX1+VSV"
+    ],
+    "n_per_group": [
+      3,
+      3
+    ],
+    "ev_variance": 0.0,
+    "recomputed_p": 0.0074862644469773,
+    "t": -5.000787060664997,
+    "printed_panel_p": [
+      "0.0004 (manuscript_extracted.txt:2463)",
+      "0.0001 (manuscript_extracted.txt:2464)"
+    ],
+    "mapping_note": "Printed P values plausibly compare +VSV arms with vs without ZNFX1; those ZNFX1 arms are NOT deposited, so the printed P cannot be attributed to the deposited contrast."
+  },
+  {
+    "id": "CALC-7g-IFIT1",
+    "panel": "Fig 7g",
+    "comparison": "EV vs EV+VSV (the only two deposited columns)",
+    "deposited_columns": [
+      "EV",
+      "EV+VSV"
+    ],
+    "figure_groups_shown": [
+      "EV",
+      "ZNFX1",
+      "EV+VSV",
+      "ZNFX1+VSV"
+    ],
+    "n_per_group": [
+      3,
+      3
+    ],
+    "ev_variance": 0.0,
+    "recomputed_p": 0.004337032931461024,
+    "t": -5.821040328851053,
+    "printed_panel_p": [
+      "0.0004 (manuscript_extracted.txt:2463)",
+      "0.0001 (manuscript_extracted.txt:2464)"
+    ],
+    "mapping_note": "Printed P values plausibly compare +VSV arms with vs without ZNFX1; those ZNFX1 arms are NOT deposited, so the printed P cannot be attributed to the deposited contrast."
+  },
+  {
+    "id": "CALC-3f-n",
+    "panel": "Fig 3f",
+    "check": "survival denominators",
+    "deposited_series_wt": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      3,
+      3
+    ],
+    "deposited_series_ko": [
+      5,
+      5,
+      5,
+      5,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "max_at_risk_wt": 5,
+    "max_at_risk_ko": 5,
+    "legend_statement": "n = 10 mice per group (manuscript_extracted.txt:1083)",
+    "alt_tested": [
+      "series read as number at risk (max 5)",
+      "series read as percent (values are integers 1-5, not 0-100)",
+      "two pooled cohorts of 5 (would require a second undeposited cohort)"
+    ]
+  },
+  {
+    "id": "CALC-3f-events",
+    "panel": "Fig 3f",
+    "reconstructed_deaths_wt": [
+      8,
+      8
+    ],
+    "censored_wt": 3,
+    "reconstructed_deaths_ko": [
+      4,
+      4,
+      4,
+      6
+    ],
+    "censored_ko": 1,
+    "note": "Reconstruction assumes the series is number-at-risk at 10 successive timepoints; timepoint units are not deposited."
+  },
+  {
+    "id": "CALC-1f-n",
+    "panel": "Fig 1f/1g",
+    "check": "clinical sample counts",
+    "fig1f_healthy_n": 9,
+    "fig1f_treated_n": 14,
+    "fig1g_n_per_col": 18,
+    "legend_statement": "n = 9 uninfected controls, n = 14 HIV (manuscript_extracted.txt:594); n = 18 independent samples (manuscript_extracted.txt:596)",
+    "result": "counts in deposited columns equal the legend-stated n"
+  },
+  {
+    "id": "CALC-7c-labels",
+    "panel": "Fig 7c",
+    "legend_statement": "in wild-type or Mda5-/- A549 cells (manuscript_extracted.txt:2537)",
+    "deposited_row_labels": [
+      "Rig-i -/-",
+      "Mda5 -/-"
+    ],
+    "outlier_cell": "Source Data Fig 7.xlsx!Sheet1!G40",
+    "outlier_value": 4176.8590572,
+    "sibling_values": [
+      45514.8509464,
+      42552.9712536
+    ],
+    "ratio_to_sibling_mean": 10.542350243802236
+  }
+]

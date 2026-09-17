@@ -1,0 +1,161 @@
+{
+ "Source Data Fig 1.xlsx": {
+  "decimal_places_histogram": {
+   "0": 81,
+   "4": 6,
+   "5": 141,
+   "6": 34,
+   "7": 137,
+   "8": 1
+  },
+  "high_precision_cells(>=6dp)": 172,
+  "low_precision_cells(<=2dp)": 81,
+  "zero_cells": [],
+  "duplicate_value_groups(excl 0/1)": 1,
+  "example_duplicates": {
+   "0.249075": [
+    "E34",
+    "E38",
+    "E41"
+   ]
+  },
+  "duplicate_numeric_rows": {
+   "(1.0, 1.0, 1.0)": 2,
+   "(1.0, 1.0, 1.0, 1.0, 1.0, 1.0)": 2
+  }
+ },
+ "Source Data Fig 2.xlsx": {
+  "decimal_places_histogram": {
+   "0": 28,
+   "1": 25,
+   "2": 270,
+   "7": 28,
+   "18": 1,
+   "19": 1
+  },
+  "high_precision_cells(>=6dp)": 30,
+  "low_precision_cells(<=2dp)": 323,
+  "zero_cells": [],
+  "duplicate_value_groups(excl 0/1)": 24,
+  "example_duplicates": {
+   "0.53": [
+    "J3",
+    "E23"
+   ],
+   "0.85": [
+    "D4",
+    "J8"
+   ],
+   "0.86": [
+    "J4",
+    "C21",
+    "F72"
+   ],
+   "18.52": [
+    "K4",
+    "K5"
+   ],
+   "1.23": [
+    "D5",
+    "C20",
+    "C30"
+   ],
+   "0.84": [
+    "D7",
+    "C32"
+   ]
+  },
+  "duplicate_numeric_rows": {
+   "(1.32, 2.42, 1.53, 2.31, 1.63, 1.53, 2.53, 1.48, 1.89, 1.54)": 2
+  }
+ },
+ "Source Data Fig 3.xlsx": {
+  "decimal_places_histogram": {
+   "0": 52,
+   "1": 64,
+   "2": 32,
+   "7": 30,
+   "8": 2
+  },
+  "high_precision_cells(>=6dp)": 32,
+  "low_precision_cells(<=2dp)": 148,
+  "zero_cells": [],
+  "duplicate_value_groups(excl 0/1)": 15,
+  "example_duplicates": {
+   "1.9": [
+    "H19",
+    "F22"
+   ],
+   "2.5": [
+    "I19",
+    "N19",
+    "N22"
+   ],
+   "3.5": [
+    "J19",
+    "E22",
+    "M22"
+   ],
+   "4.1": [
+    "K19",
+    "R19"
+   ],
+   "2.7": [
+    "L19",
+    "M19"
+   ],
+   "3.8": [
+    "O19",
+    "O22"
+   ]
+  },
+  "duplicate_numeric_rows": {
+   "(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)": 4
+  }
+ },
+ "Source Data Fig 7.xlsx": {
+  "decimal_places_histogram": {
+   "0": 59,
+   "2": 54,
+   "4": 1,
+   "5": 10,
+   "6": 155,
+   "7": 144,
+   "8": 1
+  },
+  "high_precision_cells(>=6dp)": 300,
+  "low_precision_cells(<=2dp)": 113,
+  "zero_cells": [
+   "C61",
+   "E61",
+   "C67",
+   "E67",
+   "E70"
+  ],
+  "duplicate_value_groups(excl 0/1)": 5,
+  "example_duplicates": {
+   "243.7718632": [
+    "E25",
+    "F31"
+   ],
+   "0.13": [
+    "C98",
+    "D98"
+   ],
+   "0.31": [
+    "D99",
+    "B100"
+   ],
+   "0.21": [
+    "C100",
+    "B104",
+    "D105"
+   ],
+   "0.05": [
+    "B103",
+    "C105"
+   ]
+  },
+  "duplicate_numeric_rows": {}
+ }
+}

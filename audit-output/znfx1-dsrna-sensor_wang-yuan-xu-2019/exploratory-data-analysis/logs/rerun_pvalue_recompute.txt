@@ -1,0 +1,26 @@
+﻿Fig 2h VSV  wt vs Znfx1-/- (stated p=0.004187)
+   wt   n=3 mean=1618.11 sd=215.98
+   KO   n=3 mean=5634.90 sd=1163.84   fold=3.48
+   Student t=-5.8775 df=4 p=0.004187
+   Welch   t=-5.8775 df=2.14 p=0.023710
+   stated p=0.004187  -> Student MATCH; Welch no match
+
+Fig 2h EMCV wt vs Znfx1-/- (stated p=0.00185)
+   wt   n=3 mean=546.09 sd=114.86
+   KO   n=3 mean=2188.70 sd=371.13   fold=4.01
+   Student t=-7.3233 df=4 p=0.001850
+   Welch   t=-7.3233 df=2.38 p=0.011019
+   stated p=0.00185  -> Student MATCH; Welch no match
+
+Fig 2h H1N1 wt vs Znfx1-/- (no p stated)
+   wt   n=4 mean=498.95 sd=92.61
+   KO   n=4 mean=1355.93 sd=133.35   fold=2.72
+   Student t=-10.5567 df=6 p=0.000042
+   Welch   t=-10.5567 df=5.35 p=0.000088
+
+Fig 2h HSV-1 wt vs Znfx1-/- (no p stated)
+   wt   n=4 mean=6303.05 sd=1258.19
+   KO   n=4 mean=7500.76 sd=1467.89   fold=1.19
+   Student t=-1.2390 df=6 p=0.261605
+   Welch   t=-1.2390 df=5.86 p=0.262634
+

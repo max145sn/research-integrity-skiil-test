@@ -1,0 +1,31 @@
+﻿### Per-file cell inventory
+Source Data Fig 1.xlsx: numeric=400 text=102 blank=389 formulas=0
+   min=-0.3456 max=118 exact_1.0=81 (20.2%)
+   decimal-place histogram: {0: 81, 4: 6, 5: 141, 6: 34, 7: 137, 8: 1}
+Source Data Fig 2.xlsx: numeric=353 text=128 blank=455 formulas=2
+   min=0.00185 max=9512 exact_1.0=28 (7.9%)
+   decimal-place histogram: {0: 28, 1: 25, 2: 270, 7: 28, 18: 1, 19: 1}
+Source Data Fig 3.xlsx: numeric=180 text=47 blank=593 formulas=0
+   min=0.4 max=1.236e+04 exact_1.0=36 (20.0%)
+   decimal-place histogram: {0: 52, 1: 64, 2: 32, 7: 30, 8: 2}
+Source Data Fig 7.xlsx: numeric=424 text=124 blank=607 formulas=0
+   min=0 max=6.974e+04 exact_1.0=54 (12.7%)
+   decimal-place histogram: {0: 59, 2: 54, 4: 1, 5: 10, 6: 155, 7: 144, 8: 1}
+
+### Pooled terminal-digit analysis (values with >=2 decimals, non-integer)
+terminal digit  : N=1048  chi2(9)=230.63
+   0:0  1:78  2:151  3:147  4:146  5:165  6:132  7:79  8:80  9:70
+penultimate digit: N=1048  chi2(9)=49.48
+   0:72  1:77  2:92  3:101  4:130  5:121  6:126  7:131  8:122  9:76
+
+first significant digit (Benford), N=1048
+   1: obs= 317 ( 30.2%)  benford= 30.1%
+   2: obs= 160 ( 15.3%)  benford= 17.6%
+   3: obs= 135 ( 12.9%)  benford= 12.5%
+   4: obs= 112 ( 10.7%)  benford=  9.7%
+   5: obs=  84 (  8.0%)  benford=  7.9%
+   6: obs=  60 (  5.7%)  benford=  6.7%
+   7: obs=  65 (  6.2%)  benford=  5.8%
+   8: obs=  58 (  5.5%)  benford=  5.1%
+   9: obs=  57 (  5.4%)  benford=  4.6%
+   chi2(8)=8.31

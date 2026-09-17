@@ -1,0 +1,84 @@
+﻿================================================================================
+FILE: Source Data Fig 4.pdf  size=19569773 bytes  pages=1
+metadata: {"format": "PDF 1.5", "title": "Fig.4", "author": "", "subject": "", "keywords": "", "creator": "Adobe Illustrator CC 2017 (Macintosh)", "producer": "Adobe PDF library 15.00", "creationDate": "D:20190831164610+08'00'", "modDate": "D:20190831164610+08'00'", "trapped": "", "encryption": null}
+-- page 1: 595x842pt  images=17  textchars=328
+     img xref=13 265x109 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=33
+     img xref=14 916x342 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=34
+     img xref=15 1004x326 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=35
+     img xref=16 2276x1030 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=36
+     img xref=17 1408x1034 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=37
+     img xref=18 2524x454 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=38
+     img xref=19 2346x510 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=39
+     img xref=20 740x332 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=40
+     img xref=21 910x204 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=41
+     img xref=22 1322x450 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=42
+     img xref=23 718x228 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=43
+     img xref=24 635x350 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=44
+     img xref=25 407x218 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=45
+     img xref=26 416x229 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=46
+     img xref=27 523x256 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=47
+     img xref=28 513x252 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=48
+     img xref=29 404x216 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=49
+     text: Figure 4 b / ZNFX1-flag / ZNFX1-flag / GAPDH / GAPDH / Figure 4c / ZNFX1 / GAPDH / Mx1 / MDA5 / RIG-I / OAS1 / Figure 4f / Native Page / SDS Page / IRF3 / IRF3 / GAPDH / ZNFX1 / Figure 4h / p-IRF3 / p-TBK1 / GAPDH / IRF3 / Figure 4g / GAPDH / RIG-I / ZNFX1-flag / GAPDH / TBK1 / 245 kDa / 35 kDa / 245 kDa / 35 kDa / 245 kDa / 245 kDa / 35 kDa / 35 kDa / 100 kDa / 35 kDa
+================================================================================
+FILE: Source Data Fig 5.pdf  size=13040249 bytes  pages=1
+metadata: {"format": "PDF 1.5", "title": "Fig.5", "author": "", "subject": "", "keywords": "", "creator": "Adobe Illustrator CC 2017 (Macintosh)", "producer": "Adobe PDF library 15.00", "creationDate": "D:20190831165356+08'00'", "modDate": "D:20190831165356+08'00'", "trapped": "", "encryption": null}
+-- page 1: 595x842pt  images=16  textchars=318
+     img xref=13 1038x494 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=32
+     img xref=14 718x396 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=33
+     img xref=15 521x244 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=34
+     img xref=16 127x69 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=35
+     img xref=17 164x126 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=36
+     img xref=18 321x294 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=37
+     img xref=19 178x186 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=38
+     img xref=20 296x101 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=39
+     img xref=21 449x235 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=40
+     img xref=22 216x241 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=41
+     img xref=23 870x535 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=42
+     img xref=24 831x542 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=43
+     img xref=25 633x487 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=44
+     img xref=26 605x355 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=45
+     img xref=27 1163x348 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=46
+     img xref=28 967x589 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=47
+     text: ZNFX1 / MDA5 / RIG-I / Figure 5b / Figure 5g / Figure 5h / Figure 5i / ZNFX1 / ZNFX1 / ZNFX1 / HMW-poly I:C / LMW-poly I:C / poly dA:dT / ISD / ZNFX1 / cGAS / ZNFX1 / MAVS / RIG-I / Figure 5j / Figure 5k / Figure 5l / HA / cGAS / flag / Native page / SDS page / ZNFX1 / RIG-I / MAVS / 245 kDa / 245 kDa / 100 kDa / 100 kDa / 245 kDa / 65 kDa / 245 kDa / 245 kDa / 245 kDa / 245 kDa
+================================================================================
+FILE: Source Data Fig 6.pdf  size=6693658 bytes  pages=1
+metadata: {"format": "PDF 1.5", "title": "Fig.6", "author": "", "subject": "", "keywords": "", "creator": "Adobe Illustrator CC 2017 (Macintosh)", "producer": "Adobe PDF library 15.00", "creationDate": "D:20190831171459+08'00'", "modDate": "D:20190831171459+08'00'", "trapped": "", "encryption": null}
+-- page 1: 595x842pt  images=36  textchars=576
+     img xref=14 571x134 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=53
+     img xref=15 232x141 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=54
+     img xref=16 677x186 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=55
+     img xref=17 309x209 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=56
+     img xref=18 160x152 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=57
+     img xref=19 128x153 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=58
+     img xref=20 123x73 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=59
+     img xref=21 114x47 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=60
+     img xref=22 240x64 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=61
+     img xref=23 244x59 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=62
+     img xref=24 244x68 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=63
+     img xref=25 237x71 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=64
+     img xref=26 215x189 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=65
+     img xref=27 197x80 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=66
+     img xref=28 250x67 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=67
+     img xref=29 259x94 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=68
+     img xref=30 232x100 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=69
+     img xref=31 181x63 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=70
+     img xref=32 243x70 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=71
+     img xref=33 436x233 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=72
+     img xref=34 444x573 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=73
+     img xref=35 347x321 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=74
+     img xref=36 280x310 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=75
+     img xref=37 217x56 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=76
+     img xref=38 570x412 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=77
+     img xref=39 178x85 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=78
+     img xref=40 672x460 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=79
+     img xref=41 392x172 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=80
+     img xref=42 470x320 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=81
+     img xref=43 614x152 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=82
+     img xref=44 284x156 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=83
+     img xref=45 511x118 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=84
+     img xref=46 367x186 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=85
+     img xref=47 364x167 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=86
+     img xref=48 378x87 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=87
+     img xref=49 837x321 bpc=8 cs=DeviceCMYK filter=FlateDecode smask=88
+     text: Figure 6d / Figure 6g / Figure 6i / Figure 6k / Figure 6f / Figure 6e / Figure 6j / Figure 6c / Figure 6a / ZNFX1 / β-actin / COX IV / ZNFX1 / Lamin B / ZNFX1 / MAVS / ZNFX1 / MAVS / GAPDH / HA / flag / HA / flag / HA / flag / HA / flag / ZNFX1 / MAVS / COX IV / flag / ZNFX1 / MAVS / ZNFX1 / MAVS / GAPDH / ZNFX1 / MAVS / ZNFX1 / MAVS

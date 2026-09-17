@@ -1,0 +1,275 @@
+======================================================================
+Source Data Fig 1.xlsx :: Sheet1 :: dims=A1:K81
+  A2=Figure 1b; B2=VSV; G2=polyI:C
+  B3=0h; C3=4h; D3=8h; E3=16h; F3=24h; G3=0h; H3=4h; I3=8h; J3=16h; K3=24h
+  [B4..K4] 10 numeric
+  [B5..K5] 10 numeric
+  [B6..K6] 10 numeric
+  A8=Figure 1e; B8=left panel
+  B9=Muscle; C9=Brain; D9=Lymph node; E9=Thymus; F9=liver; G9=Bowel; H9=Heart; I9=Kideny; J9=Lung; K9=Spleen
+  [B10..K10] 10 numeric
+  [B11..K11] 10 numeric
+  [B12..K12] 10 numeric
+  B13=right panel
+  C14=Uninfection; F14=Virus infection
+  B15=Liver | numeric:C15..H15(6)
+  B16=Heart | numeric:C16..H16(6)
+  B17=Brain | numeric:C17..H17(6)
+  B18=kidney | numeric:C18..H18(6)
+  B19=Muscle | numeric:C19..H19(6)
+  B20=Bowel | numeric:C20..H20(6)
+  B21=Lung | numeric:C21..H21(6)
+  B22=Spleen | numeric:C22..H22(6)
+  B23=Lymph node | numeric:C23..H23(6)
+  B24=Thymus | numeric:C24..H24(6)
+  A26=Figure 1f; B26=ZNFX1-HIV; D26=RIG-I-HIV; G26=Figure 1g; H26=ZNFX1-SIV; J26=RIG-I-SIV
+  B27=healthy control; C27=Treated; D27=healthy control; E27=Treated; H27=healthy control; I27=SIV encephalitis; J27=healthy control; K27=SIV encephalitis
+  [B28..K28] 8 numeric
+  [B29..K29] 8 numeric
+  [B30..K30] 8 numeric
+  [B31..K31] 8 numeric
+  [B32..K32] 8 numeric
+  [B33..K33] 8 numeric
+  [B34..K34] 8 numeric
+  [B35..K35] 8 numeric
+  [B36..K36] 8 numeric
+  [C37..K37] 6 numeric
+  [C38..K38] 6 numeric
+  [C39..K39] 6 numeric
+  [C40..K40] 6 numeric
+  [C41..K41] 6 numeric
+  [H42..K42] 4 numeric
+  [H43..K43] 4 numeric
+  [H44..K44] 4 numeric
+  [H45..K45] 4 numeric
+  A47=Figure 1h; B47=IFN-α; C47=0h | numeric:D47..F47(3)
+  C48=4h | numeric:D48..F48(3)
+  C49=8h | numeric:D49..F49(3)
+  C50=16h | numeric:D50..F50(3)
+  C51=24h | numeric:D51..F51(3)
+  B52=IFN-β; C52=0h | numeric:D52..F52(3)
+  C53=4h | numeric:D53..F53(3)
+  C54=8h | numeric:D54..F54(3)
+  C55=16h | numeric:D55..F55(3)
+  C56=24h | numeric:D56..F56(3)
+  A58=Figure 1j; C58=UT; F58=Rux
+  B59=0h | numeric:C59..H59(6)
+  B60=4h | numeric:C60..H60(6)
+  B61=8h | numeric:C61..H61(6)
+  A63=Figure 1k; C63=WT; F63=Ifnar-/-
+  B64=0h | numeric:C64..H64(6)
+  B65=4h | numeric:C65..H65(6)
+  B66=8h | numeric:C66..H66(6)
+  A68=Figure 1l; C68=EV; D68=STAT1-50ng; E68=STAT1-100ng; F68=STAT1-200ng; H68=EV; I68=STAT2-50ng; J68=STAT2-100ng; K68=STAT2-200ng
+  B69=wt Znfx1-Luc; G69=wt Znfx1-Luc | numeric:C69..K69(8)
+  [C70..K70] 8 numeric
+  [C71..K71] 8 numeric
+  B72=△Znfx1 promoter-Luc; G72=△Znfx1 promoter-Luc | numeric:C72..K72(8)
+  [C73..K73] 8 numeric
+  [C74..K74] 8 numeric
+  C75=EV; D75=IRF1-50ng; E75=IRF1-100ng; F75=IRF1-200ng; H75=EV; I75=IRF9-50ng; J75=IRF9-100ng; K75=IRF9-200ng
+  B76=wt Znfx1-Luc; G76=wt Znfx1-Luc | numeric:C76..K76(8)
+  [C77..K77] 8 numeric
+  [C78..K78] 8 numeric
+  B79=△Znfx1 promoter-Luc; G79=△Znfx1 promoter-Luc | numeric:C79..K79(8)
+  [C80..K80] 8 numeric
+  [C81..K81] 8 numeric
+======================================================================
+Source Data Fig 2.xlsx :: Sheet1 :: dims=A2:M72
+  A2=Figure 2a; B2=A549; D2=si control; E2=si control+VSV-GFP; F2=si MAVS+VSV-GFP; G2=si ZNFX1+VSV-GFP; H2=L929; J2=si control; K2=si control+VSV-GFP; L2=si MAVS+VSV-GFP; M2=si ZNFX1+VSV-GFP
+  C3=2 MOI (6h); I3=5 MOI (6h) | numeric:D3..M3(8)
+  [D4..M4] 8 numeric
+  [D5..M5] 8 numeric
+  [D6..M6] 8 numeric
+  C7=0.5 MOI (12h); I7=1 MOI (12h) | numeric:D7..M7(8)
+  [D8..M8] 8 numeric
+  [D9..M9] 8 numeric
+  [D10..M10] 8 numeric
+  A12=Figure 2b; B12=A549 (×106); E12=L929 (×106)
+  B13=siControl+VSV; C13=siMAVS+VSV; D13=siZNFX1+VSV; E13=siControl+VSV; F13=siMAVS+VSV; G13=siZNFX1+VSV
+  [B14..G14] 6 numeric
+  [B15..G15] 6 numeric
+  [B16..G16] 6 numeric
+  [B17..G17] 6 numeric
+  A19=Figure 2d; C19=uninfected; F19=VSV
+  B20=WT | numeric:C20..H20(6)
+  B21=Rig-/- | numeric:C21..H21(6)
+  B22=Mda5-/- | numeric:C22..H22(6)
+  B23=Znfx1-/- | numeric:C23..H23(6)
+  A25=Figure 2e; C25=WT; F25=Znfx1-/-
+  B26=EV; C26=         +; D26=         +; E26=          -; F26=         +; G26=         +; H26=          -; I26=          -
+  B27=VSV; C27=          -; D27=         +; E27=         +; F27=          -; G27=         +; H27=         +; I27=         +
+  B28=ZNFX1; C28=          -; D28=          -; E28=         +; F28=          -; G28=          -; H28=          -; I28=         +
+  B29=RIG-I; C29=          -; D29=          -; E29=          -; F29=          -; G29=          -; H29=         +; I29=          -
+  [C30..I30] 7 numeric
+  [C31..I31] 7 numeric
+  [C32..I32] 7 numeric
+  A34=Figure 2g; C34=WT; H34=Znfx1-/-
+  B35=uninfected | numeric:C35..L35(10)
+  B36=VSV | numeric:C36..L36(10)
+  C37=WT; H37=Znfx1-/-
+  B38=uninfected | numeric:C38..L38(10)
+  B39=EMCV | numeric:C39..L39(10)
+  C40=WT; H40=Znfx1-/-
+  B41=uninfected | numeric:C41..L41(10)
+  B42=H1N1 | numeric:C42..L42(10)
+  C43=WT; H43=Znfx1-/-
+  B44=uninfected | numeric:C44..L44(10)
+  B45=HSV-1 low | numeric:C45..L45(10)
+  B46=HSV-1 high | numeric:C46..L46(10)
+  A48=Figure 2h; B48=uninfected; D48=VSV; F48=uninfected; H48=EMCV
+  B49=wt; C49=Znfx1-/-; D49=wt; E49=Znfx1-/-; F49=wt; G49=Znfx1-/-; H49=wt; I49=Znfx1-/-
+  [B50..I50] 8 numeric
+  [B51..I51] 8 numeric
+  [B52..I52] 8 numeric
+  C53=p-value | numeric:E53..I53(2)
+  B55=uninfected; D55=H1N1; F55=uninfected; H55=HSV-1
+  B56=wt; C56=Znfx1-/-; D56=wt; E56=Znfx1-/-; F56=wt; G56=Znfx1-/-; H56=wt; I56=Znfx1-/-
+  [B57..I57] 8 numeric
+  [B58..I58] 8 numeric
+  [B59..I59] 8 numeric
+  [B60..I60] 8 numeric
+  A62=Figure 2i; B62=MEF; D62=uninfected; G62=VSV; J62=EMCV
+  C63=WT | numeric:D63..L63(9)
+  C64=Rig i-/- | numeric:D64..L64(9)
+  C65=Mda5-/- | numeric:D65..L65(9)
+  C66=Znfx1-/- | numeric:D66..L66(9)
+  A68=Figure 2j; B68=A549; D68=uninfected; G68=VSV; J68=EMCV
+  C69=WT | numeric:D69..L69(9)
+  C70=Rig i-/- | numeric:D70..L70(9)
+  C71=Mda5-/- | numeric:D71..L71(9)
+  C72=Znfx1-/- | numeric:D72..L72(9)
+======================================================================
+Source Data Fig 3.xlsx :: Sheet1 :: dims=A2:T41
+  A2=Figure 3a; B2=lung; D2=WT; H2=Znfx1-/-
+  C3=PBS | numeric:D3..K3(8)
+  C4=VSV | numeric:D4..K4(8)
+  B5=liver; D5=WT; H5=KO-ZNFX1
+  C6=PBS | numeric:D6..K6(8)
+  C7=VSV | numeric:D7..K7(8)
+  A10=Figure 3b; B10=lung; D10=WT; H10=Znfx1-/-
+  C11=PBS | numeric:D11..K11(8)
+  C12=VSV | numeric:D12..K12(8)
+  B13=liver; C13=liver; D13=WT; H13=Znfx1-/-
+  C14=PBS | numeric:D14..K14(8)
+  C15=VSV | numeric:D15..K15(8)
+  A18=Figure 3c; B18=IFN-β; D18=wt; L18=Znfx1-/-
+  C19=PBS | numeric:D19..S19(16)
+  C20=VSV | numeric:D20..S20(16)
+  B21=IFN-α; D21=wt; L21=Znfx1-/-
+  C22=PBS | numeric:D22..S22(16)
+  C23=VSV | numeric:D23..S23(16)
+  B24=IFN-β; D24=WT; H24=Znfx1-/-
+  C25=PBS | numeric:D25..K25(8)
+  C26=HSV-1 | numeric:D26..K26(8)
+  B27=IFN-α; D27=WT; H27=Znfx1-/-
+  C28=PBS | numeric:D28..K28(8)
+  C29=HSV-1 | numeric:D29..K29(8)
+  A31=Figure 3f; B31=wt; C31=Znfx1-/-
+  [B32..C32] 2 numeric
+  [B33..C33] 2 numeric
+  [B34..C34] 2 numeric
+  [B35..C35] 2 numeric
+  [B36..C36] 2 numeric
+  [B37..C37] 2 numeric
+  [B38..C38] 2 numeric
+  [B39..C39] 2 numeric
+  [B40..C40] 2 numeric
+  [B41..C41] 2 numeric
+======================================================================
+Source Data Fig 7.xlsx :: Sheet1 :: dims=A2:K105
+  A2=Figure 7a; C2=EV; D2=ZNFX1; E2=RIG-I; F2=MDA5; G2=MAVS
+  B3=WT | numeric:C3..G3(5)
+  [C4..G4] 5 numeric
+  [C5..G5] 5 numeric
+  B6=Znfx1-/- | numeric:C6..G6(5)
+  [C7..G7] 5 numeric
+  [C8..G8] 5 numeric
+  A10=Figure 7b; B10=IFNB1; D10=EV; E10=ZNFX1; F10=RIG-I; G10=MDA5
+  C11=WT | numeric:D11..G11(4)
+  [D12..G12] 4 numeric
+  [D13..G13] 4 numeric
+  C14=Rig-i -/- | numeric:D14..G14(4)
+  [D15..G15] 4 numeric
+  [D16..G16] 4 numeric
+  C17=Mda5 -/- | numeric:D17..G17(4)
+  [D18..G18] 4 numeric
+  [D19..G19] 4 numeric
+  C20=Mavs -/- | numeric:D20..G20(4)
+  [D21..G21] 4 numeric
+  [D22..G22] 4 numeric
+  B23=IFIT1; D23=EV; E23=ZNFX1; F23=RIG-I; G23=MDA5
+  C24=WT | numeric:D24..G24(4)
+  [D25..G25] 4 numeric
+  [D26..G26] 4 numeric
+  C27=Rig-i -/- | numeric:D27..G27(4)
+  [D28..G28] 4 numeric
+  [D29..G29] 4 numeric
+  C30=Mda5 -/- | numeric:D30..G30(4)
+  [D31..G31] 4 numeric
+  [D32..G32] 4 numeric
+  C33=Mavs -/- | numeric:D33..G33(4)
+  [D34..G34] 4 numeric
+  [D35..G35] 4 numeric
+  A37=Figure 7c; C37=EV; D37=EV+VSV; E37=ZNFX1+VSV; F37=RIG-I+VSV; G37=MDA5+VSV; I37=EV; J37=EV+EMCV; K37=ZNFX1+EMCV
+  B38=Rig-i -/-; H38=Rig-i -/- | numeric:C38..K38(8)
+  [C39..K39] 8 numeric
+  [C40..K40] 8 numeric
+  B41=Mda5 -/-; H41=Mda5 -/- | numeric:C41..K41(8)
+  [C42..K42] 8 numeric
+  [C43..K43] 8 numeric
+  A47=Figure 7f; C47=EV; D47=EV+polyI:C; E47=ZNFX1; F47=ZNFX1+polyI:C; H47=Figure 7e; J47=EV; K47=EV+VSV-GFP
+  B48=IFI35; I48=WT | numeric:C48..K48(6)
+  B49=IFITM2 | numeric:C49..K49(6)
+  B50=IFITM3 | numeric:C50..K50(6)
+  B51=IFITM1; J51=EV; K51=EV+VSV-GFP | numeric:C51..F51(4)
+  B52=IRF1; I52=Rig-i -/- | numeric:C52..K52(6)
+  B53=TAP1 | numeric:C53..K53(6)
+  B54=TLR3 | numeric:C54..K54(6)
+  B55=TDRD7; J55=EV; K55=EV+VSV-GFP | numeric:C55..F55(4)
+  B56=TRIM25; I56=Mda5 -/- | numeric:C56..K56(6)
+  B57=TNFSF10 | numeric:C57..K57(6)
+  B58=GBP2 | numeric:C58..K58(6)
+  B59=GBP3 | numeric:C59..F59(4)
+  B60=GBP4 | numeric:C60..F60(4)
+  B61=ZBP1; H61=Figure 7g; J61=EV; K61=EV+VSV | numeric:C61..F61(4)
+  B62=TRIM21; I62=IFNB1 | numeric:C62..K62(6)
+  B63=USP18 | numeric:C63..K63(6)
+  B64=APOBEC3F | numeric:C64..K64(6)
+  B65=DHX58; I65=IFIT1 | numeric:C65..K65(6)
+  B66=CCL5 | numeric:C66..K66(6)
+  B67=CH25H | numeric:C67..K67(6)
+  B68=CCL2 | numeric:C68..F68(4)
+  B69=MYD88 | numeric:C69..F69(4)
+  B70=CXCL10 | numeric:C70..F70(4)
+  B71=ISG20 | numeric:C71..F71(4)
+  B72=HLA-B | numeric:C72..F72(4)
+  B73=HLA-E | numeric:C73..F73(4)
+  B74=IFI16 | numeric:C74..F74(4)
+  B75=IFIT1 | numeric:C75..F75(4)
+  B76=IFIT2 | numeric:C76..F76(4)
+  B77=IFIT3 | numeric:C77..F77(4)
+  B78=NMI | numeric:C78..F78(4)
+  B79=PSMB9 | numeric:C79..F79(4)
+  B80=CD38 | numeric:C80..F80(4)
+  B81=PARP12 | numeric:C81..F81(4)
+  B82=PARP14 | numeric:C82..F82(4)
+  B83=PARP9 | numeric:C83..F83(4)
+  B84=TRIM38 | numeric:C84..F84(4)
+  A86=Figure 7h; C86=EV; D86=ZNFX1; E86=RIG-I; F86=EV+polyI:C; G86=ZNFX1+polyI:C; H86=RIG-I+polyI:C
+  B87=IFNB1 | numeric:C87..H87(6)
+  [C88..H88] 6 numeric
+  [C89..H89] 6 numeric
+  B90=IFIT1 | numeric:C90..H90(6)
+  [C91..H91] 6 numeric
+  [C92..H92] 6 numeric
+  A96=Figure 7i; B96=WT; C96=Rig-i-/-; E96=WT; F96=Rig-i-/-
+  B97=siCtrl; C97=siCtrl; D97=siZNFX1; E97=siCtrl+VSV; F97=siCtrl+VSV; G97=siZNFX1+VSV
+  [B98..G98] 6 numeric
+  [B99..G99] 6 numeric
+  [B100..G100] 6 numeric
+  A101=Figure 7j
+  B102=WT; C102=Rig-i-/-; D102=DKO; E102=WT+VSV; F102=Rig-i-/-+VSV; G102=DKO+VSV
+  [B103..G103] 6 numeric
+  [B104..G104] 6 numeric
+  [B105..G105] 6 numeric

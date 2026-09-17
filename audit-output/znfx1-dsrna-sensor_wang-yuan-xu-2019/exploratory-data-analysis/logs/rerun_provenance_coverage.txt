@@ -1,0 +1,48 @@
+﻿## Provenance
+  Source Data Fig 1.xlsx: creator='WangYao' created=2019-08-29 06:30:46 modBy='WangYao' modified=2019-10-22 13:46:52
+  Source Data Fig 2.xlsx: creator='WangYao' created=2019-08-29 06:32:53 modBy='WangYao' modified=2019-08-29 06:42:29
+  Source Data Fig 3.xlsx: creator='WangYao' created=2019-08-29 06:33:47 modBy='WangYao' modified=2019-08-29 06:42:45
+  Source Data Fig 7.xlsx: creator='WangYao' created=2019-08-29 06:36:49 modBy='WangYao' modified=2019-08-29 06:45:03
+  Source Data Fig 4.pdf: creator='Adobe Illustrator CC 2017 (Macintosh)' created=D:20190831164610+08'00' modBy='' modified=D:20190831164610+08'00'
+  Source Data Fig 5.pdf: creator='Adobe Illustrator CC 2017 (Macintosh)' created=D:20190831165356+08'00' modBy='' modified=D:20190831165356+08'00'
+  Source Data Fig 6.pdf: creator='Adobe Illustrator CC 2017 (Macintosh)' created=D:20190831171459+08'00' modBy='' modified=D:20190831171459+08'00'
+
+## Numeric panel coverage (XLSX)
+  Fig 1b: file=Source Data Fig 1.xlsx rows=6 numeric_cells=30
+  Fig 1e: file=Source Data Fig 1.xlsx rows=18 numeric_cells=90
+  Fig 1f: file=Source Data Fig 1.xlsx rows=0 numeric_cells=0
+  Fig 1g: file=Source Data Fig 1.xlsx rows=21 numeric_cells=118
+  Fig 1h: file=Source Data Fig 1.xlsx rows=11 numeric_cells=30
+  Fig 1j: file=Source Data Fig 1.xlsx rows=5 numeric_cells=18
+  Fig 1k: file=Source Data Fig 1.xlsx rows=5 numeric_cells=18
+  Fig 1l: file=Source Data Fig 1.xlsx rows=14 numeric_cells=96
+  Fig 2a: file=Source Data Fig 2.xlsx rows=10 numeric_cells=64
+  Fig 2b: file=Source Data Fig 2.xlsx rows=7 numeric_cells=24
+  Fig 2d: file=Source Data Fig 2.xlsx rows=6 numeric_cells=24
+  Fig 2e: file=Source Data Fig 2.xlsx rows=9 numeric_cells=21
+  Fig 2g: file=Source Data Fig 2.xlsx rows=14 numeric_cells=90
+  Fig 2h: file=Source Data Fig 2.xlsx rows=14 numeric_cells=58
+  Fig 2i: file=Source Data Fig 2.xlsx rows=6 numeric_cells=36
+  Fig 2j: file=Source Data Fig 2.xlsx rows=5 numeric_cells=36
+  Fig 3a: file=Source Data Fig 3.xlsx rows=8 numeric_cells=32
+  Fig 3b: file=Source Data Fig 3.xlsx rows=8 numeric_cells=32
+  Fig 3c: file=Source Data Fig 3.xlsx rows=13 numeric_cells=96
+  Fig 3f: file=Source Data Fig 3.xlsx rows=11 numeric_cells=20
+  Fig 7a: file=Source Data Fig 7.xlsx rows=8 numeric_cells=30
+  Fig 7b: file=Source Data Fig 7.xlsx rows=27 numeric_cells=96
+  Fig 7c: file=Source Data Fig 7.xlsx rows=10 numeric_cells=48
+  Fig 7e: file=Source Data Fig 7.xlsx rows=14 numeric_cells=70
+  Fig 7f: file=Source Data Fig 7.xlsx rows=0 numeric_cells=0
+  Fig 7g: file=Source Data Fig 7.xlsx rows=25 numeric_cells=108
+  Fig 7h: file=Source Data Fig 7.xlsx rows=10 numeric_cells=36
+  Fig 7i: file=Source Data Fig 7.xlsx rows=5 numeric_cells=18
+  Fig 7j: file=Source Data Fig 7.xlsx rows=5 numeric_cells=18
+
+## Image panel coverage (PDF)
+  Source Data Fig 4.pdf: images=17 panels=['4b', '4c', '4f', '4g', '4h']
+  Source Data Fig 5.pdf: images=16 panels=['5b', '5g', '5h', '5i', '5j', '5k', '5l']
+  Source Data Fig 6.pdf: images=36 panels=['6a', '6c', '6d', '6e', '6f', '6g', '6i', '6j', '6k']
+
+numeric panels (29): ['1b', '1e', '1f', '1g', '1h', '1j', '1k', '1l', '2a', '2b', '2d', '2e', '2g', '2h', '2i', '2j', '3a', '3b', '3c', '3f', '7a', '7b', '7c', '7e', '7f', '7g', '7h', '7i', '7j']
+image panels   (21): ['4b', '4c', '4f', '4g', '4h', '5b', '5g', '5h', '5i', '5j', '5k', '5l', '6a', '6c', '6d', '6e', '6f', '6g', '6i', '6j', '6k']
+overlap: []

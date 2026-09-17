@@ -1,0 +1,138 @@
+{
+  "date": "2026-09-16",
+  "skill": "experiment-audit",
+  "auditor": "external-cross-model-reviewer-high",
+  "reviewer_model": "gpt-5.4",
+  "reviewer_backend": "cross-family-subagent",
+  "reviewer_backend_canonical": false,
+  "reviewer_backend_note": "mcp__codex__codex and mcp__manual_review__review are unavailable in this session. The verbatim skill prompt was routed to an independent read-only cross-family reviewer agent instead. Reviewer self-declared as gpt-5.4 (cross-family vs the Claude executor), so cross-model independence holds, but this is not the canonical MCP backend. Install with: claude mcp add codex -- npx -y @openai/codex-mcp",
+  "executor_model": "claude-opus-5",
+  "executor_role": "path-collection-and-transcription-only",
+  "subject": {
+    "manuscript": "s41556-019-0416-0",
+    "title": "ZNFX1 is a novel mitochondrial dsRNA sensor",
+    "journal": "Nature Cell Biology",
+    "year": 2019,
+    "authors_short": "Wang, Yuan, Xu et al.",
+    "source_data": [
+      "Source Data Fig 1.xlsx",
+      "Source Data Fig 2.xlsx",
+      "Source Data Fig 3.xlsx",
+      "Source Data Fig 4.pdf",
+      "Source Data Fig 5.pdf",
+      "Source Data Fig 6.pdf",
+      "Source Data Fig 7.xlsx"
+    ]
+  },
+  "overall_verdict": "fail",
+  "integrity_status": "fail",
+  "verdict_note": "Reflects material source-data incompleteness and panel/metadata inconsistencies. Not an allegation of misconduct. Many deposited values reproduce the reported statistics exactly.",
+  "checks": {
+    "gt_provenance": {
+      "status": "warn",
+      "details": "Controls are conventional and independently motivated (beta-actin 2^-ddCt, Firefly/Renilla, IgG/input, empty vector, GAPDH/Lamin B1/COX IV loading controls). No circular comparator demonstrated. However raw Ct values, standard curves, FACS event files/gates, ELISA absorbances and blot quantification are absent, so reference stability cannot be independently checked.",
+      "evidence": [
+        "manuscript_extracted.txt:2738-2745",
+        "manuscript_extracted.txt:2759-2760",
+        "Source Data Fig 1.xlsx:Sheet1:B3:K6,B9:K12,B27:K45,C59:H66,C69:K81",
+        "manuscript_extracted.txt:921-953,1750-1769"
+      ]
+    },
+    "score_normalization": {
+      "status": "warn",
+      "details": "Many control groups are pinned at exactly 1.000 for every replicate, removing visible control-group variance; testing fold-change rather than underlying dCt can understate uncertainty. Normal for 2^-ddCt reporting and not fraudulent normalization. Absolute ELISA/plaque/FACS values exist for some panels, preventing a blanket FAIL. Raw Ct/dCt and raw Firefly/Renilla readings unavailable.",
+      "evidence": [
+        "Source Data Fig 1.xlsx:Sheet1:B4:B6,G4:G6",
+        "Source Data Fig 1.xlsx:Sheet1:C15:E24",
+        "Source Data Fig 1.xlsx:Sheet1:C59:H59,C64:H64",
+        "Source Data Fig 1.xlsx:Sheet1:C69:C81,H69:H81",
+        "Source Data Fig 2.xlsx:Sheet1:B50:C52,F50:G52,B57:C60,F57:G60",
+        "Source Data Fig 3.xlsx:Sheet1:D3:K3,D6:K6,D11:K11,D14:K14",
+        "Source Data Fig 7.xlsx:Sheet1:C3:C8,D11:D35"
+      ]
+    },
+    "result_existence": {
+      "status": "fail",
+      "details": "Eight independent recomputations reproduced the reported P values exactly (Fig 1f, 1g, 1j, 2a, 2h VSV, 3a, 3c, 7i/7j). Against that: Fig 3f legend claims n=10 but deposited counts never exceed 5 and no event/censoring records exist, so the stated Gehan-Breslow-Wilcoxon P=0.0283 cannot be recomputed; Fig 2h legend says n=3 but H1N1 and HSV-1 carry four values per group and the reported H1N1 P requires all four; Fig 7c legend says wild-type or Mda5-/- while deposited groups are Rig-I-/- and Mda5-/-; Fig 7e and Fig 7g are missing treatment groups; no replicate-level source exists for Fig 4a-e/i, Fig 5b-f or Fig 6j; Extended Data source data promised by the availability statement is absent; the 80% conjunctivitis claim has no animal-level table.",
+      "reconciliations_passed": [
+        {"panel": "Fig 1f", "recomputed_p": 0.012325, "reported_p": 0.0123, "evidence": "Source Data Fig 1.xlsx:Sheet1:B28:C41; manuscript_extracted.txt:443,594-595"},
+        {"panel": "Fig 1g", "recomputed_p": 3.7716e-15, "reported_p": 3.77e-15, "evidence": "Source Data Fig 1.xlsx:Sheet1:H28:I45; manuscript_extracted.txt:444,596"},
+        {"panel": "Fig 1j 4h", "recomputed_p": 0.004318, "reported_p": 0.0043, "evidence": "Source Data Fig 1.xlsx:Sheet1:C60:H60; manuscript_extracted.txt:529"},
+        {"panel": "Fig 2a A549 6h", "recomputed_p": 0.002799, "reported_p": 0.0028, "evidence": "Source Data Fig 2.xlsx:Sheet1:E3:E6,G3:G6; manuscript_extracted.txt:843-847"},
+        {"panel": "Fig 2h VSV", "recomputed_p": 0.0041869, "reported_p": 0.0042, "evidence": "Source Data Fig 2.xlsx:Sheet1:D50:E53; manuscript_extracted.txt:862-869"},
+        {"panel": "Fig 3a lung", "recomputed_p": 8.6907e-06, "reported_p": 8.69e-06, "evidence": "Source Data Fig 3.xlsx:Sheet1:D4:K4; manuscript_extracted.txt:1067"},
+        {"panel": "Fig 3c VSV IFN-beta", "recomputed_p": 3.1219e-09, "reported_p": "matches", "evidence": "Source Data Fig 3.xlsx:Sheet1:D20:S20; manuscript_extracted.txt:1071"},
+        {"panel": "Fig 7i", "recomputed_p": 0.005121, "reported_p": 0.0051, "evidence": "Source Data Fig 7.xlsx:Sheet1:F98:G100; manuscript_extracted.txt:2524-2525"},
+        {"panel": "Fig 7j", "recomputed_p": 0.002555, "reported_p": 0.0026, "evidence": "Source Data Fig 7.xlsx:Sheet1:F103:G105; manuscript_extracted.txt:2524-2525"}
+      ],
+      "failures": [
+        {"id": "F1", "panel": "Fig 3f", "issue": "legend n=10 vs deposited survival counts never exceeding 5; no event/censoring records; stated survival P=0.0283 not recomputable", "evidence": "manuscript_extracted.txt:1083-1085; Source Data Fig 3.xlsx:Sheet1:B32:C41"},
+        {"id": "F2", "panel": "Fig 2h", "issue": "legend n=3 but H1N1 and HSV-1 have four values per group; reported H1N1 P~4.24e-5 requires all four", "evidence": "manuscript_extracted.txt:910; Source Data Fig 2.xlsx:Sheet1:D57:E60,H57:I60"},
+        {"id": "F3", "panel": "Fig 7c", "issue": "legend says wild-type or Mda5-/-; deposited groups are Rig-I-/- and Mda5-/-", "evidence": "manuscript_extracted.txt:2537; Source Data Fig 7.xlsx:Sheet1:B38:K43"},
+        {"id": "F4", "panel": "Fig 7e", "issue": "only EV/uninfected and EV+VSV present; ZNFX1/RIG-I/MDA5 treatment groups missing; means, SDs and P not reproducible", "evidence": "manuscript_extracted.txt:2538-2540; Source Data Fig 7.xlsx:Sheet1:I48:K58"},
+        {"id": "F5", "panel": "Fig 7g", "issue": "ZNFX1 condition missing; only EV and EV+VSV columns deposited", "evidence": "manuscript_extracted.txt:2475-2495,2541-2542; Source Data Fig 7.xlsx:Sheet1:I61:K67"},
+        {"id": "F6", "panel": "Fig 4a-e/i, Fig 5b-f, Fig 6j", "issue": "no replicate-level numerical source data; PDFs provide uncropped images only", "evidence": "Source Data Fig 4.pdf, Fig 5.pdf, Fig 6.pdf page 1"},
+        {"id": "F7", "panel": "Extended Data Figs 1-7", "issue": "source data promised by availability statement is absent from the package", "evidence": "manuscript_extracted.txt:2859-2863"},
+        {"id": "F8", "panel": "Fig 3d", "issue": "80% conjunctivitis claim has no animal-level source table", "evidence": "manuscript_extracted.txt:219"}
+      ]
+    },
+    "dead_code": {
+      "status": "warn",
+      "details": "No statistical scripts, analysis code, experiment tracker, config files or machine-readable run records exist in the package, so function invocation and DONE status cannot be checked. Potential orphan/unresolvable data: second 'HSV-1 high' row in Fig 2g not distinguishable in panel labels; anomalous Fig 7c value G40=4176.8590572 is ~10x below neighbouring replicates 45515 and 42553 and is not resolvable without raw records.",
+      "evidence": [
+        "Source Data Fig 2.xlsx:Sheet1:B45:L46",
+        "Source Data Fig 7.xlsx:Sheet1:G40"
+      ]
+    },
+    "scope": {
+      "status": "warn",
+      "details": "Four cell lines, primary macrophages/PBMCs, mouse cohorts, HIV/SIV observational datasets and several viruses - broader than a single-assay study. But most mechanistic estimates use only n=3 independent experiments, one mouse strain, one main in-vivo RNA-virus challenge, and HSV-1 as the principal DNA-virus comparator. Generalization language ('essential', 'specifically restricts RNA viruses', 'broad anti-RNA-viral spectrum', 'immediately', therapeutic extrapolation) requires qualification. 'Conserved' rests primarily on sequence analysis, not conserved functional tests across species.",
+      "evidence": [
+        "manuscript_extracted.txt:165-219,2715-2730",
+        "manuscript_extracted.txt:80-84,165,194,614,2197-2202",
+        "manuscript_extracted.txt:2173-2181"
+      ]
+    },
+    "eval_type": ["real_gt", "self_supervised_proxy", "human_eval", "simulation_only"],
+    "eval_type_detail": {
+      "status": "pass",
+      "real_gt": "plaque titres, calibrated ELISA concentrations, FACS percentages, animal survival",
+      "self_supervised_proxy": "relative qPCR, reporter ratios, normalized RIP-seq/heatmaps, qualitative blot comparisons",
+      "human_eval": "unblinded conjunctivitis/histopathology interpretation; no blinding performed (manuscript_extracted.txt:3033-3037)",
+      "simulation_only": "promoter/site prediction, phylogenetic and in-silico analyses",
+      "synthetic_proxy": "not identified"
+    }
+  },
+  "action_items": [
+    "Release raw Ct/dCt values, Firefly and Renilla readings, ELISA absorbances/standard curves, plaque counts, and FCS files with gates.",
+    "Correct or explain the Fig 2h n=3 statement versus four deposited replicates.",
+    "Supply individual survival times/censoring for all claimed Fig 3f n=10 animals and rerun the stated survival test.",
+    "Resolve the Fig 7c WT versus Rig-I-/- label conflict and verify cell G40.",
+    "Deposit complete Fig 7e/7g treatment groups and numerical data for Figs 4-6.",
+    "Supply the Extended Data statistical source data promised by the availability statement.",
+    "Release the Excel/Prism analysis tables or scripts, software settings, multiple-comparison decisions, and an experiment/run ledger.",
+    "Analyse qPCR on dCt values; report fold changes for presentation only.",
+    "Run a separate blinded pixel-level blot/image forensics pass."
+  ],
+  "claims": [
+    {"id": "C1", "claim": "ZNFX1 is induced by viral infection/IFN", "ref": "manuscript_extracted.txt:112-147", "impact": "supported"},
+    {"id": "C2", "claim": "ZNFX1 deficiency enhances RNA-virus replication in vitro", "ref": "manuscript_extracted.txt:165-194", "impact": "supported"},
+    {"id": "C3", "claim": "ZNFX1 has a broad, RNA-virus-specific antiviral spectrum", "ref": "manuscript_extracted.txt:194,614", "impact": "needs_qualifier"},
+    {"id": "C4", "claim": "ZNFX1 is essential for host defence in mice", "ref": "manuscript_extracted.txt:1078", "impact": "needs_qualifier"},
+    {"id": "C5", "claim": "80% of knockout mice developed conjunctivitis", "ref": "manuscript_extracted.txt:219", "impact": "not_verifiable"},
+    {"id": "C6", "claim": "ZNFX1 directly binds viral RNA and prefers long RNA", "ref": "manuscript_extracted.txt:921-953", "impact": "needs_qualifier"},
+    {"id": "C7", "claim": "ZNFX1 localizes to mitochondria and interacts with MAVS", "ref": "manuscript_extracted.txt:2048-2094", "impact": "supported"},
+    {"id": "C8", "claim": "Signalling is independent of RIG-I/MDA5", "ref": "manuscript_extracted.txt:2095-2122", "impact": "needs_qualifier"},
+    {"id": "C9", "claim": "ZNFX1 acts immediately as an early sensor", "ref": "manuscript_extracted.txt:81-84,2163-2169", "impact": "needs_qualifier"},
+    {"id": "C10", "claim": "ZNFX1 may provide an early therapeutic strategy", "ref": "manuscript_extracted.txt:2197-2202", "impact": "unsupported"}
+  ],
+  "out_of_scope": [
+    "pixel-level image/blot forensics (duplication, splicing, contrast, lane manipulation)",
+    "biological sample authentication",
+    "independence of replicates",
+    "laboratory notebooks",
+    "GEO accession retrieval and raw sequencing reanalysis",
+    "FCS file inspection",
+    "antibody specificity validation"
+  ]
+}

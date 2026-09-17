@@ -1,0 +1,723 @@
+{
+ "sha256": "b9f79468c20ce150e49e0c9f00202495d15767cef16fd7f4da409e97cdd660d7",
+ "metadata": {
+  "/Author": "Yao Wang",
+  "/CreationDate": "D:20191105160015+05'30'",
+  "/Creator": "Springer",
+  "/CrossMarkDomains[1]": "springer.com",
+  "/CrossMarkDomains[2]": "springerlink.com",
+  "/Keywords": "",
+  "/ModDate": "D:20191105160108+05'30'",
+  "/Subject": "Nature Cell Biology, doi:10.1038/s41556-019-0416-0",
+  "/Title": "Mitochondria-localised ZNFX1 functions as a dsRNA sensor to initiate antiviral responses through MAVS",
+  "/doi": "10.1038/s41556-019-0416-0"
+ },
+ "pdf_version": "%PDF-1.4",
+ "encrypted": false,
+ "n_pages": 24,
+ "outline_entries": 2,
+ "has_xmp": true,
+ "pages": [
+  {
+   "page": 1,
+   "chars": 5798,
+   "words": 825,
+   "images": 0,
+   "tables": 1,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 2,
+   "chars": 8260,
+   "words": 1261,
+   "images": 0,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 3,
+   "chars": 4294,
+   "words": 819,
+   "images": 7,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 4,
+   "chars": 5829,
+   "words": 1108,
+   "images": 1,
+   "tables": 1,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 5,
+   "chars": 4813,
+   "words": 816,
+   "images": 2,
+   "tables": 2,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 6,
+   "chars": 3678,
+   "words": 782,
+   "images": 10,
+   "tables": 4,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 7,
+   "chars": 4399,
+   "words": 795,
+   "images": 8,
+   "tables": 6,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 8,
+   "chars": 3478,
+   "words": 670,
+   "images": 14,
+   "tables": 13,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 9,
+   "chars": 8348,
+   "words": 1282,
+   "images": 0,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 10,
+   "chars": 4309,
+   "words": 842,
+   "images": 2,
+   "tables": 1,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 11,
+   "chars": 8192,
+   "words": 1261,
+   "images": 0,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 12,
+   "chars": 10744,
+   "words": 1564,
+   "images": 0,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 13,
+   "chars": 2642,
+   "words": 369,
+   "images": 0,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 14,
+   "chars": 133,
+   "words": 19,
+   "images": 1,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 15,
+   "chars": 1403,
+   "words": 222,
+   "images": 0,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 16,
+   "chars": 1876,
+   "words": 310,
+   "images": 1,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 17,
+   "chars": 998,
+   "words": 162,
+   "images": 1,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 18,
+   "chars": 595,
+   "words": 97,
+   "images": 1,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 19,
+   "chars": 403,
+   "words": 63,
+   "images": 1,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 20,
+   "chars": 284,
+   "words": 39,
+   "images": 1,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 21,
+   "chars": 506,
+   "words": 74,
+   "images": 1,
+   "tables": 0,
+   "width": 595.3,
+   "height": 790.9,
+   "rotation": 0
+  },
+  {
+   "page": 22,
+   "chars": 3563,
+   "words": 514,
+   "images": 1,
+   "tables": 0,
+   "width": 612.0,
+   "height": 792.0,
+   "rotation": 0
+  },
+  {
+   "page": 23,
+   "chars": 3215,
+   "words": 429,
+   "images": 0,
+   "tables": 0,
+   "width": 612.0,
+   "height": 792.0,
+   "rotation": 0
+  },
+  {
+   "page": 24,
+   "chars": 2796,
+   "words": 422,
+   "images": 0,
+   "tables": 0,
+   "width": 612.0,
+   "height": 792.0,
+   "rotation": 0
+  }
+ ],
+ "total_chars": 90556,
+ "total_words": 14745,
+ "total_images": 52,
+ "image_detail": [
+  {
+   "page": 3,
+   "w": 316,
+   "h": 695,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 3,
+   "w": 312,
+   "h": 179,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 3,
+   "w": 346,
+   "h": 335,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 3,
+   "w": 346,
+   "h": 338,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 3,
+   "w": 346,
+   "h": 335,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 3,
+   "w": 344,
+   "h": 230,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 3,
+   "w": 344,
+   "h": 230,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 4,
+   "w": 254,
+   "h": 247,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 5,
+   "w": 498,
+   "h": 238,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 5,
+   "w": 590,
+   "h": 477,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 6,
+   "w": 298,
+   "h": 117,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 6,
+   "w": 299,
+   "h": 118,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 6,
+   "w": 448,
+   "h": 142,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 6,
+   "w": 441,
+   "h": 144,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 6,
+   "w": 432,
+   "h": 460,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 6,
+   "w": 434,
+   "h": 421,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 6,
+   "w": 432,
+   "h": 147,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 6,
+   "w": 490,
+   "h": 362,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 6,
+   "w": 159,
+   "h": 22,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 6,
+   "w": 143,
+   "h": 21,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 7,
+   "w": 235,
+   "h": 126,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 7,
+   "w": 317,
+   "h": 323,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 7,
+   "w": 326,
+   "h": 321,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 7,
+   "w": 552,
+   "h": 225,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 7,
+   "w": 182,
+   "h": 227,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 7,
+   "w": 182,
+   "h": 285,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 7,
+   "w": 326,
+   "h": 320,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 7,
+   "w": 264,
+   "h": 248,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 8,
+   "w": 19,
+   "h": 215,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 8,
+   "w": 195,
+   "h": 163,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 194,
+   "h": 163,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 547,
+   "h": 534,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 8,
+   "w": 148,
+   "h": 165,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 148,
+   "h": 164,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 255,
+   "h": 296,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 255,
+   "h": 295,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 210,
+   "h": 421,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 309,
+   "h": 394,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 388,
+   "h": 532,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 8,
+   "w": 298,
+   "h": 396,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 171,
+   "h": 375,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 8,
+   "w": 309,
+   "h": 178,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 10,
+   "w": 543,
+   "h": 561,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 10,
+   "w": 155,
+   "h": 24,
+   "colorspace": "[[/'Indexed', [/'ICCBased', <PDFStream(7"
+  },
+  {
+   "page": 14,
+   "w": 1945,
+   "h": 2711,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 16,
+   "w": 2120,
+   "h": 1605,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 17,
+   "w": 1895,
+   "h": 1825,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 18,
+   "w": 1773,
+   "h": 615,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 19,
+   "w": 2120,
+   "h": 2535,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 20,
+   "w": 1564,
+   "h": 2711,
+   "colorspace": "[/'DeviceGray']"
+  },
+  {
+   "page": 21,
+   "w": 1637,
+   "h": 855,
+   "colorspace": "[[/'ICCBased', <PDFStream(799): raw=2574"
+  },
+  {
+   "page": 22,
+   "w": 473,
+   "h": 67,
+   "colorspace": "[[/'ICCBased', <PDFStream(644): raw=2597"
+  }
+ ],
+ "fonts": [
+  [
+   "MinionPro-Regular",
+   44576
+  ],
+  [
+   "Whitney-Book",
+   17922
+  ],
+  [
+   "HOEJIE+Calibri-Light",
+   9074
+  ],
+  [
+   "FOEEJE+Helvetica",
+   7476
+  ],
+  [
+   "Whitney-Bold",
+   2001
+  ],
+  [
+   "Whitney-Semibold",
+   1732
+  ],
+  [
+   "MinionPro-It",
+   1062
+  ],
+  [
+   "MinionPro-Bold",
+   1045
+  ],
+  [
+   "FWHEJE+Helvetica-Oblique",
+   686
+  ],
+  [
+   "Helvetica2",
+   434
+  ],
+  [
+   "Whitney-BookItalic",
+   427
+  ],
+  [
+   "Helvetica3",
+   293
+  ],
+  [
+   "HRIQLA+STIXGeneral-Regular",
+   263
+  ],
+  [
+   "HOEJLE+Calibri-LightItalic",
+   259
+  ],
+  [
+   "Whitney-Medium",
+   168
+  ],
+  [
+   "Helvetica5",
+   124
+  ],
+  [
+   "Helvetica4",
+   114
+  ],
+  [
+   "HOEIPE+MyriadPro-Light",
+   114
+  ],
+  [
+   "TFWVXC+TimesNewRomanPSMT",
+   90
+  ],
+  [
+   "Whitney-Semibold2",
+   41
+  ],
+  [
+   "HOEJBF+MyriadPro-LightIt",
+   36
+  ],
+  [
+   "Whitney-SemiboldItalic",
+   30
+  ],
+  [
+   "MinionPro-BoldIt",
+   29
+  ],
+  [
+   "STIXGeneral-Regular6",
+   22
+  ],
+  [
+   "STIXGeneral-Italic",
+   17
+  ],
+  [
+   "STIXGeneral-Regular5",
+   14
+  ],
+  [
+   "STIXGeneral-Regular4",
+   10
+  ],
+  [
+   "STIXGeneral-Bold",
+   10
+  ],
+  [
+   "STIXGeneral-Regular2",
+   8
+  ],
+  [
+   "STIXGeneral-Regular3",
+   6
+  ],
+  [
+   "STIXGeneral-Italic2",
+   5
+  ],
+  [
+   "Whitney-Light",
+   1
+  ],
+  [
+   "STIXGeneral-BoldItalic",
+   1
+  ]
+ ],
+ "page_sizes": [
+  [
+   595.3,
+   790.9
+  ],
+  [
+   612.0,
+   792.0
+  ]
+ ]
+}

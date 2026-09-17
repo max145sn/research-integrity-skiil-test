@@ -1,0 +1,87 @@
+{
+  "package_root": "C:\\Users\\MSX6389\\.copilot\\repos\\copilot-worktrees\\research-integrity-skiil-test\\max145sn-redesigned-meme\\audit-output\\znfx1-dsrna-sensor_wang-yuan-xu-2019\\supporting-files",
+  "files": [
+    {
+      "file_id": "FILE-0001",
+      "path": "manuscript_extracted.txt",
+      "bytes": 96827,
+      "sha256": "9145a5dc89c2f81675b4853b872836aa38bbb35d3de5ce1ffc814956defeeb61",
+      "mime": "text/plain",
+      "classification": "NARRATIVE_OR_DOCUMENTATION",
+      "readable": true,
+      "error": null
+    },
+    {
+      "file_id": "FILE-0002",
+      "path": "source-data\\Source Data Fig 1.xlsx",
+      "bytes": 15724,
+      "sha256": "948c4974e337469f85c949c69b3769a9e70f7e1602efc6e5329d0d34921a40c3",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "classification": "STRUCTURED_DATA",
+      "readable": true,
+      "error": null
+    },
+    {
+      "file_id": "FILE-0003",
+      "path": "source-data\\Source Data Fig 2.xlsx",
+      "bytes": 15179,
+      "sha256": "b3f7a518a3a1ccd12d5c72a78da6f5497f876e508ca957665e142b90a6541ea1",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "classification": "STRUCTURED_DATA",
+      "readable": true,
+      "error": null
+    },
+    {
+      "file_id": "FILE-0004",
+      "path": "source-data\\Source Data Fig 3.xlsx",
+      "bytes": 12688,
+      "sha256": "f77eed0f8466ebba296fdcbe13e9837133827d3883db8b28b1839582e8bc821a",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "classification": "STRUCTURED_DATA",
+      "readable": true,
+      "error": null
+    },
+    {
+      "file_id": "FILE-0005",
+      "path": "source-data\\Source Data Fig 4.pdf",
+      "bytes": 19569773,
+      "sha256": "5c0f777759eda96554769759498593a4b9b8578bf794081058550e24f0abf861",
+      "mime": "application/pdf",
+      "classification": "NARRATIVE_OR_DOCUMENTATION",
+      "readable": true,
+      "error": null
+    },
+    {
+      "file_id": "FILE-0006",
+      "path": "source-data\\Source Data Fig 5.pdf",
+      "bytes": 13040249,
+      "sha256": "6bd3c1ec2376c1fd752c694f7257abb62dc0d54affd4135e93fad43e46911e70",
+      "mime": "application/pdf",
+      "classification": "NARRATIVE_OR_DOCUMENTATION",
+      "readable": true,
+      "error": null
+    },
+    {
+      "file_id": "FILE-0007",
+      "path": "source-data\\Source Data Fig 6.pdf",
+      "bytes": 6693658,
+      "sha256": "f49239f09a4d8b05c01b110d8a91ea92929267914b2009b1728db5fe91c486ea",
+      "mime": "application/pdf",
+      "classification": "NARRATIVE_OR_DOCUMENTATION",
+      "readable": true,
+      "error": null
+    },
+    {
+      "file_id": "FILE-0008",
+      "path": "source-data\\Source Data Fig 7.xlsx",
+      "bytes": 16447,
+      "sha256": "b4ca4c544660c71fa156231aee94da5b3ed6d5cb630563225c5f24c220ed5b09",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "classification": "STRUCTURED_DATA",
+      "readable": true,
+      "error": null
+    }
+  ],
+  "file_count": 8,
+  "unclassified_count": 0
+}

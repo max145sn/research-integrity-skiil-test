@@ -1,0 +1,135 @@
+443: P = 0.0123
+444: P = 3.77 × 10–15
+445: P = 4.50 × 10–12
+446: P = 7.44 × 10–6
+447: P = 4.40 × 10–6
+448: P = 0.0004
+529: P = 0.0043
+530: P = 0.0065
+531: P = 0.0003
+532: P = 1.69 × 10–6
+581: P = 0.0009
+582: P = 0.0003
+594: with HIV infection compared with uninfected controls (UI) (n = 9 independent samples for uninfected controls, n = 14 independent samples for HIV
+596: (n = 18 independent samples). h, Znfx1 expression was measured by qRT–PCR in A549 cells after IFN-α or IFN-β treatment for the indicated time points.
+601: plasmids. For c,d,i, experiments were repeated at least three times independently, with similar results obtained. For b,e,h,j–l, n = 3 independent experiments.
+602: Means ± s.d. are shown, and P values were calculated using two-tailed unpaired Student’s t-test.
+843: P = 0.0013
+844: P = 0.0028
+845: P = 4.60 × 10–6
+846: P = 1.23 × 10–6
+847: P = 7.34 × 10–5
+851: P = 0.0002
+852: P = 3.19 × 10–6
+853: P = 1.36 × 10–6
+854: P = 1.09 × 10–6
+855: P = 7.89 × 10–6
+862: P = 0.0023
+863: P = 0.0003
+864: P = 0.0042
+865: P = 0.0019
+866: P = 0.0001 P = 0.0006
+867: P = 0.0003
+868: P = 3.42 × 10–6
+869: P = 4.24 × 10–5
+870: P = 0.6519
+871: P = 0.2616
+900: (si)RNA or the indicated siRNAs followed by VSV-eGFP infection at different multiplicity of infection (MOI) (n = 4 independent experiments). b, Plaque
+901: assay of VSV titres in cell supernatants after VSV infection for 12 h (n = 4 independent experiments). c, Immunoblot analysis of VSV-G protein expression
+907: with VSV, encephalomyocarditis virus (EMCV), influenza A virus (H1N1) or herpes simplex virus type 1 (HSV-1) for 16 h (n = 5 independent experiments).
+910: Znfx1−/−, Rig-I−/−, Mda5−/− A549 cells infected with VSV and EMCV. For d,e,h–j, n = 3 independent experiments. All data are presented as mean ± s.d.
+911: P values were calculated using two-tailed unpaired Student’s t-test.
+1067: P = 8.69 × 10–6
+1068: P = 0.0008
+1069: P = 0.0005
+1070: P = 0.0009
+1071: P = 3.12 ×10–9
+1072: P = 7.65 ×10–11
+1075: P = 0.0283
+1076: P = 0.1361
+1077: P = 0.9430
+1079: wild-type and Znfx1−/− mice with VSV infection by intravenous injection (2 × 107 p.f.u. per g body weight, n = 4 mice per group). b, qRT–PCR analysis of
+1080: Ifnb1 mRNA in the lung and liver from wild-type and Znfx1−/− mice (n = 4 mice per group). c, IFN-α and IFN-β production in sera from wild-type mice and
+1083: bars, 80 μm. The experiments were repeated three times, independently, with similar results. f, Survival of wild-type and Znfx1−/− mice (n = 10 mice per
+1084: group) after intravenous injection of VSV (2 × 107 p.f.u. per g body weight). Data in a–c are presented as mean ± s.d. Statistical differences were detected
+1085: with two-tailed unpaired Student’s t-tests in a–c. A Gehan–Breslow–Wilcoxon test was applied in f.
+1423: P = 0.0009
+1424: P = 0.0006
+1425: P = 0.0006
+1426: P = 8.29 × 10–5
+1427: P = 0.0140
+1428: P = 0.0006
+1429: P = 0.0097
+1430: P = 0.0060
+1440: P = 0.0001
+1441: P = 0.0038
+1442: P = 5.80 × 10–5
+1443: P = 0.0040
+1444: P = 0.0028
+1445: P = 0.0002
+1446: P = 0.0001
+1448: P = 0.9733
+1470: For f–h, the experiments were repeated three times, independently, with similar results obtained. Data in a–e,i are from three independent experiments
+1471: (mean ± s.d.). P values were calculated using two-tailed unpaired Student’s t-test.
+1670: P = 0.0002
+1671: P = 0.0009
+1672: P = 4.18 × 10–6
+1673: P = 6.06 × 10–5
+1686: P = 0.0001
+1687: P = 0.0005
+1693: P = 0.0026
+1694: P = 3.96 × 10–5
+1712: P = 0.0009
+1768: by SDD–PAGE or SDS–PAGE assay. Data in b,c,e,f are presented as mean ± s.d. (n = 3 independent experiments). P values were calculated using two-tailed
+1769: unpaired Student’s t-test. For g–l, the experiments were repeated three times, independently, with similar results obtained.
+2046: independent experiments with similar results.
+2432: P = 0.0007
+2433: P = 0.0304
+2434: P = 0.0004
+2435: P = 0.0004
+2436: P = 0.0294
+2437: P = 0.0002
+2438: P = 0.0015
+2439: P = 8.41 × 10–5
+2444: P = 0.0005
+2445: P = 0.0030
+2446: P = 2.93 × 10–6
+2447: P = 0.0097 P = 1.03 × 10–5
+2463: P = 0.0004
+2464: P = 0.0001
+2494: P = 0.0003
+2495: P = 0.0030
+2524: P = 0.0051
+2525: P = 0.0026
+2529: P = 0.0734
+2530: P = 0.3851
+2531: P = 0.5914
+2532: P = 0.1758
+2533: P = 0.1935
+2534: P = 0.6618
+2544: VSV-eGFP infection. For a–c,e,g–j, n = 3 independent experiments. Data are presented as mean ± s.d. P values were calculated using two-tailed unpaired
+2545: Student’s t-test.
+2554: summaries, source data, extended data, supplementary informa-
+2853: experimental groups. Statistical significance was determined using a two-tailed,
+2854: unpaired Student’s t-test with a confidence interval of 95%. P ≤ 0.05 was denoted
+2863: Source Data. All other data supporting the findings of this study are available from
+2897: VSV-eGFP infection for another 6 hrs (n = 3 independent experiments). d, qRT-PCR revealed the mRNA expression of target gene in A549 cells transfected
+2898: with indicated siRNAs for 48 hrs (n = 3 independent experiments). e-f, RNA levels of Znfx1 and Rig-I are significantly increased after different virial
+2899: infection in different cell types. g, Schematic representation of ZNFX1 promoter containing core region bound by STAT1, STAT2, IRF1 and IRF9. For e, n = 3
+2900: independent experiments. Data in f, n = 4 wells for SeV infected epithelial cells and n = 6 wells for uninfected cells; n = 5 samples for IVA infected pDCs;
+2901: n = 4 independent experiments for SeV infected monocytoid cells; n = 2 independent experiments for SeV or HIV infected Macrophages or mDCs. All data
+2902: are shown as the mean ± s.d. Statistical differences were detected using two-tailed unpaired Student’s t-tests.
+2909: mRNA expression in A549 and L929 cells transfected with control siRNA or ZNFX1 siRNA 1#, 2# or 3# for 48 hrs (n = 3 independent experiments).
+2912: another 12 hrs (n = 4 independent experiments). d, qRT-PCR analysis of VSV mRNA expression (left panel) and plaque assay analysis of VSV titer (right
+2914: 16 hrs (n = 3 independent experiments). e, FACS analysis of Znfx1+/+ and Znfx1-/- 293T cells followed by VSV-eGFP infection at 0.5 MOI for the indicated
+2915: time points (n = 3 independent experiments). f, Znfx1-/- 293T and A549 clones were generated by the CRISPR-Cas9 method. Deficiency of target genes in
+2917: cells with control siRNA (si Control) or Znfx1-specific siRNA (si ZNFX1) (n = 3 independent experiments). h, ELISA of IFN-α in supernatants of BMDMs
+2918: from WT and Znfx1-/- mice infected with VSV or HSV-1 for 16 hrs (n = 5 independent experiments). All data are shown as the mean ± s.d. P values were
+2919: calculated using two-tailed unpaired Student’s t-test. For b, f, the experiments were repeated three times, independently, with similar results obtained.
+2928: indicated time points (n = 3 independent experiments). e, qRT-PCR analysis of Ifnb1 and ISGs mRNA expression in Znfx1+/+ and Znfx1-/- 293T cells followed
+2929: by VSV infected with increasing MOI (0.5 and 1) for 0, 8 and 16 hrs (n = 3 independent experiments). For b, c, the experiments were repeated three times,
+2930: independently, with similar results obtained. Data in d, e are the mean ± s.d. P values were calculated using two-tailed unpaired Student’s t-test.
+2939: are representative of at least three independent experiments.
+3011: Statistical source data for Fig. 1-7 and Supplementary Fig. 1-6 are provided in Supplementary Table. Uncropped blots are provided in supplement figure.
+3027: experiments included at least 3 independent experiments.The number of independent experiment was indicated in each figure legend.
+3032: All experimental findings were reliably reproduced in multiple independent experiments as indicated in the figure legends.

@@ -1,0 +1,192 @@
+{
+ "Source Data Fig 1.xlsx": {
+  "bytes": 15724,
+  "sha256": "948c4974e337469f",
+  "format": "Office Open XML workbook (.xlsx)",
+  "sheets": [
+   "Sheet1"
+  ],
+  "sheet_profiles": [
+   {
+    "sheet": "Sheet1",
+    "dims": "A1:K81",
+    "rows": 81,
+    "cols": 11,
+    "total_cells": 891,
+    "numeric": 400,
+    "text": 102,
+    "empty": 389,
+    "pct_empty": 43.7,
+    "negatives": 10,
+    "zeros": 0,
+    "formulas_preserved": false,
+    "min": -0.345583,
+    "max": 117.9523757,
+    "median": 3.77169385,
+    "mean": 7.8324,
+    "dynamic_range_orders": 3.8,
+    "most_common_value": [
+     1,
+     81
+    ],
+    "exact_ones": 81
+   }
+  ]
+ },
+ "Source Data Fig 2.xlsx": {
+  "bytes": 15179,
+  "sha256": "b3f7a518a3a1ccd1",
+  "format": "Office Open XML workbook (.xlsx)",
+  "sheets": [
+   "Sheet1"
+  ],
+  "sheet_profiles": [
+   {
+    "sheet": "Sheet1",
+    "dims": "A1:M72",
+    "rows": 72,
+    "cols": 13,
+    "total_cells": 936,
+    "numeric": 353,
+    "text": 128,
+    "empty": 455,
+    "pct_empty": 48.6,
+    "negatives": 0,
+    "zeros": 0,
+    "formulas_preserved": false,
+    "min": 0.0018500638904232246,
+    "max": 9512.4273043,
+    "median": 33.1,
+    "mean": 476.9786,
+    "dynamic_range_orders": 6.7,
+    "most_common_value": [
+     1,
+     28
+    ],
+    "exact_ones": 28
+   }
+  ]
+ },
+ "Source Data Fig 3.xlsx": {
+  "bytes": 12688,
+  "sha256": "f77eed0f8466ebba",
+  "format": "Office Open XML workbook (.xlsx)",
+  "sheets": [
+   "Sheet1"
+  ],
+  "sheet_profiles": [
+   {
+    "sheet": "Sheet1",
+    "dims": "A1:T41",
+    "rows": 41,
+    "cols": 20,
+    "total_cells": 820,
+    "numeric": 180,
+    "text": 47,
+    "empty": 593,
+    "pct_empty": 72.3,
+    "negatives": 0,
+    "zeros": 0,
+    "formulas_preserved": false,
+    "min": 0.4,
+    "max": 12359.5056448,
+    "median": 5.0,
+    "mean": 784.3448,
+    "dynamic_range_orders": 4.5,
+    "most_common_value": [
+     1,
+     36
+    ],
+    "exact_ones": 36
+   }
+  ]
+ },
+ "Source Data Fig 4.pdf": {
+  "bytes": 19569773,
+  "sha256": "5c0f777759eda965",
+  "format": "PDF (raster scan container)",
+  "pages": 1,
+  "total_embedded_images": 17,
+  "total_text_chars": 326,
+  "chars_per_page": 326.0,
+  "page_detail": [
+   {
+    "page": 1,
+    "images": 17,
+    "text_chars": 326,
+    "w": 595.3,
+    "h": 841.9
+   }
+  ]
+ },
+ "Source Data Fig 5.pdf": {
+  "bytes": 13040249,
+  "sha256": "6bd3c1ec2376c1fd",
+  "format": "PDF (raster scan container)",
+  "pages": 1,
+  "total_embedded_images": 16,
+  "total_text_chars": 317,
+  "chars_per_page": 317.0,
+  "page_detail": [
+   {
+    "page": 1,
+    "images": 16,
+    "text_chars": 317,
+    "w": 595.3,
+    "h": 841.9
+   }
+  ]
+ },
+ "Source Data Fig 6.pdf": {
+  "bytes": 6693658,
+  "sha256": "f49239f09a4d8b05",
+  "format": "PDF (raster scan container)",
+  "pages": 1,
+  "total_embedded_images": 36,
+  "total_text_chars": 574,
+  "chars_per_page": 574.0,
+  "page_detail": [
+   {
+    "page": 1,
+    "images": 36,
+    "text_chars": 574,
+    "w": 595.3,
+    "h": 841.9
+   }
+  ]
+ },
+ "Source Data Fig 7.xlsx": {
+  "bytes": 16447,
+  "sha256": "b4ca4c544660c71f",
+  "format": "Office Open XML workbook (.xlsx)",
+  "sheets": [
+   "Sheet1"
+  ],
+  "sheet_profiles": [
+   {
+    "sheet": "Sheet1",
+    "dims": "A1:K105",
+    "rows": 105,
+    "cols": 11,
+    "total_cells": 1155,
+    "numeric": 424,
+    "text": 124,
+    "empty": 607,
+    "pct_empty": 52.6,
+    "negatives": 0,
+    "zeros": 5,
+    "formulas_preserved": false,
+    "min": 0,
+    "max": 69738.3243327,
+    "median": 12.78814225,
+    "mean": 2632.3462,
+    "dynamic_range_orders": 6.7,
+    "most_common_value": [
+     1,
+     54
+    ],
+    "exact_ones": 54
+   }
+  ]
+ }
+}

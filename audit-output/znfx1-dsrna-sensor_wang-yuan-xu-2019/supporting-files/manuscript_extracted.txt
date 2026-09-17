@@ -1,0 +1,3128 @@
+===== PAGE 1 =====
+Articles
+https://doi.org/10.1038/s41556-019-0416-0
+1State Key Laboratory of Biocontrol, Guangdong Province Key Laboratory of Pharmaceutical Functional Genes, School of Life Science, Sun Yat-sen University, 
+Guangzhou, China. 2School of Life Science, Beijing University of Chinese Medicine, Beijing, China. *e-mail: lssxal@mail.sysu.edu.cn
+T
+he innate immune system is the first line of host defence against 
+pathogen invasion. Upon viral infection, virus-derived nucleic 
+acids are mainly sensed by two cytosolic nucleic acid sen-
+sors, the DNA sensor cyclic guanosine monophosphate–adenosine 
+monophosphate synthase (cGAS)1,2 and the retinoic acid-inducible 
+gene I (RIG-I)-like receptors (RLRs), including RIG-I and MDA53–6. 
+In addition to these well-known nucleic acid sensors, many other 
+nucleic acid sensors, including several DExD/H box helicases, have 
+been identified in a wide range of cell types to supplement the 
+functions of RLRs and cGAS7. For example, DDX60 is involved in 
+RIG-I-dependent and -independent antiviral responses8, DDX1, 
+DDX21 and DHX36 helicases form a complex with TRIF to sense 
+dsRNA in dendritic cells9, DHX9 mediates NLRP9b recognition of 
+dsRNA stretches and forms inflammasome complexes to promote 
+the maturation of interleukin (IL)-18 and gasdermin D-induced 
+pyroptosis10 and NLRP6 binds viral RNA via DHX15 and interacts 
+with mitochondrial antiviral signalling protein (MAVS) to induce 
+type I/III interferons (IFNs)11. These emerging studies highlight 
+the crucial roles of DExD/H box helicases, which belong to helicase 
+superfamily 2 (SF2), in antiviral immune responses. However, as a 
+different superfamily of many other helicases, helicase SF1 is rarely 
+characterized in sensing pathogenic nucleic acids, although these 
+proteins share a conserved core composed of two tandem RecA 
+domains with ATPase activity and RNA binding ability12–14.
+After binding viral-derived nucleic acids to cytosolic viral sen-
+sors, two adaptors, MAVS and STING, can be recruited to induce 
+the production of type I IFNs and a number of interferon stimulated 
+genes (ISGs) with antiviral activities15–24. For example, the myxovi-
+rus resistance 1 (Mx1) gene product is the inhibitor of virus entry25, 
+the interferon-induced transmembrane (IFITM) family prevents 
+infection before virus can traverse the lipid bilayer of the cell26, PKR 
+impedes viral translation through phosphorylation of eIF2a elon-
+gation factors27, while tetherin causes the retention of virions on 
+infected cell surfaces28,29. In addition to inhibiting a specific viral life 
+cycle stage, some ISGs can enhance innate pathogen-sensing capa-
+bilities or positively regulate IFN signalling24. For example, poly-
+glutamine binding protein 1 binds to reverse-transcribed HIV-1 
+DNA and interacts with cGAS to activate the type I IFN response30, 
+RNF128 functions as an E3 ligase for K63-linked ubiquitination 
+and activation of TBK131 and human IFN-inducible oligoadenyl-
+ate synthetase-like protein mediates RIG-I activation by mimicking 
+polyubiquitin32. Thus, ISGs exert diverse functions at multiple levels 
+of antiviral immunity.
+To determine the antiviral functions of rarely studied helicase 
+SF1 and identify more ISGs, we analysed previously published 
+in vitro transcription-sequencing alternative polyadenylation sites 
+(IVT-SAPAS) data of vesicular stomatitis virus (VSV)-infected 
+monocyte-derived macrophages (MDMs) and identified ZNFX1 
+(a member of helicase SF1) as an ISG and mitochondrial-local-
+ised dsRNA sensor33. ZNFX1 can initiate IFN and ISG expression 
+immediately upon RNA virus infection by sensing viral RNAs and 
+interacting with MAVS, without depending on RLRs. The identi-
+fication of ZNFX1 not only sheds light on the functions of RNA 
+helicase SF1 in antiviral immunity, but also provides a target for 
+antiviral therapy.
+Results
+Viral infection induces ZNFX1 expression. To identify undis-
+covered molecules involved in antiviral innate immunity, we ana-
+lysed our previously published IVT-SAPAS data of VSV-infected 
+MDMs and found numerous genes with changes in their expres-
+sions (Extended Data Fig. 1a)33. By comparing VSV-infected human 
+MDM data and mouse peritoneal macrophage data, we found 
+some common genes, which were upregulated more than three-
+fold, including FFAR2, ZEB2, TIPARP, PTGS2, CMPK2, ZNFX1 
+and CSRNP1. We then knocked down these genes in A549 cells and 
+Mitochondria-localised ZNFX1 functions as a 
+dsRNA sensor to initiate antiviral responses 
+through MAVS
+Yao Wang1, Shaochun Yuan1, Xin Jia1, Yong Ge1, Tao Ling1, Meng Nie1, Xihong Lan1, Shangwu Chen1 and 
+Anlong Xu   1,2*
+In the past two decades, emerging studies have suggested that DExD/H box helicases belonging to helicase superfamily 2 
+(SF2) play essential roles in antiviral innate immunity. However, the antiviral functions of helicase SF1, which shares a con-
+served helicase core with SF2, are little understood. Here we demonstrate that zinc finger NFX1-type containing 1 (ZNFX1), a 
+helicase SF1, is an interferon (IFN)-stimulated, mitochondrial-localised dsRNA sensor that specifically restricts the replication 
+of RNA viruses. Upon virus infection, ZNFX1 immediately recognizes viral RNA through its Armadillo-type fold and P-loop 
+domain and then interacts with mitochondrial antiviral signalling protein to initiate the type I IFN response without depending 
+on retinoic acid-inducible gene I-like receptors (RLRs). In short, as is the case with interferon-stimulated genes (ISGs) alone, 
+ZNFX1 can induce IFN and ISG expression at an early stage of RNA virus infection to form a positively regulated loop of the well-
+known RLR signalling. This provides another layer of understanding of the complexity of antiviral immunity.
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1346
+
+===== PAGE 2 =====
+Articles
+NATURE CELL BIoLoGy
+subsequently infected the cells with VSV-eGFP (enhanced green 
+fluorescence protein). Flow cytometry to detect the percentage 
+of GFP-positive cells showed that knocking down ZNFX1, whose 
+antiviral roles have never been reported, facilitated VSV infection 
+(Extended Data Fig. 1b). Many previous studies have suggested that 
+DExD/H box RNA helicases, belonging to RNA helicase SF2, play 
+diverse roles in antiviral immune responses7. ZNFX1, a representa-
+tive of RNA helicase SF1, contains an Armadillo-type fold (ARM) 
+domain, a P-loop helicase domain and a zinc finger (ZF) domain. 
+Because genes from helicases SF1 and SF2 share a conserved 
+core structure, characterized by two tandem RecA domains, we 
+proposed that SF1 members may also play important roles in antivi-
+ral immunity, as previously suggested13.
+To test this hypothesis, we analysed the gene expression pro-
+files of SF1 and SF2 using IVT-SAPAS data and found a number 
+of genes in these two subfamilies with changes in expression upon 
+VSV infection (Fig. 1a). Flow cytometry results showed that knock-
+ing down MOV10, HELZ2, UPF1 and ZNFX1 in A549 cells led to 
+markedly enhanced VSV replication, whereas SEXT knockdown 
+caused the opposite result (Extended Data Fig. 1c,d). MOV10, UPF1 
+and SEXT have been implicated previously in antiviral immunity, 
+validating our screening approach based on RNAi and viral infec-
+tion, and suggesting that ZNFX1 is probably an undiscovered 
+antiviral molecule34–36.
+To obtain more insight into the role of ZNFX1 in antiviral 
+responses, qRT–PCR or immunoblot analyses were conducted to 
+obtain the upregulated expression pattern of ZNFX1 in A549 cells, 
+peripheral blood mononuclear cells (PBMCs) or mouse embryonic 
+fibroblast (MEF) cells upon VSV infection or poly(I:C) stimula-
+tion (Fig. 1b–d). The abundance of Znfx1 in mouse spleen and lung 
+and the upregulation in immune-related tissues including thymus, 
+lymph node, spleen and lung after intravenous injection of VSV 
+were also demonstrated by qRT–PCR (Fig. 1e). We also conducted 
+statistical analyses of previously collected microarray data sets (GD
+S4231/4214/1271/3210/6082/6063) and found that RNA levels 
+of Znfx1 were significantly higher in patients with HIV infection 
+and monkeys with encephalitis caused by simian immunodefi-
+ciency virus (SIV) when compared with healthy controls (Fig. 1f,g). 
+Moreover, the transcription of Znfx1 is significantly increased after 
+different virus infections in different cell types, including macro-
+phages, dendritic cells and epithelial cells (Extended Data Fig. 1e,f). 
+These data all indicate that ZNFX1 may be an antiviral molecule.
+ZNFX1 is an IFN-stimulated gene. Because viral infection led to 
+the enhancement of ZNFX1 expression at both mRNA and protein 
+levels, we next examined whether ZNFX1 is an ISG by incubating 
+A549 cells with human recombinant IFN-α and IFN-β. The results 
+of qRT–PCR and immunoblot analyses showed that the expression 
+of ZNFX1 could be induced by IFN-α and IFN-β (Fig. 1h,i). In con-
+trast, the induction of Znfx1 mRNA by VSV could be inhibited by 
+the JAK1 inhibitor ruxolitinib and was almost abolished in Ifnar1−/− 
+A549 cells (Fig. 1j,k).
+To identify which nucleotides and region are important in deter-
+mining Znfx1 transcription, bioinformatics analyses using the 
+promoter 2.0 prediction server (http://www.cbs.dtu.dk/services/
+promoter/), JASPAR (http://jaspar.genereg.net/) and CpG plot 
+(http://www.ebi.ac.uk/Tools/seqstats/emboss_cpgplot/) were per-
+formed to identify the region between −1,064 and +63 of Znfx1 
+containing TATA box, GC box and CAAT box, which are the char-
+acteristics of a promoter. Further analyses of transcription factor 
+binding sites revealed that the promoter of Znfx1 contains STAT1, 
+STAT2, IRF1 and IRF9 binding motifs in a relatively concentrated 
+and overlapped region, as shown in Extended Data Fig. 1g. Based on 
+these analyses, we constructed a Znfx1 promoter reporter construct 
+containing the region between −1,064 and +63 and a mutated 
+reporter construct with deletions of the STAT1, STAT2, IRF1 and 
+IRF9 binding motifs. Next, these two reporter constructs were 
+transfected with increasing amounts of STAT1, STAT2, IRF1 or 
+IRF9 expression plasmids into 293T cells. Reporter assays showed 
+that the expression of reporter gene could be induced by the Znfx1 
+promoter but not by a gene lacking the transcriptional factor bind-
+ing sites in the presence of STAT1, STAT2, IRF1 or IRF9 (Fig. 1l). 
+In all, ZNFX1 is an ISG whose upregulation upon viral infection is 
+dependent on the JAK1-STAT1 cascade.
+ZNFX1 is essential for innate anti-RNA virus in vitro and in vivo. 
+To further explore the role of ZNFX1 in antiviral immune responses, 
+we silenced the endogenous expression of ZNFX1 in A549 and L929 
+cells. The cells were then infected with VSV-eGFP and subjected 
+to flow cytometry analysis (Extended Data Fig. 2a,b). The results 
+show that knockdown of Znfx1 significantly enhanced VSV rep-
+lication both in A549 and L929 cells (Fig. 2a). Meanwhile, higher 
+VSV titres and increased VSV-G protein were observed in Znfx1 
+silencing cells (Fig. 2b,c). Consistently, knockdown of Znfx1 expres-
+sion significantly decreased the production of IFN-α and IFN-β 
+protein in A549 cells after VSV infection or poly(I:C) stimulation 
+(Extended Data Fig. 2c). In contrast, lower VSV mRNA and VSV 
+titres in A549 cells were observed when ZNFX1 was overexpressed 
+(Extended Data Fig. 2d).
+To obtain more functional evidence for ZNFX1 in antivi-
+ral responses, we employed a CRISPR-mediated genome editing 
+approach to knock out Znfx1 in 293T and A549 cells. Similar to the 
+transient silencing of Znfx1 in A549 or L929 cells, we found that 
+genome editing of Znfx1 in 293T and A549 cells enhanced VSV 
+replication (Fig. 2d and Extended Data Fig. 2e,f). Meanwhile, over-
+expression of ZNFX1 in wild-type or Znfx1−/− A549 cells restricted 
+VSV replication (Fig. 2e). Further RNA sequencing analysis com-
+paring the genes differentially expressed between wild-type and 
+ZNFX1-overexpressed A549 cells showed the upregulated enrich-
+ment of genes involved in negative regulation of viral replication 
+and signal transduction of type I IFN (Fig. 2f). Interestingly, virus 
+mRNA levels were increased in Znfx1 knockdown A549 cells with 
+EMCV and influenza A virus (H1N1) infection, but not signifi-
+cantly changed upon herpes simplex virus type 1 (HSV-1) infection, 
+suggesting a broad anti-RNA-viral spectrum of ZNFX1 (Extended 
+Data Fig. 2g).
+To investigate the physiological role of ZNFX1 in vivo, we gener-
+ated Znfx1−/− C57BL/6J mice using CRISPR/Cas system (Extended 
+Data Fig. 3a–c). Znfx1−/− mice were viable, without obvious physi-
+ological or behavioural abnormalities. Six- to eight-week-old mice 
+were used in this study. First, BMDMs from wild-type and Znfx1−/− 
+mice were isolated and infected with VSV, EMCV, H1N1 or HSV-1. 
+Compared to wild-type counterparts, Znfx1−/− BMDMs exhibited 
+lower IFN-α or IFN-β secretion after RNA virus infection, includ-
+ing VSV, EMCV and H1N1 but not HSV-1 (Fig. 2g and Extended 
+Data Fig. 2h). Consistently, higher virus mRNA levels were detected 
+in VSV, EMCV and H1N1 infected Znfx1−/− BMDMs but not in 
+HSV-1 infected cells (Fig. 2h). Compared to wild-type counterparts, 
+Znfx1−/− MEF and A549 cells exhibited lower IFN-β secretion after 
+RNA virus infection of VSV and EMCV (Fig. 2i,j).
+To evaluate the importance of ZNFX1 in host defence against 
+viral infection in vivo, wild-type and Znfx1−/− mice were injected 
+with VSV through the caudal vein. Enhancement of VSV replication 
+in lung and liver of Znfx1−/− mice was observed when compared with 
+wild-type mice (Fig. 3a). With reduced expression of Ifnb1 in lung 
+and liver, lower secretion of IFN-α and IFN-β in serum was detected 
+in Znfx1−/− mice (Fig. 3b,c). Notably, no difference in IFN-α and 
+IFN-β in serum was observed between Znfx1−/− and wild-type mice 
+after HSV-1 infection (Fig. 3c). Interestingly, one day post infec-
+tion with VSV, 80% of Znfx1−/− mice suffered from conjunctivitis, 
+which is the early symptom of VSV infection (Fig. 3d). In addition, 
+more infiltration of inflammatory cells into the lungs of Znfx1−/− 
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1347
+
+===== PAGE 3 =====
+Articles
+NATURE CELL BIoLoGy
+SF2: DEAD-box
+VSV: 0
+4
+16
+24 h
+2
+8
+SF1 RNA helicase
+a
+Znfx1 mRNA (relative)
+Znfx1 mRNA (relative)
+e
+0
+10
+20
+30
+40
+50
+–
++
++
+VSV :
+VSV:
+Time (h):
+0
+4
+8
+Poly(I:C)
+–
+–
+–
++
++
++
++
++
++
+–
+–
+–
+–
+–
+–
+–
+–
+16 24
+0
+4
+16 24
+Relative mRNA
+expression of Znfx1
+8
+b
+MDM
+VSV: 0
+4
+16
+24 h
+2
+8
+MDM
+1.5
+–1.5
+0
+2
+–2
+0
+A549
+0
+4
+8
+16
+24 h
+d
+0
+30
+60
+90
+120
+Muscle
+Brain
+Lymph node
+Thymus
+Bowel
+Heart
+Kideny
+Lung
+Spleen
+0
+5
+10
+15
+20
+25
+Liver
+Heart
+Brain
+Kidney
+Muscle
+Bowel
+Lung
+Spleen
+Lymph node
+Thymus
+IB: ZNFX1
+PBMC
+IFN-α:
+4
+8
+16
+24 h
+0
+IFN-β:
+4
+8
+16
+24 h
+0
+A549
+i
+IB: ZNFX1
+IB: GAPDH
+IB: GAPDH
+IB: ZNFX1
+IB: β-actin
+IB: RIG-I
+35 kDa
+35 kDa
+245 kDa
+245 kDa
+Poly(I:C)
+A549
+0
+4
+8
+16
+24 h
+MEF
+Znfx1
+β-actin
+Znfx1
+β-actin
+Znfx1
+β-actin
+Znfx1
+β-actin
+VSV:
+0
+4
+8
+16
+24 h
+A549
+MEF
+c
+IB: ZNFX1
+IB: β-actin
+IB: RIG-I
+245 kDa
+45 kDa
+–0.5
+0
+0.5
+1.0
+1.5
+2.0
+–0.5
+0
+0.5
+1.0
+UI
+HIV
+UI
+HIV
+Znfx1
+transformed count
+Rig-I
+transformed count
+7
+8
+9
+10
+11
+2
+4
+6
+8
+10
+Znfx1
+transformed count
+Rig-I
+transformed count
+UI
+SIV
+UI
+SIV
+f
+g
+0
+5
+10
+15
+Relative mRNA
+ expression of Znfx1
+Time (h):
+IFN-α:
+IFN-β:
+h
+Liver
+Uninfected
+Virus infection
+Uninfected (UI)
+SIV infection
+Uninfected (UI)
+HIV infection
+P = 0.0123
+P = 3.77 × 10–15
+P = 4.50 × 10–12
+P = 7.44 × 10–6
+P = 4.40 × 10–6
+P = 0.0004
+–
++
++
+0
+4
+8
+–
+–
+–
++
++
++
++
++
++
+–
+–
+–
+–
+–
+–
+–
+–
+16 24
+0
+4
+16 24
+8
+Relative mRNA
+expression of Znfx1
+j
+0
+5
+10
+15
+0
+5
+10
+15
+VSV: 0
+4
+8 h
+VSV: 0
+4
+8 h
+Relative mRNA
+expression of Znfx1
+0
+1
+2
+3
+4
+0
+2
+4
+6
+8
+10
+0
+20
+40
+60
+80
+wt Znfx1-Luc
+ΔZnfx1 promotor-Luc
+Rel. Znfx1-Luc
+activity
+0
+1
+2
+3
+4
+Rel. Znfx1-Luc
+activity
+Rel. Znfx1-Luc
+activity
+Rel. Znfx1-Luc
+activity
+k
+l
+P = 0.0043
+P = 0.0065
+P = 0.0003
+P = 1.69 × 10–6
+UT
+Rux
+WT
+Ifnar –/–
+EV
+STAT1
++
+–
+–
+–
+–
+– –
+–
++
+–
+EV
+IRF9
++
+–
+–
+–
+–
+– –
+–
++
+–
+EV
+IRF1
++
+–
+–
+–
+–
+– –
+–
++
+–
+EV
+STAT2
++
+–
+–
+–
+–
+– –
+–
++
+–
+P = 0.0009
+P = 0.0003
+100 kDa
+245 kDa
+45 kDa
+100 kDa
+Fig. 1 | Viral infection induces Znfx1 expression, an IFN-stimulated gene. a, MDMs were infected with VSV, then IVT-SAPAS was performed. The heatmap 
+shows an abundance change of RNA helicases SF1 and SF2 in virus-infected MDMs. b, A549 cells were challenged with VSV or stimulated with poly(I:C) 
+for the indicated time. The mRNA levels were analysed by qRT–PCR. c, A549 and MEF cells were challenged with VSV or stimulated with poly(I:C) for the 
+indicated time. The mRNA levels were analysed by RT–PCR. d, Immunoblot (IB) analysis of ZNFX1 protein in A549 cells and peripheral blood mononuclear 
+cells (PBMCs) upon VSV infection at the indicated time points. e, Left: Distribution of Znfx1 in various mice tissues was determined using qRT–PCR analysis; 
+the transcription of Znfx1 in muscle was set to 1, values of other tissues are expressed as the ratio compared with muscle. Right: Znfx1 mRNA expression 
+change in various mice tissues following intravenous injection of VSV determined by qRT–PCR. f, RNA levels of Znfx1 are significantly higher in patients 
+with HIV infection compared with uninfected controls (UI) (n = 9 independent samples for uninfected controls, n = 14 independent samples for HIV 
+infection). g, RNA levels of Znfx1 and Rig-I in encephalitis monkeys infected with simian immunodeficiency virus (SIV) compared with healthy controls 
+(n = 18 independent samples). h, Znfx1 expression was measured by qRT–PCR in A549 cells after IFN-α or IFN-β treatment for the indicated time points. 
+i, Immunoblot analysis of ZNFX1 and RIG-I expression in A549 cells treated with human recombinant IFN-α or IFN-β for the indicated time points. j, Znfx1 
+expression was measured by qRT–PCR in A549 cells after ruxolitinib (Rux) pretreatment for 2 h, then infected with VSV for time points. k, Znfx1 expression 
+was measured by qRT–PCR in wild-type (wt) and Ifnar1−/− cells after VSV infection. l, Luciferase activities determined from 293T cells transfected with Znfx1 
+promoter reporter (wt Znfx1-Luc) or its mutation (ΔZnfx1 promotor-Luc) together with increasing amounts of Flag-STAT1, STAT2, IRF1, IRF9 expressing 
+plasmids. For c,d,i, experiments were repeated at least three times independently, with similar results obtained. For b,e,h,j–l, n = 3 independent experiments. 
+Means ± s.d. are shown, and P values were calculated using two-tailed unpaired Student’s t-test.
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1348
+
+===== PAGE 4 =====
+Articles
+NATURE CELL BIoLoGy
+mice following VSV infection was observed (Fig. 3e) and Znfx1−/− 
+mice were less resistant to VSV infection in overall survival assays 
+(Fig. 3f). These data suggest that Znfx1 deficiency has impaired 
+innate immune responses against RNA virus infection by producing 
+less type I IFNs in vivo. In addition, we suggested that ZNFX1 exerts 
+its antiviral properties specifically on RNA viruses.
+ZNFX1 initiates IFN-based antiviral responses. To investigate the 
+role of ZNFX1 in the IFN signalling, luciferase reporter assays were 
+conducted by transiently transfecting the A549 cells with increas-
+ing amounts of ZNFX1 expression plasmid and Ifnb1-reporter or 
+IFN-stimulated response element (ISRE) reporter plasmids fol-
+lowed with or without VSV challenge. The results showed that 
+overexpression of ZNFX1 activated the Ifnb1 promoter and ISRE 
+reporter slightly (Fig. 4a). Moreover, ZNFX1 significantly enhanced 
+the activation of Ifnb1 promoter triggered by VSV, two types of 
+poly(I:C) or poly(dA:dT) in a dose-dependent manner (Fig. 4b,c). 
+In contrast, knockout of Znfx1 decreased VSV-induced activation of 
+Ifnb1 reporter and ISRE reporter in 293T cells (Fig. 4d). Meanwhile, 
+transcription of Ifnb1 and ISGs was induced in a dose- and time-
+dependent manner when ZNFX1 was overexpressed alone in A549 
+cells but reduced in the absence of ZNFX1 (Fig. 4e and Extended 
+Data Fig. 3d,e), while protein expression of a number of ISGs was 
+reduced in Znfx1−/− A549 and MEF cells when compared with wild-
+type cells, respectively (Fig. 4f). Consistently, the phosphorylation 
+of TBK1 and IRF3 in Znfx1−/− macrophages upon VSV infection 
+was lower than that in wild-type macrophages (Fig. 4g). The dimer-
+ization of IRF3 was also lower in VSV-infected Znfx1−/− 293T cells 
+than that in wild-type cells (Fig. 4h). Notably, restricted replication 
+of VSV was observed in wild-type but not in Ifnar1−/− A549 cells 
+VSV-eGFP (MOI: 2) 6 h
+VSV-eGFP (MOI: 0.5) 12 h
+0
+10
+20
+30
+L929
+IB: VSV-G
+IB: GAPDH
+IB: VSV-G
+IB: GAPDH
+VSV-eGFP
+65 kDa
+35 kDa
+A549
+a
+b
+c
+A549
+p.f.u. ml−1 (×106)
+VSV-eGFP
+VSV-eGFP
+0
+20
+40
+60
+80
+A549 VSV-GFP+
+(% of total)
+VSV-GFP+
+(% of total)
+0
+10
+20
+30
+40
+L929
+p.f.u. ml−1 (×106)
+L929
+VSV-GFP+ (% of total)
+0
+20
+40
+60
+80
+100
+VSV-eGFP VSV-eGFP
+0
+500
+1,000
+1,500
+2,000
+0
+2,000
+4,000
+6,000
+8,000
+10,000
+Rel. mRNA of EMCV
+Rel. mRNA of H1N1
+Rel. mRNA of HSV-1
+H1N1
+HSV-1
+g
+0
+2,000
+4,000
+6,000
+8,000
+Rel. mRNA of VSV
+VSV
+0
+20
+40
+60
+80
+100
+WT
+Rig i –/–
+Mda5 –/–
+Znfx1–/–
+WT
+Rig i –/–
+Mda5 –/–
+Znfx1–/–
+WT
+Rig i –/–
+Mda5 –/–
+Znfx1–/–
+VSV-GFP+
+(% of total)
+A549
+Uninfect.
+VSV
+d
+e
+Control
+MAVS
+ZNFX1
+0
+500
+1,000
+1,500
+2,000
+2,500
+0
+500
+1,000
+1,500
+2,000
+2,500
+0
+100
+200
+300
+400
+500
+0
+200
+400
+600
+800
+IFN-β (pg ml−1)
+IFN-β (pg ml−1)
+IFN-β (pg ml−1)
+IFN-β (pg ml−1)
+IFN-β (pg ml−1)
+IFN-β (pg ml−1)
+EMCV
+H1N1
+HSV-1
+VSV
+h
+EV
+ZNFX1
++
++
+–
+–
+–
+VSV
++
++
+–
++
++
+–
++
+–
+–
+RIG-I
+–
+–
+–
+–
+–
++
+–
+–
++
+–
+–
++
+0
+20
+40
+60
+80
+0
+1,000
+2,000
+3,000
+EMCV
++
+P value (–log10)
+0
+1,000
+2,000
+3,000
+Uninfect. VSV
+EMCV
+0
+500
+1,000
+1,500
+Uninfect. VSV
+EMCV
+Negative regulation of viral replication
+Type I IFN signalling
+EGFR signalling
+Defence response to virus
+TRIF-dependent TLR signalling
+0
+8
+6
+4
+2
+4.60 × 10−8
+3.80 × 10−7
+2.60 × 10−7
+2.50 × 10−7
+1.60 × 10−7
+i
+f
+j
+P = 0.0013
+P = 0.0028
+P = 4.60 × 10–6
+P = 1.23 × 10–6
+P = 7.34 × 10–5
+VSV-eGFP
+VSV-eGFP
++
+P = 0.0002
+P = 3.19 × 10–6
+P = 1.36 × 10–6
+P = 1.09 × 10–6
+P = 7.89 × 10–6
+WT
+Znfx1–/–
+WT
+Znfx1–/–
+WT
+Znfx1–/–
+P = 0.0023
+P = 0.0003
+P = 0.0042
+P = 0.0019
+P = 0.0001 P = 0.0006
+P = 0.0003
+P = 3.42 × 10–6
+P = 4.24 × 10–5
+P = 0.6519
+P = 0.2616
+65 kDa
+35 kDa
+N-STM
+Control
+Control
+MAVS
+MAVS
+ZNFX1
+ZNFX1
+N-STM
+Control
+MAVS
+ZNFX1
+N-STM
+Control
+MAVS
+ZNFX1
+N-STM
+Control
+MAVS
+ZNFX1
+N-STM
+Control
+MAVS
+ZNFX1
+VSV-eGFP (MOI: 5) 6 h
+VSV-eGFP (MOI: 1) 12 h
+Fig. 2 | ZNFX1 deficiency impairs cellular antiviral RNA response. a, FACS analysis of A549 and L929 cells transfected with control small interfering 
+(si)RNA or the indicated siRNAs followed by VSV-eGFP infection at different multiplicity of infection (MOI) (n = 4 independent experiments). b, Plaque 
+assay of VSV titres in cell supernatants after VSV infection for 12 h (n = 4 independent experiments). c, Immunoblot analysis of VSV-G protein expression 
+in A549 and L929 cells infected with VSV for 12 h. The experiments were repeated three times, independently, with similar results. d, FACS analysis 
+of wild-type, Znfx1−/−, Rig-I−/− or Mda5−/− cells infected by VSV-eGFP. e, FACS analysis of wild-type and Znfx1−/− A549 cells transfected with RIG-I, 
+ZNFX1 expressing plasmids or empty vector (EV) following VSV-eGFP infection. f, Gene ontology analysis of the pathways among genes significantly 
+upregulated between ZNFX1 overexpressed cells and wild-type A549 cells. The Kolmogorov–Smirnov test was used to calculated P values. g, Enzyme-
+linked immunosorbent assay (ELISA) of IFN-β in supernatants of bone marrow-derived macrophages (BMDMs) from wild-type and Znfx1−/− mice infected 
+with VSV, encephalomyocarditis virus (EMCV), influenza A virus (H1N1) or herpes simplex virus type 1 (HSV-1) for 16 h (n = 5 independent experiments). 
+h, Viral mRNA transcripts were analysed in VSV, EMCV, H1N1 and HSV-1 infected wild-type and Znfx1−/− BMDMs by qRT–PCR analysis. i, ELISA of IFN-β in 
+supernatants of MEFs from wild-type and Znfx1−/−, Rig-I−/−, Mda5−/− mice infected with VSV and EMCV. j, ELISA of IFN-β in supernatants of wild-type and 
+Znfx1−/−, Rig-I−/−, Mda5−/− A549 cells infected with VSV and EMCV. For d,e,h–j, n = 3 independent experiments. All data are presented as mean ± s.d.  
+P values were calculated using two-tailed unpaired Student’s t-test.
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1349
+
+===== PAGE 5 =====
+Articles
+NATURE CELL BIoLoGy
+(Fig. 4i). All these data suggest that ZNFX1 is involved in antiviral 
+immune responses by inducing type I IFN production and its anti-
+viral property also depends on IFN signalling.
+ZNFX1 directly binds to viral RNA. Many genes belonging to 
+RNA helicase SF2 have been identified as RNA virus sensors that 
+bind viral RNA, so we assumed that ZNFX1 belonging to SF1 may 
+also bind viral RNA as an RNA sensor. To verify this hypothesis, we 
+first overexpressed ZNFX1 in 293T cells and then performed pull-
+down and qRT–PCR assays to determine the high binding ability of 
+ZNFX1 with VSV-RNA (Fig. 5a,b). A similar assay also detected the 
+binding ability of endogenous ZNFX1 to VSV, EMCV and Senda 
+virus (SeV) RNAs in A549 cells (Fig. 5c). RNA immunoprecipita-
+tion (RIP)-sequencing analysis by isolating RNA from immunopre-
+cipitates with antibodies against endogenous ZNFX1 also mapped 
+ZNFX1-associated RNA to VSV genome (Fig. 5d), preferentially to 
+a segment of VSV strand around 6,000–8,000 nt (Fig. 5e). Notably, 
+when ZNFX1-associated RNA was transfected into A549 cells, 
+induced transcription of Ifnb1 and induced expression of Ifnb1 pro-
+moter-based reporter were observed by qRT–PCR and luciferase 
+activity analyses (Fig. 5f).
+To further assess the nature of viral RNA bound by ZNFX1, we 
+first incubated nucleic acid analogue linked beads with a cells lysis 
+of 293T overexpressed with Flag-tagged ZNFX1, RIG-I or MAVS. 
+Pulldown assays were performed to show that ZNFX1 and RIG-I 
+proteins bind to poly(I:C) but not poly(C) (Fig. 5g). Additionally, 
+cGAS but not ZNFX1 binds to both single- and double-stranded 
+DNA (ISD, a 45 bp double-stranded DNA; Fig. 5h). Competition 
+experiments revealed the preferable binding of ZNFX1 proteins to 
+HMW poly(I:C), but not LMW poly(I:C), poly(dA:dT) or 5′ppp-
+dsRNA (Fig. 5i). To map the poly(I:C)-binding sites of ZNFX1, we 
+prepared truncated versions of ZNFX1 and performed poly(I:C) 
+pulldown experiments. The results showed that the ARM and 
+P-loop domains, but not the ZF domain, were required for the 
+binding of ZNFX1 to poly(I:C) (Fig. 5j). Meanwhile, we observed 
+enhanced oligomerization of ZNFX1 after viral infection (Fig. 5k,l). 
+Thus, ZNFX1 functions as an RNA virus sensor, which prefers to 
+bind the long RNA molecules.
+ZNFX1 localises to mitochondria and interacts with MAVS. To 
+determine the subcellular localisation of ZNFX1, we separated 
+VSV-infected cells into cytoplasmic and nuclear fractions, and 
+detected ZNFX1 protein mainly in the cytoplasm (Fig. 6a, upper 
+panel). Previous studies about ARM-containing proteins, ALEX3 
+and SARM1, have indicated these proteins to be mitochondrially 
+localised. Thus, we next determined, by immunoblot analyses, 
+whether ZNFX1, an ARM-containing protein, can also localise to 
+this immune-related organelle37–39. The results show the increased 
+VSV RNA
+replicates (fold ×103)
+VSV RNA
+replicates (fold ×103)
+b
+WT
+VSV injection 24 h
+PBS
+VSV
+Znfx1–/–
+Lung
+VSV
+PBS
+Liver
+0
+a
+e
+Znfx1–/–
+Znfx1+/+
+WT
+Znfx1–/–
+WT
+Znfx1–/–
+WT
+Znfx1–/–
+0
+1
+2
+3
+4
+5
+Time after injection (days)
+0
+20
+40
+60
+80
+100
+Survival (%)
+f
+0
+5
+10
+15
+5
+10
+15
+VSV
+PBS
+0
+50
+100
+150
+200
+0
+200
+400
+600
+800
+Rel. mRNA of
+Ifnb1
+Rel. mRNA of
+Ifnb1
+Lung
+VSV
+PBS
+Liver
+VSV
+PBS
+0
+50
+100
+150
+200
+250
+0
+50
+100
+150
+200
+0
+600
+1,200
+1,800
+0
+200
+400
+600
+800
+IFN-β (pg ml−1)
+IFN-β (pg ml−1)
+IFN-α (pg ml−1)
+IFN-α (pg ml−1)
+VSV
+PBS
+HSV-1
+PBS
+HSV-1
+PBS
+VSV
+PBS
+c
+d
+P = 8.69 × 10–6
+P = 0.0008
+P = 0.0005
+P = 0.0009
+P = 3.12 ×10–9
+P = 7.65 ×10–11
+Znfx1–/–
+Znfx1+/+
+P = 0.0283
+P = 0.1361
+P = 0.9430
+Fig. 3 | ZNFX1 is essential for host defence against RNA virus in mice. a, VSV mRNA transcripts were analysed by qRT–PCR in the lung and liver from 
+wild-type and Znfx1−/− mice with VSV infection by intravenous injection (2 × 107 p.f.u. per g body weight, n = 4 mice per group). b, qRT–PCR analysis of 
+Ifnb1 mRNA in the lung and liver from wild-type and Znfx1−/− mice (n = 4 mice per group). c, IFN-α and IFN-β production in sera from wild-type mice and 
+Znfx1−/− mice after intravenous injection with VSV and HSV-1 (8 or 4 mice per group). d, One day post infection with VSV, Znfx1−/− mice suffered from 
+conjunctivitis, unlike wild-type mice. e, Haematoxylin & eosin staining of lung sections from wild-type and Znfx1−/− mice infected with VSV for 24 h. Scale 
+bars, 80 μm. The experiments were repeated three times, independently, with similar results. f, Survival of wild-type and Znfx1−/− mice (n = 10 mice per 
+group) after intravenous injection of VSV (2 × 107 p.f.u. per g body weight). Data in a–c are presented as mean ± s.d. Statistical differences were detected 
+with two-tailed unpaired Student’s t-tests in a–c. A Gehan–Breslow–Wilcoxon test was applied in f.
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1350
+
+===== PAGE 6 =====
+Articles
+NATURE CELL BIoLoGy
+VSV:
+4
+8
+h
+0
+2
+4
+8
+0
+2
+IRF3 dimer
+IRF3 monomer
+IB: IRF3
+IB: GAPDH
+IB: ZNFX1
+Native-gel
+SDS–PAGE
+VSV
+2
+4
+0
+1
+IB: p-IRF3
+IB: IRF3
+IB: TBK1
+IB: p-TBK1
+IB: GAPDH
+g
+Peritoneal macrophage
+2
+4
+0
+1
+h
+WT
+ZNFX1–/–
+Znfx1–/–
+h
+a
+0
+50
+100
+150
+200
+0
+2
+4
+6
+8
+Rel. IFN-β-Luc
+activity
+Rel. ISRE-Luc
+activity
+EV
+ZNFX1
++ + –
+–
+–
+–
++ + –
+–
+–
+–
++ + –
+–
+–
+–
++ + –
+–
+–
+–
+VSV
++
++
+–
++
++
++
+–
++
++
++
+–
++
++
++
+–
++
+VSV (MOI:0.1)
+VSV (MOI:0.5)
+IB: α-Flag
+IB: GAPDH
+f
+ZNFX1:
+12
+24
+36 h
+log2
+(fold change)
+0
+12
+8
+4
+10
+5
+Rig-I
+Ifnb1
+Znfx1
+Irf7
+Mx1
+Oas2
+Ifih1
+Ifit3
+Ifit2
+Ifit1
+Isg15
+Ifi44
+Rig-I
+Ifnb1
+Znfx1
+Irf7
+Mx1
+Oas2
+Ifih1
+Ifit3
+Ifit2
+Ifit1
+Isg15
+Ifi44
+e
+b
+Rel. IFN-β-Luc
+activity
+Rel. ISRE-Luc
+activity
+–
+–
++
+–
++
++
+– – – –
+–
+–
+–
+–
++
+–
++
++
+–
+– – –
+–
+– – – –
+– – –
+– – – –
+– – – –
++
++
++
+–
+ZNFX1
+Poly(I:C) (HMW)
+Poly(I:C) (LMW)
+Poly(dA:dT)
+–
+–
++
+–
++
++
+– – – –
+–
+–
+–
+–
++
+–
++
++
+–
+–
+–
+–
+–
+–
+–
+–
+–
+–
+–
+–
+–
+–
+– –
+–
+–
+–
+–
++
++
++
+–
+Poly(I:C) (HMW)
+Poly(I:C) (LMW)
+Poly(dA:dT)
+IB: α-Flag
+IB: GAPDH
+0
+100
+200
+300
+400
+0
+50
+100
+150
+Rel. IFN-β-Luc
+activity
+Rel. ISRE-Luc
+activity
+VSV
+–
+VSV 
+–
+–
+–
+d
+WT
+ZNFX1–/–
+45 kDa
+45 kDa
+35 kDa
+75 kDa
+75 kDa
+WT
+75 kDa
+65 kDa
+100 kDa
+135 kDa
+245 kDa
+35 kDa
+IB: ZNFX1
+IB: OAS1
+IB: GAPDH
+IB: MDA5
+IB: RIG-I
+IB: Mx1
+WT
+ZNFX1–/–
+VSV
+0
+8 h
+4
+2
+0
+8
+4
+2
+VSV
+4
+8
+0
+2
+MEF
+4
+8
+0
+2
+h
+Znfx1–/–
+IB: GAPDH
+IB: RIG-I
+100 kDa
+35 kDa
+A549
+i
+0
+20
+40
+60
+80
+VSV-GFP+ (% of total)
+EV
+ZNFX1
++
+–
+–
+–
+–
+VSV
++
++
+–
++
++
+–
+–
+–
++
+–
++
++
+–
+WT
+Ifnar1–/–
+c
+ZNFX1:
+0
+2
+4
+6
+8
+0
+2
+4
+6
+Rel. IFN-β-Luc
+activity
+Rel. ISRE-Luc
+activity
+EV
+ZNFX1
++
+–
+–
+–
++
+–
+–
+–
+P = 0.0009
+P = 0.0006
+P = 0.0006
+P = 8.29 × 10–5
+P = 0.0140
+P = 0.0006
+P = 0.0097
+P = 0.0060
+0
+30
+60
+90
+120
+0
+5
+10
+15
+P = 0.0001
+P = 0.0038
+P = 5.80 × 10–5
+P = 0.0040
+P = 0.0028
+P = 0.0002
+P = 0.0001
+WT
+P = 0.9733
+245 kDa
+35 kDa
+245 kDa
+35 kDa
+245 kDa
+35 kDa
+245 kDa
+35 kDa
+45 kDa
+35 kDa
+245 kDa
+Fig. 4 | ZNFX1 initiates IFN-based antiviral responses. a,b, A549 cells were transfected with IFN-β-Luc or ISRE-Luc with increasing amounts of ZNFX1 
+plasmid for 24 h, and then uninfected (a) or infected with VSV for 16 h before luciferase assays (b). c, Luciferase activity analysis of A549 cells that were 
+transfected with the indicated luciferase reporters followed by stimulation with low-molecular-weight (LMW) poly(I:C), high-molecular-weight (HMW) 
+poly(I:C) and poly(dA:dT) for another 16 h. d, Luciferase activity of Ifnb1 or ISRE in wild-type and Znfx1−/− 293T cells that were infected with increasing 
+amounts of VSV for 24 h. e, qRT–PCR analysis of Ifnb1 and ISGs in A549 cells transfected with ZNFX1-expressing plasmids with increasing amounts 
+(125, 250 or 500 ng per well) for 24 h (left) or with 500 ng per well for the indicated time points (right). f, Immunoblot analysis of ISGs level in wild-
+type and Znfx1−/− A549 cells or RIG-I expression in wild-type and Znfx1−/− MEFs infected by VSV for the indicated time points. g, Immunoblot analysis of 
+phosphorylated (p-) IRF3 and (p-) TBK1 in peritoneal macrophages from wild-type and Znfx1−/− mice upon VSV infection for the indicated time points.  
+h, Immunoblot analysis of IRF3 dimerization in wild-type and Znfx1−/− 293T cells upon VSV infection for the indicated time points with native PAGE. i, FACS 
+analysis of wild-type or Ifnar1−/− A549 cells transfected with ZNFX1-expressing plasmids or empty vector (EV) for 24 h followed by VSV-eGFP infection. 
+For f–h, the experiments were repeated three times, independently, with similar results obtained. Data in a–e,i are from three independent experiments 
+(mean ± s.d.). P values were calculated using two-tailed unpaired Student’s t-test.
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1351
+
+===== PAGE 7 =====
+Articles
+NATURE CELL BIoLoGy
+ZNFX1
+Pulldown:
+MAVS
+RIG-I
+Poly(I:C)
+cGAS
+–
+–
+S
+S
+D
+D
+Poly(C)
+Poly(I:C)
+Poly(C)
+IB: α-Flag
+b
+FL-HA
+F5-HA
+F4-HA
+F3-HA
+F2-HA
+F1-HA
+e
+Input:
+IB: α-HA
+IP: Poly(I:C)
+IB: α-HA
+ZNFX1-FL
+ARM
+P-loop NH
+ZF
+P-loop NH
+ZF
+ZF
+ARM
+P-loop NH
+P-loop NH
+ARM
+ZNFX1-F1
+ZNFX1-F2
+ZNFX1-F3
+ZNFX1-F4
+ZNFX1-F5
+1
+1918
+580
+1918
+1918
+1261
+1
+1
+580
+1261
+1261
+ZNFX1
+Competitor
+IB: anti-Flag
+–
+IP: Poly(I:C)
+–
+–
+5’-ppp dsRNA
+Poly(I:C)(HMW)
+Poly(I:C)(LMW)
+Competitor:
+–
+IB: anti-Flag
+IP: Poly(I:C)
+Poly(dA:dT)
+c
+VSV infection
+Flag or ctrl IP
+RNA extraction
+Test for IFN stimulatory
+activity
+0
+10
+20
+30
+Test for VSV RNA
+Bound
+VSV RNA
+IgG
+ZNFX1-Flag
+MDA5-Flag
+RIG-I-Flag
+ZNFX1-Flag
+RIG-I-Flag
+MDA5-Flag
+Rel. IFN-β-Luc
+activity
+25 ng
+50 ng
+25 ng
+50 ng
+IgG-RNA
+ZNFX1-RNA
+RIG-I-RNA
+MDA5-RNA
+Rel. mRNA of
+Ifnb1
+IB: α-Flag
+IgG
+ZNFX1
+0
+2
+4
+6
+8
+IgG
+ZNFX1
+Bound
+VSV RNA
+Bound
+EMCV RNA
+0
+2
+4
+6
+0
+5
+10
+15
+20
+25
+Bound
+SeV RNA
+IgG
+ZNFX1
+IP:
+a
+f
+h
+i
+j
+ZNFX1-Flag
+ZNFX1-HA
+VSV
+–
++
++
++
++
++
+–
++
+–
+WCL
+IB: α-Flag
+IB: α-HA
+IB: α-HA
+IP: α-Flag
+IB: α-Flag
+ZNFX1
+aggregates
+SDD–PAGE
+SDS–PAGE
+ZNFX1-Flag
+VSV
+–
++
++
+–
++
+–
+IB: α-Flag
+k
+g
+WCL
+IB: α-Flag
+WCL
+IB: α-Flag
+IB: α-Flag
+0
+2,000
+4,000
+6,000
+8,000
+10,000
+−60
+−40
+−20
+0
+20
+40
+60
+VSV genome (nt)
+(+) strand
+(–) strand
+d
+Relative numbers
+P = 0.0002
+P = 0.0009
+P = 4.18 × 10–6
+P = 6.06 × 10–5
+0
+10
+20
+30
+40
+50
+0
+10
+20
+30
+40
+Water
+P = 0.0001
+P = 0.0005
+IgG-RNA
+ZNFX1-RNA
+RIG-I-RNA
+MDA5-RNA
+Water
+P = 0.0026
+P = 3.96 × 10–5
+0
+1
+2
+3
+L
+L
+G
+G
+M
+NS
+VSV gene:
+L
+N
+IgG
+ZNFX1
+Bound VSV RNA
+(IP/input)
+P = 0.0009
+0–1 K
+1–2 K
+8–10 K
+5–6 K
+4–5 K
+3–4 K
+2–3 K
+6–8 K
+VSV strand:
+Pulldown:
+245 kDa
+135 kDa
+100 kDa
+245 kDa
+245 kDa
+245 kDa
+245 kDa
+245 kDa
+245 kDa
+245 kDa
+245 kDa
+135 kDa
+75 kDa
+100 kDa
+245 kDa
+135 kDa
+75 kDa
+100 kDa
+245 kDa
+75 kDa
+100 kDa
+245 kDa
+75 kDa
+100 kDa
+245 kDa
+65 kDa
+65 kDa
+Poly(I:C)
+Poly(C)
+l
+Fig. 5 | ZNFX1 binds to viral RNA. a, Schematic of the experimental set-up for ZNFX1, RIG-I and MDA5 immunoprecipitation. b, VSV-infected 293T 
+cells were transfected with the indicated plasmids, immunoprecipitated and analysed by qRT–PCR to detect bound VSV-RNA. c, Endogenous ZNFX1-
+immunoprecipitated RNA was analysed by qRT–PCR using VSV-, EMCV- and SeV-infected A549 cells. d, RIP-sequencing mapped endogenous ZNFX1-
+associated sequences to the VSV genome. The data shown are normalized with sequences from the input sample. + and − RNA is shown in red and blue, 
+respectively. e, qRT–PCR analysis of endogenous ZNFX1-immunoprecipitated RNA in VSV-infected A549 cells, the x axis corresponds to the positions in 
+the VSV genome, includeing of five coding genes. f, ZNFX1 co-immunoprecipitated RNA was first transfected into A549 cells, then luciferase activity and 
+mRNA transcripts of Ifnb1 were assessed. g, Flag-tagged ZNFX1, RIG-I or MAVS plasmids were transfected into 293T cells, then whole-cell lysates  
+(WSL) were incubated with agarose bead-conjugated poly(C) or poly(I:C). The proteins bound to agarose beads were analysed by immunoblotting.  
+h, Flag-tagged ZNFX1 or cGAS plasmids were transfected into 293T cells and agarose bead-conjugated DNA was incubated with whole-cell lysates, 
+then the bound proteins were analysed by immunoblotting (S, single-stranded DNA; D, double-stranded DNA). i, Flag-ZNFX1 recombinant protein 
+was incubated with agarose beads-conjugated poly(I:C) in the absence or presence of increasing amounts (0.5, 5 and 50 μg ml−1) of unlabelled HMW-
+poly(I:C), LMW-poly(I:C), poly(dA:dT) or 5′ppp-dsRNA. Bound complexes were pelleted by centrifugation and analysed by immunoblot. j, Schematics 
+of ZNFX1 and its serial deletion mutants. The truncated versions of HA-tagged ZNFX1 were transfected into 293T cells, then whole-cell lysates were 
+incubated with agarose bead-conjugated poly(I:C). Bound proteins were analysed by immunoblotting. k, Co-immunoprecipitation and immunoblot 
+analysis of 293T cells transfected with Flag-ZNFX1 and HA-ZNFX1. l, Immunoblot analysis of ZNFX1 in 293T cells transfected with Flag-ZNFX1 plasmids 
+by SDD–PAGE or SDS–PAGE assay. Data in b,c,e,f are presented as mean ± s.d. (n = 3 independent experiments). P values were calculated using two-tailed 
+unpaired Student’s t-test. For g–l, the experiments were repeated three times, independently, with similar results obtained.
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1352
+
+===== PAGE 8 =====
+Articles
+NATURE CELL BIoLoGy
+a
+–
++
++
+Mito.
+M
+S
+P
+Proteinase K
+–
++
++
+Mito.
+1% Triton
+–
++
+–
+IB: COX IV
+IB: ZNFX1
+IB: MAVS
+Alkali
+Mock
+VSV 16 h
+VSV 8 h
+b
+g
+IP
+IB: ZNFX1
+VSV
+IB: MAVS
+IgG
+MAVS
+4
+8
+h
+0
+0
+IB: ZNFX1
+WCL
+IB: MAVS
+12
+IB: GAPDH
+Flag-MAVS
+HA-ZNFX1
++
++
++
++
++
++
++
+IP: α-HA
+IB: α-HA
+IB: α-HA
+IB: α-Flag
+WCL
+– FL
+F5
+F4
+F3
+F2
+F1
+IP: α-HA
+EV
+–
+–
+–
+–
+–
+–
++
+IgG (H)
+h
+IP
+IB: ZNFX1
+VSV
+IB: MAVS
+IgG ZNFX1
+IB: ZNFX1
+WCL
+IB: MAVS
+IB: GAPDH
+–
+–
++
+–
+WT
+Znfx1–/–
+IgG ZNFX1
++
+–
+IP
+IB: ZNFX1
+VSV
+IB: MAVS
+IgG MAVS
+IB: ZNFX1
+WCL
+IB: MAVS
+IB: GAPDH
+–
+–
++
+–
+WT
+Mavs–/–
+IgG
+MAVS
++
+–
+IB: ZNFX1
+IB: Lamin B1
+IB: β-actin
+VSV
+–
++
+–
++
+Nuc.
+Cyt.
+VSV
+IB: COX IV
+IB: β-actin
+IB: ZNFX1
+–
++
+–
++
+Mito.
+Cyto.
+IB: COX IV
+IB: ZNFX1
+IB: MAVS
+IB: α-Flag
+IB: α-HA
+WCL
+IP: α-Flag
+IB: α-HA
+TRIF
+MyD88
+MAVS
+STING
+ZNFX1-HA
+EV
+d
+IP: α-Flag
+IB: α-Flag
+*
+*
+Flag-adaptor
++
++
++
++
++
+c
+e
+f
+11
+6.5
+2
+log2(fold change)
+Rig-I
+Ifnb1
+Mx1
+Oas2
+Ifih1
+Ifit3
+Ifit2
+Ifit1
+Isg15
+Ifi44
+i
+F1
+F2
+F3
+F4
+F5
+FL
+j
+Mock
+VSV 8 h
+ZNFX1-Flag
+MAVS-GFP
+Merge
+Mito
+ZNFX1-Flag
+Merge
+MAVS
+HA-ZNFX1
++
++
++
+IP: α-Flag
+IB: α-Flag
+IB: α-HA
+IB: α-Flag
+WCL
+IP: α-Flag
+IB: α-HA
+MAVS-ΔCARD
+MAVS-ΔTM
+Flag-truncation
+k
+245 kDa
+135 kDa
+75 kDa
+100 kDa
+75 kDa
+245 kDa
+135 kDa
+75 kDa
+100 kDa
+75 kDa
+245 kDa
+135 kDa
+75 kDa
+245 kDa
+75 kDa
+245 kDa
+75 kDa
+245 kDa
+75 kDa
+65 kDa
+245 kDa
+75 kDa
+35 kDa
+245 kDa
+100 kDa
+75 kDa
+35 kDa
+245 kDa
+100 kDa
+75 kDa
+35 kDa
+245 kDa
+75 kDa
+35 kDa
+245 kDa
+75 kDa
+245 kDa
+75 kDa
+35 kDa
+245 kDa
+75 kDa
+245 kDa
+75 kDa
+15 kDa
+245 kDa
+75 kDa
+15 kDa
+245 kDa
+45 kDa
+15 kDa
+245 kDa
+65 kDa
+45 kDa
+IB: α-Flag
+Fig. 6 | ZNFX1 localises to mitochondria and interacts with MAVS. a, Endogenous ZNFX1 was detected in mitochondrial fractions but not nucleic fractions 
+of A549 cells by immunoblot analysis. b, Flag-ZNFX1 was expressed in A549 cells for 24 h, then the cells were challenged with VSV. Immunofluorescence 
+with anti-Flag antibody was used to detect the overexpressed protein (green). Mitochondria were identified by mitochondrial marker (red). Scale bar, 
+10 μm. c, Mitochondrial fraction isolated from A549 cells was treated with proteinase K (100 ng ml−1) in the absence or presence of 1% TritonX-100 
+for 15 min on ice, and the reactants were developed by immunoblot analysis. Alkali extraction was carried out using Na2CO3 to treat the mitochondrial 
+fraction isolated from A549 cells. Both the soluble protein fraction (S) and integral membrane protein fraction (P) were isolated and used for immunoblot 
+analysis. ‘M’ indicates untreated control mitochondrial sample. d, Co-immunoprecipitation of extracts of 293T cells transfected with Flag-tagged TRIF, 
+MyD88, MAVS and STING, together with HA-ZNFX1. e–g, Co-immunoprecipitation and immunoblot analysis of A549 cells infected with VSV and 
+harvested at the indicated time points. WCL, whole-cell lysates. h, Confocal microscopy of 293T cells transfected with Flag-ZNFX1 and GFP-MAVS, with 
+or without VSV infection. Scale bar, 10 μm. i, Co-immunoprecipitation and immunoblot analysis of 293T cells transfected with Flag-MAVS and deletion 
+mutants of HA-ZNFX1 or empty vector are shown. j, qRT–PCR analysis of Ifnb1 and ISGs in A549 cells transfected with ZNFX1 and its truncated versions. 
+k, Co-immunoprecipitation and immunoblot analysis of 293T cells transfected with HA-ZNFX1 and truncation of MAVS. Data are representative of three 
+independent experiments with similar results.
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1353
+
+===== PAGE 9 =====
+Articles
+NATURE CELL BIoLoGy
+presence of ZNFX1 protein in the mitochondrial fractions isolated 
+from VSV-infected cells (Fig. 6a, lower panel). Confocal microscopy 
+confirmed the co-localisation of overexpressed ZNFX1 protein with 
+mitochondria and enlarged ZNFX1 specks were observed after viral 
+infection (Fig. 6b). To further explore the sub-mitochondrial locali-
+sation of ZNFX1, protease protection assays were performed. As 
+shown in Fig. 6c, when mitochondria were treated with proteinase K 
+without Triton X-100, MAVS and most of the ZNFX1 protein were 
+digested, indicating ZNFX1 as an outer mitochondrial membrane 
+protein. In contrast, cytochrome c oxidase subunit IV (COX IV), a 
+mitochondria inner membrane protein, was resistant to proteinase 
+K digestion. To further characterize the mitochondria association 
+of ZNFX1, mitochondria was then subjected to alkali extraction. 
+Supernatant with peripheral membrane proteins and pellet frac-
+tions with integral membrane proteins were recovered.
+We found that the outer membrane integral protein MAVS was 
+primarily recovered in the pellet following extraction, but observed 
+COX IV in both fractions. ZNFX1 was largely recovered in the 
+supernatant (Fig. 6c), indicating that ZNFX1 localises to mitochon-
+dria as a peripheral membrane protein, like SARM1 and ALEX3 in 
+previous reports37,38,40.
+To further characterize how ZNFX1 transduces the antiviral 
+signals when sensing viral RNA, we examined the interaction of 
+ZNFX1 with adaptors involved in IFN production, including TRIF, 
+MyD88, MAVS and STING. Co-immunoprecipitation experi-
+ments showed that HA-tagged ZNFX1 was associated with Flag-
+tagged MAVS but not with TRIF, MyD88 and STING (Fig. 6d). 
+Endogenous co-immunoprecipitation experiments further showed 
+that ZNFX1 and MAVS formed a complex in A549 cells naturally, 
+and their association was enhanced upon viral infection owing to 
+the upregulation of ZNFX1 (Fig. 6e–g). Confocal microscopy also 
+indicated that ZNFX1 co-localised with MAVS (Fig. 6h). Further 
+co-immunoprecipitation assays using a series of ZNFX1 trunca-
+tion mutants showed that full-length ZNFX1 and ARM-containing 
+mutants, including F3 and F5, could interact with MAVS (Fig. 6i). 
+Consistent with co-immunoprecipitation assays, overexpressed 
+full-length and F3 truncation mutant of ZNFX1 resulted in induced 
+expression of Ifnb1 and ISGs and restricted VSV replication (Fig. 6j 
+and Extended Data Fig. 4a). Moreover, ZNFX1 could not interact 
+with truncated MAVS without the transmembrane (TM) domain 
+(Fig. 6k), and the mitochondrial distribution of ZNFX1 was inde-
+pendent of its interaction with MAVS (Extended Data Fig. 4b).
+ZNFX1-mediated signalling is independent of RIG-I and MDA5. 
+To validate the role for ZNFX1 in generating antiviral immune 
+responses relative to existing antiviral sensors RIG-I and MDA5, 
+we first performed endogenous co-immunoprecipitation assays and 
+found that ZNFX1 interacts with neither RIG-I nor MDA5 in rest-
+ing or VSV-infected cells. qRT–PCR analyses were performed and 
+indicated that Znfx1 deficiency did not affect RIG-I-, MDA5- and 
+MAVS-mediated induction of Ifnb1 expression (Fig. 7a). Moreover, 
+overexpressed ZNFX1 could intensely induce the mRNA expression 
+of Ifnb1 and Ifit1 in wild-type and Mda5−/− cells, slightly in Rig-I−/−, 
+but not in Mavs−/− cells (Fig. 7b). The qRT–PCR results also showed 
+reduced viral loads of VSV and EMCV in Mda5−/− cells when cells 
+were transfected with ZNFX1, RIG-I and MDA5 expressing plas-
+mids, respectively (Fig. 7c). Likewise, FACS analyses indicated a 
+reduced percentage of GFP+ cells in VSV-eGFP infected wild-type, 
+Mda5−/− and Rig-I−/− cells, which were transfected with viral sensors, 
+including ZNFX1 (shown in Fig. 7d,e). By using RNA sequencing, 
+we observed that ZNFX1 overexpression enhanced the induction 
+of IFNs and ISGs in Rig-I−/− cells upon poly(I:C) stimulation (Fig. 
+7f). We also observed the VSV and poly(I:C) induction of Ifnb1 and 
+Ifit1 in Znfx1 and Rig-I double knockout cells (DKO) when cells 
+were transfected with ZNFX1 or RIG-I-overexpressed plasmids, 
+respectively (Fig. 7g,h). Moreover, siRNA knockdown of ZNFX1 
+could further enhance the viral loads of VSV-eGFP in Rig-I−/− cells 
+(Fig. 7i). Similar results were noted in that the viral loads of VSV-
+eGFP in DKO cells were much higher than those in Rig-I−/− cells 
+(Fig. 7j). All these results suggested that ZNFX1 performs its antivi-
+ral roles without depending on RLRs.
+Discussion
+The innate immune system detects invading viruses mainly by rec-
+ognizing the pathogenic nucleic acid through pattern recognition 
+receptors. Overwhelming evidence has shown that RLRs, includ-
+ing RIG-I and MDA5, are perhaps the most important lines of viral 
+RNA sensing3–6,41. However, expression of RIG-I and MDA5 is rare 
+in resting cells and becomes detectable until 7 h in viral infection42,43. 
+Thus, although the antiviral roles of RIG-I and MDA5 have been 
+well established, how the type I IFN is primed to initiate the early 
+expression of a series of ISG genes, including RIG-I and MDA5, 
+remains unanswered.
+Here, we have demonstrated that ZNFX1, a member of RNA heli-
+case SF1, is an IFN-stimulated gene and can restrict the replication 
+of RNA viruses. Similar to RIG-I and MDA5, ZNFX1 induces a type 
+I IFN response by sensing viral RNAs and interacting with MAVS. 
+However, ZNFX1 differs from RIG-I and MDA5 in several aspects. 
+First, although RIG-I, MDA5 and ZNFX1 are commonly expressed 
+ISGs regulated by the Jak-STAT pathway, the constitutive mRNA or 
+protein levels of ZNFX1 are much higher than those of RIG-I and 
+MDA5 in various tissues and cell types (Fig. 1i and Extended Data 
+Figs. 1f, 2f and 5a–c). Meanwhile, the induced expression of ZNFX1 
+is primed and reaches a peak much earlier than RIG-I upon IFN-α 
+and IFN-β stimulation (Fig.1i). These differences may indicate the 
+prime importance of ZNFX1 to monitor viral invasion at an early 
+stage. Second, unlike RIG-I and MDA5, localised in the cytosol with 
+cytosol-to-mitochondrial membrane translocation after sensing 
+viral RNA, ZNFX1 is localised to the outer membrane of mitochon-
+dria, which should facilitate its natural interaction with mitochon-
+dria-localised MAVS. Although no classical mitochondria targeting 
+motif can be predicted from ZNFX1, functional studies of the ARM 
+domain containing proteins ALEX3 and SARM suggest that the 
+ARM in ZNFX1 may be responsible for its mitochondrial localisa-
+tion37,38,44–46. Third, although ZNFX1 can interact with MAVS, the 
+ZNFX1–MAVS complex is not as efficient as the RIG-I–MAVS 
+complex in inducing the transcription of Ifnb1 and ISGs. Such a 
+functional difference may be due to the lack of the caspase recruit-
+ment domain (CARD) in ZNFX1. Although ZNFX1 binds to virus 
+RNA and interacts with MAVS in a fashion independent of RIG-I 
+and MDA5, the deficiency of ZNFX1 could impair the induced 
+expression of a series of ISGs, including RIG-I or MDA5, leading 
+to antiviral defect in the early stage of virus infection47–49. Thus, we 
+infer that ZNFX1 is probably an early sensor for RNA viruses rather 
+than a redundant RNA sensor to trigger IFN signalling upon sens-
+ing dsRNA. However, the efficient antiviral responses based on the 
+induction of IFNs are still required for the activation of RLRs, whose 
+expression could be primed by ZNFX1 in the early antiviral stage. 
+From this point of view, ZNFX1 might also be regarded as a posi-
+tive regulator of RIG-I and MDA5 signalling, leading to an efficient 
+antiviral signalling network later on (Extended Data Fig. 7).
+In addition to the functional differences that have been men-
+tioned above, we found that ZNFX1 is highly conserved from fruit 
+flies to humans (Extended Data Figs. 5d and 6 and Supplementary 
+Table 1), which is strikingly different from RIG-I, which is lacking 
+in fruit fly, fugu fish and chicken lineages. In addition to ZNFX1, 
+another representative of RNA helicase SF1, MOV10, is well con-
+served during evolution and shown to be a co-factor to enhance the 
+nuclear export of viral mRNA34. Thus, the evolutionarily conserved 
+RNA helicase SF1 rather than RLRs may play more important anti-
+viral roles in lower species. The arms race between viruses and the 
+host may finally result in the recruitment of many RNA or DNA 
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1354
+
+===== PAGE 10 =====
+Articles
+NATURE CELL BIoLoGy
+binding proteins, such as the DExD/H box helicases, to detect the 
+invading viruses in the evolution of vertebrates. As well as acting as 
+a dsRNA sensor to trigger antiviral responses, ZNFX1 is required 
+for epigenetic inheritance in Caenorhabditis elegans, based on 
+two recent reports50,51. Thus, determining further roles of ZNFX1 
+in other physiological or pathological processes still requires 
+further studies.
+In all, our study here has identified ZNFX1 as a dsRNA sensor 
+that induces the production of IFNs and ISGs in the early stage of 
+viral infection, providing further insights into the existing complex-
+ity of the antiviral immunity mediated by RLRs and MAVS. ZFNX1, 
+as the monitor to sense viral RNA in the early stage of viral infec-
+tion, may serve as a strategy for early therapeutic intervention in 
+viral infections in the future.
+EV+
+62.34%
+ZNFX1+
+13.54%
+VSV-eGFP
+SSC-A
+Mda5–/–
+EV+
+59.94%
+RIG-I+
+30.42%
+ZNFX1+
+51.41%
+Rig-I –/–
+MDA5+
+18.37%
+EV
++
+ZNFX1
+RIG-I
++
++
++
++
+Poly(I:C)
++
+EV
++
+ZNFX1
+RIG-I
++
++
++
++
+Poly(I:C)
++
+Rel. mRNA of Ifnb1
+Rel. mRNA of Ifit1
+0
+20,000
+40,000
+60,000
+80,000
+Rel. mRNA
+of VSV
+0
+20,000
+40,000
+60,000
+Rel. mRNA
+of EMCV
+EV
++
+ZNFX1
+RIG-I
+MDA5
++
++
++
++
++
++
++
+EMCV
+EMCV
+a
+b
+e
+c
+VSV-GFP+
+(% of total)
+EV
++
+ZNFX1
+RIG-I
+MDA5
++
++
++
++ +
++
++
+VSV-eGFP
+d
+0
+50
+100
+150
+200
+0
+100
+200
+300
+400
+Rel. mRNA of Ifit1
+EV
++
+ZNFX1
+RIG-I
+MDA5
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+EV
++
+ZNFX1
+RIG-I
+MDA5
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+EV+
+40.43%
+RIG-I+
+7.85%
+ZNFX1+
+3.40%
+WT
+0
+20
+40
+60
+80
++ +
++
++
+VSV-eGFP
+VSV-eGFP
+0
+100
+500
+1,000
+1,500
+EV
+ZNFX1
+RIG-I
+MDA5
+MAVS
+Rel. mRNA of Ifnb1
+Rel. mRNA of Ifnb1
+f
+WT
+Znfx1–/–
+Mavs–/–
+Rig-I –/–
+WT
+Mda5 –/–
+Mavs–/–
+Rig-I –/–
+WT
+Mda5 –/–
+0
+1.5
+–1.5
+Ifi35
+Ifitm3
+Ifitm1
+Irf1
+Tap1
+Tlr3
+Tdrd7
+Trim25
+Tnfsf10
+Gbp2
+Gbp3
+Gbp4
+Usp18
+Trim21
+Apobec3
+Dhx58
+Ccl5
+Ccl2
+Myd88
+Isg20
+Hla-b
+Hla-e
+Ifi16
+Ifit2
+Ifit3
+ZNFX1
+EV
+EV+
+ZNFX1+
+Rig-I –/–
+h
+Row z-score
+Cd38
+Psmb9
+Trim38
+Parp14
+Nmi
+EV
++
+ZNFX1
+RIG-I
+MDA5
++
++
++
++
++
++
++
+VSV
+VSV
+P = 0.0007
+P = 0.0304
+P = 0.0004
+P = 0.0004
+P = 0.0294
+P = 0.0002
+P = 0.0015
+P = 8.41 × 10–5
+WT
+Mda5 –/–
+WT
+Rig-I –/–
+P = 0.0005
+P = 0.0030
+P = 2.93 × 10–6
+P = 0.0097 P = 1.03 × 10–5 
+Rig-I –/–
+WT
+Mda5 –/–
+0.1
+1
+10
+100
+1,000
+10,000
+100,000
+0.1
+1
+10
+100
+1,000
+P = 0.0004
+P = 0.0001
+DKO
+DKO
+0
+5
+10
+15
+0
+2
+4
+6
+Rel. mRNA of Ifnb1
+Rel. mRNA of Ifit1
+EV
++
+ZNFX1
++
++
++
+EV
++
+ZNFX1
++
++
++
+VSV
+VSV
+DKO
+DKO
+g
+P = 0.0003
+P = 0.0030
+0
+10
+20
+30
+40
+50
+0
+10
+20
+30
+40
+50
+VSV-GFP+
+(% of total)
+VSV-GFP+
+(% of total)
+WT
+Rig-I –/–
+DKO
+VSV-eGFP
+si Ctrl
+si Ctrl
+si ZNFX1
+j
+i
+si Ctrl
+si Ctrl
+si ZNFX1
+P = 0.0051
+P = 0.0026
+VSV-eGFP
+N-STM
+N-STM
+P = 0.0734
+P = 0.3851
+P = 0.5914
+P = 0.1758
+P = 0.1935
+P = 0.6618
+Fig. 7 | ZNFX1 induces IFN signalling in an RLR-independent manner. a, qRT–PCR analysis of Ifnb1 in wild-type and Znfx1−/−A549 cells transfected 
+with the indicated expressing plasmids. b, qRT–PCR analysis of Ifnb1 and Ifit1 in wild-type, Rig-I−/−, Mda5−/− or Mavs−/− A549 cells transfected with the 
+indicated expressing plasmids. c, qRT–PCR analysis of cellular VSV and EMCV loads in wild-type or Mda5−/− A549 cells transfected with the indicated 
+expressing plasmids for 24 h followed by viral infection for another 12 h. d, FACS analysis of WT, Rig-I−/− and Mda5−/− A549 cells transfected with ZNFX1, 
+RIG-I or MDA5 expressing plasmids or EV for 24 h followed by VSV-eGFP infection. The experiments were repeated three times, independently, with 
+similar results obtained. e, Statistical analysis of the data from the multiple repeated FACS experiments in d. f, Heatmap of ISGs expression profiles in 
+ZNFX1 overexpression in Rig-I−/− cells with or without poly(I:C) stimulation. g,h, Ifnb1 and Ifit1 mRNA transcripts were analysed by qRT–PCR in Rig-I−/− and 
+Znfx1−/− DKO cells transfected with the indicated expressing plasmids followed by VSV or poly(I:C) stimulation. i, FACS analysis of WT and Rig-I−/− A549 
+cells transfected with siRNAs of control or Znfx1 for 48 h followed by VSV-eGFP infection. j, FACS analysis of WT, Rig-I−/− and DKO A549 cells followed by 
+VSV-eGFP infection. For a–c,e,g–j, n = 3 independent experiments. Data are presented as mean ± s.d. P values were calculated using two-tailed unpaired 
+Student’s t-test.
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1355
+
+===== PAGE 11 =====
+Articles
+NATURE CELL BIoLoGy
+Online content
+Any methods, additional references, Nature Research reporting 
+summaries, source data, extended data, supplementary informa-
+tion, acknowledgements, peer review information; details of author 
+contributions and competing interests; and statements of code 
+and data availability are available at https://doi.org/10.1038/s41556-
+019-0416-0.
+Received: 16 October 2018; Accepted: 26 September 2019;  
+Published online: 4 November 2019
+References
+	1.	 Ablasser, A. et al. cGAS produces a 2′–5′-linked cyclic dinucleotide second 
+messenger that activates STING. Nature 498, 380–384 (2013).
+	2.	 Wu, J. et al. Cyclic GMP-AMP is an endogenous second messenger in innate 
+immune signaling by cytosolic DNA. Science 339, 826–830 (2013).
+	3.	 Yoneyama, M. et al. The RNA helicase RIG-I has an essential function in 
+double-stranded RNA-induced innate antiviral responses. Nat. Immunol. 5, 
+730–737 (2004).
+	4.	 Pichlmair, A. et al. RIG-I-mediated antiviral responses to single-stranded 
+RNA bearing 5′-phosphates. Science 314, 997–1001 (2006).
+	5.	 Kato, H. et al. Differential roles of MDA5 and RIG-I helicases in the 
+recognition of RNA viruses. Nature 441, 101–105 (2006).
+	6.	 Goubau, D. et al. Antiviral immunity via RIG-I-mediated recognition of RNA 
+bearing 5′-diphosphates. Nature 514, 372–375 (2014).
+	7.	 Ahmad, S. & Hur, S. Helicases in antiviral immunity: dual properties as 
+sensors and effectors. Trends Biochem. Sci. 40, 576–585 (2015).
+	8.	 Oshiumi, H. et al. DDX60 is involved in RIG-I-dependent and independent 
+antiviral responses, and its function is attenuated by virus-induced EGFR 
+activation. Cell Rep. 11, 1193–1207 (2015).
+	9.	 Zhang, Z. et al. DDX1, DDX21 and DHX36 helicases form a complex with 
+the adaptor molecule TRIF to sense dsRNA in dendritic cells. Immunity 34, 
+866–878 (2011).
+	10.	Zhang, Z., Yuan, B., Lu, N., Facchinetti, V. & Liu, Y. J. DHX9 pairs with IPS-1 
+to sense double-stranded RNA in myeloid dendritic cells. J. Immunol. 187, 
+4501–4508 (2011).
+	11.	Wang, P. H. et al. Nlrp6 regulates intestinal antiviral innate immunity. Science 
+350, 826–830 (2015).
+	12.	Singleton, M. R., Dillingham, M. S. & Wigley, D. B. Structure and  
+mechanism of helicases and nucleic acid translocases. Annu. Rev. Biochem. 
+76, 23–50 (2007).
+	13.	Fairman-Williams, M. E., Guenther, U. P. & Jankowsky, E. SF1 and SF2 
+helicases: family matters. Curr. Opin. Struct. Biol. 20, 313–324 (2010).
+	14.	Linder, P. & Jankowsky, E. From unwinding to clamping—the DEAD box 
+RNA helicase family. Nat. Rev. Mol. Cell. Bio. 12, 505–516 (2011).
+	15.	Seth, R. B., Sun, L., Ea, C. K. & Chen, Z. J. Identification and characterization 
+of MAVS, a mitochondrial antiviral signaling protein that activates NF-κB 
+and IRF 3. Cell 122, 669–682 (2005).
+	16.	Ishikawa, H. & Barber, G. N. STING is an endoplasmic reticulum adaptor 
+that facilitates innate immune signalling. Nature 455, 674–678 (2008).
+	17.	Chen, Q., Sun, L. J. & Chen, Z. J. Regulation and function of the  
+cGAS-STING pathway of cytosolic DNA sensing. Nat. Immunol. 17, 
+1142–1149 (2016).
+	18.	Munoz-Wolf, N. & Lavelle, E. C. Hippo interferes with antiviral defences. 
+Nat. Cell Biol. 19, 267–269 (2017).
+	19.	Zhang, Q. et al. Hippo signalling governs cytosolic nucleic acid sensing 
+through YAP/TAZ-mediated TBK1 blockade. Nat. Cell Biol. 19,  
+362–374 (2017).
+	20.	O’Shea, J. J. & Plenge, R. JAK and STAT signaling molecules in 
+immunoregulation and immune-mediated disease. Immunity 36,  
+542–550 (2012).
+	21.	Schoggins, J. W. et al. Pan-viral specificity of IFN-induced genes reveals new 
+roles for cGAS in innate immunity. Nature 505, 691–695 (2014).
+	22.	Chan, Y. K. & Gack, M. U. Viral evasion of intracellular DNA and RNA 
+sensing. Nat. Rev. Microbiol. 14, 360–373 (2016).
+	23.	Schneider, W. M., Chevillotte, M. D. & Rice, C. M. Interferon-stimulated 
+genes: a complex web of host defenses. Annu. Rev. Immunol. 32,  
+513–545 (2014).
+	24.	Schoggins, J. W. et al. A diverse range of gene products are effectors of the 
+type I interferon antiviral response. Nature 472, 481–485 (2011).
+	25.	Pillai, P. S. et al. Mx1 reveals innate pathways to antiviral resistance and lethal 
+influenza disease. Science 352, 463–466 (2016).
+	26.	Bailey, C. C. et al. IFITM-family proteins: the cell’s first line of antiviral 
+defense. Annu. Rev. Virol. 1, 261–283 (2014).
+	27.	Munir, M. & Berg, M. The multiple faces of proteinkinase R in antiviral 
+defense. Virulence 4, 85–89 (2013).
+	28.	Neil, S. J., Zeng, T. & Bieniasz, P. D. Tetherin inhibits retrovirus release and is 
+antagonized by HIV-1 Vpu. Nature 451, 425–430 (2008).
+	29.	Yan, N. & Chen, Z. J. Intrinsic antiviral immunity. Nat. Immunol. 13,  
+214–222 (2012).
+	30.	Yoh, S. M. et al. PQBP1 is a proximal sensor of the cGAS-dependent innate 
+response to HIV-1. Cell 161, 1293–1305 (2015).
+	31.	Song, G. et al. E3 ubiquitin ligase RNF128 promotes innate antiviral 
+immunity through K63-linked ubiquitination of TBK1. Nat. Immunol. 17, 
+1342–1351 (2016).
+	32.	Zhu, J. et al. Antiviral activity of human OASL protein is mediated by 
+enhancing signaling of the RIG-I RNA sensor. Immunity 40, 936–948 (2014).
+	33.	Jia, X. et al. The role of alternative polyadenylation in the antiviral innate 
+immune response. Nat. Commun. 8, 14605 (2017).
+	34.	Goodier, J. L., Cheung, L. E. & Kazazian, H. H. Jr. MOV10 RNA  
+helicase is a potent inhibitor of retrotransposition in cells. PLoS Genet. 8, 
+e1002941 (2012).
+	35.	Serquina, A. K. et al. UPF1 is crucial for the infectivity of human 
+immunodeficiency virus type 1 progeny virions. J. Virol. 87,  
+8853–8861 (2013).
+	36.	Miller, M. S. et al. Senataxin suppresses the antiviral transcriptional response 
+and controls viral biogenesis. Nat. Immunol. 16, 485–494 (2015).
+	37.	López, D. G. et al. The Eutherian Armcx genes regulate mitochondrial 
+trafficking in neurons and interact with Miro and Trak2. Nat. Commun. 3, 
+814 (2012).
+	38.	Mukherjee, P. et al. Activation of the innate signaling molecule MAVS by 
+bunyavirus infection upregulates the adaptor protein SARM1, leading to 
+neuronal death. Immunity 38, 705–716 (2013).
+	39.	West, A. P., Shadel, G. S. & Ghosh, S. Mitochondria in innate immune 
+responses. Nat. Rev. Immunol. 11, 389–402 (2011).
+	40.	Yoshizumi, T. et al. Influenza A virus protein PB1-F2 translocates into 
+mitochondria via Tom40 channels and impairs innate immunity. Nat. 
+Commun. 5, 4713 (2014).
+	41.	Loo, Y. M. et al. Distinct RIG-I and MDA5 signaling by RNA viruses in 
+innate immunity. J. Virol. 82, 335–345 (2008).
+	42.	Lu, H. B. et al. DHX15 senses double-stranded RNA in myeloid dendritic 
+cells. J. Immunol. 193, 1364–1372 (2014).
+	43.	Lian, H. et al. The zinc-finger protein ZCCHC3 binds RNA and facilitates 
+viral RNA sensing and activation of the RIG-I-like receptors. Immunity  
+18, 49 (2018).
+	44.	Serrat, R. et al. The non-canonical Wnt/PKC pathway regulates mitochondrial 
+dynamics through degradation of the arm-like domain-containing protein 
+Alex3. PLoS One 8, e67773 (2013).
+	45.	Panneerselvam, P. et al. T-cell death following immune activation is mediated 
+by mitochondria-localized SARM. Cell Death Differ. 20, 478–489 (2013).
+	46.	Yuan, S. et al. Amphioxus SARM involved in neural development  
+may function as a suppressor of TLR signaling. J. Immunol. 184,  
+6874–6881 (2010).
+	47.	Hou, F. et al. MAVS forms functional prion-like aggregates to activate and 
+propagate antiviral innate immune response. Cell 146, 448–461 (2011).
+	48.	Gack, M. U. et al. TRIM25 RING-finger E3 ubiquitin ligase is essential for 
+RIG-I-mediated antiviral activity. Nature 446, 916–920 (2007).
+	49.	Jiang, X. et al. Ubiquitin-induced oligomerization of the RNA sensors RIG-I 
+and MDA5 activates antiviral innate immune response. Immunity 36, 
+959–973 (2012).
+	50.	Ishidate, T. et al. ZNFX-1 functions within perinuclear nuage to balance 
+epigenetic signals. Mol. Cell 70, 639–649 (2018).
+	51.	Wan, G. et al. Spatiotemporal regulation of liquid-like condensates in 
+epigenetic inheritance. Nature 557, 679–683 (2018).
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in 
+published maps and institutional affiliations.
+© The Author(s), under exclusive licence to Springer Nature Limited 2019
+Nature Cell Biology | VOL 21 | NOVEMBER 2019 | 1346–1356 | www.nature.com/naturecellbiology
+1356
+
+===== PAGE 12 =====
+Articles
+NATURE CELL BIoLoGy
+Methods
+Mice. C57BL/6 Znfx1−/− mice were generated by a CRISPR/Cas9 system from 
+GemParmatech Co. Exons 3 to 11 were selected as the targeted region. Mice were 
+kept and bred in pathogen-free conditions. The Institutional Animal Care and 
+Use Committee of Sun Yat-sen University, Guangzhou, China approved all the 
+experimental protocols concerning the handling of mice. The study is compliant 
+with all relevant ethical regulations regarding animals.
+Reagents and antibodies. The poly(I:C) (both HMW and LMW) and poly(dA:dT) 
+were purchased from InvivoGen. Recombinant human IFN-α, recombinant human 
+IFN-β and all IFN ELISA kits were purchased from R&D Systems. Lipofectamine 
+2000, Lipofectamine 3000 and Lipofectamine RNAiMAX were purchased from 
+Invitrogen. Protein G agarose, used for immunoprecipitation, was purchased from 
+Pierce. Poly(I) and agarose-bond poly(C) were from Sigma (P4154 and P9827). 
+The following antibodies were used for immunoblot analysis: anti-human ZNFX1 
+(1:1,000; ab179452, Abcam), anti-mouse ZNFX1 (1:1,000; Dia-An Biotech), anti-
+MAVS (1:1,000; ab31334, Abcam), anti-IRF3 (1:1,000; sc-33641, Santa Cruz), anti-
+RIG-I (1:1000; D14G6, Cell Signaling), anti-phosphorylated IRF3 (1:1,000; 4D4G, 
+Cell Signaling), anti-TBK1 (1:1,000; D1B4, Cell Signaling), anti-phosphorylated 
+TBK1 (1:1,000; D52C2, Cell Signaling), anti-GAPDH (1:10,000; ET1601-4, 
+HuaBio), anti-β-actin (1:10,000; 60008-1-Ig, Proteintech), anti-lamin B1 (1:2,000; 
+12987-1-AP, Proteintech), anti-COX-IV (1:3,000; 66110-1-Ig, Proteintech), anti-
+HA (1:5,000; clone HA-7, H6533, Sigma), anti-Flag (1:5,000; clone M2, F1804, 
+Sigma), goat anti-mouse IgG-HRP (1:10,000; HA1006, HuaBio), goat anti-rabbit 
+IgG-HRP (1:10,000; HA1001, HuaBio).
+Cells and pathogens. The A549, MEF, L929 and 293T cell lines were purchased 
+from ATCC. All these cells were cultured in endotoxin-free DMEM (Gibco), 
+supplemented with 10% FBS (Gibco) and 1% penicillin–streptomycin (Gibco). 
+PBMC and mouse peritoneal macrophage were isolated and cultured as described 
+previously33. VSV (Indiana strain), VSV-eGFP and HSV-1 were from our 
+laboratory. Human influenza virus A/Puerto Rico/8/34 (H1N1) (PR8) and SeV 
+were provided by J. Cui (College of Life Sciences, Sun Yat-sen University). H1N1, 
+SeV, VSV and HSV-1 were titred on Vero cells.
+Analogue stimulation and virus infection. Cells were stimulated with poly(I:C) 
+(3 μg ml−1) and poly(dA:dT) (3 μg ml−1) delivered by polyethylenimine (PEI) for the 
+indicated hours. Cells were infected at an indicated MOI in serum-free DMEM for 
+1 h, washed by 1× PBS, and incubated with fresh complete medium for the times 
+shown in the figures. For in vivo virus infection, six- to eight-week-old mice were 
+infected with VSV for 24 h by intravenous injection (2 × 107 p.f.u. per g body weight).
+RNA interference. Lipofectamine RNAi MAX was used for the transfection 
+of siRNAs (30 nM) into A549 or L929 cells according to the manufacturer’s 
+instructions. The sequences of siRNAs with higher silencing efficiency are as follows:
+human Znfx1-siRNA: 5′-GGAAUAUCGUGGAGUGUAA dTdT-3′;
+human Mavs-siRNA: 5′-CCACCUUGAUGCCUGUGAA dTdT-3′.
+These human RNA oligos were synthesized at Guangzhou Ribobio. The mouse 
+siRNAs were purchased from Thermo Scientific. The target for Znfx1 is ID:509273 
+and for Mavs is ID:169532.
+RNA isolation, qRT–PCR and ELISA. Total RNA was extracted using TRIzol 
+reagent (Invitrogen) and reversed-transcribed with a PrimeScript RT reagent 
+kit with gDNA Eraser (TaKaRa) according to the manufacturer’s instructions. A 
+Light Cycler480 instrument (using the 384-well module) with RealStar Green Fast 
+Mixture (GenStar) was used for quantitative real-time PCR analysis. The data were 
+normalized by the level of β-actin expression in each individual sample. The 2−ΔΔCt 
+method was used to calculate relative expression changes. The primer sequences 
+are listed in Supplementary Table 2. The concentrations of IFN-α and IFN-β in 
+culture supernatants were measured using kits from R&D Systems, according to 
+the manufacturer’s instructions.
+Luciferase reporter gene assay. A549 cells or 293T cells were plated at a density 
+of 105 cells per well in a 48-well plate. A549 cells in each well were transiently 
+transfected with 100 ng IFN-β or ISRE luciferase and 5 ng Renilla luciferase 
+reporter vectors plus ZNFX1 expression vector using Lipofectamine 3000. 293T 
+cells including wild-type 293T and Znfx1 deficiency 293T cells (Znfx1−/−-293T) 
+were transfected with reporter vectors using Lipofectamine 2000. At 24 h post 
+transfection, cells were stimulated with 3 μg ml−1 poly(I:C) or poly(dA:dT) or 
+infected with the indicated dose of VSV. Cells were harvested 24 h after stimulation 
+or infection, and luciferase activities were measured with a dual-luciferase reporter 
+assay system (Promega) according to the manufacturer’s instructions. Data are 
+normalized for transfection efficiency by dividing Firefly luciferase activity by 
+Renilla luciferase activity. Each experiment was replicated at least three times.
+Library construction for RNA sequencing and sequencing procedures. Total 
+RNA was isolated using an RNeasy mini kit (Qiagen). RNA integrity was assessed 
+using an RNA Nano 6000 assay kit of the Agilent Bioanalyzer 2100 system. 
+Sequencing libraries were generated using an NEBNext UltraTM directional RNA 
+library prep kit for Illumina (NEB). The poly(A) containing mRNA molecules 
+were purified using poly(T) oligo-attached magnetic beads. Purified libraries 
+were quantified using a Qubit 2.0 fluorometer (Life Technologies) and validated 
+using an Agilent 2100 Bioanalyzer to confirm the insert size and to calculate the 
+mole concentration. Library preparations were sequenced on an Illumina Hiseq 
+Xten platform and paired-end reads were generated. Library construction and 
+sequencing were performed at Biomarker Corporation.
+Ultraviolet crosslinked RIP assay. 293T cells were transfected with the indicated 
+Flag-tagged plasmids for 24 h, followed by VSV infection for another 12 h. Cells 
+were crosslinked with ultraviolet light at 254 nm (300 mJ cm−2), then harvested and 
+lysed with immunoprecipitation lysis buffer. Flag M2 antibody (Sigma-Aldrich) 
+was added to the cell lysate and incubated overnight at 4 °C. Protein G beads were 
+washed and added to antibody–cell lysate mixture and incubated for 2 h at 4 °C. 
+The bead-bound immunoprecipitates were washed three times with lysis buffer 
+containing RNase inhibitors. The beads were then split into two samples for protein 
+or RNA extraction. Proteins were extracted for western blot analysis and the RNA 
+was extracted using Trizol reagent before real-time PCR analysis for VSV RNA. For 
+endogenous ZNFX1-RIP analysis, ZNFX1-associated immunoprecipitates were 
+prepared by incubating IgG or anti-ZNFX1 (2 μg) antibody and protein G beads 
+with cell lysates of VSV-, EMCV- or SeV-infected A549 cells. RNA was extracted 
+using Trizol reagent before real-time PCR analysis for viral RNA.
+Confocal microscopy. A549 cells were transfected with the expression plasmid 
+for Flag-tagged ZNFX1. After 24 h, cells were mock or VSV-infected for 8 h and 
+16 h. The cells were fixed in 4% paraformaldehyde and permeabilized with 0.1% 
+saponin, then blocked for 30 min with 10% goat serum, incubated overnight at 4 °C 
+with anti-Flag and mitochondrial marker MitoTracker Red CMXRos (Invitrogen). 
+Imaging of the cells was carried out using Leica TCS SP5 confocal laser microscopy 
+under a ×100 oil objective.
+Flow cytometry. For gene knockdown, A549 and L929 cells were transiently 
+transfected with siRNAs for 48 h and then challenged with VSV-eGFP for 6 h 
+at 2 MOI. For gene overexpression, cells were transfected with the indicated 
+expression plasmids for 24 h following VSV-eGFP infection at the indicated MOI 
+for 6 h or 12 h. The cells were washed once in cold PBS and resuspended in cold 
+staining buffer (PBS with 1% fetal bovine serum). For each condition, 10,000 
+cells were counted and the followed analyses were performed on a flow cytometer 
+(FACSCalibur and CytoFLEX).
+Mitochondrial fractionation and proteolysis. Mitochondrial fractionation 
+and proteolysis assays were performed as previously described, with slight 
+modification41. Briefly, virally infected A549 cells were washed once with cold 1× 
+PBS (pH 7.2), scraped off the culture plate, and lysed in 800 μl of homogenization 
+buffer (20 mM HEPES (pH 7.5), 70 mM sucrose and 220 mM mannitol) by 30 
+strokes in a Dounce homogenizer. The homogenate was centrifuged at 800g 
+for 5 min to precipitate the nuclei, and the resulting supernatant was further 
+centrifuged at 10,000g for 10 min (4 °C) to precipitate the crude mitochondrial 
+fraction. The resulting supernatant was further centrifuged at 100,000g for 30 min 
+(4 °C) to precipitate light membrane organelles, and the final supernatant was used 
+as the cytosolic fraction.
+For the proteinase K resistance assay, the isolated mitochondria pellet was 
+washed once with homogenization buffer. Then, the pellet was resuspended in 
+buffer and treated with proteinase K (100 ng ml−1) in the absence or presence 
+of 1% Triton X-100 (wt/vol). The proteolytic reaction was performed on ice for 
+15 min, and the reactants were subjected to western blot analysis with the indicated 
+antibodies.
+Generation of Znfx1−/−, Rig-I−/−, Mda5−/−, Mavs−/− and Ifnar1−/− cells. 
+Znfx1−/−, Rig-I−/−, Mda5−/−, Mavs−/− and Ifnar1−/− cells were constructed using 
+the CRISPR/Cas9 gene-editing system. Small guide RNAs (sgRNAs) targeting 
+the genome sequence of target genes were cloned into PX458 vector. The sgRNA 
+targeting sequences were 5′-TCCTAACCAACGAGTCTGTT-3′ for ZNFX1, 
+5′-GCAGGTGCAGAGAAATTGG-3′ for RIG-I, 5′-GGGTGAAAATGTACA 
+TCCAG-3′ for MDA5, 5′-CCTCTGACCTGGCAGCCCT-3′ for MAVS and 
+5′-TCATTTACACCATTTCGCAA-3′ for IFNAR1. CRISPR plasmids were 
+transfected into 293T or A549 cells using Lip2000 and Lip3000, and single-cell 
+colonies of GFP+ cells were picked and validated at protein expression level by 
+western blot.
+In vitro pulldown and competition. For poly(C) and poly(I:C) pulldown assays, 
+poly(C)- or poly(I:C)-coated beads were equilibrated in binding buffer and 
+were combined with an equal volume of whole-cell lysates prepared from 293T 
+cells transiently transfected with the indicated expression plasmids that were 
+treated with lysis buffer. The cell extracts were supplemented with protease and 
+phosphatase inhibitors. The mixtures were incubated with gentle agitation for 
+2 h at 4 °C. Beads were then washed three times with lysis buffer and analysed by 
+immunoblotting with anti-HA-HRP.
+To generate purified ZNFX1 proteins, 293T cells transiently transfected 
+with plasmids encoding Flag-ZNFX1 proteins were lysed with lysis buffer. After 
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 13 =====
+Articles
+NATURE CELL BIoLoGy
+centrifugation, the supernatants were incubated with anti-Flag M2 affinity gel 
+for 2 h at 4 °C. The beads were washed three times with wash buffer, and the 
+Flag-ZNFX1 proteins were eluted by competition with Flag peptide. For in vitro 
+pulldown and competition, purified ZNFX1 proteins were incubated for 4 h with 
+agarose bead-conjugated poly(I:C) in the absence or presence of poly(I:C) and 
+other competitors. Centrifugation was followed by the incubation and the beads 
+were analysed by immunoblotting with anti-HA-HRP.
+Statistics and reproducibility. Statistical analyses were carried out using 
+Microsoft Excel software and GraphPad Prism to assess the differences between 
+experimental groups. Statistical significance was determined using a two-tailed, 
+unpaired Student’s t-test with a confidence interval of 95%. P ≤ 0.05 was denoted 
+as statistically significant. All experiments were performed three or more times 
+independently under identical or similar conditions.
+Reporting Summary. Further information on research design is available in the 
+Nature Research Reporting Summary linked to this article.
+Data availability
+RNA sequencing data that support the findings of this study have been deposited 
+in the Gene Expression Omnibus (GEO) under accession code GSE132979. Source 
+data for Figs. 1–7 and Extended Data Figs. 1–7 have been provided as Statistics 
+Source Data. All other data supporting the findings of this study are available from 
+the corresponding author upon reasonable request.
+Acknowledgements
+This work was supported by the National Natural Science Foundation (NNSF) of China 
+under grants 31770943, 81430099 and 31900661 and by the Natural Science Foundation 
+of Guangdong Province of China under grants 2015A030306043, 2018A030313924 and 
+2018A030313051.
+Author contributions
+Y.W., S.Y. and A.X. conceived the ideas and designed the experiments. Y.W., X.J., Y.G., 
+T.L., M.N. and X.L. performed the experiments. Y.W., S.Y. and X.J. analysed the data. S.Y., 
+Y.W., X.J. and S.C. contributed to editing the manuscript. S.Y. and A.X. supervised the 
+research and wrote the paper. S.Y. and X.J. are joint co first authors.
+Competing interests
+The authors declare no competing interests.
+Additional information
+Extended data is available for this paper at https://doi.org/10.1038/s41556-019-0416-0.
+Supplementary information is available for this paper at https://doi.org/10.1038/
+s41556-019-0416-0.
+Correspondence and requests for materials should be addressed to A.X.
+Reprints and permissions information is available at www.nature.com/reprints.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 14 =====
+Articles
+NATURE CELL BIoLoGy
+Extended Data Fig. 1 | See next page for caption.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 15 =====
+Articles
+NATURE CELL BIoLoGy
+Extended Data Fig. 1 | Bioinformatics analysis of in vitro transcription-sequencing APA sites (IVT-SAPAS) data of VSV-infected macrophages and 
+previously collected viral infection microarray data. a, IVT-SAPAS revealed the genes with transcriptional changes in MDMs infected with VSV for 0, 
+2, 4, 8, 16, 24 hrs. b-c, The percentage of GFP+ cells of FACS analysis of A549 cells transfected with control siRNA or the indicated siRNAs followed by 
+VSV-eGFP infection for another 6 hrs (n = 3 independent experiments). d, qRT-PCR revealed the mRNA expression of target gene in A549 cells transfected 
+with indicated siRNAs for 48 hrs (n = 3 independent experiments). e-f, RNA levels of Znfx1 and Rig-I are significantly increased after different virial 
+infection in different cell types. g, Schematic representation of ZNFX1 promoter containing core region bound by STAT1, STAT2, IRF1 and IRF9. For e, n = 3 
+independent experiments. Data in f, n = 4 wells for SeV infected epithelial cells and n = 6 wells for uninfected cells; n = 5 samples for IVA infected pDCs; 
+n = 4 independent experiments for SeV infected monocytoid cells; n = 2 independent experiments for SeV or HIV infected Macrophages or mDCs. All data 
+are shown as the mean ± s.d. Statistical differences were detected using two-tailed unpaired Student’s t-tests.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 16 =====
+Articles
+NATURE CELL BIoLoGy
+Extended Data Fig. 2 | ZNFX1 deficiency impairs antiviral immune response in vitro and in vivo. a, Quantitative RT-PCR (qRT-PCR) analysis of Znfx1 
+mRNA expression in A549 and L929 cells transfected with control siRNA or ZNFX1 siRNA 1#, 2# or 3# for 48 hrs (n = 3 independent experiments).  
+b, Western blot analysis of ZNFX1 protein expression in A549 cells transfected with control siRNA or human ZNFX1 siRNA 1# for 48 hrs. c, ELISA of IFN-α 
+or IFN-β production in cell supernatants from A549 cells with target gene knockdown for 48 hrs followed by VSV infection or poly I:C stimulation for 
+another 12 hrs (n = 4 independent experiments). d, qRT-PCR analysis of VSV mRNA expression (left panel) and plaque assay analysis of VSV titer (right 
+panel) of A549 cells transfected with RIG-I, ZNFX1 expressing plasmids or empty vector plasmid for 24 hrs and then infected with VSV at an MOI of 2 for 
+16 hrs (n = 3 independent experiments). e, FACS analysis of Znfx1+/+ and Znfx1-/- 293T cells followed by VSV-eGFP infection at 0.5 MOI for the indicated 
+time points (n = 3 independent experiments). f, Znfx1-/- 293T and A549 clones were generated by the CRISPR-Cas9 method. Deficiency of target genes in 
+the KO clones were confirmed by immunoblotting analysis. g, qRT-PCR analysis of viral mRNA transcripts in VSV, EMCV, H1N1 and HSV-1 infected A549 
+cells with control siRNA (si Control) or Znfx1-specific siRNA (si ZNFX1) (n = 3 independent experiments). h, ELISA of IFN-α in supernatants of BMDMs 
+from WT and Znfx1-/- mice infected with VSV or HSV-1 for 16 hrs (n = 5 independent experiments). All data are shown as the mean ± s.d. P values were 
+calculated using two-tailed unpaired Student’s t-test. For b, f, the experiments were repeated three times, independently, with similar results obtained.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 17 =====
+Articles
+NATURE CELL BIoLoGy
+Extended Data Fig. 3 | ZNFX1 positively regulates IFN-β signaling. a, Illustration of the CRISPR-Cas9 strategy to generate Znfx1-deficient mice and primer 
+design used in (b). b, Genotyping of the ZNFX1 mutant pups. c, Immunoblot analysis of ZNFX1 protein levels in Znfx1+/+ and Znfx1-/- MEFs cells. d, qRT-
+PCR analysis of Ifnb1 and ISGs mRNA levels in A549 cells transfected with siControl (si Ctrl) or si ZNFX1 for 48 hrs and then infected with VSV for the 
+indicated time points (n = 3 independent experiments). e, qRT-PCR analysis of Ifnb1 and ISGs mRNA expression in Znfx1+/+ and Znfx1-/- 293T cells followed 
+by VSV infected with increasing MOI (0.5 and 1) for 0, 8 and 16 hrs (n = 3 independent experiments). For b, c, the experiments were repeated three times, 
+independently, with similar results obtained. Data in d, e are the mean ± s.d. P values were calculated using two-tailed unpaired Student’s t-test.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 18 =====
+Articles
+NATURE CELL BIoLoGy
+Extended Data Fig. 4 | ZNFX1 localizes to mitochondria and interacts with MAVS. a, FACS analysis of Znfx1-/- A549 cells transfected with ZNFX1 and 
+its mutants expressing plasmids or empty vector (EV) for 24 hrs followed by VSV-eGFP infection at an MOI of 2 for 6 hrs. b, Endogenous level of ZNFX1 
+protein in mitochondrial fractions in WT and Mavs-/- 293T with or without VSV infection at 1 MOI for 6 hrs. COX-IV was used as the loading control. Data 
+are representative of at least three independent experiments.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 19 =====
+Articles
+NATURE CELL BIoLoGy
+Extended Data Fig. 5 | The expression of Znfx1 in different tissues and cell types, and the phylogenetic tree of Znfx1. a-c, The expression of Znfx1, Rig-I 
+and Mda5 in different tissues and cell types as per BioGPS. d, Phylogenetic tree of ZNFX1 and RIG-I using an amino acid sequence alignment among 
+different species.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 20 =====
+Articles
+NATURE CELL BIoLoGy
+Extended Data Fig. 6 | Alignment of ZNFX1 amino acid sequences in human, mouse, rat and zebrafish. Shading indicates sequence conservation, with 
+darker gray indicating a higher degree of conservation.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 21 =====
+Articles
+NATURE CELL BIoLoGy
+Extended Data Fig. 7 | Work model of mitochondria-localized ZNFX1 functions as a dsRNA sensor to initiate antiviral responses through MAVS. Upon 
+RNA virus infection, ZNFX1 induces type I interferon response by interacting with MAVS in the early stage, thus primes the expression of a number of 
+ISGs, including RIG-I and MDA5. The induced sensors further enhance the antiviral immune response by amplifying ISGs expression.
+Nature Cell Biology | www.nature.com/naturecellbiology
+
+===== PAGE 22 =====
+1
+nature research  |  reporting summary
+October 2018
+Corresponding author(s):
+Anlong Xu
+Last updated by author(s): 28th August 19
+Reporting Summary
+Nature Research wishes to improve the reproducibility of the work that we publish. This form provides structure for consistency and transparency 
+in reporting. For further information on Nature Research policies, see Authors & Referees and the Editorial Policy Checklist.
+Statistics
+For all statistical analyses, confirm that the following items are present in the figure legend, table legend, main text, or Methods section.
+n/a Confirmed
+The exact sample size (n) for each experimental group/condition, given as a discrete number and unit of measurement
+A statement on whether measurements were taken from distinct samples or whether the same sample was measured repeatedly
+The statistical test(s) used AND whether they are one- or two-sided 
+Only common tests should be described solely by name; describe more complex techniques in the Methods section.
+A description of all covariates tested
+A description of any assumptions or corrections, such as tests of normality and adjustment for multiple comparisons
+A full description of the statistical parameters including central tendency (e.g. means) or other basic estimates (e.g. regression coefficient) 
+AND variation (e.g. standard deviation) or associated estimates of uncertainty (e.g. confidence intervals)
+For null hypothesis testing, the test statistic (e.g. F, t, r) with confidence intervals, effect sizes, degrees of freedom and P value noted 
+Give P values as exact values whenever suitable.
+For Bayesian analysis, information on the choice of priors and Markov chain Monte Carlo settings
+For hierarchical and complex designs, identification of the appropriate level for tests and full reporting of outcomes
+Estimates of effect sizes (e.g. Cohen's d, Pearson's r), indicating how they were calculated
+Our web collection on statistics for biologists contains articles on many of the points above.
+Software and code
+Policy information about availability of computer code
+Data collection
+Fluorescent images: Leica TCS SP5 confocal laser microscopy 
+Flow cytometry: Cytoflex (Beckmam Coulter). 
+qRT-PCR: LightCycler 480 instrument (Roche).
+Data analysis
+Data representation and statistical analysis: Graphpad Prism 7 and Microsoft Office Excel 2017. Flow cytometry data were analyzed with 
+CytExpert 1.2 software. Laser scanning confocal microscopy: LAS X Core. Images were processed with Adobe Photoshop.
+For manuscripts utilizing custom algorithms or software that are central to the research but not yet described in published literature, software must be made available to editors/reviewers. 
+We strongly encourage code deposition in a community repository (e.g. GitHub). See the Nature Research guidelines for submitting code & software for further information.
+Data
+Policy information about availability of data
+All manuscripts must include a data availability statement. This statement should provide the following information, where applicable: 
+- Accession codes, unique identifiers, or web links for publicly available datasets 
+- A list of figures that have associated raw data 
+- A description of any restrictions on data availability
+Accession codes of GEO database for collected microarray data: GDS4231/4214/1271/3210/6082/6063. 
+Accession codes of GEO database for raw data of RNA sequencing : GSE132979. 
+Statistical source data for Fig. 1-7 and Supplementary Fig. 1-6 are provided in Supplementary Table. Uncropped blots are provided in supplement figure.
+
+===== PAGE 23 =====
+2
+nature research  |  reporting summary
+October 2018
+Field-specific reporting
+Please select the one below that is the best fit for your research. If you are not sure, read the appropriate sections before making your selection.
+Life sciences
+Behavioural & social sciences
+ Ecological, evolutionary & environmental sciences
+For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf
+Life sciences study design
+All studies must disclose on these points even when the disclosure is negative.
+Sample size
+Sample sizes were determined based on the Authors' experience of what is necessary to generate a convincing and compelling result. All 
+experiments included at least 3 independent experiments.The number of independent experiment was indicated in each figure legend. 
+Western blots are representative of three independently performed experiments.
+Data exclusions
+No data were excluded from the analyses.
+Replication
+  All experimental findings were reliably reproduced in multiple independent experiments as indicated in the figure legends.
+Randomization
+Animals were randomly assigned to the respective body weight matched groups. 
+Blinding
+Animals were randomly assigned to the respective body WT groups and KO ZNFX1 groups  were infected with or without VSV. No blinding was 
+done in this study. Virtually all the data are quantitative, most measurements are made using a machine, and not easily subject to operator 
+bias.
+Reporting for specific materials, systems and methods
+We require information from authors about some types of materials, experimental systems and methods used in many studies. Here, indicate whether each material, 
+system or method listed is relevant to your study. If you are not sure if a list item applies to your research, read the appropriate section before selecting a response. 
+Materials & experimental systems
+n/a Involved in the study
+Antibodies
+Eukaryotic cell lines
+Palaeontology
+Animals and other organisms
+Human research participants
+Clinical data
+Methods
+n/a Involved in the study
+ChIP-seq
+Flow cytometry
+MRI-based neuroimaging
+Antibodies
+Antibodies used
+anti-ZNFX1 (IB:1:1000; ab179452, Abcam),  
+anti-MAVS (IB:1:1,000; IP:1:100, ab31334, Abcam),  
+anti-IRF3 (IB:1:1,000, sc-33641, SL-12, Santa Cruz),  
+anti-RIG-I (IB:1:1000, D14G6, #3743, Cell Signaling),  
+anti-MDA5 (IB:1:1000, D74E4, #5321, Cell Signaling) 
+anti-phosphorylated IRF3 (IB:1:1,000; 4D4G; #4947, Cell Signaling),  
+anti-TBK1 (IB:1:1000; D1B4; #3504, Cell Signaling),  
+anti-phosphorylated TBK1 (IB:1:1000; D52C2, #5483, Cell Signaling),  
+anti-GAPDH (IB:1:10,000; ET1601-4; HuaBio),  
+anti-b-actin (IB:1:10,000; 60008-1-Ig; Proteintech),  
+anti-Lamin B1 (IB:1:2000; 12987-1-AP; Proteintech),  
+anti-COX-IV (IB:1:3000; 66110-1-Ig; Proteintech),  
+anti-HA (IB:1: 5,000; clone HA-7, H6533; Sigma),  
+anti-Flag (IB:1:5000; clone M2, F1804, Sigma),  
+Goat anti-mouse IgG-HRP (IB:1:10000; HA1006, HuaBio),  
+Goat anti-Rabbit IgG-HRP (IB:1:10000; HA1001, HuaBio),  
+anti-mouse ZNFX1 protein was prepared by Dia-An Biotech, Inc, in Wuhan, China (IP:1:100; IB:1:1000).
+Validation
+All antibodies used in this study were obtained from commercial sources and validated according to manufacturers's instruction.
+
+===== PAGE 24 =====
+3
+nature research  |  reporting summary
+October 2018
+Eukaryotic cell lines
+Policy information about cell lines
+Cell line source(s)
+The A549, MEF, L929 and 293T cell lines were purchased from ATCC.
+Authentication
+All the cell lines were authenticated by short tandem repeat profiling prior to use. And microscopic inspection (these cells are 
+easily distinguished based on morphology).
+Mycoplasma contamination
+All the cell lines were tested negative for mycoplasma contamination.
+Commonly misidentified lines
+(See ICLAC register)
+No commonly misidentified cell lines were used.
+Animals and other organisms
+Policy information about studies involving animals; ARRIVE guidelines recommended for reporting animal research
+Laboratory animals
+The following inbred mouse species were used: C57BL/6J. Supplier and age (6-8 weeks) of the mice as well as housing conditions 
+are provided for each experiment in the Methods section.  Male and female mice were used.
+Wild animals
+We declare the study did not involve wild animals.
+Field-collected samples
+No field-collected samples were used in this study.
+Ethics oversight
+The study is compliant with all relevant ethical regulations for animal experiments. All the experimental protocols were approved 
+by the Institutional Animal Care and Use Committee of Sun Yat-sen University.
+Note that full information on the approval of the study protocol must also be provided in the manuscript.
+Flow Cytometry
+Plots
+Confirm that:
+The axis labels state the marker and fluorochrome used (e.g. CD4-FITC).
+The axis scales are clearly visible. Include numbers along axes only for bottom left plot of group (a 'group' is an analysis of identical markers).
+All plots are contour plots with outliers or pseudocolor plots.
+A numerical value for number of cells or percentage (with statistics) is provided.
+Methodology
+Sample preparation
+For gene knockdown, knockout or overexpression, A549 and L929 cells were transiently transfected with siRNAs or expression 
+plasmids and then challenged with VSV-eGFP. The cells were washed once in cold PBS and resuspended in cold staining buffer 
+(PBS with 1% fetal bovine serum).
+Instrument
+Cytoflex (Beckmam Coulter) system.
+Software
+CytExpert 1.2 software was used for data collection and CytExpert 1.2 for data analysis.
+Cell population abundance
+Purity of the sorted A549 and L929 cell fractions was confirmed by flow cytometry resulting in a purity of the sorted cells of 
+>95%.
+Gating strategy
+A representative plot and gating is provided with every flow cytometry figure. We gated the GFP positive cells in the VSV-
+uinfected group less than 1% and calculated the ratios of GFP positive cells after eGFP-VSV infection. 
+Tick this box to confirm that a figure exemplifying the gating strategy is provided in the Supplementary Information.

@@ -1,0 +1,1215 @@
+{
+  "audit_id": "URPA-ZNFX1-2019-001",
+  "package": {
+    "title": "ZNFX1 mitochondrial dsRNA sensor (Wang, Yuan, Jia, Ge, Ling, Nie, Lan, Chen & Xu, Nature Cell Biology 21:1346-1356, 2019; DOI 10.1038/s41556-019-0416-0)",
+    "scope_status": "PARTIALLY_COMPLETE",
+    "scope_basis": "Package supplied to the audit contains the manuscript text plus seven author-deposited Source Data files. No analysis code, no raw instrument output, no Extended Data / Supplementary source data, and no numeric source data for Figures 4, 5 and 6 were supplied.",
+    "evidence_profiles_detected": [
+      "group comparisons",
+      "repeated measurements or time series",
+      "counted observations",
+      "laboratory measurements",
+      "image evidence",
+      "aggregate-only evidence"
+    ],
+    "specialist_method_validation": "NOT_ASSESSED",
+    "execution_status": "EXECUTION_NOT_ATTEMPTED",
+    "execution_basis": "No analysis code, notebook, or workflow was supplied with the package, so there is nothing to execute. Independent recomputation was performed instead with deterministic scripts written by the audit and retained in audit-evidence/scripts/."
+  },
+  "files": [
+    {
+      "file_id": "FILE-0001",
+      "path": "manuscript_extracted.txt",
+      "classification": "NARRATIVE_OR_DOCUMENTATION",
+      "readable": true,
+      "bytes": 96827,
+      "sha256": "9145a5dc89c2f81675b4853b872836aa38bbb35d3de5ce1ffc814956defeeb61",
+      "evidence_role": "REPORTED_STATEMENT_SOURCE"
+    },
+    {
+      "file_id": "FILE-0002",
+      "path": "source-data/Source Data Fig 1.xlsx",
+      "classification": "STRUCTURED_DATA",
+      "readable": true,
+      "bytes": 15724,
+      "sha256": "948c4974e337469f85c949c69b3769a9e70f7e1602efc6e5329d0d34921a40c3",
+      "evidence_role": "RESULT_OBJECT"
+    },
+    {
+      "file_id": "FILE-0003",
+      "path": "source-data/Source Data Fig 2.xlsx",
+      "classification": "STRUCTURED_DATA",
+      "readable": true,
+      "bytes": 15179,
+      "sha256": "b3f7a518a3a1ccd12d5c72a78da6f5497f876e508ca957665e142b90a6541ea1",
+      "evidence_role": "RESULT_OBJECT"
+    },
+    {
+      "file_id": "FILE-0004",
+      "path": "source-data/Source Data Fig 3.xlsx",
+      "classification": "STRUCTURED_DATA",
+      "readable": true,
+      "bytes": 12688,
+      "sha256": "f77eed0f8466ebba296fdcbe13e9837133827d3883db8b28b1839582e8bc821a",
+      "evidence_role": "RESULT_OBJECT"
+    },
+    {
+      "file_id": "FILE-0005",
+      "path": "source-data/Source Data Fig 4.pdf",
+      "classification": "IMAGE_OR_FIGURE",
+      "readable": true,
+      "bytes": 19569773,
+      "sha256": "5c0f777759eda96554769759498593a4b9b8578bf794081058550e24f0abf861",
+      "evidence_role": "PUBLISHED_ARTIFACT_SUPPORT",
+      "classification_note": "Inventory script classified by extension as NARRATIVE_OR_DOCUMENTATION; reclassified by evidence structure to IMAGE_OR_FIGURE because the file is a scan set of uncropped immunoblots with a label-only text layer."
+    },
+    {
+      "file_id": "FILE-0006",
+      "path": "source-data/Source Data Fig 5.pdf",
+      "classification": "IMAGE_OR_FIGURE",
+      "readable": true,
+      "bytes": 13040249,
+      "sha256": "6bd3c1ec2376c1fd752c694f7257abb62dc0d54affd4135e93fad43e46911e70",
+      "evidence_role": "PUBLISHED_ARTIFACT_SUPPORT",
+      "classification_note": "Reclassified by evidence structure as for FILE-0005."
+    },
+    {
+      "file_id": "FILE-0007",
+      "path": "source-data/Source Data Fig 6.pdf",
+      "classification": "IMAGE_OR_FIGURE",
+      "readable": true,
+      "bytes": 6693658,
+      "sha256": "f49239f09a4d8b05c01b110d8a91ea92929267914b2009b1728db5fe91c486ea",
+      "evidence_role": "PUBLISHED_ARTIFACT_SUPPORT",
+      "classification_note": "Reclassified by evidence structure as for FILE-0005."
+    },
+    {
+      "file_id": "FILE-0008",
+      "path": "source-data/Source Data Fig 7.xlsx",
+      "classification": "STRUCTURED_DATA",
+      "readable": true,
+      "bytes": 16447,
+      "sha256": "b4ca4c544660c71fa156231aee94da5b3ed6d5cb630563225c5f24c220ed5b09",
+      "evidence_role": "RESULT_OBJECT"
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "Abstract",
+      "status": "REVIEWED",
+      "claims_identified": 4,
+      "claims_classified": 4
+    },
+    {
+      "section": "Introduction",
+      "status": "REVIEWED",
+      "claims_identified": 0,
+      "claims_classified": 0
+    },
+    {
+      "section": "Results - ZNFX1 induction (Fig 1)",
+      "status": "REVIEWED",
+      "claims_identified": 6,
+      "claims_classified": 6
+    },
+    {
+      "section": "Results - antiviral restriction (Fig 2)",
+      "status": "REVIEWED",
+      "claims_identified": 4,
+      "claims_classified": 4
+    },
+    {
+      "section": "Results - in vivo (Fig 3)",
+      "status": "REVIEWED",
+      "claims_identified": 3,
+      "claims_classified": 3
+    },
+    {
+      "section": "Results - localisation / RNA binding / MAVS (Fig 4-6)",
+      "status": "REVIEWED_EVIDENCE_BLOCKED",
+      "claims_identified": 3,
+      "claims_classified": 3
+    },
+    {
+      "section": "Results - RLR independence (Fig 7)",
+      "status": "REVIEWED",
+      "claims_identified": 5,
+      "claims_classified": 5
+    },
+    {
+      "section": "Discussion",
+      "status": "REVIEWED",
+      "claims_identified": 0,
+      "claims_classified": 0
+    },
+    {
+      "section": "Methods / Statistics",
+      "status": "REVIEWED",
+      "claims_identified": 1,
+      "claims_classified": 1
+    },
+    {
+      "section": "Data availability",
+      "status": "REVIEWED",
+      "claims_identified": 1,
+      "claims_classified": 1
+    },
+    {
+      "section": "Extended Data / Supplementary",
+      "status": "NOT_SUPPLIED",
+      "claims_identified": 0,
+      "claims_classified": 0
+    }
+  ],
+  "studies": [
+    {
+      "study_id": "S-001",
+      "description": "Cell-culture loss- and gain-of-function virology in A549, L929, HEK293T and MEF cells",
+      "file_ids": [
+        "FILE-0002",
+        "FILE-0003",
+        "FILE-0008"
+      ]
+    },
+    {
+      "study_id": "S-002",
+      "description": "Mouse in vivo VSV/HSV-1 infection and survival",
+      "file_ids": [
+        "FILE-0004"
+      ]
+    },
+    {
+      "study_id": "S-003",
+      "description": "Human/macaque clinical sample expression analysis (HIV, SIV encephalitis)",
+      "file_ids": [
+        "FILE-0002"
+      ]
+    },
+    {
+      "study_id": "S-004",
+      "description": "Biochemistry: subcellular localisation, RNA binding, protein-protein interaction",
+      "file_ids": [
+        "FILE-0005",
+        "FILE-0006",
+        "FILE-0007"
+      ]
+    }
+  ],
+  "populations": [
+    {
+      "population_id": "P-001",
+      "source_file_ids": [
+        "FILE-0003"
+      ],
+      "unit_of_analysis": "independent experiment (biological replicate) of relative viral RNA level",
+      "value_column": "Source Data Fig 2.xlsx!Sheet1 columns B-I, rows 50-52 and 57-60",
+      "weight_column": null,
+      "numerator": null,
+      "denominator": null,
+      "inclusion_rules": [
+        "all deposited replicate rows within the Figure 2h block"
+      ],
+      "exclusion_rules": [
+        "label rows 48-49 and 55-56 excluded",
+        "stored p-value row 53 excluded from the input series and used only as the comparison target"
+      ],
+      "positive_count_requirement": null,
+      "placeholder_handling": "Uninfected/control arms are deposited as the exact constant 1 in every replicate (normalisation reference), not as missing values; retained as data.",
+      "missing_value_handling": "No blank cells inside the block.",
+      "grouping": [
+        "genotype: wt vs Znfx1-/-",
+        "virus: VSV, EMCV, H1N1, HSV-1"
+      ],
+      "aggregation": "two-tailed unpaired Student t-test per virus, wt vs Znfx1-/-",
+      "mapping_confidence": "CONFIRMED",
+      "alternative_specifications_tested": [
+        "Student equal-variance t-test",
+        "Welch unequal-variance t-test"
+      ]
+    },
+    {
+      "population_id": "P-002",
+      "source_file_ids": [
+        "FILE-0004"
+      ],
+      "unit_of_analysis": "mouse at risk at each successive observation timepoint",
+      "value_column": "Source Data Fig 3.xlsx!Sheet1!B32:C41",
+      "weight_column": null,
+      "numerator": "mice surviving",
+      "denominator": "mice at risk at study start",
+      "inclusion_rules": [
+        "all 10 deposited rows for each of the two genotype columns"
+      ],
+      "exclusion_rules": [
+        "header row 31 excluded"
+      ],
+      "positive_count_requirement": null,
+      "placeholder_handling": "No placeholders present; all cells are small positive integers.",
+      "missing_value_handling": "No missing cells.",
+      "grouping": [
+        "genotype: wt vs Znfx1-/-"
+      ],
+      "aggregation": "survival series; Gehan-Breslow-Wilcoxon per the legend",
+      "mapping_confidence": "PROBABLE",
+      "alternative_specifications_tested": [
+        "series read as number-at-risk per timepoint (maximum 5 per group)",
+        "series read as percent survival (rejected: values are integers 1-5, not a 0-100 scale)",
+        "series read as two pooled cohorts of 5 to reach the legend n=10 (would require a second, undeposited cohort)"
+      ]
+    },
+    {
+      "population_id": "P-003",
+      "source_file_ids": [
+        "FILE-0008"
+      ],
+      "unit_of_analysis": "independent experiment of relative Ifnb1 / Ifit1 mRNA in Rig-I-/-;Znfx1-/- (DKO) cells",
+      "value_column": "Source Data Fig 7.xlsx!Sheet1!J62:K67",
+      "weight_column": null,
+      "numerator": null,
+      "denominator": null,
+      "inclusion_rules": [
+        "all deposited replicate rows in the Figure 7g block"
+      ],
+      "exclusion_rules": [],
+      "positive_count_requirement": null,
+      "placeholder_handling": "EV reference arm deposited as the exact constant 1 in all three replicates (zero variance).",
+      "missing_value_handling": "The ZNFX1 and ZNFX1+VSV arms shown in the published panel have no deposited column; treated as unavailable evidence, not as zero.",
+      "grouping": [
+        "transfection: EV vs EV+VSV (only deposited levels)"
+      ],
+      "aggregation": "two-tailed unpaired Student t-test",
+      "mapping_confidence": "UNRESOLVED",
+      "alternative_specifications_tested": [
+        "printed P attributed to EV vs EV+VSV (the deposited contrast)",
+        "printed P attributed to EV+VSV vs ZNFX1+VSV (the contrast the panel design implies, not deposited)"
+      ]
+    },
+    {
+      "population_id": "P-004",
+      "source_file_ids": [
+        "FILE-0002"
+      ],
+      "unit_of_analysis": "independent clinical sample",
+      "value_column": "Source Data Fig 1.xlsx!Sheet1!B28:E41 (Fig 1f) and H28:K45 (Fig 1g)",
+      "weight_column": null,
+      "numerator": null,
+      "denominator": null,
+      "inclusion_rules": [
+        "all non-empty cells in each labelled sample column"
+      ],
+      "exclusion_rules": [
+        "label rows 26-27 excluded"
+      ],
+      "positive_count_requirement": null,
+      "placeholder_handling": "Trailing empty cells in the shorter control columns are absent samples, not zeros.",
+      "missing_value_handling": "Counted as absent; column length defines n.",
+      "grouping": [
+        "cohort: healthy control vs treated/encephalitis",
+        "gene: ZNFX1 vs RIG-I"
+      ],
+      "aggregation": "count of non-empty cells per column",
+      "mapping_confidence": "CONFIRMED",
+      "alternative_specifications_tested": [
+        "count including blank trailing cells (rejected: would exceed the deposited block)"
+      ]
+    },
+    {
+      "population_id": "P-005",
+      "source_file_ids": [
+        "FILE-0004"
+      ],
+      "unit_of_analysis": "mouse",
+      "value_column": "Source Data Fig 3.xlsx!Sheet1 rows 3-29",
+      "weight_column": null,
+      "numerator": null,
+      "denominator": null,
+      "inclusion_rules": [
+        "all deposited per-animal values in the Figure 3a, 3b and 3c blocks"
+      ],
+      "exclusion_rules": [
+        "label rows excluded"
+      ],
+      "positive_count_requirement": null,
+      "placeholder_handling": "None present.",
+      "missing_value_handling": "None present.",
+      "grouping": [
+        "genotype: wt vs Znfx1-/-",
+        "treatment: PBS vs VSV or HSV-1",
+        "tissue: lung, liver, serum"
+      ],
+      "aggregation": "count of values per genotype-treatment cell",
+      "mapping_confidence": "CONFIRMED",
+      "alternative_specifications_tested": [
+        "per-tissue vs pooled counting"
+      ]
+    },
+    {
+      "population_id": "P-006",
+      "source_file_ids": [
+        "FILE-0008"
+      ],
+      "unit_of_analysis": "independent experiment of relative cellular viral load",
+      "value_column": "Source Data Fig 7.xlsx!Sheet1!C38:K43",
+      "weight_column": null,
+      "numerator": null,
+      "denominator": null,
+      "inclusion_rules": [
+        "all deposited replicate rows in the Figure 7c block"
+      ],
+      "exclusion_rules": [],
+      "positive_count_requirement": null,
+      "placeholder_handling": "EV reference arm deposited as the exact constant 1.",
+      "missing_value_handling": "None present.",
+      "grouping": [
+        "host genotype as deposited: Rig-i -/- and Mda5 -/-",
+        "transfection: EV, ZNFX1, RIG-I, MDA5",
+        "virus: VSV, EMCV"
+      ],
+      "aggregation": "per-group replicate series",
+      "mapping_confidence": "UNRESOLVED",
+      "alternative_specifications_tested": [
+        "deposited row labels taken as authoritative",
+        "figure legend genotypes ('wild-type or Mda5-/-') taken as authoritative"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "canonical_text": "ZNFX1 is an interferon-stimulated gene whose expression is induced by RNA virus infection and by poly(I:C).",
+      "centrality": "CENTRAL",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:88 (Abstract)",
+        "manuscript_extracted.txt:601 (Fig 1 legend)"
+      ],
+      "expected_evidence": "Source Data Fig 1.xlsx Figure 1b/1h blocks",
+      "population_id": null,
+      "depends_on": [],
+      "calculation_required": false,
+      "outcome": "NOT_CHECKED",
+      "outcome_basis": "Replicate values are deposited and n=3 matches the legend, but no printed panel statistic was recomputed for this claim within the audit budget."
+    },
+    {
+      "claim_id": "C-002",
+      "canonical_text": "Znfx1 expression increases across multiple mouse tissues after virus infection.",
+      "centrality": "SUPPORTING",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:596 (Fig 1e legend)"
+      ],
+      "expected_evidence": "Source Data Fig 1.xlsx Figure 1e blocks",
+      "population_id": null,
+      "depends_on": [
+        "C-001"
+      ],
+      "calculation_required": false,
+      "outcome": "NOT_CHECKED",
+      "outcome_basis": "Deposited 10-tissue blocks present and structurally consistent; not recomputed."
+    },
+    {
+      "claim_id": "C-003",
+      "canonical_text": "ZNFX1 transcript levels are elevated in samples from HIV-infected individuals relative to uninfected controls (n = 9 controls, n = 14 infected).",
+      "centrality": "SUPPORTING",
+      "study_id": "S-003",
+      "occurrences": [
+        "manuscript_extracted.txt:594"
+      ],
+      "expected_evidence": "Source Data Fig 1.xlsx!Sheet1!B28:E41",
+      "population_id": "P-004",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "MATCH",
+      "outcome_basis": "Deposited column lengths are exactly 9 (healthy control) and 14 (treated), equal to the legend-stated n."
+    },
+    {
+      "claim_id": "C-004",
+      "canonical_text": "ZNFX1 transcript levels are elevated in SIV encephalitis samples (n = 18 independent samples).",
+      "centrality": "SUPPORTING",
+      "study_id": "S-003",
+      "occurrences": [
+        "manuscript_extracted.txt:596"
+      ],
+      "expected_evidence": "Source Data Fig 1.xlsx!Sheet1!H28:K45",
+      "population_id": "P-004",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "MATCH",
+      "outcome_basis": "Each deposited Figure 1g column contains exactly 18 values, equal to the legend-stated n."
+    },
+    {
+      "claim_id": "C-005",
+      "canonical_text": "Znfx1 induction requires JAK/STAT signalling and type I IFN receptor signalling.",
+      "centrality": "SUPPORTING",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:601 (Fig 1j,1k legend)"
+      ],
+      "expected_evidence": "Source Data Fig 1.xlsx Figure 1j/1k blocks",
+      "population_id": null,
+      "depends_on": [
+        "C-001"
+      ],
+      "calculation_required": false,
+      "outcome": "NOT_CHECKED",
+      "outcome_basis": "Deposited 3+3 replicate structure matches legend n=3; panel statistics not recomputed."
+    },
+    {
+      "claim_id": "C-006",
+      "canonical_text": "STAT1, STAT2, IRF1 and IRF9 drive the Znfx1 promoter.",
+      "centrality": "SUPPORTING",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:601 (Fig 1l legend)"
+      ],
+      "expected_evidence": "Source Data Fig 1.xlsx Figure 1l blocks",
+      "population_id": null,
+      "depends_on": [
+        "C-001"
+      ],
+      "calculation_required": false,
+      "outcome": "NOT_CHECKED",
+      "outcome_basis": "Deposited luciferase blocks present with wt and promoter-deletion constructs; not recomputed."
+    },
+    {
+      "claim_id": "C-007",
+      "canonical_text": "Knockdown of ZNFX1 enhances VSV replication in A549 and L929 cells.",
+      "centrality": "CENTRAL",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:900-901 (Fig 2a,2b legend)"
+      ],
+      "expected_evidence": "Source Data Fig 2.xlsx Figure 2a/2b blocks",
+      "population_id": null,
+      "depends_on": [],
+      "calculation_required": false,
+      "outcome": "NOT_CHECKED",
+      "outcome_basis": "Deposited blocks contain 4 replicate rows per arm, matching the legend n=4; panel statistics not recomputed."
+    },
+    {
+      "claim_id": "C-008",
+      "canonical_text": "Znfx1 deficiency increases cellular RNA-virus load (VSV, EMCV) relative to wild type.",
+      "centrality": "CENTRAL",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:907 (Fig 2g legend)",
+        "manuscript_extracted.txt:910 (Fig 2h legend)"
+      ],
+      "expected_evidence": "Source Data Fig 2.xlsx!Sheet1!B50:I53",
+      "population_id": "P-001",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "MATCH",
+      "outcome_basis": "Two-tailed unpaired Student t-tests recomputed from the deposited replicates reproduce the workbook-stored p-values to within 5e-15 (VSV 0.004186885624489591 vs stored 0.004186885624489595; EMCV 0.001850063890423224 vs stored 0.0018500638904232246)."
+    },
+    {
+      "claim_id": "C-009",
+      "canonical_text": "The Figure 2h experiments comprise n = 3 independent experiments.",
+      "centrality": "DESCRIPTIVE",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:910"
+      ],
+      "expected_evidence": "Source Data Fig 2.xlsx!Sheet1 rows 50-52 and 57-60",
+      "population_id": "P-001",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "ROBUST_MISMATCH",
+      "outcome_basis": "The VSV/EMCV block deposits 3 replicate rows (consistent with the legend) but the H1N1/HSV-1 block deposits 4 replicate rows for every arm. Re-reading the block boundaries and re-counting confirmed 4 rows; no alternative row grouping yields 3."
+    },
+    {
+      "claim_id": "C-010",
+      "canonical_text": "ZNFX1 specifically restricts RNA viruses and not the DNA virus HSV-1.",
+      "centrality": "CENTRAL",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:88 (Abstract)",
+        "manuscript_extracted.txt:907"
+      ],
+      "expected_evidence": "Source Data Fig 2.xlsx Figure 2g/2h HSV-1 arms",
+      "population_id": null,
+      "depends_on": [
+        "C-008"
+      ],
+      "calculation_required": false,
+      "outcome": "NOT_CHECKED",
+      "outcome_basis": "HSV-1 arms are deposited; the non-significance claim was not independently recomputed within the audit budget."
+    },
+    {
+      "claim_id": "C-011",
+      "canonical_text": "Znfx1-/- mice carry higher VSV load and lower Ifnb1 in lung and liver (n = 4 mice per group).",
+      "centrality": "CENTRAL",
+      "study_id": "S-002",
+      "occurrences": [
+        "manuscript_extracted.txt:1079-1080"
+      ],
+      "expected_evidence": "Source Data Fig 3.xlsx Figure 3a/3b blocks",
+      "population_id": "P-005",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "MATCH",
+      "outcome_basis": "Each genotype-treatment cell deposits 4 values (8 per row across two genotypes), equal to the legend-stated n = 4 mice per group."
+    },
+    {
+      "claim_id": "C-012",
+      "canonical_text": "Serum IFN-alpha and IFN-beta differ between wild-type and Znfx1-/- mice after VSV or HSV-1 (8 or 4 mice per group).",
+      "centrality": "SUPPORTING",
+      "study_id": "S-002",
+      "occurrences": [
+        "manuscript_extracted.txt:1081"
+      ],
+      "expected_evidence": "Source Data Fig 3.xlsx Figure 3c blocks",
+      "population_id": "P-005",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "MATCH",
+      "outcome_basis": "The VSV blocks deposit 16 values per row (8 per genotype) and the HSV-1 blocks 8 values per row (4 per genotype), matching the legend's '8 or 4 mice per group'."
+    },
+    {
+      "claim_id": "C-013",
+      "canonical_text": "Survival of wild-type and Znfx1-/- mice after VSV injection was assessed with n = 10 mice per group.",
+      "centrality": "CENTRAL",
+      "study_id": "S-002",
+      "occurrences": [
+        "manuscript_extracted.txt:1083"
+      ],
+      "expected_evidence": "Source Data Fig 3.xlsx!Sheet1!B32:C41",
+      "population_id": "P-002",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "ROBUST_MISMATCH",
+      "outcome_basis": "The deposited Figure 3f series never exceeds 5 in either genotype column (wt starts at 5 and ends at 3; Znfx1-/- starts at 5 and ends at 1), so the deposited data describe at most 5 animals at risk per group against a legend-stated n = 10. A percent-survival reading was tested and rejected (values are integers 1-5, not a 0-100 scale). A pooled two-cohort reading that would reach 10 requires a second cohort that is not deposited."
+    },
+    {
+      "claim_id": "C-014",
+      "canonical_text": "ZNFX1 is localised to mitochondria.",
+      "centrality": "CENTRAL",
+      "study_id": "S-004",
+      "occurrences": [
+        "manuscript_extracted.txt:84 (Title)",
+        "manuscript_extracted.txt:88 (Abstract)"
+      ],
+      "expected_evidence": "Numeric source data underlying Figure 4 panels",
+      "population_id": null,
+      "depends_on": [],
+      "calculation_required": false,
+      "outcome": "BLOCKED",
+      "outcome_basis": "Only uncropped blot scans were supplied for Figure 4; no numeric or image-quantification data are available, and image forensics is outside this audit's validated scope."
+    },
+    {
+      "claim_id": "C-015",
+      "canonical_text": "ZNFX1 recognises viral RNA through its Armadillo-type fold and P-loop domain.",
+      "centrality": "CENTRAL",
+      "study_id": "S-004",
+      "occurrences": [
+        "manuscript_extracted.txt:88 (Abstract)"
+      ],
+      "expected_evidence": "Numeric source data underlying Figure 5 panels",
+      "population_id": null,
+      "depends_on": [],
+      "calculation_required": false,
+      "outcome": "BLOCKED",
+      "outcome_basis": "Only uncropped blot scans were supplied for Figure 5; no numeric binding data are available."
+    },
+    {
+      "claim_id": "C-016",
+      "canonical_text": "ZNFX1 interacts with MAVS to initiate the type I IFN response.",
+      "centrality": "CENTRAL",
+      "study_id": "S-004",
+      "occurrences": [
+        "manuscript_extracted.txt:84 (Title)",
+        "manuscript_extracted.txt:88 (Abstract)"
+      ],
+      "expected_evidence": "Numeric source data underlying Figure 6 panels",
+      "population_id": null,
+      "depends_on": [],
+      "calculation_required": false,
+      "outcome": "BLOCKED",
+      "outcome_basis": "Only uncropped blot scans were supplied for Figure 6; no numeric interaction data are available."
+    },
+    {
+      "claim_id": "C-017",
+      "canonical_text": "ZNFX1 induces Ifnb1 without depending on RIG-I or MDA5, but requires MAVS.",
+      "centrality": "CENTRAL",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:88 (Abstract)",
+        "manuscript_extracted.txt:2535-2536 (Fig 7a,7b legend)"
+      ],
+      "expected_evidence": "Source Data Fig 7.xlsx Figure 7a/7b blocks",
+      "population_id": null,
+      "depends_on": [
+        "C-016"
+      ],
+      "calculation_required": false,
+      "outcome": "NOT_CHECKED",
+      "outcome_basis": "Deposited 3-replicate blocks for WT, Rig-i-/-, Mda5-/- and Mavs-/- are present and structurally match legend n=3; panel statistics not recomputed."
+    },
+    {
+      "claim_id": "C-018",
+      "canonical_text": "Figure 7c reports cellular VSV and EMCV loads in wild-type or Mda5-/- A549 cells.",
+      "centrality": "DESCRIPTIVE",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:2537"
+      ],
+      "expected_evidence": "Source Data Fig 7.xlsx!Sheet1!B38:K43 row labels",
+      "population_id": "P-006",
+      "depends_on": [],
+      "calculation_required": false,
+      "outcome": "ROBUST_MISMATCH",
+      "outcome_basis": "The deposited Figure 7c block is labelled 'Rig-i -/-' and 'Mda5 -/-' in both the VSV and the EMCV half; no wild-type row is deposited. The legend names 'wild-type or Mda5-/-'. Both readings were tested and cannot be reconciled without an undeposited wild-type arm."
+    },
+    {
+      "claim_id": "C-019",
+      "canonical_text": "The Figure 7c replicate series are internally consistent within each treatment group.",
+      "centrality": "DESCRIPTIVE",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:2537"
+      ],
+      "expected_evidence": "Source Data Fig 7.xlsx!Sheet1!G38:G40",
+      "population_id": "P-006",
+      "depends_on": [
+        "C-018"
+      ],
+      "calculation_required": true,
+      "outcome": "MAPPING_AMBIGUITY",
+      "outcome_basis": "Cell G40 (4,176.86) is 10.5x below the mean of its two sibling replicates (45,514.85 and 42,552.97) in the same MDA5+VSV group. A decimal-shift transcription error and a genuine biological outlier are both consistent with the deposited evidence; the package contains no raw instrument output that would discriminate them."
+    },
+    {
+      "claim_id": "C-020",
+      "canonical_text": "The P values printed on Figure 7g (P = 0.0004 for Ifnb1, P = 0.0001 for Ifit1) derive from the deposited Figure 7g data.",
+      "centrality": "SUPPORTING",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:2463",
+        "manuscript_extracted.txt:2464"
+      ],
+      "expected_evidence": "Source Data Fig 7.xlsx!Sheet1!J62:K67",
+      "population_id": "P-003",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "MAPPING_AMBIGUITY",
+      "outcome_basis": "The deposited Figure 7g block contains only two columns, 'EV' and 'EV+VSV', whereas the published panel displays EV, ZNFX1, EV+VSV and ZNFX1+VSV arms. Recomputing the only deposited contrast gives P = 0.00749 (Ifnb1) and P = 0.00434 (Ifit1), neither of which equals a printed value; but the panel design implies the printed P values compare the +VSV arms with and without ZNFX1, and those ZNFX1 arms are not deposited. The printed values therefore cannot be attributed to, or refuted by, the deposited contrast."
+    },
+    {
+      "claim_id": "C-021",
+      "canonical_text": "Figure 7e provides statistical analysis of the repeated FACS experiments shown in Figure 7d.",
+      "centrality": "SUPPORTING",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:2539-2540"
+      ],
+      "expected_evidence": "Source Data Fig 7.xlsx!Sheet1!J48:K58",
+      "population_id": null,
+      "depends_on": [],
+      "calculation_required": false,
+      "outcome": "MAPPING_AMBIGUITY",
+      "outcome_basis": "The deposited Figure 7e block contains only 'EV' and 'EV+VSV-GFP' columns for WT, Rig-i-/- and Mda5-/-, while Figure 7d is described as transfecting ZNFX1, RIG-I or MDA5 plasmids or EV. The ZNFX1/RIG-I/MDA5 arms needed to reproduce the 7e comparison are not deposited."
+    },
+    {
+      "claim_id": "C-022",
+      "canonical_text": "P values throughout were calculated using a two-tailed unpaired Student's t-test.",
+      "centrality": "DESCRIPTIVE",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:602",
+        "manuscript_extracted.txt:911",
+        "manuscript_extracted.txt:2853-2854"
+      ],
+      "expected_evidence": "Source Data Fig 2.xlsx!Sheet1!E53 and I53 stored p-values",
+      "population_id": "P-001",
+      "depends_on": [],
+      "calculation_required": true,
+      "outcome": "MATCH",
+      "outcome_basis": "Where a stored p-value exists in the deposited workbooks, the equal-variance (Student) t-test reproduces it exactly, while the Welch variant does not (0.0237 and 0.0110). The stated test is therefore the test actually used for those cells."
+    },
+    {
+      "claim_id": "C-023",
+      "canonical_text": "Statistical source data for Fig. 1-7 and Supplementary Fig. 1-6 are provided, and uncropped blots are provided.",
+      "centrality": "DESCRIPTIVE",
+      "study_id": "S-001",
+      "occurrences": [
+        "manuscript_extracted.txt:3011",
+        "manuscript_extracted.txt:2863"
+      ],
+      "expected_evidence": "The supplied package as inventoried",
+      "population_id": null,
+      "depends_on": [],
+      "calculation_required": false,
+      "outcome": "ROBUST_MISMATCH",
+      "outcome_basis": "The package supplied to this audit contains statistical source data for Figures 1, 2, 3 and 7 only. Figures 4, 5 and 6 are represented solely by uncropped blot scans with no numeric data, and no Supplementary Fig. 1-6 or Extended Data source data are present. This is a statement about the package as supplied to the audit and does not establish what the journal holds."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F-001",
+      "item_type": "RESEARCH_PACKAGE_FINDING",
+      "title": "Figure 2h H1N1/HSV-1 block deposits four replicate rows while the legend states n = 3",
+      "primary_category": "REPLICATE_COUNT_CORRESPONDENCE",
+      "claim_ids": [
+        "C-009"
+      ],
+      "evidence_status": [
+        "DIRECTLY_INSPECTED",
+        "RECOMPUTED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MINOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "The printed P values for the H1N1 and HSV-1 sub-panels could not be mapped to the deposited block from the text layer, so the effect of the extra replicate row on the reported statistic was not tested.",
+      "assessment_label": "CONCERN",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 2,
+      "reviewer_action": "Ask the authors to confirm the number of independent experiments for each Figure 2h sub-panel and to align the legend with the deposited rows.",
+      "evidence_locator": "Source Data Fig 2.xlsx!Sheet1!B57:I60 (4 rows) vs manuscript_extracted.txt:910"
+    },
+    {
+      "finding_id": "F-002",
+      "item_type": "RESEARCH_PACKAGE_FINDING",
+      "title": "Figure 3f survival legend states n = 10 mice per group; deposited series describe at most 5 per group",
+      "primary_category": "DENOMINATOR_CORRESPONDENCE",
+      "claim_ids": [
+        "C-013"
+      ],
+      "evidence_status": [
+        "DIRECTLY_INSPECTED",
+        "RECOMPUTED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MAJOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "The survival test statistic printed for the panel was not recoverable from the text layer and the timepoint units are not deposited, so the audit did not test whether the group size changes the reported survival difference.",
+      "assessment_label": "CONCERN",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 1,
+      "reviewer_action": "Ask the authors for the per-animal survival table (one row per mouse, with time of death or censoring) and confirm the group size used for the Gehan-Breslow-Wilcoxon test.",
+      "evidence_locator": "Source Data Fig 3.xlsx!Sheet1!B32:C41 (max value 5) vs manuscript_extracted.txt:1083"
+    },
+    {
+      "finding_id": "F-003",
+      "item_type": "RESEARCH_PACKAGE_FINDING",
+      "title": "Figure 7c legend names wild-type cells; the deposited block is labelled Rig-i-/- and Mda5-/-",
+      "primary_category": "GROUP_LABEL_CORRESPONDENCE",
+      "claim_ids": [
+        "C-018"
+      ],
+      "evidence_status": [
+        "DIRECTLY_INSPECTED",
+        "CROSS_DOCUMENT_MATCH"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MAJOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "Which label is correct cannot be determined from the package; the genotype assignment bears directly on the RLR-independence interpretation but the audit has no evidence establishing which arm was actually run.",
+      "assessment_label": "CONCERN",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 1,
+      "reviewer_action": "Ask the authors which genotypes were used in Figure 7c and to correct either the legend or the deposited row labels.",
+      "evidence_locator": "Source Data Fig 7.xlsx!Sheet1!B38 and B41 vs manuscript_extracted.txt:2537"
+    },
+    {
+      "finding_id": "F-004",
+      "item_type": "RESEARCH_PACKAGE_FINDING",
+      "title": "One Figure 7c replicate is about ten-fold below its two sibling replicates",
+      "primary_category": "INTERNAL_CONSISTENCY",
+      "claim_ids": [
+        "C-019"
+      ],
+      "evidence_status": [
+        "DIRECTLY_INSPECTED",
+        "RECOMPUTED"
+      ],
+      "certainty": "MEDIUM",
+      "verification_impact": "MINOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "A decimal-shift transcription error and a genuine outlier are equally consistent with the deposited evidence; no raw instrument output was supplied to discriminate them.",
+      "assessment_label": "UNRESOLVED",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 3,
+      "reviewer_action": "Ask the authors to confirm the value in this cell against the original qPCR output.",
+      "evidence_locator": "Source Data Fig 7.xlsx!Sheet1!G40 = 4176.859 vs G38 = 45514.851 and G39 = 42552.971"
+    },
+    {
+      "finding_id": "F-005",
+      "item_type": "RESEARCH_PACKAGE_FINDING",
+      "title": "Data-availability statement promises broader source data than the supplied package contains",
+      "primary_category": "PACKAGE_COMPLETENESS",
+      "claim_ids": [
+        "C-023"
+      ],
+      "evidence_status": [
+        "DIRECTLY_INSPECTED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MAJOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "Scoped to the package supplied to this audit. The audit cannot determine whether the journal or the authors hold the additional files, so no impact on the published results has been evaluated.",
+      "assessment_label": "CONCERN",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 2,
+      "reviewer_action": "Confirm whether numeric source data for Figures 4-6, the Extended Data figures and Supplementary Figs 1-6 exist and can be added to the package.",
+      "evidence_locator": "manuscript_extracted.txt:3011 vs audit-evidence/inventory.json (8 files)"
+    },
+    {
+      "finding_id": "F-006",
+      "item_type": "RESEARCH_PACKAGE_FINDING",
+      "title": "Figure 2h VSV and EMCV p-values reproduce exactly from the deposited replicates using the stated test",
+      "primary_category": "STATISTICAL_REPRODUCTION",
+      "claim_ids": [
+        "C-008",
+        "C-022"
+      ],
+      "evidence_status": [
+        "RECOMPUTED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "NONE",
+      "result_correctness_impact": "NONE_DEMONSTRATED",
+      "impact_status": "EVALUATED",
+      "severity": "NOT_APPLICABLE",
+      "severity_basis": "Completed check that supports correspondence within its scope.",
+      "assessment_label": "POSITIVE",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 4,
+      "reviewer_action": "No action required; this check supports correspondence for these two cells only.",
+      "evidence_locator": "Recomputed 0.004186885624489591 vs stored E53 = 0.004186885624489595; recomputed 0.001850063890423224 vs stored I53 = 0.0018500638904232246"
+    },
+    {
+      "finding_id": "F-007",
+      "item_type": "RESEARCH_PACKAGE_FINDING",
+      "title": "Clinical-sample and mouse group sizes match the legend-stated n where they are deposited",
+      "primary_category": "SAMPLE_SIZE_CORRESPONDENCE",
+      "claim_ids": [
+        "C-003",
+        "C-004",
+        "C-011",
+        "C-012"
+      ],
+      "evidence_status": [
+        "RECOMPUTED",
+        "DIRECTLY_INSPECTED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "NONE",
+      "result_correctness_impact": "NONE_DEMONSTRATED",
+      "impact_status": "EVALUATED",
+      "severity": "NOT_APPLICABLE",
+      "severity_basis": "Completed check that supports correspondence within its scope.",
+      "assessment_label": "POSITIVE",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 4,
+      "reviewer_action": "No action required.",
+      "evidence_locator": "Fig 1f 9/14, Fig 1g 18, Fig 3a-b 4 per group, Fig 3c 8 and 4 per group"
+    },
+    {
+      "finding_id": "F-008",
+      "item_type": "RESEARCH_PACKAGE_FINDING",
+      "title": "Control arms are deposited as the exact constant 1 with zero variance",
+      "primary_category": "NORMALISATION_STRUCTURE",
+      "claim_ids": [
+        "C-008",
+        "C-020"
+      ],
+      "evidence_status": [
+        "DIRECTLY_INSPECTED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MINOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "A factual structural condition. Whether it affects any reported statistic depends on which contrasts the printed P values represent, which the package does not establish for the affected panels.",
+      "assessment_label": "NEUTRAL",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 3,
+      "reviewer_action": "Note when reading the panels: where a t-test compares a treated arm against a fold-change reference fixed at 1.0, the spread comes entirely from the treated arm.",
+      "evidence_locator": "Source Data Fig 2.xlsx!Sheet1!B50:C52 and F50:G52; Source Data Fig 7.xlsx!Sheet1!J62:J67 and C38:C43"
+    }
+  ],
+  "limitations": [
+    {
+      "finding_id": "L-001",
+      "item_type": "VERIFICATION_LIMITATION",
+      "title": "No numeric source data for Figures 4, 5 and 6",
+      "primary_category": "MISSING_EVIDENCE",
+      "claim_ids": [
+        "C-014",
+        "C-015",
+        "C-016"
+      ],
+      "evidence_status": [
+        "BLOCKED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "COMPLETE_BLOCK",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "Missing evidence blocks verification; it does not indicate that the underlying results are wrong.",
+      "assessment_label": "LIMITATION",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 1,
+      "reviewer_action": "Request quantification tables for the Figure 4-6 panels if these claims need to be verified numerically."
+    },
+    {
+      "finding_id": "L-002",
+      "item_type": "VERIFICATION_LIMITATION",
+      "title": "Figure 7g deposits two of the four displayed groups, so its printed P values cannot be attributed",
+      "primary_category": "INCOMPLETE_GROUP_COVERAGE",
+      "claim_ids": [
+        "C-020"
+      ],
+      "evidence_status": [
+        "BLOCKED",
+        "RECOMPUTED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MAJOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "The contrast the printed P values represent is not deposited, so no mismatch can be demonstrated and none is claimed.",
+      "assessment_label": "LIMITATION",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 2,
+      "reviewer_action": "Request the ZNFX1 and ZNFX1+VSV replicate values for Figure 7g and confirm which pair each printed P value compares."
+    },
+    {
+      "finding_id": "L-003",
+      "item_type": "VERIFICATION_LIMITATION",
+      "title": "Figure 7e deposits only the empty-vector arms",
+      "primary_category": "INCOMPLETE_GROUP_COVERAGE",
+      "claim_ids": [
+        "C-021"
+      ],
+      "evidence_status": [
+        "BLOCKED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MAJOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "Missing arms block the comparison; no discrepancy is demonstrated.",
+      "assessment_label": "LIMITATION",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 2,
+      "reviewer_action": "Request the ZNFX1, RIG-I and MDA5 transfection arms for the Figure 7d/7e FACS quantification."
+    },
+    {
+      "finding_id": "L-004",
+      "item_type": "VERIFICATION_LIMITATION",
+      "title": "No analysis code, scripts or workflow supplied",
+      "primary_category": "NO_EXECUTABLE_WORKFLOW",
+      "claim_ids": [
+        "C-008",
+        "C-022"
+      ],
+      "evidence_status": [
+        "NOT_APPLICABLE"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MAJOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "Execution-based verification is unavailable; independent recomputation was substituted where the deposited data allowed.",
+      "assessment_label": "LIMITATION",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 3,
+      "reviewer_action": "None required for a wet-lab package of this type; noted so the execution status is not mistaken for a failed run."
+    },
+    {
+      "finding_id": "L-005",
+      "item_type": "VERIFICATION_LIMITATION",
+      "title": "Extended Data and Supplementary figure source data absent from the package",
+      "primary_category": "MISSING_EVIDENCE",
+      "claim_ids": [
+        "C-023"
+      ],
+      "evidence_status": [
+        "BLOCKED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MAJOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "Absent artifacts are unavailable evidence, not evidence of error.",
+      "assessment_label": "LIMITATION",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 3,
+      "reviewer_action": "Confirm whether these files exist and should have been supplied."
+    },
+    {
+      "finding_id": "L-006",
+      "item_type": "VERIFICATION_LIMITATION",
+      "title": "Figure 3f timepoint units and per-animal records are not deposited",
+      "primary_category": "INSUFFICIENT_GRANULARITY",
+      "claim_ids": [
+        "C-013"
+      ],
+      "evidence_status": [
+        "BLOCKED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "MAJOR",
+      "result_correctness_impact": "NOT_DETERMINED",
+      "impact_status": "NOT_EVALUATED",
+      "severity": "UNDETERMINED",
+      "severity_basis": "The survival statistic cannot be recomputed without event times, so the effect of the group-size discrepancy on the reported result is untested.",
+      "assessment_label": "LIMITATION",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 2,
+      "reviewer_action": "Request the per-animal survival table."
+    },
+    {
+      "finding_id": "B-001",
+      "item_type": "AUDIT_LIMITATION",
+      "title": "Image forensics on the uncropped blot scans was not performed",
+      "primary_category": "SPECIALIST_METHOD_NOT_VALIDATED",
+      "claim_ids": [
+        "C-014",
+        "C-015",
+        "C-016"
+      ],
+      "evidence_status": [
+        "NOT_CHECKED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "NOT_DETERMINED",
+      "result_correctness_impact": "NOT_APPLICABLE",
+      "impact_status": "NOT_APPLICABLE",
+      "severity": "NOT_APPLICABLE",
+      "severity_basis": "Declared out of scope; no validated image-forensics tooling was available to this audit.",
+      "assessment_label": "NOT_ASSESSED",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 3,
+      "reviewer_action": "Route the Figure 4-6 blot scans to a specialist image-integrity check if that assurance is needed. SPECIALIST_METHOD_VALIDATION: NOT_ASSESSED."
+    },
+    {
+      "finding_id": "B-002",
+      "item_type": "AUDIT_LIMITATION",
+      "title": "Seven deposited claims were not independently recomputed",
+      "primary_category": "FEASIBLE_WORK_NOT_COMPLETED",
+      "claim_ids": [
+        "C-001",
+        "C-002",
+        "C-005",
+        "C-006",
+        "C-007",
+        "C-010",
+        "C-017"
+      ],
+      "evidence_status": [
+        "NOT_CHECKED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "NOT_DETERMINED",
+      "result_correctness_impact": "NOT_APPLICABLE",
+      "impact_status": "NOT_APPLICABLE",
+      "severity": "NOT_APPLICABLE",
+      "severity_basis": "Feasible work that this audit did not complete; recorded so that unchecked is not read as checked-and-clean.",
+      "assessment_label": "NOT_ASSESSED",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 3,
+      "reviewer_action": "These panels have deposited replicate data and could be recomputed in a follow-up pass."
+    },
+    {
+      "finding_id": "B-003",
+      "item_type": "AUDIT_LIMITATION",
+      "title": "Panel-to-P-value mapping relies on the manuscript text layer and is positional for some panels",
+      "primary_category": "MAPPING_METHOD_LIMITATION",
+      "claim_ids": [
+        "C-009",
+        "C-020"
+      ],
+      "evidence_status": [
+        "INFERRED"
+      ],
+      "certainty": "DEMONSTRATED",
+      "verification_impact": "NOT_DETERMINED",
+      "result_correctness_impact": "NOT_APPLICABLE",
+      "impact_status": "NOT_APPLICABLE",
+      "severity": "NOT_APPLICABLE",
+      "severity_basis": "Method limitation affecting which printed statistics could be tied to which panel.",
+      "assessment_label": "NOT_ASSESSED",
+      "misconduct_inference": "NONE",
+      "include_in_technical": true,
+      "include_in_brief": true,
+      "review_priority": 3,
+      "reviewer_action": "Confirm panel-to-P assignments against the typeset figures before acting on any P-value-specific query."
+    }
+  ],
+  "coverage": {
+    "claims_total": 23,
+    "claim_outcomes": {
+      "MATCH": 6,
+      "ROBUST_MISMATCH": 4,
+      "SPECIFICATION_DEPENDENT": 0,
+      "MAPPING_AMBIGUITY": 3,
+      "BLOCKED": 3,
+      "NOT_CHECKED": 7,
+      "NOT_APPLICABLE": 0,
+      "DEPENDENCY_UNRESOLVED": 0
+    },
+    "claim_occurrences_total": 31,
+    "distinct_discrepancies": 4,
+    "research_package_findings": 8,
+    "verification_limitations": 6,
+    "audit_limitations": 3,
+    "files_inventoried": 8,
+    "files_readable": 8,
+    "reconciliation": "PASS",
+    "reconciliation_note": "claim_outcomes sum to claims_total (23). Findings (8), verification limitations (6) and audit limitations (3) are counted in mutually exclusive registers and are not summed with claims."
+  },
+  "validation": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": []
+  }
+}

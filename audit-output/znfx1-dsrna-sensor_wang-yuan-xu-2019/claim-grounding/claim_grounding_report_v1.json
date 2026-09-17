@@ -1,0 +1,1132 @@
+{
+  "version": "claim_grounding_report_v1",
+  "generated_at": "2026-09-16T07:19:04Z",
+  "source_ref": {
+    "artifact": "s41556-019-0416-0.pdf",
+    "title": "Mitochondria-localised ZNFX1 functions as a dsRNA sensor to initiate antiviral responses through MAVS",
+    "doi": "10.1038/s41556-019-0416-0",
+    "venue": "Nature Cell Biology 21, 1346-1356 (2019)",
+    "extracted_text": "audit-output/znfx1-dsrna-sensor_wang-yuan-xu-2019/supporting-files/manuscript_extracted.txt",
+    "scope": "Citation-backed claims in the Introduction, the screen-validation sentence in Results, and the Discussion. Claims resting on the manuscript's own experiments (support_type calculation / assumption) are out of scope for this skill.",
+    "resolver_record_sha256": "sha256:d0cc00dc858683ea119c44164a7d9d9271c26c6b0edebf7de384cdc1a6be9f77"
+  },
+  "grading_policy": {
+    "span_rule": "substantiated and partial require at least one verbatim quote from a fetched source, with a locator, drawn from one of the entry's own evidence_uris.",
+    "identity_gate": "Each evidence_uri carries one citation_identities entry. A mismatch downgrades an otherwise positive verdict to not_substantiated; metadata_unavailable downgrades to source_unavailable.",
+    "verification_status": "Derived: substantiated -> verified, conflicting -> falsified, otherwise unverified.",
+    "grounding_risk_score": "Mean per-claim weight over all claims. Weights: substantiated 0.0, partial 0.5, source_unavailable 0.5, not_substantiated 1.0, conflicting 1.0. Higher is riskier.",
+    "source_content": "Europe PMC REST (resultType=core) abstracts, keyed by canonical DOI. Where a claim's specific content would only appear in a paywalled full text, that is stated in the claim notes rather than graded as if the full text had been read."
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim_text": "Upon viral infection, virus-derived nucleic acids are mainly sensed by two cytosolic nucleic acid sensors, the DNA sensor cGAS and the RIG-I-like receptors (RLRs), including RIG-I and MDA5.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1038/nature12306",
+        "https://doi.org/10.1126/science.1229963",
+        "https://doi.org/10.1038/ni1087",
+        "https://doi.org/10.1126/science.1132998",
+        "https://doi.org/10.1038/nature04734",
+        "https://doi.org/10.1038/nature13590"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1126/science.1229963",
+          "quote": "Cytosolic DNA induces type I interferons and other cytokines that are important for antimicrobial defense... cGAMP bound to STING, leading to the activation of IRF3 and induction of interferon-beta.",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/ni1087",
+          "quote": "we identify retinoic acid inducible gene I (RIG-I), which encodes a DExD/H box RNA helicase that contains a caspase recruitment domain, as an essential regulator for dsRNA-induced signaling",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature04734",
+          "quote": "our data show that RIG-I and MDA5 distinguish different RNA viruses and are critical for host antiviral responses",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Six citations, three independently quoted; the remaining three (refs 1, 4, 6) are congruent title-level support for the same proposition.",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature12306",
+          "reference_number": 1,
+          "input": {
+            "displayed": "Ablasser, A. et al. Nature 498, 380-384 (2013)",
+            "canonical": "cGAS produces a 2'-5'-linked cyclic dinucleotide second messenger that activates STING. Nature 498, 380-384 (2013)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1126/science.1229963",
+          "reference_number": 2,
+          "input": {
+            "displayed": "Wu, J. et al. Science 339, 826-830 (2013)",
+            "canonical": "Cyclic GMP-AMP is an endogenous second messenger in innate immune signaling by cytosolic DNA. Science 339, 826-830 (2013)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/ni1087",
+          "reference_number": 3,
+          "input": {
+            "displayed": "Yoneyama, M. et al. Nat. Immunol. 5, 730-737 (2004)",
+            "canonical": "The RNA helicase RIG-I has an essential function in double-stranded RNA-induced innate antiviral responses. Nat. Immunol. 5, 730-737 (2004)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1126/science.1132998",
+          "reference_number": 4,
+          "input": {
+            "displayed": "Pichlmair, A. et al. Science 314, 997-1001 (2006)",
+            "canonical": "RIG-I-mediated antiviral responses to single-stranded RNA bearing 5'-phosphates. Science 314, 997-1001 (2006)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature04734",
+          "reference_number": 5,
+          "input": {
+            "displayed": "Kato, H. et al. Nature 441, 101-105 (2006)",
+            "canonical": "Differential roles of MDA5 and RIG-I helicases in the recognition of RNA viruses. Nature 441, 101-105 (2006)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature13590",
+          "reference_number": 6,
+          "input": {
+            "displayed": "Goubau, D. et al. Nature 514, 372-375 (2014)",
+            "canonical": "Antiviral immunity via RIG-I-mediated recognition of RNA bearing 5'-diphosphates. Nature 514, 372-375 (2014)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "claim_text": "Many other nucleic acid sensors, including several DExD/H box helicases, have been identified in a wide range of cell types to supplement the functions of RLRs and cGAS.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1016/j.tibs.2015.08.001"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.tibs.2015.08.001",
+          "quote": "A growing number of these helicases contribute to the innate immune system, either as sensors that detect foreign nucleic acids and/or as effectors that directly participate in the clearance of such foreign species.",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.tibs.2015.08.001",
+          "reference_number": 7,
+          "input": {
+            "displayed": "Trends Biochem. Sci. 40, 576-585 (2015)",
+            "canonical": "Helicases in Antiviral Immunity: Dual Properties as Sensors and Effectors. Trends Biochem. Sci. 40, 576-585 (2015)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "claim_text": "DDX60 is involved in RIG-I-dependent and -independent antiviral responses.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1016/j.celrep.2015.04.047"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.celrep.2015.04.047",
+          "quote": "we show that DDX60 is involved in RIG-I-independent viral RNA degradation",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.celrep.2015.04.047",
+          "quote": "We show that DDX60 is an upstream factor of RIG-I that activates RIG-I signaling in a ligand-specific manner.",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.celrep.2015.04.047",
+          "reference_number": 8,
+          "input": {
+            "displayed": "Cell Rep. 11, 1193-1207 (2015)",
+            "canonical": "DDX60 Is Involved in RIG-I-Dependent and Independent Antiviral Responses... Cell Rep. 11, 1193-1207 (2015)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "claim_text": "DDX1, DDX21 and DHX36 helicases form a complex with TRIF to sense dsRNA in dendritic cells.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1016/j.immuni.2011.03.027"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.immuni.2011.03.027",
+          "quote": "the DDX1-DDX21-DHX36 complex represents a dsRNA sensor that uses the TRIF pathway to activate type I IFN responses in the cytosol of mDCs",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.immuni.2011.03.027",
+          "reference_number": 9,
+          "input": {
+            "displayed": "Immunity 34, 866-878 (2011)",
+            "canonical": "DDX1, DDX21, and DHX36 helicases form a complex with the adaptor molecule TRIF to sense dsRNA in dendritic cells. Immunity 34, 866-878 (2011)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "claim_text": "DHX9 mediates NLRP9b recognition of dsRNA stretches and forms inflammasome complexes to promote the maturation of interleukin (IL)-18 and gasdermin D-induced pyroptosis.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.4049/jimmunol.1101307"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "not_substantiated",
+      "supporting_spans": [],
+      "notes": "The cited work characterises DHX9 as a dsRNA sensor acting through IPS-1/MAVS in myeloid dendritic cells. Its abstract contains no mention of NLRP9b, inflammasome assembly, IL-18 maturation or gasdermin D-dependent pyroptosis; the nearest statement is 'DHX9 is an important RNA sensor that is dependent on IPS-1 to sense pathogenic RNA'. No span supports the claim, so it cannot be graded positive. The NLRP9b/IL-18/gasdermin D result appears to belong to a different report (Zhu et al., Nature 546, 667-670, 2017).",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.4049/jimmunol.1101307",
+          "reference_number": 10,
+          "input": {
+            "displayed": "Zhang, Z. et al. J. Immunol. 187, 4501-4508 (2011)",
+            "canonical": "DHX9 pairs with IPS-1 to sense double-stranded RNA in myeloid dendritic cells. J. Immunol. 187, 4501-4508 (2011)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "claim_text": "NLRP6 binds viral RNA via DHX15 and interacts with mitochondrial antiviral signalling protein (MAVS) to induce type I/III interferons (IFNs).",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1126/science.aab3145"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1126/science.aab3145",
+          "quote": "Nlrp6 bound viral RNA via the RNA helicase Dhx15 and interacted with mitochondrial antiviral signaling protein to induce type I/III interferons (IFNs) and IFN-stimulated genes (ISGs)",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Near-verbatim correspondence.",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1126/science.aab3145",
+          "reference_number": 11,
+          "input": {
+            "displayed": "Science 350, 826-830 (2015)",
+            "canonical": "Nlrp6 regulates intestinal antiviral innate immunity. Science 350, 826-830 (2015)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "claim_text": "Helicase SF1 is rarely characterized in sensing pathogenic nucleic acids, although these proteins share a conserved core composed of two tandem RecA domains with ATPase activity and RNA binding ability.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1146/annurev.biochem.76.052305.115300",
+        "https://doi.org/10.1016/j.sbi.2010.03.011",
+        "https://doi.org/10.1038/nrm3154"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "partial",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.sbi.2010.03.011",
+          "quote": "SF1 and SF2 helicases share a catalytic core with high structural similarity, but different enzymes even within each SF perform a wide spectrum of distinct functions on diverse substrates.",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1146/annurev.biochem.76.052305.115300",
+          "quote": "we delineate six superfamilies of enzymes, with examples of crystal structures where available, and discuss these structures in the context of biochemical data to outline our present understanding of helicase and translocase activity",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Refs 12 and 13 support a shared SF1/SF2 catalytic core. Ref 14 is a review of the DEAD-box family, which is SF2, not SF1; nothing in it speaks to SF1 or to the RecA-domain architecture, so it is carried by the bundle rather than supporting it. The specific wording 'two tandem RecA domains' is not stated in any of the three abstracts.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1146/annurev.biochem.76.052305.115300",
+          "reference_number": 12,
+          "input": {
+            "displayed": "Annu. Rev. Biochem. 76, 23-50 (2007)",
+            "canonical": "Structure and mechanism of helicases and nucleic acid translocases. Annu. Rev. Biochem. 76, 23-50 (2007)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.sbi.2010.03.011",
+          "reference_number": 13,
+          "input": {
+            "displayed": "Curr. Opin. Struct. Biol. 20, 313-324 (2010)",
+            "canonical": "SF1 and SF2 helicases: family matters. Curr. Opin. Struct. Biol. 20, 313-324 (2010)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nrm3154",
+          "reference_number": 14,
+          "input": {
+            "displayed": "Linder, P. & Jankowsky, E. Nat. Rev. Mol. Cell Biol. 12, 505-516 (2011)",
+            "canonical": "From unwinding to clamping - the DEAD box RNA helicase family. Nat. Rev. Mol. Cell Biol. 12, 505-516 (2011)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "claim_text": "After binding viral-derived nucleic acids to cytosolic viral sensors, two adaptors, MAVS and STING, can be recruited to induce the production of type I IFNs and a number of interferon stimulated genes (ISGs) with antiviral activities.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1016/j.cell.2005.08.012",
+        "https://doi.org/10.1038/nature07317",
+        "https://doi.org/10.1146/annurev-immunol-032713-120231"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.cell.2005.08.012",
+          "quote": "overexpression of MAVS induces the expression of IFN-beta through activation of NF-kappaB and IRF 3, thus boosting antiviral immunity",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature07317",
+          "quote": "a molecule (STING; stimulator of interferon genes) that appears essential for effective innate immune signalling processes... able to activate both NF-kappaB and IRF3 transcription pathways to induce expression of type I interferon",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1146/annurev-immunol-032713-120231",
+          "quote": "Interferon-stimulated gene (ISG) products take on a number of diverse roles. Collectively, they are highly effective at resisting and controlling pathogens.",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Grounded against three of the ten-reference bundle (refs 15, 16, 23); refs 17-22 and 24 are congruent background of the same kind and were not separately quoted.",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.cell.2005.08.012",
+          "reference_number": 15,
+          "input": {
+            "displayed": "Seth, R. B. et al. Cell 122, 669-682 (2005)",
+            "canonical": "Identification and characterization of MAVS... Cell 122, 669-682 (2005)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature07317",
+          "reference_number": 16,
+          "input": {
+            "displayed": "Ishikawa, H. & Barber, G. N. Nature 455, 674-678 (2008)",
+            "canonical": "STING is an endoplasmic reticulum adaptor that facilitates innate immune signalling. Nature 455, 674-678 (2008)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1146/annurev-immunol-032713-120231",
+          "reference_number": 23,
+          "input": {
+            "displayed": "Schneider, W. M. et al. Annu. Rev. Immunol. 32, 513-545 (2014)",
+            "canonical": "Interferon-stimulated genes: a complex web of host defenses. Annu. Rev. Immunol. 32, 513-545 (2014)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "claim_text": "The myxovirus resistance 1 (Mx1) gene product is the inhibitor of virus entry.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1126/science.aaf3926"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "partial",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1126/science.aaf3926",
+          "quote": "we used mice expressing a functional Mx gene encoding a major interferon-induced effector against IAV in humans",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "The span establishes Mx1 as an interferon-induced antiviral effector, which is the general half of the claim. The specific mechanistic half - that Mx1 inhibits virus *entry* - is not supported anywhere in the cited work, which is a study of caspase-dependent pathology and secondary bacterial burden in Mx1-intact mice. Verdict limited to partial on the span rule.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1126/science.aaf3926",
+          "reference_number": 25,
+          "input": {
+            "displayed": "Pillai, P. S. et al. Science 352, 463-466 (2016)",
+            "canonical": "Mx1 reveals innate pathways to antiviral resistance and lethal influenza disease. Science 352, 463-466 (2016)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "claim_text": "The interferon-induced transmembrane (IFITM) family prevents infection before virus can traverse the lipid bilayer of the cell.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1146/annurev-virology-031413-085537"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1146/annurev-virology-031413-085537",
+          "quote": "members of the IFITM (interferon-induced transmembrane) family are unique because they prevent infection before a virus can traverse the lipid bilayer of the cell",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Verbatim.",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1146/annurev-virology-031413-085537",
+          "reference_number": 26,
+          "input": {
+            "displayed": "Bailey, C. C. et al. Annu. Rev. Virol. 1, 261-283 (2014)",
+            "canonical": "IFITM-family proteins: the cell's first line of antiviral defense. Annu. Rev. Virol. 1, 261-283 (2014)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "claim_text": "PKR impedes viral translation through phosphorylation of eIF2a elongation factors.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.4161/viru.23134"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "not_substantiated",
+      "supporting_spans": [],
+      "notes": "The cited mini-review does not discuss eIF2-alpha phosphorylation or translational shutdown at all; its stated subject is a different function - 'PKR is crucial for the integrity of newly synthesized IFN mRNA'. No span supports the claim. Separately, eIF2-alpha is a translation *initiation* factor, so the manuscript's descriptor 'elongation factors' is incorrect independently of the citation.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.4161/viru.23134",
+          "reference_number": 27,
+          "input": {
+            "displayed": "Munir, M. & Berg, M. Virulence 4, 85-89 (2013)",
+            "canonical": "The multiple faces of proteinkinase R in antiviral defense. Virulence 4, 85-89 (2013)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "claim_text": "Tetherin causes the retention of virions on infected cell surfaces.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1038/nature06553",
+        "https://doi.org/10.1038/ni.2229"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature06553",
+          "quote": "it consists of protein-based tethers, which we term 'tetherins', that cause retention of fully formed virions on infected cell surfaces",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Verbatim from ref 28; ref 29 is a congruent review.",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature06553",
+          "reference_number": 28,
+          "input": {
+            "displayed": "Neil, S. J. et al. Nature 451, 425-430 (2008)",
+            "canonical": "Tetherin inhibits retrovirus release and is antagonized by HIV-1 Vpu. Nature 451, 425-430 (2008)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/ni.2229",
+          "reference_number": 29,
+          "input": {
+            "displayed": "Yan, N. & Chen, Z. J. Nat. Immunol. 13, 214-222 (2012)",
+            "canonical": "Intrinsic antiviral immunity. Nat. Immunol. 13, 214-222 (2012)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "claim_text": "In addition to inhibiting a specific viral life cycle stage, some ISGs can enhance innate pathogen-sensing capabilities or positively regulate IFN signalling.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1038/nature09907"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "partial",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature09907",
+          "quote": "Broadly acting effectors included IRF1, C6orf150 (also known as MB21D1), HPSE, RIG-I (also known as DDX58), MDA5 (also known as IFIH1) and IFITM3",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Ref 24 is an ISG overexpression screen; it supports ISG functional diversity and the presence of sensing molecules among ISG effectors, but makes no statement about positive regulation of IFN signalling. The manuscript's phrasing 'enhance innate pathogen-sensing capabilities' tracks the abstract of ref 23 almost word for word - 'ISGs both enhance innate pathogen-sensing capabilities and negatively regulate signaling through the JAK-STAT pathway' - but ref 23 is not the reference attached here, and its polarity on the second half is the opposite of the manuscript's.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature09907",
+          "reference_number": 24,
+          "input": {
+            "displayed": "Schoggins, J. W. et al. Nature 472, 481-485 (2011)",
+            "canonical": "A diverse range of gene products are effectors of the type I interferon antiviral response. Nature 472, 481-485 (2011)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "claim_text": "Polyglutamine binding protein 1 binds to reverse-transcribed HIV-1 DNA and interacts with cGAS to activate the type I IFN response.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1016/j.cell.2015.04.050"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.cell.2015.04.050",
+          "quote": "We found that PQBP1 directly binds to reverse-transcribed HIV-1 DNA and interacts with cGAS to initiate an IRF3-dependent innate response",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Near-verbatim.",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.cell.2015.04.050",
+          "reference_number": 30,
+          "input": {
+            "displayed": "Yoh, S. M. et al. Cell 161, 1293-1305 (2015)",
+            "canonical": "PQBP1 is a proximal sensor of the cGAS-dependent innate response to HIV-1. Cell 161, 1293-1305 (2015)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "claim_text": "RNF128 functions as an E3 ligase for K63-linked ubiquitination and activation of TBK1.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1038/ni.3588"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/ni.3588",
+          "quote": "Our study identified RNF128 as an E3 ligase for K63-linked ubiquitination and activation of TBK1",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Verbatim.",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/ni.3588",
+          "reference_number": 31,
+          "input": {
+            "displayed": "Nat. Immunol. 17, 1342-1351 (2016)",
+            "canonical": "E3 ubiquitin ligase RNF128 promotes innate antiviral immunity through K63-linked ubiquitination of TBK1. Nat. Immunol. 17, 1342-1351 (2016)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "claim_text": "Human IFN-inducible oligoadenylate synthetase-like protein mediates RIG-I activation by mimicking polyubiquitin.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1016/j.immuni.2014.05.007"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.immuni.2014.05.007",
+          "quote": "the human IFN-inducible oligoadenylate synthetases-like (OASL) protein has antiviral activity and mediates RIG-I activation by mimicking polyubiquitin",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Verbatim.",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.immuni.2014.05.007",
+          "reference_number": 32,
+          "input": {
+            "displayed": "Immunity 40, 936-948 (2014)",
+            "canonical": "Antiviral activity of human OASL protein is mediated by enhancing signaling of the RIG-I RNA sensor. Immunity 40, 936-948 (2014)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "claim_text": "We analysed previously published IVT-SAPAS data of VSV-infected monocyte-derived macrophages (MDMs) and identified ZNFX1 (a member of helicase SF1) as an ISG and mitochondrial-localised dsRNA sensor.",
+      "manuscript_locator": "Introduction, p.1346",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1038/ncomms14605"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "partial",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/ncomms14605",
+          "quote": "we show genome-wide poly(A) sites switch and average 3' UTR length shortens gradually in response to vesicular stomatitis virus (VSV) infection in macrophages",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "The citation grounds the data provenance (the IVT-SAPAS dataset from VSV-infected macrophages) but not the conclusion the sentence attaches to it. Ref 33 contains no ZNFX1 content. The identification of ZNFX1 as an ISG and mitochondrial dsRNA sensor is this manuscript's own finding; as written the superscript sits at the end of the whole sentence and reads as external support for it.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/ncomms14605",
+          "reference_number": 33,
+          "input": {
+            "displayed": "Jia, X. et al. Nat. Commun. 8, 14605 (2017)",
+            "canonical": "The role of alternative polyadenylation in the antiviral innate immune response. Nat. Commun. 8, 14605 (2017)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C18",
+      "claim_text": "MOV10, UPF1 and SEXT have been implicated previously in antiviral immunity, validating our screening approach based on RNAi and viral infection.",
+      "manuscript_locator": "Results, p.1346-1347 (lines 109-115)",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1371/journal.pgen.1002941",
+        "https://doi.org/10.1128/jvi.00925-13",
+        "https://doi.org/10.1038/ni.3132"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "partial",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/ni.3132",
+          "quote": "Here we identified a role for SETX in controlling the antiviral response.",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1371/journal.pgen.1002941",
+          "quote": "MOV10 protein, a putative RNA helicase and component of the RNA-induced silencing complex (RISC), inhibits retrovirus replication.",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1128/jvi.00925-13",
+          "quote": "The SF1 helicase MOV10 is an antiviral factor that is incorporated into human immunodeficiency virus type 1 (HIV-1) virions.",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "Refs 34 and 36 support antiviral roles for MOV10 and SETX. Ref 35 does not support an antiviral role for UPF1 - its conclusion is the opposite polarity: 'whereas ectopic MOV10 restricts HIV-1 replication, the related UPF1 helicase functions as a cofactor at an early postentry step'. Note also that the protein name is written 'SEXT' in the manuscript; the gene is SETX (senataxin), as in the title of ref 36.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1371/journal.pgen.1002941",
+          "reference_number": 34,
+          "input": {
+            "displayed": "Goodier, J. L. et al. PLoS Genet. 8, e1002941 (2012)",
+            "canonical": "MOV10 RNA helicase is a potent inhibitor of retrotransposition in cells. PLoS Genet. 8, e1002941 (2012)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1128/jvi.00925-13",
+          "reference_number": 35,
+          "input": {
+            "displayed": "Serquina, A. K. et al. J. Virol. 87, 8853-8861 (2013)",
+            "canonical": "UPF1 is crucial for the infectivity of human immunodeficiency virus type 1 progeny virions. J. Virol. 87, 8853-8861 (2013)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/ni.3132",
+          "reference_number": 36,
+          "input": {
+            "displayed": "Miller, M. S. et al. Nat. Immunol. 16, 485-494 (2015)",
+            "canonical": "Senataxin suppresses the antiviral transcriptional response and controls viral biogenesis. Nat. Immunol. 16, 485-494 (2015)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C19",
+      "claim_text": "Overwhelming evidence has shown that RLRs, including RIG-I and MDA5, are perhaps the most important lines of viral RNA sensing.",
+      "manuscript_locator": "Discussion, p.1354",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1038/ni1087",
+        "https://doi.org/10.1126/science.1132998",
+        "https://doi.org/10.1038/nature04734",
+        "https://doi.org/10.1038/nature13590",
+        "https://doi.org/10.1128/jvi.01080-07"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature04734",
+          "quote": "RIG-I and MDA5 distinguish different RNA viruses and are critical for host antiviral responses",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1128/jvi.01080-07",
+          "quote": "Alpha/beta interferon immune defenses are essential for resistance to viruses and can be triggered through the actions of the cytoplasmic helicases retinoic acid-inducible gene I (RIG-I) and melanoma differentiation-associated gene 5 (MDA5).",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/ni1087",
+          "reference_number": 3,
+          "input": {
+            "displayed": "Yoneyama, M. et al. Nat. Immunol. 5, 730-737 (2004)",
+            "canonical": "The RNA helicase RIG-I has an essential function in double-stranded RNA-induced innate antiviral responses. Nat. Immunol. 5, 730-737 (2004)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1126/science.1132998",
+          "reference_number": 4,
+          "input": {
+            "displayed": "Pichlmair, A. et al. Science 314, 997-1001 (2006)",
+            "canonical": "RIG-I-mediated antiviral responses to single-stranded RNA bearing 5'-phosphates. Science 314, 997-1001 (2006)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature04734",
+          "reference_number": 5,
+          "input": {
+            "displayed": "Kato, H. et al. Nature 441, 101-105 (2006)",
+            "canonical": "Differential roles of MDA5 and RIG-I helicases in the recognition of RNA viruses. Nature 441, 101-105 (2006)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature13590",
+          "reference_number": 6,
+          "input": {
+            "displayed": "Goubau, D. et al. Nature 514, 372-375 (2014)",
+            "canonical": "Antiviral immunity via RIG-I-mediated recognition of RNA bearing 5'-diphosphates. Nature 514, 372-375 (2014)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1128/jvi.01080-07",
+          "reference_number": 41,
+          "input": {
+            "displayed": "J. Virol. 82, 335-345 (2008)",
+            "canonical": "Distinct RIG-I and MDA5 signaling by RNA viruses in innate immunity. J. Virol. 82, 335-345 (2008)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C20",
+      "claim_text": "Expression of RIG-I and MDA5 is rare in resting cells and becomes detectable until 7 h in viral infection.",
+      "manuscript_locator": "Discussion, p.1354",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.4049/jimmunol.1303322",
+        "https://doi.org/10.1016/j.immuni.2018.08.014"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "not_substantiated",
+      "supporting_spans": [],
+      "notes": "Neither cited work addresses basal RIG-I/MDA5 expression or any time-to-detection threshold. Ref 42 characterises DHX15 as a dsRNA sensor in myeloid dendritic cells; ref 43 characterises ZCCHC3 as a co-receptor for RIG-I and MDA5. No span supports either the 'rare in resting cells' component or the '7 h' component, and the latter is the quantitative premise the Discussion's central argument rests on. Independently, the displayed citation for ref 43 fails the identity gate (see citation_identities), which forces a non-positive verdict regardless of content.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.4049/jimmunol.1303322",
+          "reference_number": 42,
+          "input": {
+            "displayed": "J. Immunol. 193, 1364-1372 (2014)",
+            "canonical": "DHX15 senses double-stranded RNA in myeloid dendritic cells. J. Immunol. 193, 1364-1372 (2014)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.immuni.2018.08.014",
+          "reference_number": 43,
+          "input": {
+            "displayed": "Lian, H. et al. Immunity 18, 49 (2018)",
+            "canonical": "The Zinc-Finger Protein ZCCHC3 Binds RNA and Facilitates Viral RNA Sensing and Activation of the RIG-I-like Receptors. Immunity 49, 438-448.e5 (2018)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "mismatch"
+        }
+      ]
+    },
+    {
+      "id": "C21",
+      "claim_text": "Functional studies of the ARM domain containing proteins ALEX3 and SARM suggest that the ARM in ZNFX1 may be responsible for its mitochondrial localisation.",
+      "manuscript_locator": "Discussion, p.1354",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1038/ncomms1829",
+        "https://doi.org/10.1016/j.immuni.2013.02.013",
+        "https://doi.org/10.1371/journal.pone.0067773",
+        "https://doi.org/10.1038/cdd.2012.144",
+        "https://doi.org/10.4049/jimmunol.0903675"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "partial",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1371/journal.pone.0067773",
+          "quote": "The Armcx3 gene encodes a mitochondrial-targeted protein (Alex3) that contains several arm-like domains.",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/ncomms1829",
+          "quote": "Here we show a new protein family that localizes to the mitochondria and controls mitochondrial dynamics. This family of proteins is encoded by an array of armadillo (Arm) repeat-containing genes located on the X chromosome.",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/cdd.2012.144",
+          "quote": "The mitochondria-localized SARM triggers intrinsic apoptosis by generating reactive oxygen species and depolarizing the mitochondrial potential.",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.4049/jimmunol.0903675",
+          "quote": "B. belcheri tsingtauense SARM was localized in mitochondria and could attenuate the TLR signaling",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "The spans establish that ALEX3/Armcx proteins and SARM are ARM-repeat proteins that localise to mitochondria. They do not establish the causal step the sentence infers - that the ARM domain is *responsible for* that localisation. Ref 45 attributes SARM's proapoptotic function to its SAM and TIR domains, not the ARM. Ref 38 concerns MAVS-driven SARM1 upregulation and neuronal death and contributes nothing to the localisation argument.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1038/ncomms1829",
+          "reference_number": 37,
+          "input": {
+            "displayed": "Nat. Commun. 3, 814 (2012)",
+            "canonical": "The Eutherian Armcx genes regulate mitochondrial trafficking in neurons and interact with Miro and Trak2. Nat. Commun. 3, 814 (2012)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.immuni.2013.02.013",
+          "reference_number": 38,
+          "input": {
+            "displayed": "Immunity 38, 705-716 (2013)",
+            "canonical": "Activation of the innate signaling molecule MAVS by bunyavirus infection upregulates the adaptor protein SARM1... Immunity 38, 705-716 (2013)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1371/journal.pone.0067773",
+          "reference_number": 44,
+          "input": {
+            "displayed": "PLoS ONE 8, e67773 (2013)",
+            "canonical": "The non-canonical Wnt/PKC pathway regulates mitochondrial dynamics through degradation of the arm-like domain-containing protein Alex3. PLoS ONE 8, e67773 (2013)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/cdd.2012.144",
+          "reference_number": 45,
+          "input": {
+            "displayed": "Cell Death Differ. 20, 478-489 (2013)",
+            "canonical": "T-cell death following immune activation is mediated by mitochondria-localized SARM. Cell Death Differ. 20, 478-489 (issue 2013; online 2012)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.4049/jimmunol.0903675",
+          "reference_number": 46,
+          "input": {
+            "displayed": "J. Immunol. 184, 6874-6881 (2010)",
+            "canonical": "Amphioxus SARM involved in neural development may function as a suppressor of TLR signaling. J. Immunol. 184, 6874-6881 (2010)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C22",
+      "claim_text": "Although ZNFX1 binds to virus RNA and interacts with MAVS in a fashion independent of RIG-I and MDA5, the deficiency of ZNFX1 could impair the induced expression of a series of ISGs, including RIG-I or MDA5, leading to antiviral defect in the early stage of virus infection.",
+      "manuscript_locator": "Discussion, p.1354",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1016/j.cell.2011.06.041",
+        "https://doi.org/10.1038/nature05732",
+        "https://doi.org/10.1016/j.immuni.2012.03.022"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "not_substantiated",
+      "supporting_spans": [],
+      "notes": "All three cited works predate the identification of ZNFX1 as an antiviral factor and none of them contains any ZNFX1 content: ref 47 is on prion-like MAVS aggregation, ref 48 on TRIM25-mediated RIG-I ubiquitination, ref 49 on ubiquitin-induced RIG-I/MDA5 oligomerisation. No span in any of them supports a consequence of ZNFX1 deficiency. The proposition is supported by the manuscript's own data, and the citations appear to have been attached to the wrong sentence or intended as generic RLR-activation background.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.cell.2011.06.041",
+          "reference_number": 47,
+          "input": {
+            "displayed": "Hou, F. et al. Cell 146, 448-461 (2011)",
+            "canonical": "MAVS forms functional prion-like aggregates to activate and propagate antiviral innate immune response. Cell 146, 448-461 (2011)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/nature05732",
+          "reference_number": 48,
+          "input": {
+            "displayed": "Gack, M. U. et al. Nature 446, 916-920 (2007)",
+            "canonical": "TRIM25 RING-finger E3 ubiquitin ligase is essential for RIG-I-mediated antiviral activity. Nature 446, 916-920 (2007)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.immuni.2012.03.022",
+          "reference_number": 49,
+          "input": {
+            "displayed": "Jiang, X. et al. Immunity 36, 959-973 (2012)",
+            "canonical": "Ubiquitin-induced oligomerization of the RNA sensors RIG-I and MDA5 activates antiviral innate immune response. Immunity 36, 959-973 (2012)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C23",
+      "claim_text": "Another representative of RNA helicase SF1, MOV10, is well conserved during evolution and shown to be a co-factor to enhance the nuclear export of viral mRNA.",
+      "manuscript_locator": "Discussion, p.1354",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1371/journal.pgen.1002941"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "partial",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1371/journal.pgen.1002941",
+          "quote": "With homologs in other vertebrates, insects, and plants, MOV10 may represent an ancient and innate form of immunity against both infective viruses and endogenous retroelements.",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "The span supports evolutionary conservation. It does not support the functional half of the claim, and the cited work points the other way: its subject is MOV10 as 'a potent inhibitor of retrotransposition' that 'inhibits retrovirus replication', not a co-factor enhancing nuclear export of viral mRNA, a process the abstract does not mention. Graded partial rather than conflicting because the source is silent on nuclear export rather than contradicting it directly; the polarity of MOV10's role, however, is inverted relative to the source.",
+      "verification_status": "unverified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1371/journal.pgen.1002941",
+          "reference_number": 34,
+          "input": {
+            "displayed": "Goodier, J. L. et al. PLoS Genet. 8, e1002941 (2012)",
+            "canonical": "MOV10 RNA helicase is a potent inhibitor of retrotransposition in cells. PLoS Genet. 8, e1002941 (2012)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    },
+    {
+      "id": "C24",
+      "claim_text": "As well as acting as a dsRNA sensor to trigger antiviral responses, ZNFX1 is required for epigenetic inheritance in Caenorhabditis elegans, based on two recent reports.",
+      "manuscript_locator": "Discussion, p.1354-1355",
+      "support_type": "literature",
+      "evidence_uris": [
+        "https://doi.org/10.1016/j.molcel.2018.04.009",
+        "https://doi.org/10.1038/s41586-018-0132-0"
+      ],
+      "domain": "general",
+      "method": "text_entailment",
+      "verdict": "substantiated",
+      "supporting_spans": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.molcel.2018.04.009",
+          "quote": "we identify the deeply conserved helicase-domain protein, ZNFX-1, as an epigenetic regulator and component of nuage that interacts with Argonaute systems to balance epigenetic inheritance",
+          "locator": "Abstract"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/s41586-018-0132-0",
+          "quote": "one biological function of ZNFX-1 and WAGO-4 is to interact with silencing RNAs in the C. elegans germline to direct transgenerational epigenetic inheritance",
+          "locator": "Abstract"
+        }
+      ],
+      "notes": "",
+      "verification_status": "verified",
+      "citation_identities": [
+        {
+          "evidence_uri": "https://doi.org/10.1016/j.molcel.2018.04.009",
+          "reference_number": 50,
+          "input": {
+            "displayed": "Mol. Cell 70, 639-649 (2018)",
+            "canonical": "ZNFX-1 functions within perinuclear nuage to balance epigenetic signals. Mol. Cell 70, 639-649.e6 (2018)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        },
+        {
+          "evidence_uri": "https://doi.org/10.1038/s41586-018-0132-0",
+          "reference_number": 51,
+          "input": {
+            "displayed": "Nature 557, 679-683 (2018)",
+            "canonical": "Spatiotemporal regulation of liquid-like condensates in epigenetic inheritance. Nature 557, 679-683 (2018)",
+            "resolver": "Crossref REST + OpenAlex + Europe PMC"
+          },
+          "verdict": "matched"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total": 24,
+    "by_verdict": {
+      "substantiated": 13,
+      "not_substantiated": 4,
+      "partial": 7
+    },
+    "grounding_risk_score": 0.3125,
+    "citations_checked": 43,
+    "citation_identity_mismatches": [
+      43
+    ]
+  }
+}
