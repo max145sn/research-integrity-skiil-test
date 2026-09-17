@@ -425,6 +425,9 @@ Based on data characteristics, recommend:
 
 ## Resources
 
+### assets/
+- `report_template.md`: Comprehensive markdown template for EDA reports
+
 ### scripts/
 - `eda_analyzer.py`: Comprehensive analysis script that can be run directly or imported
 
@@ -435,6 +438,3 @@ Based on data characteristics, recommend:
 - `spectroscopy_analytical_formats.md`: 35+ spectroscopy formats
 - `proteomics_metabolomics_formats.md`: 30+ omics formats
 - `general_scientific_formats.md`: 30+ general formats
-
-### assets/
-- `report_template.md`: Comprehensive markdown template for EDA reports

@@ -6,6 +6,10 @@ Visible copies of repository skills for easier browsing in Codespaces.
 - `claim-grounding/skill.md`
 - `citation-management/skill.md`
 - `exploratory-data-analysis/skill.md`
+  - `exploratory-data-analysis/assets/` — report_template.md
+  - `exploratory-data-analysis/fixtures/` — proteomics_fixture.mztab, mass_spectrometry_fixture.mgf, structure_fixture.pdb
+  - `exploratory-data-analysis/references/` — README.md
+  - `exploratory-data-analysis/scripts/` — eda_analyzer.py
 - `academic-paper-review/skill.md`
 - `academic-paper-reviewer/skill.md`
   - `academic-paper-reviewer/agents/` — field-analyst-agent.md, eic-agent.md, methodology-reviewer-agent.md, domain-reviewer-agent.md, perspective-reviewer-agent.md, editorial-synthesizer-agent.md, devils-advocate-reviewer-agent.md
